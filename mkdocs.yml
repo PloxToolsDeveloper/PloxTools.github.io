@@ -1,0 +1,63 @@
+site_name: PloxTools Plugins
+site_url: https://ploxtools.github.io/
+site_author: PloxTools
+site_description: Official documentation for PloxTools Unreal Engine plugins.
+
+theme:
+  name: material
+  language: en
+  font:
+    text: "Inter"
+    code: "Fira Code"
+  logo: assets/logo.png
+  favicon: assets/icon.png
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.top
+    - navigation.tabs
+    - content.code.copy
+    - navigation.indexes
+
+plugins: []
+
+nav:
+  - Home: index.md
+  - Plugins:
+      - Overview: plugins/index.md
+      - Google Play Billing:
+          - Implementation:
+              - Overview: plugins/billing/implementation/overview.md
+              - Getting Started: plugins/billing/implementation/getting_started.md
+              - Initialize Billing Client: plugins/billing/implementation/initialize_billingclient.md
+              - Query Product Details: plugins/billing/implementation/query_product_details.md
+              - Launch Billing Flow: plugins/billing/implementation/launch_billing_flow.md
+              - Set Non-Consumable Products: plugins/billing/implementation/set_nonconsumable_products.md
+              - Process Pending Purchases: plugins/billing/implementation/process_pending_purchases.md
+              - Query Owned Purchases: plugins/billing/implementation/query_owned_purchases.md
+              - Show In-App Messages: plugins/billing/implementation/show_inapp_messages.md
+              - Utilities: plugins/billing/implementation/utilities.md
+          - Object Definitions:
+              - Product Details: plugins/billing/object_definitions/product_details.md
+              - Purchase: plugins/billing/object_definitions/purchase.md
+              - Enumerations: plugins/billing/object_definitions/enumerations.md
+      - Google AdMob:
+          - Overview: plugins/admob/overview.md
+          - Getting Started: plugins/admob/getting_started.md
+      - Firebase Analytics:
+          - Overview: plugins/analytics/overview.md
+          - Getting Started: plugins/analytics/getting_started.md
+  - Help: help/help.md      
