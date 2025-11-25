@@ -433,6 +433,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -612,12 +616,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../process_pending_purchases/" class="md-nav__link">
+      <a href="../is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -641,6 +668,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -752,6 +802,24 @@
   <a href="#consume-purchase" class="md-nav__link">
     <span class="md-ellipsis">
       Consume Purchase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      C++ Usage
     </span>
   </a>
   
@@ -1032,6 +1100,8 @@
       
         
       
+        
+      
     
     
     
@@ -1286,6 +1356,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -1876,6 +1969,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      C++ Usage
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1893,26 +2004,24 @@
 
 
 <h1 id="manual-purchase-handling">Manual Purchase Handling</h1>
-<p>This section covers functions designed for developers who prefer to manually handle purchase verification and acknowledgment on their own server.<br />
-Instead of relying on automatic consumption or acknowledgment, these functions provide direct control over the purchase flow — allowing you to launch a purchase, receive its token, and confirm or consume it later after your backend validation.  </p>
-<p>Manual purchase handling is useful when:
-- You need to verify purchases securely through your backend before granting items or subscriptions.<br />
-- You want to implement custom logic for fraud detection or entitlement management.<br />
-- You require more flexibility in managing purchase states and tokens across multiple devices or accounts.  </p>
+<p>This section covers functions designed for developers who prefer to manually handle purchase verification and acknowledgment on their own server. Instead of relying on automatic consumption or acknowledgment, these functions provide direct control over the purchase flow — allowing you to launch a purchase, receive its token, and confirm or consume it later after your backend validation.  </p>
+<p>Manual purchase handling is useful when:</p>
+<ul>
+<li>You need to verify purchases securely through your backend before granting items or subscriptions.  </li>
+<li>You want to implement custom logic for fraud detection or entitlement management.  </li>
+<li>You require more flexibility in managing purchase states and tokens across multiple devices or accounts.  </li>
+</ul>
 <hr />
 <h2 id="launch-billing-flow-manual">Launch Billing Flow Manual</h2>
-<p>This asynchronous function works similarly to the standard <a href="../launch_billing_flow/"><code>LaunchBillingFlow</code></a>, but it does <strong>not automatically acknowledge or consume</strong> the purchase after completion.<br />
-It is intended for developers who want full control over purchase validation and confirmation on their own backend.  </p>
-<p>When using this function, you’ll receive a purchase details struct that includes the purchase token. This token can then be verified on your server before calling <strong>Acknowledge Purchase</strong> or <strong>Consume Purchase</strong>.<br />
-This approach provides maximum flexibility and is recommended for apps that rely on secure server-side validation of transactions.</p>
+<p>This asynchronous function works similarly to the standard <a href="../launch_billing_flow/"><code>LaunchBillingFlow</code></a>, but it does <strong>not automatically acknowledge or consume</strong> the purchase after completion. It is intended for developers who want full control over purchase validation and confirmation on their own backend.  </p>
+<p>When using this function, you’ll receive a purchase details struct that includes the purchase token. This token can then be verified on your server before calling <strong>Acknowledge Purchase</strong> or <strong>Consume Purchase</strong>. This approach provides maximum flexibility and is recommended for apps that rely on secure server-side validation of transactions.</p>
 <div align="center">
   <img src="../assets/manual_purchase_handling/manual_purchase_handling_launchbillingflow.png" width="250">
 </div>
 
 <hr />
 <h2 id="acknowledge-purchase">Acknowledge Purchase</h2>
-<p>This asynchronous function must be called for <strong>every completed purchase</strong> in order to finalize it.<br />
-Google Play requires that all purchases be acknowledged within three days, otherwise the transaction will be automatically refunded.  </p>
+<p>This asynchronous function must be called for <strong>every completed purchase</strong> in order to finalize it. Google Play requires that all purchases be acknowledged within three days, otherwise the transaction will be automatically refunded.  </p>
 <p>The function takes the <strong>purchase token</strong> as a parameter, confirms the purchase with Google Play, and then returns the same token back — allowing you to use it later for <strong>Consume Purchase</strong>, if the product is consumable.  </p>
 <p>This manual acknowledgment flow ensures that only verified purchases are finalized, giving your backend full control over entitlement logic and item delivery.</p>
 <div align="center">
@@ -1921,14 +2030,85 @@ Google Play requires that all purchases be acknowledged within three days, other
 
 <hr />
 <h2 id="consume-purchase">Consume Purchase</h2>
-<p>This function is used to <strong>consume</strong> a previously acknowledged purchase.<br />
-Consuming a purchase means marking it as used, so the same item can be bought again in the future.<br />
-This applies only to <strong>one-time consumable products</strong> (for example, in-game currency or resources).  </p>
-<p>The function takes the <strong>purchase token</strong> obtained during the purchase or acknowledgment process, performs the consume request, and confirms the operation with Google Play.<br />
-After a successful consume, the token becomes invalid and a new one will be issued on the next purchase.</p>
+<p>This function is used to <strong>consume</strong> a previously acknowledged purchase. Consuming a purchase means marking it as used, so the same item can be bought again in the future. This applies only to <strong>one-time consumable products</strong> (for example, in-game currency or resources).  </p>
+<p>The function takes the <strong>purchase token</strong> obtained during the purchase or acknowledgment process, performs the consume request, and confirms the operation with Google Play. After a successful consume, the token becomes invalid and a new one will be issued on the next purchase.</p>
 <div align="center">
   <img src="../assets/manual_purchase_handling/manual_purchase_handling_consumepurchase.png" width="200">
 </div>
+
+<hr />
+<h2 id="example">Example</h2>
+<p>In this example, we handle a purchase manually using <strong>Launch Billing Flow Manual</strong>. After the player successfully completes a purchase, the returned <a href="../../object_definitions/purchase/#fpurchase"><code>FPurchase</code></a> struct is broken down to extract the <strong>Purchase Token</strong>. That token is then used to explicitly call Acknowledge Purchase and, after acknowledgment succeeds, Consume Purchase to reset the product for repurchase.</p>
+<p>This flow ensures full control over acknowledgment and consumption, allowing you to integrate custom validation logic or backend verification.</p>
+<div align="center">
+  <img src="../assets/manual_purchase_handling/manual_purchase_handling_example.png" width="670">
+</div>
+
+<hr />
+<h2 id="c-usage">C++ Usage</h2>
+<p>You can handle manual purchases directly from C++ to maintain full control over acknowledgment and consumption.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BillingCPPLibrary.h&quot;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">UMyGameInstance::HandleManualPurchase</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">FString</span><span class="w"> </span><span class="n">ProductId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;testproduct1&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">FString</span><span class="w"> </span><span class="n">OfferToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Leave empty for in-app products</span>
+
+<span class="w">    </span><span class="c1">// Step 1: Launch manual billing flow</span>
+<span class="w">    </span><span class="n">FOnPurchaseSuccessfulNative</span><span class="w"> </span><span class="n">OnSuccess</span><span class="p">;</span>
+<span class="w">    </span><span class="n">OnSuccess</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">FPurchase</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Purchase</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Purchase successful&quot;</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// Extract the purchase token</span>
+<span class="w">        </span><span class="n">FString</span><span class="w"> </span><span class="n">Token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Purchase</span><span class="p">.</span><span class="n">PurchaseToken</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Step 2: Acknowledge the purchase</span>
+<span class="w">        </span><span class="n">FOnAcknowledgeSuccessfulNative</span><span class="w"> </span><span class="n">OnAckSuccess</span><span class="p">;</span>
+<span class="w">        </span><span class="n">OnAckSuccess</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([</span><span class="n">Token</span><span class="p">]()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Purchase acknowledged: %s&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">Token</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// Step 3: Consume the purchase (for consumables)</span>
+<span class="w">            </span><span class="n">FOnConsumeSuccessfulNative</span><span class="w"> </span><span class="n">OnConsumeSuccess</span><span class="p">;</span>
+<span class="w">            </span><span class="n">OnConsumeSuccess</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([]()</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Purchase consumed successfully&quot;</span><span class="p">));</span>
+<span class="w">            </span><span class="p">});</span>
+
+<span class="w">            </span><span class="n">FOnConsumeFailedNative</span><span class="w"> </span><span class="n">OnConsumeFail</span><span class="p">;</span>
+<span class="w">            </span><span class="n">OnConsumeFail</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="n">EBillingResponseCode</span><span class="w"> </span><span class="n">Code</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FString</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Error</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consume failed: %s (Code %d)&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">Error</span><span class="p">,</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">int32</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Code</span><span class="p">));</span>
+<span class="w">            </span><span class="p">});</span>
+
+<span class="w">            </span><span class="n">UBillingCPPLibrary</span><span class="o">::</span><span class="n">ConsumePurchase</span><span class="p">(</span><span class="n">Token</span><span class="p">,</span><span class="w"> </span><span class="n">OnConsumeSuccess</span><span class="p">,</span><span class="w"> </span><span class="n">OnConsumeFail</span><span class="p">);</span>
+<span class="w">        </span><span class="p">});</span>
+
+<span class="w">        </span><span class="n">FOnAcknowledgeFailedNative</span><span class="w"> </span><span class="n">OnAckFail</span><span class="p">;</span>
+<span class="w">        </span><span class="n">OnAckFail</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="n">EBillingResponseCode</span><span class="w"> </span><span class="n">Code</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FString</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Error</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Acknowledge failed: %s (Code %d)&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">Error</span><span class="p">,</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">int32</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Code</span><span class="p">));</span>
+<span class="w">        </span><span class="p">});</span>
+
+<span class="w">        </span><span class="n">UBillingCPPLibrary</span><span class="o">::</span><span class="n">AcknowledgePurchase</span><span class="p">(</span><span class="n">Token</span><span class="p">,</span><span class="w"> </span><span class="n">OnAckSuccess</span><span class="p">,</span><span class="w"> </span><span class="n">OnAckFail</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="n">FOnPurchasePendingNative</span><span class="w"> </span><span class="n">OnPending</span><span class="p">;</span>
+<span class="w">    </span><span class="n">OnPending</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">FPurchase</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Purchase</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Warning</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Purchase pending...&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="n">FOnPurchaseFailedNative</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">;</span>
+<span class="w">    </span><span class="n">OnFailure</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="n">EBillingResponseCode</span><span class="w"> </span><span class="n">Code</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FString</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Message</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Purchase failed: %s (Code %d)&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">Message</span><span class="p">,</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">int32</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Code</span><span class="p">));</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="n">UBillingCPPLibrary</span><span class="o">::</span><span class="n">LaunchBillingFlowManual</span><span class="p">(</span><span class="n">ProductId</span><span class="p">,</span><span class="w"> </span><span class="n">EProductType</span><span class="o">::</span><span class="n">INAPP</span><span class="p">,</span><span class="w"> </span><span class="n">OfferToken</span><span class="p">,</span><span class="w"> </span><span class="n">OnSuccess</span><span class="p">,</span><span class="w"> </span><span class="n">OnPending</span><span class="p">,</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 

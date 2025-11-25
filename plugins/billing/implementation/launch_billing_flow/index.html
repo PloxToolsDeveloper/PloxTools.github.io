@@ -433,6 +433,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -789,12 +793,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../process_pending_purchases/" class="md-nav__link">
+      <a href="../is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -818,6 +845,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -1140,6 +1190,8 @@
       
         
       
+        
+      
     
     
     
@@ -1394,6 +1446,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -2109,10 +2184,8 @@
 
 
 <h1 id="launch-billing-flow">Launch Billing Flow</h1>
-<p>This asynchronous function starts the purchase flow for a selected product.<br />
-It connects directly to the <strong>Google Play Billing</strong> system and displays the native purchase UI to the user.</p>
-<p>Depending on the product type, this function can launch either a one-time purchase or a subscription flow.<br />
-For subscriptions, an <strong>Offer Token</strong> must be provided to specify a particular base plan or promotional offer.</p>
+<p>This asynchronous function starts the purchase flow for a selected product. It connects directly to the <strong>Google Play Billing</strong> system and displays the native purchase UI to the user.</p>
+<p>Depending on the product type, this function can launch either a one-time purchase or a subscription flow. For subscriptions, an <strong>Offer Token</strong> must be provided to specify a particular base plan or promotional offer.</p>
 <p>Once the purchase process finishes, one of the delegates will trigger — indicating whether the purchase succeeded, is pending, or failed.</p>
 <div align="center">
   <img src="../assets/launch_billing_flow/launch_billing_flow_node.png" width="250">
@@ -2121,60 +2194,48 @@ For subscriptions, an <strong>Offer Token</strong> must be provided to specify a
 <hr />
 <h2 id="parameters">Parameters</h2>
 <h3 id="1-product-id">1. Product Id</h3>
-<p>The unique product ID to purchase, as defined in your <strong>Google Play Console</strong>.<br />
-Must exactly match the ID used when configuring your product.  </p>
+<p>The unique product ID to purchase, as defined in your <strong>Google Play Console</strong>. Must exactly match the ID used when configuring your product.  </p>
 <hr />
 <h3 id="2-product-type">2. Product Type</h3>
-<p>Specifies whether the purchase is a <strong>In-App</strong> product or a <strong>Subscription</strong>.<br />
-See <a href="../../object_definitions/enumerations/#eproducttype"><code>EProductType</code></a> for available values.  </p>
+<p>Specifies whether the purchase is a <strong>In-App</strong> product or a <strong>Subscription</strong>. See <a href="../../object_definitions/enumerations/#eproducttype"><code>EProductType</code></a> for available values.  </p>
 <hr />
 <h3 id="3-offer-token">3. Offer Token</h3>
-<p>A required token for <strong>subscription purchases</strong>, representing the selected base plan or offer.<br />
-Can be obtained from the queried <a href="../../object_definitions/product_details/#fproductdetails"><code>FProductDetails</code></a> data by using <a href="../query_product_details/"><code>Query Product Details</code></a> node.<br />
-For <strong>in-app products</strong>, this parameter can be left empty.  </p>
+<p>A required token for <strong>subscription purchases</strong>, representing the selected base plan or offer. Can be obtained from the queried <a href="../../object_definitions/product_details/#fproductdetails"><code>FProductDetails</code></a> data by using <a href="../query_product_details/"><code>Query Product Details</code></a> node. For <strong>in-app products</strong>, this parameter can be left empty.  </p>
 <hr />
 <h3 id="4-on-success">4. On Success</h3>
-<p>Triggered when the purchase completes successfully.<br />
-Returns a <a href="../../object_definitions/purchase/#fpurchase"><code>FPurchase</code></a> object containing all purchase data.<br />
-Use this delegate to unlock content or grant in-game items.  </p>
+<p>Triggered when the purchase completes successfully. Returns a <a href="../../object_definitions/purchase/#fpurchase"><code>FPurchase</code></a> object containing all purchase data. Use this delegate to unlock content or grant in-game items.  </p>
 <hr />
 <h3 id="5-on-pending">5. On Pending</h3>
-<p>Triggered when a purchase is <strong>pending</strong> (e.g., cash-based payments or delayed transactions).<br />
-You can notify the player that the transaction is awaiting confirmation.  </p>
+<p>Triggered when a purchase is <strong>pending</strong> (e.g., cash-based payments or delayed transactions). You can notify the player that the transaction is awaiting confirmation.  </p>
 <hr />
 <h3 id="6-on-failure">6. On Failure</h3>
-<p>Triggered if the billing flow fails, is cancelled, or encounters a network issue.<br />
-Returns:<br />
-- <strong>Response Code</strong> — <a href="../../object_definitions/enumerations/#ebillingresponsecode"><code>EBillingResponseCode</code></a><br />
-- <strong>Error Message</strong> — <code>FString</code> with debug information.  </p>
+<p>Triggered if the billing flow fails, is cancelled, or encounters a network issue. Returns: </p>
+<ul>
+<li><strong>Response Code</strong> — <a href="../../object_definitions/enumerations/#ebillingresponsecode"><code>EBillingResponseCode</code></a>  </li>
+<li><strong>Error Message</strong> — <code>FString</code> with debug information.  </li>
+</ul>
 <p>Use this delegate to log errors and handle cancellations.</p>
 <hr />
 <h2 id="examples">Examples</h2>
 <h3 id="in-app-purchase">In-App Purchase</h3>
-<p>In the below example, we are launching a purchase flow for an <strong>In-App Product</strong> using its product ID from the <strong>Google Play Console</strong>.<br />
-You can create your own functions to handle successful purchases, pending transactions, or failures, depending on your project’s logic.  </p>
-<p>For <strong>In-App Product</strong> purchases, the <strong>Offer Token</strong> field can be left empty.<br />
-For <strong>Subscription</strong> purchases, you must provide a valid token corresponding to the selected base plan or offer.</p>
+<p>In the below example, we are launching a purchase flow for an <strong>In-App Product</strong> using its product ID from the <strong>Google Play Console</strong>. You can create your own functions to handle successful purchases, pending transactions, or failures, depending on your project’s logic.  </p>
+<p>For <strong>In-App Product</strong> purchases, the <strong>Offer Token</strong> field can be left empty. For <strong>Subscription</strong> purchases, you must provide a valid token corresponding to the selected base plan or offer.</p>
 <div align="center">
   <img src="../assets/launch_billing_flow/launch_billing_flow_exampleinapp.png" width="670">
 </div>
 
 <hr />
 <h3 id="subscription">Subscription</h3>
-<p>In this example, we’re starting a <strong>subscription purchase</strong> using a product ID from the <strong>Google Play Console</strong>.<br />
-Depending on your project’s setup, you can implement your own logic to handle successful purchases, pending states, and failures.</p>
-<p>The key difference when working with subscriptions is the use of an <strong>Offer Token</strong>, which identifies the selected base plan and offer.<br />
-You can obtain this token using the <a href="../utilities/#get-subscription-offer-token"><code>Get Subscription Offer Token</code></a> node from the previously retrieved <a href="../../object_definitions/product_details/#fproductdetails"><code>FProductDetails</code></a> data by using <a href="../query_product_details/"><code>Query Product Details</code></a> node.</p>
-<p>If a subscription has multiple base plans or offers, make sure to store the relevant product details and select the desired one when launching the billing flow.<br />
-If there’s only one plan available, the <strong>Offer Token</strong> can be left blank — the first available plan will be used automatically.</p>
+<p>In this example, we’re starting a <strong>subscription purchase</strong> using a product ID from the <strong>Google Play Console</strong>. Depending on your project’s setup, you can implement your own logic to handle successful purchases, pending states, and failures.</p>
+<p>The key difference when working with subscriptions is the use of an <strong>Offer Token</strong>, which identifies the selected base plan and offer. You can obtain this token using the <a href="../utilities/#get-subscription-offer-token"><code>Get Subscription Offer Token</code></a> node from the previously retrieved <a href="../../object_definitions/product_details/#fproductdetails"><code>FProductDetails</code></a> data by using <a href="../query_product_details/"><code>Query Product Details</code></a> node.</p>
+<p>If a subscription has multiple base plans or offers, make sure to store the relevant product details and select the desired one when launching the billing flow. If there’s only one plan available, the <strong>Offer Token</strong> can be left blank — the first available plan will be used automatically.</p>
 <div align="center">
   <img src="../assets/launch_billing_flow/launch_billing_flow_examplesubs.png" width="670">
 </div>
 
 <hr />
 <h2 id="c-usage">C++ Usage</h2>
-<p>You can also launch the billing flow directly from C++ using the static <code>LaunchBillingFlow</code> function.<br />
-Provide a valid <strong>Product ID</strong>, <strong>Product Type</strong>, and (optionally) an <strong>Offer Token</strong> for subscriptions.</p>
+<p>You can also launch the billing flow directly from C++ using the static <code>LaunchBillingFlow</code> function. Provide a valid <strong>Product ID</strong>, <strong>Product Type</strong>, and (optionally) an <strong>Offer Token</strong> for subscriptions.</p>
 <h3 id="in-app-purchase_1">In-App Purchase</h3>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BillingCPPLibrary.h&quot;</span>
 

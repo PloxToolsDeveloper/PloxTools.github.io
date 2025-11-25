@@ -429,6 +429,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -608,12 +612,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+      <a href="../../../billing/implementation/is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -637,6 +664,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -959,6 +1009,8 @@
       
         
       
+        
+      
     
     
     
@@ -1213,6 +1265,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -1941,10 +2016,8 @@
 
 
 <h1 id="launch-in-app-review">Launch In-App Review</h1>
-<p>This is an <strong>asynchronous</strong> function that triggers the native Google Play in-app review flow.<br />
-The review dialog is displayed and controlled entirely by the Play Store — your game cannot force or customize its appearance.</p>
-<p>You must wait until the user finishes interacting with the dialog before continuing your app logic.<br />
-Once the operation completes, one of two delegates will be called — <code>On Success</code> or <code>On Failure</code>.</p>
+<p>This is an <strong>asynchronous</strong> function that triggers the native Google Play in-app review flow. The review dialog is displayed and controlled entirely by the Play Store — your game cannot force or customize its appearance.</p>
+<p>You must wait until the user finishes interacting with the dialog before continuing your app logic. Once the operation completes, one of two delegates will be called — <code>On Success</code> or <code>On Failure</code>.</p>
 <blockquote>
 <p>💡 According to Google Play policy, regardless of the outcome — success or failure —<br />
 your app <strong>must always continue its normal flow</strong> after calling this function.<br />
@@ -1956,13 +2029,11 @@ Do not block gameplay or force the player to submit a review.</p>
 
 <h3 id="parameters">Parameters</h3>
 <h4 id="1-on-success">1. On Success</h4>
-<p>This delegate is triggered once the user has completed the in-app review flow.<br />
-The Google Play API does <strong>not</strong> reveal whether the user actually submitted a review or whether the dialog was displayed — the call only indicates that the process has finished successfully.</p>
+<p>This delegate is triggered once the user has completed the in-app review flow. The Google Play API does <strong>not</strong> reveal whether the user actually submitted a review or whether the dialog was displayed — the call only indicates that the process has finished successfully.</p>
 <p>You can simply drag this pin in Blueprint to create a custom event and execute any follow-up logic (e.g., show a thank-you message or resume gameplay).</p>
 <hr />
 <h4 id="2-on-failure">2. On Failure</h4>
-<p>A delegate that is triggered if the initialization fails.<br />
-It provides two parameters:  </p>
+<p>A delegate that is triggered if the initialization fails. It provides two parameters:  </p>
 <ul>
 <li><strong>Response Code</strong> — <a href="../../object_definitions/enumerations/"><code>EInAppReviewResponseCode</code></a> indicating the type of error.  </li>
 <li><strong>Message</strong> — <code>FString</code> with additional debug information describing the failure reason.  </li>
@@ -1970,10 +2041,8 @@ It provides two parameters:  </p>
 <p>Use this delegate to handle initialization errors and show appropriate messages to the player.</p>
 <hr />
 <h2 id="example">Example</h2>
-<p>In this example, the <strong>Launch In-App Review</strong> node is used to display the native Google Play review dialog.<br />
-Two execution pins handle the possible outcomes — <strong>On Success</strong> and <strong>On Failure</strong>.</p>
-<p>In both cases, the app must <strong>continue its regular logic flow</strong> without interruption,<br />
-as required by Google Play’s policy.</p>
+<p>In this example, the <strong>Launch In-App Review</strong> node is used to display the native Google Play review dialog. Two execution pins handle the possible outcomes — <strong>On Success</strong> and <strong>On Failure</strong>.</p>
+<p>In both cases, the app must <strong>continue its regular logic flow</strong> without interruption, as required by Google Play’s policy.</p>
 <div align="center">
   <img src="../assets/launch_inapp_review/launch_inapp_review_example.png" width="600">
 </div>

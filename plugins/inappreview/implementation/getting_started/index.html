@@ -429,6 +429,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -608,12 +612,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+      <a href="../../../billing/implementation/is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -637,6 +664,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -959,6 +1009,8 @@
       
         
       
+        
+      
     
     
     
@@ -1213,6 +1265,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -1951,24 +2026,20 @@
 <p>Purchase the plugin on the <a href="https://www.fab.com/listings/ea568462-38f0-46b1-98f9-836fe871f023"><strong>Fab Marketplace</strong></a>.</p>
 <hr />
 <h2 id="install-the-plugin">Install the Plugin</h2>
-<p>After purchasing, the plugin can be installed either directly through the Fab website or via the Fab plugin inside Unreal Engine.
-Once installed, it will appear in your project’s plugin list and can be enabled from there.</p>
+<p>After purchasing, the plugin can be installed either directly through the Fab website or via the Fab plugin inside Unreal Engine. Once installed, it will appear in your project’s plugin list and can be enabled from there.</p>
 <hr />
 <h2 id="enable-google-play-in-app-review-plugin">Enable Google Play In-App Review Plugin</h2>
-<p>Once installed, the plugin will be available in Unreal Engine under the <strong>Plugins</strong> section.<br />
-Go to <strong>Edit → Plugins</strong>, search for <strong>"PloxTools: Google Play In-App Review"</strong>, and make sure it’s enabled.</p>
+<p>Once installed, the plugin will be available in Unreal Engine under the <strong>Plugins</strong> section. Go to <strong>Edit → Plugins</strong>, search for <strong>"PloxTools: Google Play In-App Review"</strong>, and make sure it’s enabled.</p>
 <div align="center">
   <img src="../assets/getting_started/inappreview_gettingstarted_plugin.png" width="1000">
 </div>
 
 <hr />
 <h2 id="disable-any-other-in-app-review-plugins">Disable Any Other In-App Review Plugins</h2>
-<p>Make sure that no other Google Play In-App Review-related plugins are active, as they may override or conflict with this plugin.<br />
-Go to <strong>Edit → Plugins</strong> and disable any third-party Google Play In-App Review plugins.</p>
+<p>Make sure that no other Google Play In-App Review-related plugins are active, as they may override or conflict with this plugin. Go to <strong>Edit → Plugins</strong> and disable any third-party Google Play In-App Review plugins.</p>
 <hr />
 <h2 id="enable-google-play-support">Enable Google Play Support</h2>
-<p>In order for the In-App Review functions to work correctly, <strong>Google Play Support</strong> must be enabled.<br />
-Go to <strong>Project Settings → Android → Google Play Services</strong>, then check the box <strong>"Enable Google Play Support"</strong>.</p>
+<p>In order for the In-App Review functions to work correctly, <strong>Google Play Support</strong> must be enabled. Go to <strong>Project Settings → Android → Google Play Services</strong>, then check the box <strong>"Enable Google Play Support"</strong>.</p>
 <div align="center">
   <img src="../assets/getting_started/inappreview_gettingstarted_googlesupport.png" width="1000">
 </div>
@@ -1988,8 +2059,7 @@ Go to <strong>Project Settings → Android → Google Play Services</strong>, th
 <p>Once the module is added, you can include the plugin’s header in your C++ classes:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;InAppReviewCPPLibrary.h&quot;</span>
 </code></pre></div>
-<p>After that, the plugin’s functions will be available for direct use in your code.
-To view all available methods, simply Ctrl + Left Click on InAppReviewCPPLibrary.h — this will open the header file with the full list of exposed functions.</p>
+<p>After that, the plugin’s functions will be available for direct use in your code. To view all available methods, simply Ctrl + Left Click on InAppReviewCPPLibrary.h — this will open the header file with the full list of exposed functions.</p>
 <hr />
 <p>Once these steps are complete, the plugin is ready to use in your project.</p>
 

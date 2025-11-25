@@ -18,7 +18,7 @@
         <link rel="prev" href="../launch_billing_flow/">
       
       
-        <link rel="next" href="../process_pending_purchases/">
+        <link rel="next" href="../is_product_purchased/">
       
       
       <link rel="icon" href="../../../../assets/icon.png">
@@ -433,6 +433,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -696,12 +700,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../process_pending_purchases/" class="md-nav__link">
+      <a href="../is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -725,6 +752,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -1047,6 +1097,8 @@
       
         
       
+        
+      
     
     
     
@@ -1301,6 +1353,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -1923,8 +1998,7 @@
 
 
 <h1 id="set-non-consumable-products">Set Non-Consumable Products</h1>
-<p>This is a synchronous function which adds the specified product IDs to the <strong>non-consumable</strong> list.<br />
-Products registered as non-consumable can only be purchased <strong>once</strong> — after a successful purchase, they remain owned permanently and will not be consumed automatically.  </p>
+<p>This is a synchronous function which adds the specified product IDs to the <strong>non-consumable</strong> list. Products registered as non-consumable can only be purchased <strong>once</strong> — after a successful purchase, they remain owned permanently and will not be consumed automatically.  </p>
 <p>If the player attempts to buy a non-consumable product again, Google Play will show a system message indicating that the item has already been purchased.  </p>
 <p>You should call this function <strong>after initializing the Billing Client</strong>, typically at the <strong>start of the game</strong>, and pass in a list of all your one-time product IDs (for example, “RemoveAds” or “PremiumPack”).</p>
 <p>Use this for <strong>one-time purchases</strong>, such as unlocking premium features, removing ads, or granting permanent bonuses.</p>
@@ -1935,9 +2009,7 @@ Products registered as non-consumable can only be purchased <strong>once</strong
 <hr />
 <h2 id="parameters">Parameters</h2>
 <h3 id="1-product-ids">1. Product Ids</h3>
-<p>An array of product IDs that should be treated as <strong>non-consumable</strong>.<br />
-Each ID must match a product configured in the <strong>Google Play Console</strong>.<br />
-These products can only be purchased <strong>once</strong> and will remain owned by the user after purchase.</p>
+<p>An array of product IDs that should be treated as <strong>non-consumable</strong>. Each ID must match a product configured in the <strong>Google Play Console</strong>. These products can only be purchased <strong>once</strong> and will remain owned by the user after purchase.</p>
 <hr />
 <h2 id="example">Example</h2>
 <p>In this example, we set up a list of <strong>non-consumable</strong> products — items that can only be purchased once, such as ad removal or premium access.  </p>

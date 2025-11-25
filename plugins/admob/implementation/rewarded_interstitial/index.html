@@ -429,6 +429,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -608,12 +612,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+      <a href="../../../billing/implementation/is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -637,6 +664,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -942,6 +992,8 @@
   
     
     
+      
+        
       
         
       
@@ -1389,6 +1441,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -1475,6 +1536,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -2213,6 +2297,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -2279,12 +2372,10 @@
 <li>Daily login incentives  </li>
 <li>Post-game multipliers or boosters  </li>
 </ul>
-<p>Before showing a rewarded interstitial, you must first <strong>load it</strong> using its Ad Unit ID.<br />
-Once loaded, it can be displayed at any time without additional preparation.</p>
+<p>Before showing a rewarded interstitial, you must first <strong>load it</strong> using its Ad Unit ID. Once loaded, it can be displayed at any time without additional preparation.</p>
 <hr />
 <h2 id="load-rewarded-interstitial">Load Rewarded Interstitial</h2>
-<p>This function loads a <strong>rewarded interstitial ad</strong> using the provided Ad Unit ID.<br />
-It must always be called <strong>before attempting to show</strong> the ad — if no rewarded ad is loaded, calling <code>Show Rewarded Interstitial</code> will fail immediately.</p>
+<p>This function loads a <strong>rewarded interstitial ad</strong> using the provided Ad Unit ID. It must always be called <strong>before attempting to show</strong> the ad — if no rewarded ad is loaded, calling <code>Show Rewarded Interstitial</code> will fail immediately.</p>
 <div align="center">
   <img src="../assets/rewarded_interstitial/rewarded_interstitial_load.png" width="220">
 </div>
@@ -2297,12 +2388,10 @@ It must always be called <strong>before attempting to show</strong> the ad — i
 <p>Called when the rewarded interstitial ad has been successfully loaded and is ready to show.</p>
 <hr />
 <h4 id="3-on-load-failed">3. On Load Failed</h4>
-<p>Called if the ad fails to load due to network issues, invalid configuration, or SDK errors.<br />
-This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value and an error message for debugging.</p>
+<p>Called if the ad fails to load due to network issues, invalid configuration, or SDK errors. This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value and an error message for debugging.</p>
 <hr />
 <h2 id="show-rewarded-interstitial">Show Rewarded Interstitial</h2>
-<p>Displays a previously loaded <strong>rewarded interstitial ad</strong> and grants the user a reward after it finishes successfully.<br />
-Before calling this function, make sure that a rewarded interstitial ad has already been loaded using <a href="#load-rewarded-interstitial"><code>Load Rewarded Interstitial</code></a>.</p>
+<p>Displays a previously loaded <strong>rewarded interstitial ad</strong> and grants the user a reward after it finishes successfully. Before calling this function, make sure that a rewarded interstitial ad has already been loaded using <a href="#load-rewarded-interstitial"><code>Load Rewarded Interstitial</code></a>.</p>
 <div align="center">
   <img src="../assets/rewarded_interstitial/rewarded_interstitial_show.png" width="220">
 </div>
@@ -2321,20 +2410,21 @@ Before calling this function, make sure that a rewarded interstitial ad has alre
 <p>Called after the ad is fully closed by the user or finishes naturally.</p>
 <hr />
 <h4 id="5-on-reward-earned">5. On Reward Earned</h4>
-<p>Triggered when the player successfully earns a reward by watching the ad to completion.<br />
-Use this callback to grant in-game currency, bonuses, or other benefits.</p>
+<p>Triggered when the player successfully earns a reward by watching the ad to completion. This callback also returns two values:</p>
+<ul>
+<li><strong>Amount</strong> (<code>int32</code>) — the numeric reward value defined in your AdMob console.  </li>
+<li><strong>RewardType</strong> (<code>string</code>) — the name or category of the reward.</li>
+</ul>
+<p>Use these values to grant in-game currency, bonuses, power-ups, or any other rewards to the player.</p>
 <hr />
 <h4 id="6-on-failure">6. On Failure</h4>
-<p>Called if the ad fails to show (for example, if it wasn’t properly loaded or was invalidated).<br />
-This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value and an error message for debugging.</p>
+<p>Called if the ad fails to show (for example, if it wasn’t properly loaded or was invalidated). This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value and an error message for debugging.</p>
 <hr />
 <h4 id="7-on-event">7. On Event</h4>
-<p>Triggered on intermediate ad lifecycle updates — such as when is clicked.<br />
-Returns an <a href="../../object_definitions/enumerations/#efullscreenadeventtype"><code>EFullScreenAdEventType</code></a> describing the event.</p>
+<p>Triggered on intermediate ad lifecycle updates — such as when is clicked. Returns an <a href="../../object_definitions/enumerations/#efullscreenadeventtype"><code>EFullScreenAdEventType</code></a> describing the event.</p>
 <hr />
 <h2 id="is-rewarded-interstitial-ready">Is Rewarded Interstitial Ready</h2>
-<p>Checks whether a <strong>rewarded interstitial ad</strong> has been successfully loaded and is ready to be shown.<br />
-Use this before calling <a href="#show-rewarded-interstitial"><code>Show Rewarded Interstitial</code></a> to avoid triggering a failed display event.</p>
+<p>Checks whether a <strong>rewarded interstitial ad</strong> has been successfully loaded and is ready to be shown. Use this before calling <a href="#show-rewarded-interstitial"><code>Show Rewarded Interstitial</code></a> to avoid triggering a failed display event.</p>
 <div align="center">
   <img src="../assets/rewarded_interstitial/rewarded_interstitial_isready.png" width="200">
 </div>
@@ -2343,9 +2433,28 @@ Use this before calling <a href="#show-rewarded-interstitial"><code>Show Rewarde
 <p>Returns <strong>true</strong> if a rewarded interstitial ad is successfully loaded and ready to display.<br />
 Returns <strong>false</strong> if no ad is currently loaded.</p>
 <hr />
+<h2 id="example">Example</h2>
+<p>In this example, the <strong>Load Rewarded Interstitial</strong> function requests a rewarded interstitial ad using the official Google test ad unit <code>ca-app-pub-3940256099942544/5354046379</code>.</p>
+<p>When the ad finishes loading, the <strong>On Loaded</strong> event fires. The graph then checks whether the rewarded interstitial is ready using <strong>Is Rewarded Interstitial Ready</strong>. If the ad is ready, the <strong>Show Rewarded Interstitial</strong> node is executed.</p>
+<p>Two optional settings are enabled in this example:  </p>
+<ul>
+<li><strong>Auto Reload</strong> automatically loads the next rewarded interstitial after completion.  </li>
+<li><strong>Is Immersive</strong> hides system UI while the ad is shown.</li>
+</ul>
+<p>The key event here is <strong>On Reward Earned</strong>, which passes two values: </p>
+<ul>
+<li><strong>Amount</strong>  </li>
+<li><strong>Reward Type</strong>  </li>
+</ul>
+<p>These values are then forwarded to a custom event that applies the reward to the player using a function such as <strong>Give Reward to the Player</strong>.</p>
+<p>This setup ensures that the player receives the reward only after fully watching the rewarded interstitial ad, following Google’s guidelines.</p>
+<div align="center">
+  <img src="../assets/rewarded_interstitial/rewarded_interstitial_example.png" width="670">
+</div>
+
+<hr />
 <h2 id="c-usage">C++ Usage</h2>
-<p>All rewarded interstitial Blueprint functions are fully available in C++.<br />
-You can load, show, and manage rewarded interstitials directly through static methods of <code>UAdMobCPPLibrary</code>.</p>
+<p>All rewarded interstitial Blueprint functions are fully available in C++. You can load, show, and manage rewarded interstitials directly through static methods of <code>UAdMobCPPLibrary</code>.</p>
 <h3 id="loadrewardedinterstitial">LoadRewardedInterstitial</h3>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
 

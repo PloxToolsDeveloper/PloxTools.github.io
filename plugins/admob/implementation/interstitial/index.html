@@ -429,6 +429,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -608,12 +612,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+      <a href="../../../billing/implementation/is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -637,6 +664,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -942,6 +992,8 @@
   
     
     
+      
+        
       
         
       
@@ -1334,6 +1386,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -1466,6 +1527,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -2195,6 +2279,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -2253,16 +2346,12 @@
 
 
 <h1 id="interstitial">Interstitial</h1>
-<p>Interstitial ads are <strong>full-screen advertisements</strong> that cover the entire game interface until the user dismisses them or the ad finishes.<br />
-They are best suited for <strong>natural breaks</strong> in gameplay — for example, after completing a level, when opening a new screen, or while transitioning between menus.</p>
-<p>Interstitials <strong>must be loaded in advance</strong> before being shown.<br />
-Once an interstitial has been displayed, it must be loaded again before it can be shown the next time.</p>
+<p>Interstitial ads are <strong>full-screen advertisements</strong> that cover the entire game interface until the user dismisses them or the ad finishes. They are best suited for <strong>natural breaks</strong> in gameplay — for example, after completing a level, when opening a new screen, or while transitioning between menus.</p>
+<p>Interstitials <strong>must be loaded in advance</strong> before being shown. Once an interstitial has been displayed, it must be loaded again before it can be shown the next time.</p>
 <hr />
 <h2 id="load-interstitial">Load Interstitial</h2>
-<p>This function loads a <strong>fullscreen interstitial ad</strong> into memory using the specified <strong>Ad Unit ID</strong>.<br />
-It must always be called <strong>before showing</strong> the interstitial — attempting to display an unloaded ad will fail.</p>
-<p>Once the ad is successfully loaded, you can show it at any moment using the <a href="#show-interstitial"><code>Show Interstitial</code></a> function.<br />
-If the load process fails (e.g., due to network issues or no fill), you can retry after a short delay.</p>
+<p>This function loads a <strong>fullscreen interstitial ad</strong> into memory using the specified <strong>Ad Unit ID</strong>. It must always be called <strong>before showing</strong> the interstitial — attempting to display an unloaded ad will fail.</p>
+<p>Once the ad is successfully loaded, you can show it at any moment using the <a href="#show-interstitial"><code>Show Interstitial</code></a> function. If the load process fails (e.g., due to network issues or no fill), you can retry after a short delay.</p>
 <div align="center">
   <img src="../assets/interstitial/interstitial_load.png" width="220">
 </div>
@@ -2275,12 +2364,10 @@ If the load process fails (e.g., due to network issues or no fill), you can retr
 <p>Called when the interstitial ad has finished loading and is ready to be displayed.</p>
 <hr />
 <h4 id="3-on-load-failed">3. On Load Failed</h4>
-<p>Triggered if the ad fails to load.<br />
-This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> and an error message describing the issue.</p>
+<p>Triggered if the ad fails to load. This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> and an error message describing the issue.</p>
 <hr />
 <h2 id="show-interstitial">Show Interstitial</h2>
-<p>This function displays a <strong>previously loaded interstitial ad</strong> on the screen.<br />
-Before calling this function, ensure that an ad has been successfully loaded using <a href="#load-interstitial"><code>Load Interstitial</code></a>.  </p>
+<p>This function displays a <strong>previously loaded interstitial ad</strong> on the screen. Before calling this function, ensure that an ad has been successfully loaded using <a href="#load-interstitial"><code>Load Interstitial</code></a>.  </p>
 <p>You can also configure <strong>auto-reload</strong> behavior and <strong>immersive mode</strong> for a smoother user experience.</p>
 <div align="center">
   <img src="../assets/interstitial/interstitial_show.png" width="220">
@@ -2288,8 +2375,7 @@ Before calling this function, ensure that an ad has been successfully loaded usi
 
 <h3 id="parameters_1">Parameters</h3>
 <h4 id="1-auto-reload">1. Auto Reload</h4>
-<p>If enabled, the plugin will automatically load a new interstitial once the current ad finishes or is closed by the user.<br />
-This is useful for continuous ad availability during gameplay.</p>
+<p>If enabled, the plugin will automatically load a new interstitial once the current ad finishes or is closed by the user. This is useful for continuous ad availability during gameplay.</p>
 <hr />
 <h4 id="2-is-immersive">2. Is Immersive</h4>
 <p>If enabled, the interstitial will be displayed in <strong>immersive fullscreen mode</strong>, hiding system UI elements (navigation bar, status bar, etc.).</p>
@@ -2298,19 +2384,16 @@ This is useful for continuous ad availability during gameplay.</p>
 <p>Called when the ad begins showing on the screen.</p>
 <hr />
 <h4 id="4-on-completed">4. On Completed</h4>
-<p>Triggered when the ad is closed by the user or finishes displaying.<br />
-At this point, the interstitial must be <strong>reloaded</strong> before it can be shown again.</p>
+<p>Triggered when the ad is closed by the user or finishes displaying. At this point, the interstitial must be <strong>reloaded</strong> before it can be shown again.</p>
 <hr />
 <h4 id="5-on-failure">5. On Failure</h4>
-<p>Called if the ad fails to display.<br />
-This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> and an error message for debugging.</p>
+<p>Called if the ad fails to display. This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> and an error message for debugging.</p>
 <hr />
 <h4 id="6-on-event">6. On Event</h4>
 <p>Fires on additional interstitial lifecycle events (e.g., clicked, dismissed, etc.), returning an <a href="../../object_definitions/enumerations/#efullscreenadeventtype"><code>EFullScreenAdEventType</code></a> value.</p>
 <hr />
 <h2 id="is-interstitial-ready">Is Interstitial Ready</h2>
-<p>This function checks whether an interstitial ad is currently <strong>loaded and ready</strong> to be shown.<br />
-It’s recommended to verify this before calling <a href="#show-interstitial"><code>Show Interstitial</code></a> to prevent display failures.</p>
+<p>This function checks whether an interstitial ad is currently <strong>loaded and ready</strong> to be shown. It’s recommended to verify this before calling <a href="#show-interstitial"><code>Show Interstitial</code></a> to prevent display failures.</p>
 <div align="center">
   <img src="../assets/interstitial/interstitial_isready.png" width="200">
 </div>
@@ -2319,9 +2402,27 @@ It’s recommended to verify this before calling <a href="#show-interstitial"><c
 <p>Returns <strong>true</strong> if an interstitial ad is successfully loaded and ready to display.<br />
 Returns <strong>false</strong> if no ad is currently loaded.</p>
 <hr />
+<h2 id="example">Example</h2>
+<p>In this example, the <strong>Load Interstitial</strong> function is used to request a full-screen interstitial ad using the official Google test ad unit <code>ca-app-pub-3940256099942544/1033173712</code>.</p>
+<p>Once the loading process finishes, the <strong>On Loaded</strong> event is triggered. The graph then checks whether the interstitial is ready with <strong>Is Interstitial Ready</strong>. If the ad is ready, the <strong>Show Interstitial</strong> node is executed.</p>
+<p>The interstitial is displayed with two optional settings:</p>
+<ul>
+<li><strong>Auto Reload</strong> automatically loads the next interstitial after the current one finishes.  </li>
+<li><strong>Is Immersive</strong> enables immersive mode to hide system UI during ad display.</li>
+</ul>
+<p>Two events handle the interstitial lifecycle:</p>
+<ul>
+<li><strong>On Started</strong> pauses the game logic.  </li>
+<li><strong>On Completed</strong> resumes the game once the interstitial is closed.</li>
+</ul>
+<p>This setup is commonly used between levels or matches to avoid interrupting gameplay. It ensures that the game stops while the interstitial is visible and continues seamlessly when the ad finishes.</p>
+<div align="center">
+  <img src="../assets/interstitial/interstitial_example.png" width="670">
+</div>
+
+<hr />
 <h2 id="c-usage">C++ Usage</h2>
-<p>All interstitial-related Blueprint functions are also available for use in C++.<br />
-You can load, display, and manage interstitial ads directly through static methods of <code>UAdMobCPPLibrary</code>.</p>
+<p>All interstitial-related Blueprint functions are also available for use in C++. You can load, display, and manage interstitial ads directly through static methods of <code>UAdMobCPPLibrary</code>.</p>
 <h3 id="loadinterstitial">LoadInterstitial</h3>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
 

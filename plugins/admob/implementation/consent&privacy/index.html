@@ -429,6 +429,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -608,12 +612,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+      <a href="../../../billing/implementation/is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -637,6 +664,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -942,6 +992,8 @@
   
     
     
+      
+        
       
         
       
@@ -1348,6 +1400,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -1544,6 +1605,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -2333,6 +2417,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -2409,16 +2502,12 @@
 
 
 <h1 id="consent-privacy">Consent &amp; Privacy</h1>
-<p>Before showing ads, Google requires developers to obtain user consent for data processing and personalized ad display.<br />
-This is handled through the <strong>User Messaging Platform (UMP)</strong> — an official SDK provided by Google that automatically manages consent forms and stores the user’s preferences.</p>
-<p>Personalized ads typically generate <strong>significantly higher revenue</strong>, as they use relevant targeting data.<br />
-However, to enable them, your app must comply with <strong>GDPR</strong> (General Data Protection Regulation) and <strong>COPPA</strong> (Children’s Online Privacy Protection Act).</p>
-<p>The plugin fully integrates Google’s UMP SDK, which displays the consent dialog configured in your AdMob account and correctly forwards consent status to all mediation partners.<br />
-If consent is not granted, only non-personalized ads or limited ad requests will be available.</p>
+<p>Before showing ads, apps that use <strong>personalized advertising</strong> must ask the user for consent. This is required by Google through the <strong>User Messaging Platform (UMP)</strong> — an official SDK that shows the consent form and stores the user’s choice.</p>
+<p>Personalized ads typically generate <strong>higher revenue</strong>, because they use targeting data. If the user <strong>declines consent</strong>, ads will still be shown, but only in a <strong>non-personalized</strong> or <strong>limited</strong> form, which significantly reduces overall ad revenue.  </p>
+<p>The plugin includes full integration with Google’s UMP SDK. It automatically displays the consent form configured in your AdMob account and forwards the resulting consent status to all mediation partners. If consent is denied, the plugin continues working normally, but AdMob and mediation networks will restrict ad personalization.</p>
 <hr />
 <h2 id="creating-a-consent-form-in-admob">Creating a Consent Form in AdMob</h2>
-<p>To use the <strong>User Messaging Platform (UMP)</strong>, you must first create a consent form in your AdMob account.<br />
-This form will be automatically fetched and displayed by the plugin when you request user consent.</p>
+<p>To use the <strong>User Messaging Platform (UMP)</strong>, you must first create a consent form in your AdMob account. This form will be automatically fetched and displayed by the plugin when you request user consent. </p>
 <ol>
 <li>Go to your <a href="https://admob.google.com">Google AdMob dashboard</a>.  </li>
 <li>Open the section <strong>Privacy &amp; Messaging</strong>.  </li>
@@ -2432,30 +2521,23 @@ This form will be automatically fetched and displayed by the plugin when you req
 <hr />
 <h2 id="request-consent-form">Request Consent Form</h2>
 <p>This function displays the <strong>User Messaging Platform (UMP)</strong> consent dialog that asks the user for permission to show <strong>personalized ads</strong> and process personal data in accordance with <strong>GDPR</strong> and <strong>COPPA</strong>.  </p>
-<p>It is recommended to call this function <strong>before the game starts</strong> — for example, in the <strong>loading screen</strong> or <strong>main menu</strong> — so that consent is collected before any ads are loaded.<br />
-If the user has already provided consent, the dialog <strong>will not be shown again</strong>, and the process will complete instantly.</p>
+<p>It is recommended to call this function <strong>before the game starts</strong> — for example, in the <strong>loading screen</strong> or <strong>main menu</strong> — so that consent is collected before any ads are loaded. If the user has already provided consent, the dialog <strong>will not be shown again</strong>, and the process will complete instantly. </p>
 <div align="center">
   <img src="../assets/consent&privacy/consent&privacy_request.png" width="250">
 </div>
 
 <h3 id="parameters">Parameters</h3>
 <h4 id="1-under-age-of-consent">1. Under Age Of Consent</h4>
-<p>An optional parameter that marks the user as being under the age of consent.<br />
-If enabled, <strong>the consent dialog will not appear</strong>, and <strong>personalized ads will be disabled automatically</strong>.<br />
-Use this setting only in specific cases — for example, if your app includes its own <strong>age verification</strong> system.</p>
+<p>An optional parameter that marks the user as being under the age of consent. If enabled, <strong>the consent dialog will not appear</strong>, and <strong>personalized ads will be disabled automatically</strong>. Use this setting only in specific cases — for example, if your app includes its own <strong>age verification</strong> system.   </p>
 <hr />
 <h4 id="2-on-completed">2. On Completed</h4>
-<p>Called when the consent process has finished successfully.<br />
-You can safely start loading and showing ads from this point.</p>
+<p>Called when the consent process has finished successfully. You can start showing personalized ads from this point.</p>
 <hr />
 <h4 id="3-on-failure">3. On Failure</h4>
-<p>Called if the consent form fails to load or display.<br />
-This callback returns an <a href="../../object_definitions/enumerations/#eformerrorcode"><code>EFormErrorCode</code></a> value describing the reason for failure.<br />
-Use it to log the error and take appropriate action — for example, retry showing the form or return to the main menu.</p>
+<p>Called if the consent form fails to load or display. This callback returns an <a href="../../object_definitions/enumerations/#eformerrorcode"><code>EFormErrorCode</code></a> value describing the reason for failure. Use it to log the error and take appropriate action — for example, retry showing the form or return to the main menu.    </p>
 <hr />
 <h2 id="force-consent-form">Force Consent Form</h2>
-<p>This function displays the <strong>User Messaging Platform (UMP)</strong> consent dialog <strong>even if the user has already given consent</strong>.<br />
-It’s typically used in a <strong>Settings</strong> or <strong>Privacy</strong> menu where players can manually review or change their consent preferences.</p>
+<p>This function displays the <strong>User Messaging Platform (UMP)</strong> consent dialog <strong>even if the user has already given consent</strong>. It’s typically used in a <strong>Settings</strong> or <strong>Privacy</strong> menu where players can manually review or change their consent preferences. </p>
 <p>Unlike the standard <code>Request Consent Form</code>, this function always forces the consent window to appear, regardless of previous choices.</p>
 <div align="center">
   <img src="../assets/consent&privacy/consent&privacy_force.png" width="200">
@@ -2463,17 +2545,13 @@ It’s typically used in a <strong>Settings</strong> or <strong>Privacy</strong>
 
 <h3 id="parameters_1">Parameters</h3>
 <h4 id="1-on-completed">1. On Completed</h4>
-<p>Called when the consent form has been displayed and completed successfully.<br />
-You can continue with loading ads or update UI elements if needed.</p>
+<p>Called when the consent form has been displayed and completed successfully. You can continue with loading ads or update UI elements if needed.</p>
 <hr />
 <h4 id="3-on-failure_1">3. On Failure</h4>
-<p>Called if the consent form fails to load or display.<br />
-This callback returns an <a href="../../object_definitions/enumerations/#eformerrorcode"><code>EFormErrorCode</code></a> value describing the reason for failure.<br />
-Use it to log the error and take appropriate action — for example, retry showing the form or return to the main menu.</p>
+<p>Called if the consent form fails to load or display. This callback returns an <a href="../../object_definitions/enumerations/#eformerrorcode"><code>EFormErrorCode</code></a> value describing the reason for failure. Use it to log the error and take appropriate action — for example, retry showing the form or return to the main menu.  </p>
 <hr />
 <h2 id="is-consent-given">Is Consent Given</h2>
-<p>This function checks whether the user has already provided consent for personalized ads.<br />
-It’s useful when you want to confirm consent status before attempting to load or show ads.</p>
+<p>This function checks whether the user has already provided consent for personalized ads. It’s useful when you want to confirm consent status before attempting to load or show ads.  </p>
 <p>If the result is <strong>true</strong>, the user has granted consent and personalized ads can be displayed.<br />
 If <strong>false</strong>, only non-personalized or limited ads should be shown until consent is obtained.</p>
 <div align="center">
@@ -2487,40 +2565,41 @@ If <strong>false</strong>, only non-personalized or limited ads should be shown 
 - <strong>false</strong> — the user has declined or not yet provided consent  </p>
 <hr />
 <h2 id="reset-consent-state">Reset Consent State</h2>
-<p>This function resets the stored consent information for the user.<br />
-It clears the saved consent status so that the <strong>User Messaging Platform (UMP)</strong> dialog can be shown again on the next request.  </p>
+<p>This function resets the stored consent information for the user. It clears the saved consent status so that the <strong>User Messaging Platform (UMP)</strong> dialog can be shown again on the next request.  </p>
 <p>This is useful for testing or when you want to provide players with an option to review or change their consent settings manually.</p>
 <div align="center">
   <img src="../assets/consent&privacy/consent&privacy_reset.png" width="200">
 </div>
 
 <h3 id="parameters_3">Parameters</h3>
-<p>This function does not have any input or output parameters.<br />
-It simply resets all stored consent preferences.</p>
+<p>This function does not have any input or output parameters. It simply resets all stored consent preferences. </p>
 <hr />
 <h2 id="configure-ad-mob-privacy">Configure Ad Mob Privacy</h2>
-<p>This is an <strong>optional</strong> configuration function that controls AdMob’s privacy and data processing behavior.<br />
-Use it with caution — incorrect values may <strong>disable personalized ads</strong> and significantly reduce ad revenue.</p>
-<p>This node is designed for apps that specifically target children or handle sensitive age-related content.<br />
-If your app is not intended for children, you generally <strong>should not use</strong> this function.</p>
+<p>This is an <strong>optional</strong> configuration function that controls AdMob’s privacy and data processing behavior. Use it with caution — incorrect values may <strong>disable personalized ads</strong> and significantly reduce ad revenue.  </p>
+<p>This node is designed for apps that specifically target children or handle sensitive age-related content. If your app is not intended for children, you generally <strong>should not use</strong> this function.</p>
 <div align="center">
   <img src="../assets/consent&privacy/consent&privacy_configureprivacy.png" width="250">
 </div>
 
 <h3 id="parameters_4">Parameters</h3>
 <h4 id="1-is-child-directed">1. Is Child Directed</h4>
-<p>Marks the app as directed toward children under the <strong>COPPA</strong> (Children’s Online Privacy Protection Act) regulation.<br />
-When enabled, AdMob restricts ad targeting, disables personalized ads, and ensures only age-appropriate content is shown.<br />
-Use this only if your app is clearly intended for a child audience.</p>
+<p>Marks the app as directed toward children under the <strong>COPPA</strong> (Children’s Online Privacy Protection Act) regulation. When enabled, AdMob restricts ad targeting, disables personalized ads, and ensures only age-appropriate content is shown. Use this only if your app is clearly intended for a child audience. </p>
 <hr />
 <h4 id="2-is-under-age-of-consent">2. Is Under Age Of Consent</h4>
-<p>Disables personalized ads for users who are considered under the age of consent according to <strong>GDPR</strong> or <strong>regional regulations</strong>.<br />
-This does <strong>not block</strong> ad requests but forces all ads to be non-personalized.<br />
-Unlike the same option in <strong>Request Consent Form</strong>, this parameter does <strong>not skip the consent dialog</strong> — it simply controls how ads are served afterward.</p>
+<p>Disables personalized ads for users who are considered under the age of consent according to <strong>GDPR</strong> or <strong>regional regulations</strong>. This does <strong>not block</strong> ad requests but forces all ads to be non-personalized. Unlike the same option in <strong>Request Consent Form</strong>, this parameter does <strong>not skip the consent dialog</strong> — it simply controls how ads are served afterward. </p>
+<hr />
+<h2 id="example">Example</h2>
+<p>In this example, AdMob is initialized first, followed by a <strong>consent form request</strong> using the <strong>Request Consent Form</strong> node. Once initialization is completed, the consent dialog is shown to the user, allowing them to choose whether they agree to receive <strong>personalized ads</strong> in accordance with <strong>GDPR</strong> and <strong>COPPA</strong>.  </p>
+<p>After the user responds, the <strong>On Consent Completed</strong> event triggers a <strong>Switch on EConsentStatus</strong> node that checks the user’s decision.  </p>
+<p>If the status is <strong>Obtained</strong>, personalized ads are enabled through a custom <strong>Show Personalized Ads</strong> function.  </p>
+<p>This node is used <strong>only as an example</strong> — the developer cannot directly control whether personalized ads are displayed. The ad personalization behavior depends entirely on the user’s consent status and is automatically handled by the <strong>Google Mobile Ads SDK</strong> once consent is granted.  </p>
+<div align="center">
+  <img src="../assets/consent&privacy/consent&privacy_example.png" width="670">
+</div>
+
 <hr />
 <h2 id="c-usage">C++ Usage</h2>
-<p>All consent and privacy functions are also available in C++.<br />
-You can manage user consent, reset state, or adjust privacy flags directly through static methods of <code>UAdMobCPPLibrary</code>.</p>
+<p>All consent and privacy functions are also available in C++. You can manage user consent, reset state, or adjust privacy flags directly through static methods of <code>UAdMobCPPLibrary</code>.  </p>
 <h3 id="requestconsentform">RequestConsentForm</h3>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
 

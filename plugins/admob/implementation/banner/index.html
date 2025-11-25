@@ -429,6 +429,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -608,12 +612,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+      <a href="../../../billing/implementation/is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -637,6 +664,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -942,6 +992,8 @@
   
     
     
+      
+        
       
         
       
@@ -1398,6 +1450,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -1571,6 +1632,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -2387,6 +2471,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -2463,15 +2556,12 @@
 
 
 <h1 id="banner">Banner</h1>
-<p>Banner ads are rectangular ad units that appear within the game UI and remain visible while the player interacts with the application.<br />
-They are ideal for continuous, non-intrusive monetization and are commonly placed at the <strong>top</strong> or <strong>bottom</strong> of the screen.</p>
-<p>The plugin supports multiple standard and adaptive banner sizes, as well as custom placement positions.
-You can load, show, hide, and destroy banner ads at any time during gameplay.</p>
+<p>Banner ads are rectangular ad units that appear within the game UI and remain visible while the player interacts with the application. They are ideal for continuous, non-intrusive monetization and are commonly placed at the <strong>top</strong> or <strong>bottom</strong> of the screen.</p>
+<p>The plugin supports multiple standard and adaptive banner sizes, as well as custom placement positions. You can load, show, hide, and destroy banner ads at any time during gameplay.</p>
 <p>Banner ads are lightweight and refresh automatically according to the AdMob configuration, making them a stable and low-impact monetization option for most games.</p>
 <hr />
 <h2 id="banner-types">Banner Types</h2>
-<p>When loading a banner ad, you can choose from six different types, each corresponding to a specific ad <a href="../../object_definitions/enumerations/#ebanneradsize"><code>Size</code></a>.
-Use the tabs below to preview each size and decide which one best fits your layout.</p>
+<p>When loading a banner ad, you can choose from six different types, each corresponding to a specific ad <a href="../../object_definitions/enumerations/#ebanneradsize"><code>Size</code></a>. Use the tabs below to preview each size and decide which one best fits your layout.</p>
 <blockquote>
 <p>💡 The <strong>Leaderboard</strong> banner size is designed for tablets or large screens only.</p>
 </blockquote>
@@ -2511,9 +2601,7 @@ Use the tabs below to preview each size and decide which one best fits your layo
 </div>
 <hr />
 <h2 id="banner-ad-gravity">Banner Ad Gravity</h2>
-<p>When displaying a banner ad, you can choose where on the screen the banner will be positioned.<br />
-This defines the alignment and anchor point relative to the screen area.<br />
-Each <a href="../../object_definitions/enumerations/#ebannergravity"><code>Gravity</code></a> value corresponds to a specific corner or center position. </p>
+<p>When displaying a banner ad, you can choose where on the screen the banner will be positioned. This defines the alignment and anchor point relative to the screen area. Each <a href="../../object_definitions/enumerations/#ebannergravity"><code>Gravity</code></a> value corresponds to a specific corner or center position.  </p>
 <blockquote>
 <p>💡 The banner position can be changed dynamically without reloading the ad. If an ad is already displayed and you set a new <strong>Gravity</strong>, it will move to the new position.</p>
 </blockquote>
@@ -2524,8 +2612,7 @@ Each <a href="../../object_definitions/enumerations/#ebannergravity"><code>Gravi
 <p>Once a banner is loaded, it can be shown multiple times without reloading.</p>
 <hr />
 <h2 id="load-banner">Load Banner</h2>
-<p>This function loads a <strong>banner ad</strong> of the selected size and prepares it for display.<br />
-Before showing a banner, it must always be <strong>loaded first</strong> using this function. </p>
+<p>This function loads a <strong>banner ad</strong> of the selected size and prepares it for display. Before showing a banner, it must always be <strong>loaded first</strong> using this function.  </p>
 <p>It is recommended to call this function <strong>after AdMob initialization is complete</strong> — typically in the <strong>main menu</strong> or another non-interactive screen.</p>
 <div align="center">
   <img src="../assets/banner/banner_load.png" width="250">
@@ -2536,24 +2623,19 @@ Before showing a banner, it must always be <strong>loaded first</strong> using t
 <p>Specifies the <strong>unique identifier</strong> of your banner ad from your AdMob account.</p>
 <hr />
 <h4 id="2-banner-ad-size">2. Banner Ad Size</h4>
-<p>Defines which banner format to load.<br />
-You can choose between multiple standard and adaptive sizes defined in <a href="../../object_definitions/enumerations/#ebanneradsize"><code>EBannerAdSize</code></a>.<br />
-Common options include <strong>Banner (320×50)</strong>, <strong>Full Banner (468x60)</strong>, and <strong>Anchored Adaptive</strong>.</p>
+<p>Defines which banner format to load. You can choose between multiple standard and adaptive sizes defined in <a href="../../object_definitions/enumerations/#ebanneradsize"><code>EBannerAdSize</code></a>. Common options include <strong>Banner (320×50)</strong>, <strong>Full Banner (468x60)</strong>, and <strong>Anchored Adaptive</strong>. </p>
 <hr />
 <h4 id="3-on-loaded">3. On Loaded</h4>
 <p>Called when the banner ad has been successfully loaded and is ready to display.</p>
 <hr />
 <h4 id="4-on-load-failed">4. On Load Failed</h4>
-<p>Called if the banner fails to load.<br />
-This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value describing the reason for failure — for example, <code>NetworkError</code> or <code>NoFill</code>.</p>
+<p>Called if the banner fails to load. This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value describing the reason for failure — for example, <code>NetworkError</code> or <code>NoFill</code>.  </p>
 <hr />
 <h4 id="5-on-event">5. On Event</h4>
-<p>Triggered when a banner event occurs, such as a click or impression.<br />
-Returns a value of <a href="../../object_definitions/enumerations/#ebanneradeventtype"><code>EBannerAdEventType</code></a> indicating the event type — <strong>Opened</strong>, <strong>Clicked</strong>, <strong>Closed</strong>, or <strong>Impression</strong>.</p>
+<p>Triggered when a banner event occurs, such as a click or impression. Returns a value of <a href="../../object_definitions/enumerations/#ebanneradeventtype"><code>EBannerAdEventType</code></a> indicating the event type — <strong>Opened</strong>, <strong>Clicked</strong>, <strong>Closed</strong>, or <strong>Impression</strong>.  </p>
 <hr />
 <h2 id="show-banner">Show Banner</h2>
-<p>This function displays a <strong>previously loaded banner ad</strong> on the screen.<br />
-You must call <a href="#load-banner"><strong>Load Banner</strong></a> before using this function — banners cannot be shown until they are loaded successfully.  </p>
+<p>This function displays a <strong>previously loaded banner ad</strong> on the screen. You must call <a href="#load-banner"><strong>Load Banner</strong></a> before using this function — banners cannot be shown until they are loaded successfully.   </p>
 <p>You can choose the banner’s position using the <strong>Banner Gravity</strong> parameter, which determines where on the screen the ad will appear (top, middle, or bottom).</p>
 <div align="center">
   <img src="../assets/banner/banner_show.png" width="320">
@@ -2561,21 +2643,16 @@ You must call <a href="#load-banner"><strong>Load Banner</strong></a> before usi
 
 <h3 id="parameters_1">Parameters</h3>
 <h4 id="1-banner-gravity">1. Banner Gravity</h4>
-<p>Specifies the screen position for the banner ad.<br />
-Available values are defined in <a href="../../object_definitions/enumerations/#ebannergravity"><code>EBannerGravity</code></a>.<br />
-Typical options include <strong>Top Center</strong>, <strong>Middle Center</strong>, and <strong>Bottom Center</strong> (most commonly used).</p>
+<p>Specifies the screen position for the banner ad. Available values are defined in <a href="../../object_definitions/enumerations/#ebannergravity"><code>EBannerGravity</code></a>. Typical options include <strong>Top Center</strong>, <strong>Middle Center</strong>, and <strong>Bottom Center</strong> (most commonly used).  </p>
 <hr />
 <h4 id="2-on-success">2. On Success</h4>
 <p>Called when the banner is successfully displayed on screen.</p>
 <hr />
 <h4 id="3-on-failure">3. On Failure</h4>
-<p>Called if the banner fails to appear (for example, if it hasn’t been loaded yet or was destroyed).<br />
-This usually indicates that a new banner needs to be loaded before attempting to show it again.
-This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value describing the reason for failure.</p>
+<p>Called if the banner fails to appear (for example, if it hasn’t been loaded yet or was destroyed). This usually indicates that a new banner needs to be loaded before attempting to show it again. This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value describing the reason for failure. </p>
 <hr />
 <h2 id="hide-banner">Hide Banner</h2>
-<p>This function hides a <strong>currently visible banner ad</strong> from the screen without destroying it.<br />
-The banner remains loaded in memory and can be shown again instantly using <a href="#show-banner"><strong>Show Banner</strong></a>.  </p>
+<p>This function hides a <strong>currently visible banner ad</strong> from the screen without destroying it. The banner remains loaded in memory and can be shown again instantly using <a href="#show-banner"><strong>Show Banner</strong></a>.   </p>
 <p>This is useful when temporarily switching screens — for example, hiding the banner during <strong>gameplay</strong> or <strong>cutscenes</strong>, then showing it again in the <strong>main menu</strong>.</p>
 <div align="center">
   <img src="../assets/banner/banner_hide.png" width="200">
@@ -2586,9 +2663,7 @@ The banner remains loaded in memory and can be shown again instantly using <a hr
 <p>Called once the banner has been successfully hidden from the screen.</p>
 <hr />
 <h2 id="destroy-banner">Destroy Banner</h2>
-<p>This function <strong>permanently removes</strong> the current banner ad from memory.<br />
-After calling it, the banner must be <strong>loaded again</strong> before it can be shown.<br />
-Use this function when changing scenes or exiting the part of the game where banners are no longer needed — for example, before starting a level.</p>
+<p>This function <strong>permanently removes</strong> the current banner ad from memory. After calling it, the banner must be <strong>loaded again</strong> before it can be shown. Use this function when changing scenes or exiting the part of the game where banners are no longer needed — for example, before starting a level. </p>
 <div align="center">
   <img src="../assets/banner/banner_destroy.png" width="200">
 </div>
@@ -2598,8 +2673,7 @@ Use this function when changing scenes or exiting the part of the game where ban
 <p>Called after the banner ad has been completely removed from memory.</p>
 <hr />
 <h2 id="is-banner-ready">Is Banner Ready</h2>
-<p>This function checks whether a <strong>banner ad</strong> has been successfully loaded and is ready to be shown.<br />
-It is typically used to verify the ad’s state before calling <a href="#show-banner"><strong>Show Banner</strong></a>, preventing unnecessary errors or failures.</p>
+<p>This function checks whether a <strong>banner ad</strong> has been successfully loaded and is ready to be shown. It is typically used to verify the ad’s state before calling <a href="#show-banner"><strong>Show Banner</strong></a>, preventing unnecessary errors or failures.  </p>
 <div align="center">
   <img src="../assets/banner/banner_isready.png" width="200">
 </div>
@@ -2608,9 +2682,18 @@ It is typically used to verify the ad’s state before calling <a href="#show-ba
 <p>Returns <code>true</code> if a banner ad is loaded and ready to display.<br />
 Returns <code>false</code> if the banner has not been loaded or failed to load.</p>
 <hr />
+<h2 id="example">Example</h2>
+<p>In this example, the <strong>Load Banner</strong> function is used to request a banner ad with the specified <strong>Ad Unit ID</strong> and size (<strong>Full Banner</strong>).</p>
+<p>The example uses an <strong>official Google test Banner Unit ID</strong> <code>ca-app-pub-3940256099942544/9214589741</code> to safely demonstrate functionality without serving real ads.</p>
+<p>When the loading process completes successfully, the <strong>On Loaded</strong> event is triggered, which then checks whether the banner is ready to be shown using the <strong>Is Banner Ready</strong> function. If the banner is ready, the <strong>Show Banner</strong> node displays it at the <strong>Bottom Center</strong> of the screen.  </p>
+<p>This setup ensures that the banner appears only when it is fully prepared, preventing errors or empty placeholders. This approach is commonly used in menus or loading screens where ads can be preloaded and displayed seamlessly once ready.</p>
+<div align="center">
+  <img src="../assets/banner/banner_example.png" width="670">
+</div>
+
+<hr />
 <h2 id="c-usage">C++ Usage</h2>
-<p>All banner-related Blueprint functions are also available for use in C++.<br />
-You can manage banner loading, showing, hiding, and destruction directly through static methods of <code>UAdMobCPPLibrary</code>.</p>
+<p>All banner-related Blueprint functions are also available for use in C++. You can manage banner loading, showing, hiding, and destruction directly through static methods of <code>UAdMobCPPLibrary</code>.  </p>
 <h3 id="loadbanner">LoadBanner</h3>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
 

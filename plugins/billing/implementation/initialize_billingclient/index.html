@@ -433,6 +433,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -705,12 +709,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../process_pending_purchases/" class="md-nav__link">
+      <a href="../is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -734,6 +761,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -1056,6 +1106,8 @@
       
         
       
+        
+      
     
     
     
@@ -1310,6 +1362,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -1941,8 +2016,7 @@
 
 
 <h1 id="initialize-billing-client">Initialize Billing Client</h1>
-<p>This is an asynchronous function that initializes the connection between your project and the <strong>Google Play Billing</strong> service.<br />
-It must be called before any other billing operations.  </p>
+<p>This is an asynchronous function that initializes the connection between your project and the <strong>Google Play Billing</strong> service. It must be called before any other billing operations.  </p>
 <p>Once the setup is complete, one of two delegates will trigger — indicating whether the billing client was successfully connected or if the initialization failed.  </p>
 <p>Use this function at the start of your game or before performing any billing-related actions.</p>
 <div align="center">
@@ -1952,13 +2026,12 @@ It must be called before any other billing operations.  </p>
 <hr />
 <h2 id="parameters">Parameters</h2>
 <h3 id="1-on-success">1. On Success</h3>
-<p>A delegate that is triggered when the Billing Client has been successfully initialized.<br />
-No data is returned — it simply confirms that the billing connection is ready to use.  </p>
+<p>A delegate that is triggered when the Billing Client has been successfully initialized. No data is returned — it simply confirms that the billing connection is ready to use.  </p>
 <p>You can use this pin to start querying product details.</p>
 <hr />
 <h3 id="2-on-failure">2. On Failure</h3>
-<p>A delegate that is triggered if the initialization fails.<br />
-It provides two parameters:  </p>
+<p>A delegate that is triggered if the initialization fails. </p>
+<p>It provides two parameters:  </p>
 <ul>
 <li><strong>Response Code</strong> — <a href="../../object_definitions/enumerations/#ebillingresponsecode"><code>EBillingResponseCode</code></a> indicating the type of error.  </li>
 <li><strong>Message</strong> — <code>FString</code> with additional debug information describing the failure reason.  </li>
@@ -1966,8 +2039,7 @@ It provides two parameters:  </p>
 <p>Use this delegate to handle initialization errors and show appropriate messages to the player.</p>
 <hr />
 <h2 id="example">Example</h2>
-<p>In the below example, the <strong>Initialize Billing Client</strong> node is called before any billing operations.<br />
-Once the billing service is successfully connected, the <a href="../query_product_details/"><code>Query Product Details</code></a> function is executed to retrieve product information from the Google Play Console.</p>
+<p>In the below example, the <strong>Initialize Billing Client</strong> node is called before any billing operations. Once the billing service is successfully connected, the <a href="../query_product_details/"><code>Query Product Details</code></a> function is executed to retrieve product information from the Google Play Console.</p>
 <p>If initialization fails, the <strong>Handle Error</strong> function is called, passing the response code and message for debugging or user feedback.</p>
 <p>This setup ensures that your game only performs billing actions when the client connection is fully ready.</p>
 <div align="center">

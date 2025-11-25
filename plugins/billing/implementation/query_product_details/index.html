@@ -433,6 +433,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -723,12 +727,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../process_pending_purchases/" class="md-nav__link">
+      <a href="../is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -752,6 +779,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -1074,6 +1124,8 @@
       
         
       
+        
+      
     
     
     
@@ -1328,6 +1380,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -1977,12 +2052,9 @@
 
 
 <h1 id="query-product-details">Query Product Details</h1>
-<p>This is an asynchronous function that retrieves <a href="../../object_definitions/product_details/#fproductdetails">Product Details</a> from the <strong>Google Play Console</strong>.<br />
-It returns detailed data for each product ID you provide, including pricing, currency, title, and subscription offers.</p>
-<p>You can use the returned information to display in-game shop items or manage available subscriptions.<br />
-The function also provides <strong>Offer Tokens</strong>, which can be used later when Launching a Billing Flow.</p>
-<p>Parameters include a list of <strong>Product IDs</strong> and a <a href="../../object_definitions/enumerations/#eproducttype">Product Type</a> that determines whether the query targets in-app products or subscriptions.<br />
-Once the operation completes, one of two delegates will trigger — success or failure — depending on the result of the query.</p>
+<p>This is an asynchronous function that retrieves <a href="../../object_definitions/product_details/#fproductdetails">Product Details</a> from the <strong>Google Play Console</strong>. It returns detailed data for each product ID you provide, including pricing, currency, title, and subscription offers.</p>
+<p>You can use the returned information to display in-game shop items or manage available subscriptions. The function also provides <strong>Offer Tokens</strong>, which can be used later when Launching a Billing Flow.</p>
+<p>Parameters include a list of <strong>Product IDs</strong> and a <a href="../../object_definitions/enumerations/#eproducttype">Product Type</a> that determines whether the query targets in-app products or subscriptions. Once the operation completes, one of two delegates will trigger — success or failure — depending on the result of the query.</p>
 <div align="center">
   <img src="../assets/query_product_details/query_product_details_node.png" width="300">
 </div>
@@ -1990,28 +2062,24 @@ Once the operation completes, one of two delegates will trigger — success or f
 <hr />
 <h2 id="parameters">Parameters</h2>
 <h3 id="1-product-ids">1. Product Ids</h3>
-<p>An array of product IDs to request from the <strong>Google Play Console</strong>.<br />
-Each ID should match a product you’ve configured in your Play Store listing.</p>
+<p>An array of product IDs to request from the <strong>Google Play Console</strong>. Each ID should match a product you’ve configured in your Play Store listing.</p>
 <hr />
 <h3 id="2-product-type">2. Product Type</h3>
-<p>Specifies the type of products to query — either <strong>In-App</strong> or <strong>Subscription</strong>.<br />
-See <a href="../../object_definitions/enumerations/#eproducttype"><code>EProductType</code></a> for available values.</p>
+<p>Specifies the type of products to query — either <strong>In-App</strong> or <strong>Subscription</strong>. See <a href="../../object_definitions/enumerations/#eproducttype"><code>EProductType</code></a> for available values.</p>
 <hr />
 <h3 id="3-on-success">3. On Success</h3>
-<p>Triggered when product details have been successfully retrieved.<br />
-Returns an array of <a href="../../object_definitions/product_details/#fproductdetails"><code>FProductDetails</code></a> that includes all pricing and metadata information.<br />
-You can drag this pin to create a custom event and use the data in your shop or UI.</p>
+<p>Triggered when product details have been successfully retrieved. Returns an array of <a href="../../object_definitions/product_details/#fproductdetails"><code>FProductDetails</code></a> that includes all pricing and metadata information. You can drag this pin to create a custom event and use the data in your shop or UI.</p>
 <hr />
 <h3 id="4-on-failure">4. On Failure</h3>
-<p>Triggered when the request fails.<br />
-Returns:<br />
-- <strong>Response Code</strong> — <a href="../../object_definitions/enumerations/#ebillingresponsecode"><code>EBillingResponseCode</code></a><br />
-- <strong>Error Message</strong> — <code>FString</code> with additional debug information.  </p>
+<p>Triggered when the request fails. Returns:  </p>
+<ul>
+<li><strong>Response Code</strong> — <a href="../../object_definitions/enumerations/#ebillingresponsecode"><code>EBillingResponseCode</code></a>  </li>
+<li><strong>Error Message</strong> — <code>FString</code> with additional debug information.  </li>
+</ul>
 <p>Use this delegate to handle issues.</p>
 <hr />
 <h2 id="example">Example</h2>
-<p>In the example below, the <strong>Query Product Details</strong> node requests information for a list of in-app products retrieved from the <strong>Google Play Console</strong>.<br />
-The results are then passed to a custom event, which updates the product list in the in-game shop UI.</p>
+<p>In the example below, the <strong>Query Product Details</strong> node requests information for a list of in-app products retrieved from the <strong>Google Play Console</strong>. The results are then passed to a custom event, which updates the product list in the in-game shop UI.</p>
 <p>If the query fails, the <strong>Handle Error</strong> function is called, allowing you to process the error code and message for debugging or user feedback.</p>
 <p>This setup can be extended for subscriptions — simply change the <strong>Product Type</strong> to <em>Subscription</em> and store the results for use when launching a purchase.</p>
 <div align="center">

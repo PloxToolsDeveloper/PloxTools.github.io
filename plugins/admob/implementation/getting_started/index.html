@@ -429,6 +429,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -608,12 +612,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+      <a href="../../../billing/implementation/is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -637,6 +664,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -942,6 +992,8 @@
   
     
     
+      
+        
       
         
       
@@ -1349,6 +1401,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -2020,27 +2095,24 @@
 
 <h1 id="getting-started">Getting Started</h1>
 <h2 id="purchase-the-plugin">Purchase the Plugin</h2>
-<p>Purchase the plugin on the <a href="https://www.fab.com/sellers/PloxTools"><strong>Fab Marketplace</strong></a>.</p>
+<p>Purchase the plugin on the <a href="https://www.fab.com/listings/fed159d6-14fe-4843-ae56-1eb60137ec7e"><strong>Fab Marketplace</strong></a>.</p>
 <hr />
 <h2 id="install-the-plugin">Install the Plugin</h2>
-<p>After purchasing, the plugin can be installed either directly through the Fab website or via the Fab plugin inside Unreal Engine.
-Once installed, it will appear in your project’s plugin list and can be enabled from there.</p>
+<p>After purchasing, the plugin can be installed either directly through the Fab website or via the Fab plugin inside Unreal Engine. Once installed, it will appear in your project’s plugin list and can be enabled from there.</p>
 <hr />
 <h2 id="enable-google-admob-plugin">Enable Google AdMob Plugin</h2>
-<p>Once installed, the plugin will be available in Unreal Engine under the <strong>Plugins</strong> section.<br />
-Go to <strong>Edit → Plugins</strong>, search for <strong>"PloxTools: Google AdMob"</strong>, and make sure it’s enabled.</p>
+<p>Once installed, the plugin will be available in Unreal Engine under the <strong>Plugins</strong> section. Go to <strong>Edit → Plugins</strong>, search for <strong>"PloxTools: Google AdMob"</strong>, and make sure it’s enabled.</p>
 <div align="center">
   <img src="../assets/getting_started/admob_gettingstarted_plugin.png" width="1000">
 </div>
 
 <hr />
 <h2 id="disable-any-other-admob-plugins">Disable Any Other AdMob plugins</h2>
-<p>Make sure that no other Google AdMob-related plugins are active, as they may override or conflict with this plugin.<br />
-Go to <strong>Edit → Plugins</strong> and disable any third-party Google AdMob plugins.</p>
+<p>Make sure that no other Google AdMob-related plugins are active, as they may override or conflict with this plugin. Go to <strong>Edit → Plugins</strong> and disable any third-party Google AdMob plugins. </p>
 <hr />
 <h2 id="disable-built-in-admob-in-unreal-engine">Disable Built-in AdMob in Unreal Engine</h2>
-<p>Unreal Engine includes its own legacy AdMob integration, which conflicts with the <strong>PloxTools: Google AdMob</strong> plugin.<br />
-To avoid duplicate dependencies and manifest entries, you need to disable the built-in AdMob option:</p>
+<p>Unreal Engine includes its own legacy AdMob integration, which conflicts with the <strong>PloxTools: Google AdMob</strong> plugin.  </p>
+<p>To avoid duplicate dependencies and manifest entries, you need to disable the built-in AdMob option:</p>
 <ol>
 <li>Open <strong>Project Settings → Android → Google Play Services</strong>.  </li>
 <li>Turn <strong>off</strong> the option <strong>Include AdMob support for ads</strong>.  </li>
@@ -2052,8 +2124,7 @@ To avoid duplicate dependencies and manifest entries, you need to disable the bu
 
 <hr />
 <h2 id="create-and-register-your-admob-account">Create and Register Your AdMob Account</h2>
-<p>To use AdMob in your project, you must have an active <strong>Google AdMob</strong> account.<br />
-If you haven’t created one yet, you will need to register and add your application before integrating ads.</p>
+<p>To use AdMob in your project, you must have an active <strong>Google AdMob</strong> account. If you haven’t created one yet, you will need to register and add your application before integrating ads.</p>
 <ol>
 <li>Go to the <a href="https://admob.google.com"><strong>AdMob Website</strong></a>.</li>
 <li>Sign in with your Google developer account and complete the registration process.  </li>
@@ -2118,8 +2189,7 @@ If you haven’t created one yet, you will need to register and add your applica
 <p>Once the module is added, you can include the plugin’s header in your C++ classes:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
 </code></pre></div>
-<p>After that, the plugin’s functions will be available for direct use in your code.
-To view all available methods, simply Ctrl + Left Click on AdMobCPPLibrary.h — this will open the header file with the full list of exposed functions.</p>
+<p>After that, the plugin’s functions will be available for direct use in your code. To view all available methods, simply <strong>Ctrl + Left Click on AdMobCPPLibrary.h</strong> — this will open the header file with the full list of exposed functions.</p>
 <hr />
 <p>Once these steps are complete, the plugin is ready to use in your project.</p>
 

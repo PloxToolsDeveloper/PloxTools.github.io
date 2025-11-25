@@ -429,6 +429,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -608,12 +612,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+      <a href="../../../billing/implementation/is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -637,6 +664,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -942,6 +992,8 @@
   
     
     
+      
+        
       
         
       
@@ -1366,6 +1418,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -1475,6 +1536,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -2213,6 +2297,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -2271,14 +2364,11 @@
 
 
 <h1 id="rewarded">Rewarded</h1>
-<p>Rewarded ads allow players to <strong>watch a full video ad</strong> in exchange for in-game rewards — such as coins, bonuses, or additional lives.<br />
-Unlike interstitials, rewarded ads <strong>require explicit user consent</strong> to view and <strong>always grant a reward</strong> upon successful completion.</p>
-<p>Rewarded ads <strong>must be loaded in advance</strong> before being shown.<br />
-Once a rewarded has been displayed, it must be loaded again before it can be shown the next time.</p>
+<p>Rewarded ads allow players to <strong>watch a full video ad</strong> in exchange for in-game rewards — such as coins, bonuses, or additional lives. Unlike interstitials, rewarded ads <strong>require explicit user consent</strong> to view and <strong>always grant a reward</strong> upon successful completion.</p>
+<p>Rewarded ads <strong>must be loaded in advance</strong> before being shown. Once a rewarded has been displayed, it must be loaded again before it can be shown the next time.</p>
 <hr />
 <h2 id="load-rewarded">Load Rewarded</h2>
-<p>This function loads a <strong>rewarded ad</strong> using the provided Ad Unit ID.<br />
-It must always be called <strong>before attempting to show</strong> the ad — if no rewarded ad is loaded, calling <code>Show Rewarded</code> will fail immediately.</p>
+<p>This function loads a <strong>rewarded ad</strong> using the provided Ad Unit ID. It must always be called <strong>before attempting to show</strong> the ad — if no rewarded ad is loaded, calling <code>Show Rewarded</code> will fail immediately.</p>
 <div align="center">
   <img src="../assets/rewarded/rewarded_load.png" width="220">
 </div>
@@ -2291,20 +2381,17 @@ It must always be called <strong>before attempting to show</strong> the ad — i
 <p>Called when the rewarded ad has been successfully loaded and is ready to show.</p>
 <hr />
 <h4 id="3-on-load-failed">3. On Load Failed</h4>
-<p>Called if the ad fails to load due to network issues, invalid configuration, or SDK errors.<br />
-This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value and an error message for debugging.</p>
+<p>Called if the ad fails to load due to network issues, invalid configuration, or SDK errors. This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value and an error message for debugging.</p>
 <hr />
 <h2 id="show-rewarded">Show Rewarded</h2>
-<p>Displays a previously loaded <strong>rewarded ad</strong> and grants the user a reward after it finishes successfully.<br />
-Before calling this function, make sure that a rewarded ad has already been loaded using <a href="#load-rewarded"><code>Load Rewarded</code></a>.</p>
+<p>Displays a previously loaded <strong>rewarded ad</strong> and grants the user a reward after it finishes successfully. Before calling this function, make sure that a rewarded ad has already been loaded using <a href="#load-rewarded"><code>Load Rewarded</code></a>.</p>
 <div align="center">
   <img src="../assets/rewarded/rewarded_show.png" width="220">
 </div>
 
 <h3 id="parameters_1">Parameters</h3>
 <h4 id="1-auto-reload">1. Auto Reload</h4>
-<p>If enabled, the system will <strong>automatically load a new rewarded ad</strong> immediately after the current one is shown and completed.<br />
-Useful for games with frequent reward opportunities.</p>
+<p>If enabled, the system will <strong>automatically load a new rewarded ad</strong> immediately after the current one is shown and completed. Useful for games with frequent reward opportunities.</p>
 <hr />
 <h4 id="2-is-immersive">2. Is Immersive</h4>
 <p>Enables <strong>immersive mode</strong> during the ad display — hiding system UI elements (navigation bar, status bar) for a more seamless user experience.</p>
@@ -2316,20 +2403,21 @@ Useful for games with frequent reward opportunities.</p>
 <p>Called after the ad is fully closed by the user or finishes naturally.</p>
 <hr />
 <h4 id="5-on-reward-earned">5. On Reward Earned</h4>
-<p>Triggered when the player successfully earns a reward by watching the ad to completion.<br />
-Use this callback to grant in-game currency, bonuses, or other benefits.</p>
+<p>Triggered when the player successfully earns a reward by watching the ad to completion. This callback also returns two values:</p>
+<ul>
+<li><strong>Amount</strong> (<code>int32</code>) — the numeric reward value defined in your AdMob console.  </li>
+<li><strong>RewardType</strong> (<code>string</code>) — the name or category of the reward.</li>
+</ul>
+<p>Use these values to grant in-game currency, bonuses, power-ups, or any other rewards to the player.</p>
 <hr />
 <h4 id="6-on-failure">6. On Failure</h4>
-<p>Called if the ad fails to show (for example, if it wasn’t properly loaded or was invalidated).<br />
-This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value and an error message for debugging.</p>
+<p>Called if the ad fails to show (for example, if it wasn’t properly loaded or was invalidated). This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value and an error message for debugging.</p>
 <hr />
 <h4 id="7-on-event">7. On Event</h4>
-<p>Triggered on intermediate ad lifecycle updates — such as when is clicked.<br />
-Returns an <a href="../../object_definitions/enumerations/#efullscreenadeventtype"><code>EFullScreenAdEventType</code></a> describing the event.</p>
+<p>Triggered on intermediate ad lifecycle updates — such as when is clicked. Returns an <a href="../../object_definitions/enumerations/#efullscreenadeventtype"><code>EFullScreenAdEventType</code></a> describing the event.</p>
 <hr />
 <h2 id="is-rewarded-ready">Is Rewarded Ready</h2>
-<p>Checks whether a <strong>rewarded ad</strong> has been successfully loaded and is ready to be shown.<br />
-Use this before calling <a href="#show-rewarded"><code>Show Rewarded</code></a> to avoid triggering a failed display event.</p>
+<p>Checks whether a <strong>rewarded ad</strong> has been successfully loaded and is ready to be shown. Use this before calling <a href="#show-rewarded"><code>Show Rewarded</code></a> to avoid triggering a failed display event.</p>
 <div align="center">
   <img src="../assets/rewarded/rewarded_isready.png" width="200">
 </div>
@@ -2338,9 +2426,29 @@ Use this before calling <a href="#show-rewarded"><code>Show Rewarded</code></a> 
 <p>Returns <strong>true</strong> if a rewarded ad is successfully loaded and ready to display.<br />
 Returns <strong>false</strong> if no ad is currently loaded.</p>
 <hr />
+<h2 id="example">Example</h2>
+<p>In this example, the <strong>Load Rewarded</strong> function requests a rewarded ad using the official Google test ad unit <code>ca-app-pub-3940256099942544/5224354917</code>.</p>
+<p>When the ad finishes loading, the <strong>On Loaded</strong> event fires. The graph then checks whether the rewarded ad is ready using <strong>Is Rewarded Ready</strong>. If the ad is ready, the <strong>Show Rewarded</strong> node is executed.</p>
+<p>Two optional settings are enabled in this example:</p>
+<ul>
+<li><strong>Auto Reload</strong> automatically loads the next rewarded ad after completion.  </li>
+<li><strong>Is Immersive</strong> hides system UI while the ad is shown.</li>
+</ul>
+<p>The key part of rewarded ads is the <strong>On Reward Earned</strong> event.<br />
+This event provides two values:  </p>
+<ul>
+<li><strong>Amount</strong>  </li>
+<li><strong>Reward Type</strong>  </li>
+</ul>
+<p>These values are passed into a custom event, which then applies the reward to the player using a dedicated function such as <strong>Give Reward to the Player</strong>.</p>
+<p>This setup ensures the reward is granted only when the user fully watches the ad, following Google’s rewarded ad guidelines.</p>
+<div align="center">
+  <img src="../assets/rewarded/rewarded_example.png" width="670">
+</div>
+
+<hr />
 <h2 id="c-usage">C++ Usage</h2>
-<p>All rewarded-related Blueprint functions are also available in C++.<br />
-You can directly manage rewarded ad loading, showing, and reward handling through the static methods of <code>UAdMobCPPLibrary</code>.</p>
+<p>All rewarded-related Blueprint functions are also available in C++. You can directly manage rewarded ad loading, showing, and reward handling through the static methods of <code>UAdMobCPPLibrary</code>.</p>
 <h3 id="loadrewarded">LoadRewarded</h3>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
 

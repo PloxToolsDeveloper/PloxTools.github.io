@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://ploxtools.github.io/plugins/billing/implementation/process_pending_purchases/">
       
       
-        <link rel="prev" href="../set_nonconsumable_products/">
+        <link rel="prev" href="../query_owned_purchases/">
       
       
-        <link rel="next" href="../query_owned_purchases/">
+        <link rel="next" href="../show_inapp_messages/">
       
       
       <link rel="icon" href="../../../../assets/icon.png">
@@ -433,6 +433,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -609,6 +613,75 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../is_product_purchased/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../query_owned_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -725,29 +798,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../query_owned_purchases/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Query Owned Purchases
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1065,6 +1115,8 @@
       
         
       
+        
+      
     
     
     
@@ -1319,6 +1371,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -1959,12 +2034,9 @@
 
 
 <h1 id="process-pending-purchases">Process Pending Purchases</h1>
-<p>This asynchronous function checks for <strong>pending purchases</strong> that were completed by the player but not yet acknowledged.<br />
-Pending purchases can occur when the app was closed or the network connection was lost before the confirmation step.  </p>
-<p>Calling this function ensures that all unprocessed transactions are properly finalized and acknowledged on Google Play.<br />
-It should typically be used when your game starts after Billing Client successfully initialized.  </p>
-<p>Once processing is complete, one of the provided delegates will trigger — either for success or failure.
-If there are <strong>no pending purchases</strong>, neither delegate will be called.</p>
+<p>This asynchronous function checks for <strong>pending purchases</strong> that were completed by the player but not yet acknowledged. Pending purchases can occur when the app was closed or the network connection was lost before the confirmation step.  </p>
+<p>Calling this function ensures that all unprocessed transactions are properly finalized and acknowledged on Google Play. It should typically be used when your game starts after Billing Client successfully initialized.  </p>
+<p>Once processing is complete, one of the provided delegates will trigger — either for success or failure. If there are <strong>no pending purchases</strong>, neither delegate will be called.</p>
 <div align="center">
   <img src="../assets/process_pending_purchases/process_pending_purchases_node.png" width="300">
 </div>
@@ -1972,24 +2044,21 @@ If there are <strong>no pending purchases</strong>, neither delegate will be cal
 <hr />
 <h2 id="parameters">Parameters</h2>
 <h3 id="1-product-type">1. Product Type</h3>
-<p>Specifies whether to process pending purchases for <strong>InApp</strong> products or <strong>Subscriptions</strong>.<br />
-See <a href="../../object_definitions/enumerations/#eproducttype"><code>EProductType</code></a> for available values.  </p>
+<p>Specifies whether to process pending purchases for <strong>InApp</strong> products or <strong>Subscriptions</strong>. See <a href="../../object_definitions/enumerations/#eproducttype"><code>EProductType</code></a> for available values.  </p>
 <hr />
 <h3 id="2-on-success">2. On Success</h3>
-<p>Triggered when pending purchase have been successfully acknowledged.<br />
-Returns <a href="../../object_definitions/purchase/#fpurchase"><code>FPurchase</code></a> object containing the finalized purchase data.<br />
-Use this delegate to confirm rewards or update user entitlements.  </p>
+<p>Triggered when pending purchase have been successfully acknowledged. Returns <a href="../../object_definitions/purchase/#fpurchase"><code>FPurchase</code></a> object containing the finalized purchase data. Use this delegate to confirm rewards or update user entitlements.  </p>
 <hr />
 <h3 id="3-on-failure">3. On Failure</h3>
-<p>Triggered if an error occurs while checking or processing pending purchases.<br />
-Returns:<br />
-- <strong>Response Code</strong> — <a href="../../object_definitions/enumerations/#ebillingresponsecode"><code>EBillingResponseCode</code></a><br />
-- <strong>Error Message</strong> — <code>FString</code> with debug information.  </p>
+<p>Triggered if an error occurs while checking or processing pending purchases. Returns: </p>
+<ul>
+<li><strong>Response Code</strong> — <a href="../../object_definitions/enumerations/#ebillingresponsecode"><code>EBillingResponseCode</code></a>  </li>
+<li><strong>Error Message</strong> — <code>FString</code> with debug information.  </li>
+</ul>
 <p>If no pending purchases are found, neither delegate will be called.</p>
 <hr />
 <h2 id="example">Example</h2>
-<p>In the below example, we check for any <strong>pending purchases</strong> that may have completed while the app was closed or offline.<br />
-Depending on your project, you can create your own function to handle these recovered purchases and properly reward the player.  </p>
+<p>In the below example, we check for any <strong>pending purchases</strong> that may have completed while the app was closed or offline. Depending on your project, you can create your own function to handle these recovered purchases and properly reward the player.  </p>
 <p>This function is typically called <strong>at game startup</strong> to ensure all completed transactions are acknowledged and players receive their items.  </p>
 <p>Use the <strong>ProductType</strong> parameter to handle <strong>InApp</strong> products and <strong>Subscriptions</strong> separately if needed — just make sure to process both types to cover all cases.</p>
 <div align="center">
@@ -1998,8 +2067,7 @@ Depending on your project, you can create your own function to handle these reco
 
 <hr />
 <h2 id="c-usage">C++ Usage</h2>
-<p>You can process and acknowledge all pending purchases directly from C++ using the <code>ProcessPendingPurchases</code> function.<br />
-This is typically done after successful Billing Client initialization to ensure that any completed but unacknowledged transactions are finalized.  </p>
+<p>You can process and acknowledge all pending purchases directly from C++ using the <code>ProcessPendingPurchases</code> function. This is typically done after successful Billing Client initialization to ensure that any completed but unacknowledged transactions are finalized.  </p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BillingCPPLibrary.h&quot;</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">UMyGameInstance::HandlePendingPurchases</span><span class="p">()</span>

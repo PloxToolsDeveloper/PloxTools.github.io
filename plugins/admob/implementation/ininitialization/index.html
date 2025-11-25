@@ -429,6 +429,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -608,12 +612,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+      <a href="../../../billing/implementation/is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -637,6 +664,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -963,6 +1013,8 @@
       
         
       
+        
+      
     
     
     
@@ -1178,6 +1230,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -1370,6 +1431,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -2012,6 +2096,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
       C++ Usage
@@ -2061,29 +2154,23 @@
 
 
 <h1 id="initialization">Initialization</h1>
-<p>Before any ads can be loaded or shown, <strong>AdMob must be initialized</strong>.<br />
-This step prepares the Google Mobile Ads SDK, configures the application with your App ID, and ensures that all ad formats (banner, interstitial, rewarded, and others) are ready to operate.</p>
-<p>Initialization is required <strong>once</strong>, typically at the start of your game or when the first level loads.<br />
-Without initialization, no ad requests will work, and all loading functions will fail.</p>
+<p>Before any ads can be loaded or shown, <strong>AdMob must be initialized</strong>. This step prepares the Google Mobile Ads SDK, configures the application with your App ID, and ensures that all ad formats (banner, interstitial, rewarded, and others) are ready to operate.</p>
+<p>Initialization is required <strong>once</strong>, typically at the start of your game or when the first level loads. Without initialization, no ad requests will work, and all loading functions will fail.</p>
 <hr />
 <h2 id="initialize-ad-mob">Initialize Ad Mob</h2>
-<p>This function must be called <strong>before loading or showing any ads</strong>.<br />
-Once triggered, the plugin starts the AdMob SDK and waits until the initialization is complete. This can sometimes take a little time (2 to 5 seconds).</p>
-<p>When the SDK is ready, the <strong>On Completed</strong> callback is executed.
-You can pull from this pin and create a <strong>Custom Event</strong> to continue your logic, for example, to load a banner or an interstitial ad.</p>
+<p>This function must be called <strong>before loading or showing any ads</strong>. Once triggered, the plugin starts the AdMob SDK and waits until the initialization is complete. This can sometimes take a little time (2 to 5 seconds).</p>
+<p>When the SDK is ready, the <strong>On Completed</strong> callback is executed. You can pull from this pin and create a <strong>Custom Event</strong> to continue your logic, for example, to load a banner or an interstitial ad.</p>
 <div align="center">
   <img src="../assets/initialization/initialization_initialize_node.png" width="200">
 </div>
 
 <h3 id="parameters">Parameters</h3>
 <h4 id="1-on-completed">1. On Completed</h4>
-<p>A delegate that is called after the AdMob SDK has finished initializing.<br />
-No data is returned — it simply confirms that the system is ready to load and show ads.</p>
+<p>A delegate that is called after the AdMob SDK has finished initializing. No data is returned — it simply confirms that the system is ready to load and show ads.</p>
 <p>Use this pin to trigger any ad loading logic.</p>
 <hr />
 <h2 id="is-ad-mob-ready">Is Ad Mob Ready</h2>
-<p>This function returns whether the AdMob SDK has finished initializing.<br />
-It is useful if you want to check the initialization state before attempting to load or show ads.</p>
+<p>This function returns whether the AdMob SDK has finished initializing. It is useful if you want to check the initialization state before attempting to load or show ads. </p>
 <p>If the result is <strong>true</strong>, you can safely proceed with ad requests.<br />
 If it is <strong>false</strong>, you should wait until initialization completes.</p>
 <div align="center">
@@ -2096,9 +2183,17 @@ If it is <strong>false</strong>, you should wait until initialization completes.
 - <strong>true</strong> — the SDK is ready to load and display ads<br />
 - <strong>false</strong> — initialization is still in progress or has not started  </p>
 <hr />
+<h2 id="example">Example</h2>
+<p>In this example, AdMob is initialized when the widget is first created using <strong>Event Construct</strong>. This setup is used here purely as an example — in a real project, initialization is usually called <strong>once at the start of the game</strong>, such as in the <strong>Game Instance</strong> or <strong>Main Menu level</strong>, before any ads are loaded.</p>
+<p>After initialization successfully completes, the <strong>On Completed</strong> event triggers the <strong>Load Banner</strong> node to request a banner ad.</p>
+<p>This setup ensures that the SDK is ready before any ad loading happens. It’s a typical pattern for menu screens or early initialization sequences, where ads should appear immediately after the app starts.</p>
+<div align="center">
+  <img src="../assets/initialization/initialization_example.png" width="670">
+</div>
+
+<hr />
 <h2 id="c-usage">C++ Usage</h2>
-<p>All Blueprint functions are also available for use in C++.<br />
-You can initialize AdMob and check its state directly through static methods of <code>UAdMobCPPLibrary</code>.</p>
+<p>All Blueprint functions are also available for use in C++. You can initialize AdMob and check its state directly through static methods of <code>UAdMobCPPLibrary</code>.</p>
 <h3 id="initializeadmob">InitializeAdMob</h3>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
 

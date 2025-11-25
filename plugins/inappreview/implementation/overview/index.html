@@ -429,6 +429,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -608,12 +612,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+      <a href="../../../billing/implementation/is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -637,6 +664,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -959,6 +1009,8 @@
       
         
       
+        
+      
     
     
     
@@ -1213,6 +1265,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -1930,8 +2005,7 @@
 
 <h1 id="overview">Overview</h1>
 <h2 id="google-play-in-app-review">Google Play In-App Review</h2>
-<p>The <strong>Google Play In-App Review API</strong> is an official component of Google Play Services that allows players to rate and review your game <strong>without leaving the app</strong>.<br />
-It provides a seamless, native dialog managed by the Play Store itself — improving engagement and increasing review conversion rates.</p>
+<p>The <strong>Google Play In-App Review API</strong> is an official component of Google Play Services that allows players to rate and review your game <strong>without leaving the app</strong>. It provides a seamless, native dialog managed by the Play Store itself — improving engagement and increasing review conversion rates.</p>
 <h2 id="available-features">Available Features</h2>
 <ul>
 <li>Trigger the native Play Store review dialog directly from your game  </li>
@@ -1942,17 +2016,17 @@ It provides a seamless, native dialog managed by the Play Store itself — impro
 </ul>
 <hr />
 <h2 id="when-to-request-reviews">When to Request Reviews</h2>
-<p>According to Google’s <a href="https://developer.android.com/guide/playcore/in-app-review#when-to-request">official guidelines</a>, developers should <strong>time review requests carefully</strong> to ensure a positive user experience.<br />
-You can only trigger the dialog a limited number of times per user within a given period — exact limits are managed by Google Play automatically.</p>
-<p>To improve your chances of receiving quality reviews:
-- Ask for feedback <strong>after meaningful in-game events</strong> — such as completing a level or unlocking a new feature.<br />
-- Avoid displaying the dialog immediately after launch or during gameplay.<br />
-- Never spam the request or tie it to rewards — the Play Store may suppress your prompts.  </p>
+<p>According to Google’s <a href="https://developer.android.com/guide/playcore/in-app-review#when-to-request">official guidelines</a>, developers should <strong>time review requests carefully</strong> to ensure a positive user experience. You can only trigger the dialog a limited number of times per user within a given period — exact limits are managed by Google Play automatically.</p>
+<p>To improve your chances of receiving quality reviews:</p>
+<ul>
+<li>Ask for feedback <strong>after meaningful in-game events</strong> — such as completing a level or unlocking a new feature.  </li>
+<li>Avoid displaying the dialog immediately after launch or during gameplay.  </li>
+<li>Never spam the request or tie it to rewards — the Play Store may suppress your prompts.  </li>
+</ul>
 <p>By respecting these timing rules, you increase the likelihood of users leaving genuine and positive feedback.</p>
 <hr />
 <h2 id="unreal-engine-plugin">Unreal Engine Plugin</h2>
-<p>The <strong>PloxTools: Google Play In-App Review</strong> plugin integrates this feature directly into Unreal Engine, letting you prompt users for ratings through a single Blueprint or C++ call.<br />
-No Java or Android SDK configuration is required — everything is handled automatically inside the plugin.</p>
+<p>The <strong>PloxTools: Google Play In-App Review</strong> plugin integrates this feature directly into Unreal Engine, letting you prompt users for ratings through a single Blueprint or C++ call. No Java or Android SDK configuration is required — everything is handled automatically inside the plugin.</p>
 <h2 id="key-highlights">Key Highlights</h2>
 <ul>
 <li>Based on <strong>Google Play Core Review Library 2.0.2</strong>  </li>

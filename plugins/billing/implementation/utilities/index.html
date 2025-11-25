@@ -433,6 +433,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -612,12 +616,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../process_pending_purchases/" class="md-nav__link">
+      <a href="../is_product_purchased/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Process Pending Purchases
+    Is Product Purchased
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is_subscription_active/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is Subscription Active
     
   </span>
   
@@ -641,6 +668,29 @@
   
   <span class="md-ellipsis">
     Query Owned Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process_pending_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Pending Purchases
     
   </span>
   
@@ -1209,6 +1259,8 @@
       
         
       
+        
+      
     
     
     
@@ -1463,6 +1515,29 @@
   
   <span class="md-ellipsis">
     Mediation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Ads
     
   </span>
   
@@ -2247,8 +2322,7 @@
 
 
 <h1 id="utilities">Utilities</h1>
-<p>This section contains additional <strong>utility functions</strong> designed to simplify integration and improve control flow.<br />
-These helper functions let you quickly check the billing client state, feature support, product type behavior, and retrieve offer tokens when working with subscriptions.  </p>
+<p>This section contains additional <strong>utility functions</strong> designed to simplify integration and improve control flow. These helper functions let you quickly check the billing client state, feature support, product type behavior, and retrieve offer tokens when working with subscriptions.  </p>
 <p>Available utility functions:</p>
 <ul>
 <li><strong>IsBillingReady</strong> — checks if the Billing Client is initialized and ready to use.  </li>
@@ -2293,9 +2367,7 @@ These helper functions let you quickly check the billing client state, feature s
 <h2 id="get-subscription-offer-token">Get Subscription Offer Token</h2>
 <p>A helper function that extracts the <strong>Offer Token</strong> for a specific subscription offer from the list of <a href="../../object_definitions/product_details/#fproductdetails"><code>FProductDetails</code></a> previously obtained via <a href="../query_product_details/"><code>Query Product Details</code></a>.  </p>
 <p>This token is required when launching a billing flow for a subscription offer or base plan.</p>
-<p>Internally, the function iterates through the provided list of subscription products, matching the given <strong>Product ID</strong>, <strong>Base Plan ID</strong>, and (optionally) <strong>Offer ID</strong>.<br />
-If an exact match is found, it returns the corresponding offer token string.<br />
-If none match, it returns an empty string.</p>
+<p>Internally, the function iterates through the provided list of subscription products, matching the given <strong>Product ID</strong>, <strong>Base Plan ID</strong>, and (optionally) <strong>Offer ID</strong>. If an exact match is found, it returns the corresponding offer token string. If none match, it returns an empty string.</p>
 <div align="center">
   <img src="../assets/utilities/utilities_getsubscriptionoffertoken.png" width="290">
 </div>
@@ -2306,17 +2378,14 @@ If none match, it returns an empty string.</p>
 <h4 id="2-product-id">2. Product ID</h4>
 <p>The subscription’s product identifier as set up in the <strong>Google Play Console</strong>.</p>
 <h4 id="3-base-plan-id">3. Base Plan ID</h4>
-<p>The ID of the base plan for the subscription.<br />
-If left empty, the function will return the first matching plan’s token.</p>
+<p>The ID of the base plan for the subscription. If left empty, the function will return the first matching plan’s token.</p>
 <h4 id="4-offer-id">4. Offer ID</h4>
-<p>The ID of a specific promotional offer under the base plan.<br />
-If empty, the default base plan token will be returned.</p>
+<p>The ID of a specific promotional offer under the base plan. If empty, the default base plan token will be returned.</p>
 <p><strong>Returns:</strong><br />
 <code>FString</code> — the corresponding <strong>Offer Token</strong> if found, otherwise an empty string.</p>
 <hr />
 <h2 id="c-usage">C++ Usage</h2>
-<p>Below are short examples of how to use the utility functions directly in C++ code.<br />
-These can be useful when handling billing logic outside of Blueprints.</p>
+<p>Below are short examples of how to use the utility functions directly in C++ code. These can be useful when handling billing logic outside of Blueprints.</p>
 <h3 id="check-if-billing-client-is-ready">Check if Billing Client is Ready</h3>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BillingCPPLibrary.h&quot;</span>
 
