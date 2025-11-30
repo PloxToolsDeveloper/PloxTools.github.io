@@ -578,36 +578,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disable-any-other-billing-plugins" class="md-nav__link">
+  <a href="#disable-any-other-custom-billing-plugins" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable Any Other Billing Plugins
+      Disable Any Other Custom Billing Plugins
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#enable-google-play-support" class="md-nav__link">
+  <a href="#disable-online-subsystem-google-play" class="md-nav__link">
     <span class="md-ellipsis">
-      Enable Google Play Support
+      Disable Online Subsystem Google Play
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-your-google-play-license-key" class="md-nav__link">
+  <a href="#disable-android-file-server-afs" class="md-nav__link">
     <span class="md-ellipsis">
-      Add Your Google Play License Key
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-to-find-your-license-key-in-google-play-console" class="md-nav__link">
-    <span class="md-ellipsis">
-      Where to Find Your License Key in Google Play Console
+      Disable Android File Server (AFS)
     </span>
   </a>
   
@@ -2006,36 +1997,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disable-any-other-billing-plugins" class="md-nav__link">
+  <a href="#disable-any-other-custom-billing-plugins" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable Any Other Billing Plugins
+      Disable Any Other Custom Billing Plugins
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#enable-google-play-support" class="md-nav__link">
+  <a href="#disable-online-subsystem-google-play" class="md-nav__link">
     <span class="md-ellipsis">
-      Enable Google Play Support
+      Disable Online Subsystem Google Play
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-your-google-play-license-key" class="md-nav__link">
+  <a href="#disable-android-file-server-afs" class="md-nav__link">
     <span class="md-ellipsis">
-      Add Your Google Play License Key
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-to-find-your-license-key-in-google-play-console" class="md-nav__link">
-    <span class="md-ellipsis">
-      Where to Find Your License Key in Google Play Console
+      Disable Android File Server (AFS)
     </span>
   </a>
   
@@ -2089,32 +2071,28 @@
 </div>
 
 <hr />
-<h2 id="disable-any-other-billing-plugins">Disable Any Other Billing Plugins</h2>
-<p>Make sure that no other Google Play Billing-related plugins are active, as they may override or conflict with this plugin. Go to <strong>Edit → Plugins</strong> and disable any third-party Google Play Billing plugins.</p>
+<h2 id="disable-any-other-custom-billing-plugins">Disable Any Other Custom Billing Plugins</h2>
+<p>Make sure that no other custom Google Play Billing-related plugins from Fab are active, as they may override or conflict with this plugin. Go to <strong>Edit → Plugins</strong> and disable any third-party Google Play Billing plugins.</p>
 <hr />
-<h2 id="enable-google-play-support">Enable Google Play Support</h2>
-<p>In order for the billing functions to work correctly, <strong>Google Play Support</strong> must be enabled. Go to <strong>Project Settings → Android → Google Play Services</strong>, then check the box <strong>"Enable Google Play Support"</strong>.</p>
+<h2 id="disable-online-subsystem-google-play">Disable Online Subsystem Google Play</h2>
+<p>Go to <strong>Edit</strong> → <strong>Plugins</strong>, search for "<strong>Online Subsystem GooglePlay</strong>", and turn it off.</p>
+<p>This subsystem uses outdated Google Play Billing v3/v4 APIs and automatically injects Java files and manifest entries that conflict with BillingClient 8.0.0.</p>
+<blockquote>
+<p>This plugin does not rely on Unreal’s Online Subsystem Google Play.
+You can safely disable it.</p>
+</blockquote>
+<p>If you leave Online Subsystem Google Play enabled, your project may fail to package.</p>
 <div align="center">
-  <img src="../assets/getting_started/billing_gettingstarted_googlesupport.png" width="1000">
+  <img src="../assets/getting_started/billing_gettingstarted_onlinesubsystemgp.png" width="1000">
 </div>
 
 <hr />
-<h2 id="add-your-google-play-license-key">Add Your Google Play License Key</h2>
-<p>Add your <strong>Google Play License Key</strong> from the Google Play Console: Go to <strong>Project Settings → Android → Google Play Services</strong>, and paste your key in the field <strong>"Google Play License Key"</strong>.</p>
+<h2 id="disable-android-file-server-afs">Disable Android File Server (AFS)</h2>
+<p>In <strong>Edit</strong> → <strong>Plugins</strong>, locate "<strong>AndroidFileServer</strong>" and disable it.</p>
+<p>AFS injects additional manifest entries and proguard rules. In projects with custom Android integrations it may cause build failures, especially when combined with modern Google Play libraries.</p>
+<p>If AFS remains enabled, the build may fail during the packaging phase with errors related to manifest merging or missing ProGuard configurations.</p>
 <div align="center">
-  <img src="../assets/getting_started/billing_gettingstarted_licencekey.png" width="1000">
-</div>
-
-<hr />
-<h2 id="where-to-find-your-license-key-in-google-play-console">Where to Find Your License Key in Google Play Console</h2>
-<p>You can find your <strong>Google Play License Key</strong> in the <strong>Google Play Console</strong> under your game project:</p>
-<ol>
-<li>Open your game in the <a href="https://play.google.com/console">Google Play Console</a>.  </li>
-<li>Navigate to <strong>Monetize with Play → Monetization Setup</strong>.  </li>
-<li>Scroll down to the <strong>Licensing</strong> section — your key will be displayed there.  </li>
-</ol>
-<div align="center">
-  <img src="../assets/getting_started/billing_gettingstarted_whereiskey.png" width="1000">
+  <img src="../assets/getting_started/billing_gettingstarted_afs.png" width="1000">
 </div>
 
 <hr />
