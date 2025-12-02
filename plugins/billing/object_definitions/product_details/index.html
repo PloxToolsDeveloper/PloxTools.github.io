@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://ploxtools.github.io/plugins/billing/object_definitions/product_details/">
       
       
-        <link rel="prev" href="../../implementation/utilities/">
+        <link rel="prev" href="../../implementation/testing_purchases/">
       
       
         <link rel="next" href="../purchase/">
@@ -435,6 +435,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -551,6 +555,29 @@
   
   <span class="md-ellipsis">
     Query Product Details
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/query_single_product_details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Query Single Product Details
     
   </span>
   
@@ -758,6 +785,29 @@
   
   <span class="md-ellipsis">
     Utilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/testing_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Purchases Without Real Payments
     
   </span>
   
@@ -2012,19 +2062,19 @@
 <td>Unique product identifier as defined in the Google Play Console.</td>
 </tr>
 <tr>
+<td><strong>Name</strong></td>
+<td><code>FString</code></td>
+<td>The product name as it appears in the Google Play Console (for example, <strong>Test Product 1</strong>).</td>
+</tr>
+<tr>
 <td><strong>Title</strong></td>
 <td><code>FString</code></td>
-<td>The product title as it appears in the Google Play Console.</td>
+<td>The full title including the app name or package ID (for example, <strong>Test Product 1 (com.example.app)</strong>).</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td><code>FString</code></td>
 <td>The short description of the product shown to users in the store.</td>
-</tr>
-<tr>
-<td><strong>Name</strong></td>
-<td><code>FString</code></td>
-<td>Internal or display name used in your project (optional alias).</td>
 </tr>
 <tr>
 <td><strong>ProductType</strong></td>

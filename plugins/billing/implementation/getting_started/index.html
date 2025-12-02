@@ -437,6 +437,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -587,18 +591,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disable-online-subsystem-google-play" class="md-nav__link">
+  <a href="#disable-online-subsystem-google-play-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable Online Subsystem Google Play
+      Disable Online Subsystem Google Play (Optional)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#disable-android-file-server-afs" class="md-nav__link">
+  <a href="#disable-android-file-server-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable Android File Server (AFS)
+      Disable Android File Server (Optional)
     </span>
   </a>
   
@@ -667,6 +671,29 @@
   
   <span class="md-ellipsis">
     Query Product Details
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../query_single_product_details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Query Single Product Details
     
   </span>
   
@@ -874,6 +901,29 @@
   
   <span class="md-ellipsis">
     Utilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Purchases Without Real Payments
     
   </span>
   
@@ -2006,18 +2056,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disable-online-subsystem-google-play" class="md-nav__link">
+  <a href="#disable-online-subsystem-google-play-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable Online Subsystem Google Play
+      Disable Online Subsystem Google Play (Optional)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#disable-android-file-server-afs" class="md-nav__link">
+  <a href="#disable-android-file-server-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable Android File Server (AFS)
+      Disable Android File Server (Optional)
     </span>
   </a>
   
@@ -2074,23 +2124,23 @@
 <h2 id="disable-any-other-custom-billing-plugins">Disable Any Other Custom Billing Plugins</h2>
 <p>Make sure that no other custom Google Play Billing-related plugins from Fab are active, as they may override or conflict with this plugin. Go to <strong>Edit → Plugins</strong> and disable any third-party Google Play Billing plugins.</p>
 <hr />
-<h2 id="disable-online-subsystem-google-play">Disable Online Subsystem Google Play</h2>
+<h2 id="disable-online-subsystem-google-play-optional">Disable Online Subsystem Google Play (Optional)</h2>
 <p>Go to <strong>Edit</strong> → <strong>Plugins</strong>, search for "<strong>Online Subsystem GooglePlay</strong>", and turn it off.</p>
-<p>This subsystem uses outdated Google Play Billing v3/v4 APIs and automatically injects Java files and manifest entries that conflict with BillingClient 8.0.0.</p>
+<p>This subsystem uses outdated Google Play Billing APIs and automatically injects Java files and manifest entries that conflict with BillingClient 8.0.0.</p>
 <blockquote>
-<p>This plugin does not rely on Unreal’s Online Subsystem Google Play.
-You can safely disable it.</p>
+<p>💡 This plugin does not rely on Unreal’s Online Subsystem Google Play.
+Disabling it is recommended for stability, but not strictly required in all projects.</p>
 </blockquote>
-<p>If you leave Online Subsystem Google Play enabled, your project may fail to package.</p>
+<p>If left enabled, some projects may fail to package or report duplicated/obsolete Billing API classes.</p>
 <div align="center">
   <img src="../assets/getting_started/billing_gettingstarted_onlinesubsystemgp.png" width="1000">
 </div>
 
 <hr />
-<h2 id="disable-android-file-server-afs">Disable Android File Server (AFS)</h2>
-<p>In <strong>Edit</strong> → <strong>Plugins</strong>, locate "<strong>AndroidFileServer</strong>" and disable it.</p>
-<p>AFS injects additional manifest entries and proguard rules. In projects with custom Android integrations it may cause build failures, especially when combined with modern Google Play libraries.</p>
-<p>If AFS remains enabled, the build may fail during the packaging phase with errors related to manifest merging or missing ProGuard configurations.</p>
+<h2 id="disable-android-file-server-optional">Disable Android File Server (Optional)</h2>
+<p>In <strong>Edit</strong> → <strong>Plugins</strong>, locate "<strong>AndroidFileServer</strong>" and disable it <strong>only if Online Subsystem Google Play is disabled too</strong>.</p>
+<p>AFS depends on OnlineSubsystemGooglePlay. When OnlineSubsystemGooglePlay is turned off, AFS may still inject manifest sections and ProGuard rules, which can cause build failures during packaging.</p>
+<p>This prevents errors such as missing ProGuard files, manifest merge conflicts, or duplicated Java entries.</p>
 <div align="center">
   <img src="../assets/getting_started/billing_gettingstarted_afs.png" width="1000">
 </div>

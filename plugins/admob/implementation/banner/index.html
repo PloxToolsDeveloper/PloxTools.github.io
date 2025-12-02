@@ -433,6 +433,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -549,6 +553,29 @@
   
   <span class="md-ellipsis">
     Query Product Details
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/query_single_product_details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Query Single Product Details
     
   </span>
   
@@ -756,6 +783,29 @@
   
   <span class="md-ellipsis">
     Utilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/testing_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Purchases Without Real Payments
     
   </span>
   
@@ -1354,36 +1404,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Hide Banner">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-on-hidden" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. On Hidden
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1392,36 +1412,6 @@
       Destroy Banner
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Destroy Banner">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-on-destroyed" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. On Destroyed
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2375,36 +2365,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Hide Banner">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-on-hidden" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. On Hidden
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2413,36 +2373,6 @@
       Destroy Banner
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Destroy Banner">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-on-destroyed" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. On Destroyed
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2658,9 +2588,6 @@
   <img src="../assets/banner/banner_hide.png" width="200">
 </div>
 
-<h3 id="parameters_2">Parameters</h3>
-<h4 id="1-on-hidden">1. On Hidden</h4>
-<p>Called once the banner has been successfully hidden from the screen.</p>
 <hr />
 <h2 id="destroy-banner">Destroy Banner</h2>
 <p>This function <strong>permanently removes</strong> the current banner ad from memory. After calling it, the banner must be <strong>loaded again</strong> before it can be shown. Use this function when changing scenes or exiting the part of the game where banners are no longer needed — for example, before starting a level. </p>
@@ -2668,9 +2595,6 @@
   <img src="../assets/banner/banner_destroy.png" width="200">
 </div>
 
-<h3 id="parameters_3">Parameters</h3>
-<h4 id="1-on-destroyed">1. On Destroyed</h4>
-<p>Called after the banner ad has been completely removed from memory.</p>
 <hr />
 <h2 id="is-banner-ready">Is Banner Ready</h2>
 <p>This function checks whether a <strong>banner ad</strong> has been successfully loaded and is ready to be shown. It is typically used to verify the ad’s state before calling <a href="#show-banner"><strong>Show Banner</strong></a>, preventing unnecessary errors or failures.  </p>

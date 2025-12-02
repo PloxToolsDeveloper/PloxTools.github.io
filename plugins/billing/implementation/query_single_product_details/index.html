@@ -12,28 +12,28 @@
         <meta name="author" content="PloxTools">
       
       
-        <link rel="canonical" href="https://ploxtools.github.io/plugins/">
+        <link rel="canonical" href="https://ploxtools.github.io/plugins/billing/implementation/query_single_product_details/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../query_product_details/">
       
       
-        <link rel="next" href="billing/implementation/overview/">
+        <link rel="next" href="../launch_billing_flow/">
       
       
-      <link rel="icon" href="../assets/icon.png">
+      <link rel="icon" href="../../../../assets/icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>Overview - PloxTools Plugins</title>
+        <title>Query Single Product Details - PloxTools Plugins</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#query-single-product-details" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +92,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="PloxTools Plugins" class="md-header__button md-logo" aria-label="PloxTools Plugins" data-md-component="logo">
+    <a href="../../../.." title="PloxTools Plugins" class="md-header__button md-logo" aria-label="PloxTools Plugins" data-md-component="logo">
       
-  <img src="../assets/logo.png" alt="logo">
+  <img src="../../../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Query Single Product Details
             
           </span>
         </div>
@@ -170,7 +170,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
   
@@ -193,7 +193,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../../../" class="md-tabs__link">
           
   
   
@@ -213,7 +213,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../help/help/" class="md-tabs__link">
+      <a href="../../../../help/help/" class="md-tabs__link">
         
   
   
@@ -248,9 +248,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="PloxTools Plugins" class="md-nav__button md-logo" aria-label="PloxTools Plugins" data-md-component="logo">
+    <a href="../../../.." title="PloxTools Plugins" class="md-nav__button md-logo" aria-label="PloxTools Plugins" data-md-component="logo">
       
-  <img src="../assets/logo.png" alt="logo">
+  <img src="../../../../assets/logo.png" alt="logo">
 
     </a>
     PloxTools Plugins
@@ -265,7 +265,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -321,7 +321,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../../" class="md-nav__link ">
               
   
   
@@ -334,7 +334,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -353,8 +353,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -371,11 +373,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -391,7 +393,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Google Play Billing
@@ -402,8 +404,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -444,11 +448,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
@@ -464,7 +468,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2_1">
             <span class="md-nav__icon md-icon"></span>
             Implementation
@@ -478,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -501,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/getting_started/" class="md-nav__link">
+      <a href="../getting_started/" class="md-nav__link">
         
   
   
@@ -524,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/initialize_billingclient/" class="md-nav__link">
+      <a href="../initialize_billingclient/" class="md-nav__link">
         
   
   
@@ -547,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/query_product_details/" class="md-nav__link">
+      <a href="../query_product_details/" class="md-nav__link">
         
   
   
@@ -567,10 +571,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="billing/implementation/query_single_product_details/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Query Single Product Details
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -581,6 +607,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-product-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Product ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-product-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Product Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-on-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. On Success
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-on-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. On Failure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      C++ Usage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -593,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/launch_billing_flow/" class="md-nav__link">
+      <a href="../launch_billing_flow/" class="md-nav__link">
         
   
   
@@ -616,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/set_nonconsumable_products/" class="md-nav__link">
+      <a href="../set_nonconsumable_products/" class="md-nav__link">
         
   
   
@@ -639,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/is_product_purchased/" class="md-nav__link">
+      <a href="../is_product_purchased/" class="md-nav__link">
         
   
   
@@ -662,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/is_subscription_active/" class="md-nav__link">
+      <a href="../is_subscription_active/" class="md-nav__link">
         
   
   
@@ -685,7 +800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/query_owned_purchases/" class="md-nav__link">
+      <a href="../query_owned_purchases/" class="md-nav__link">
         
   
   
@@ -708,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/process_pending_purchases/" class="md-nav__link">
+      <a href="../process_pending_purchases/" class="md-nav__link">
         
   
   
@@ -731,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/show_inapp_messages/" class="md-nav__link">
+      <a href="../show_inapp_messages/" class="md-nav__link">
         
   
   
@@ -754,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/manual_purchase_handling/" class="md-nav__link">
+      <a href="../manual_purchase_handling/" class="md-nav__link">
         
   
   
@@ -777,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/utilities/" class="md-nav__link">
+      <a href="../utilities/" class="md-nav__link">
         
   
   
@@ -800,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/implementation/testing_purchases/" class="md-nav__link">
+      <a href="../testing_purchases/" class="md-nav__link">
         
   
   
@@ -880,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/object_definitions/product_details/" class="md-nav__link">
+      <a href="../../object_definitions/product_details/" class="md-nav__link">
         
   
   
@@ -903,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/object_definitions/purchase/" class="md-nav__link">
+      <a href="../../object_definitions/purchase/" class="md-nav__link">
         
   
   
@@ -926,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/object_definitions/enumerations/" class="md-nav__link">
+      <a href="../../object_definitions/enumerations/" class="md-nav__link">
         
   
   
@@ -957,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="billing/faq/faq/" class="md-nav__link">
+      <a href="../../faq/faq/" class="md-nav__link">
         
   
   
@@ -1102,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/implementation/overview/" class="md-nav__link">
+      <a href="../../../admob/implementation/overview/" class="md-nav__link">
         
   
   
@@ -1125,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/implementation/getting_started/" class="md-nav__link">
+      <a href="../../../admob/implementation/getting_started/" class="md-nav__link">
         
   
   
@@ -1148,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/implementation/ininitialization/" class="md-nav__link">
+      <a href="../../../admob/implementation/ininitialization/" class="md-nav__link">
         
   
   
@@ -1171,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/implementation/consent%26privacy/" class="md-nav__link">
+      <a href="../../../admob/implementation/consent%26privacy/" class="md-nav__link">
         
   
   
@@ -1194,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/implementation/banner/" class="md-nav__link">
+      <a href="../../../admob/implementation/banner/" class="md-nav__link">
         
   
   
@@ -1217,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/implementation/interstitial/" class="md-nav__link">
+      <a href="../../../admob/implementation/interstitial/" class="md-nav__link">
         
   
   
@@ -1240,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/implementation/rewarded/" class="md-nav__link">
+      <a href="../../../admob/implementation/rewarded/" class="md-nav__link">
         
   
   
@@ -1263,7 +1378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/implementation/rewarded_interstitial/" class="md-nav__link">
+      <a href="../../../admob/implementation/rewarded_interstitial/" class="md-nav__link">
         
   
   
@@ -1286,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/implementation/app_open/" class="md-nav__link">
+      <a href="../../../admob/implementation/app_open/" class="md-nav__link">
         
   
   
@@ -1309,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/implementation/mediation/" class="md-nav__link">
+      <a href="../../../admob/implementation/mediation/" class="md-nav__link">
         
   
   
@@ -1332,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/implementation/testing_ads/" class="md-nav__link">
+      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
         
   
   
@@ -1408,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/object_definitions/enumerations/" class="md-nav__link">
+      <a href="../../../admob/object_definitions/enumerations/" class="md-nav__link">
         
   
   
@@ -1439,7 +1554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admob/faq/faq/" class="md-nav__link">
+      <a href="../../../admob/faq/faq/" class="md-nav__link">
         
   
   
@@ -1517,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="analytics/overview/" class="md-nav__link">
+      <a href="../../../analytics/overview/" class="md-nav__link">
         
   
   
@@ -1540,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="analytics/getting_started/" class="md-nav__link">
+      <a href="../../../analytics/getting_started/" class="md-nav__link">
         
   
   
@@ -1669,7 +1784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="inappreview/implementation/overview/" class="md-nav__link">
+      <a href="../../../inappreview/implementation/overview/" class="md-nav__link">
         
   
   
@@ -1692,7 +1807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="inappreview/implementation/getting_started/" class="md-nav__link">
+      <a href="../../../inappreview/implementation/getting_started/" class="md-nav__link">
         
   
   
@@ -1715,7 +1830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="inappreview/implementation/launch_inapp_review/" class="md-nav__link">
+      <a href="../../../inappreview/implementation/launch_inapp_review/" class="md-nav__link">
         
   
   
@@ -1791,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="inappreview/object_definitions/enumerations/" class="md-nav__link">
+      <a href="../../../inappreview/object_definitions/enumerations/" class="md-nav__link">
         
   
   
@@ -1822,7 +1937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="inappreview/faq/faq/" class="md-nav__link">
+      <a href="../../../inappreview/faq/faq/" class="md-nav__link">
         
   
   
@@ -1860,7 +1975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../help/help/" class="md-nav__link">
+      <a href="../../../../help/help/" class="md-nav__link">
         
   
   
@@ -1902,27 +2017,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#available-plugins" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Available Plugins
+      Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-product-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Product ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-product-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Product Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-on-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. On Success
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-on-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. On Failure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#compatibility" class="md-nav__link">
+  <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Compatibility
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contacts-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      💬 Contacts &amp; Support
+      C++ Usage
     </span>
   </a>
   
@@ -1944,65 +2101,65 @@
 
 
 
-<h1 id="overview">Overview</h1>
-<p>Welcome to the <strong>PloxTools Plugins</strong> section — a collection of Unreal Engine plugins designed to simplify Android development, monetization, and analytics.</p>
-<p>Each plugin page includes:</p>
+<h1 id="query-single-product-details">Query Single Product Details</h1>
+<p>This function behaves similarly to <a href="../query_product_details/">QueryProductDetails</a>, but is designed to retrieve details for a <strong>single product ID</strong> instead of a list.   </p>
+<p>It is an asynchronous call that returns a single <a href="../../object_definitions/product_details/#fproductdetails">Product Details</a> object from the <strong>Google Play Console</strong>, including <strong>price</strong>, <strong>currency</strong>, <strong>title</strong>, <strong>description</strong>, and <strong>subscription offers</strong> if applicable.  </p>
+<p>You can use the returned data to display an individual shop item, show product information, or prepare an in-app purchase flow. The function also provides the <strong>Offer Token</strong>, which can later be used when launching a Billing Flow. </p>
+<p>Parameters include a single <strong>Product ID</strong> and a <a href="../../object_definitions/enumerations/#eproducttype">Product Type</a>, which defines whether the query targets an <strong>in-app product</strong> or a <strong>subscription</strong>. When the operation completes, one of two delegates will trigger — <strong>success</strong> or <strong>failure</strong> — depending on the result of the query.</p>
+<div align="center">
+  <img src="../assets/query_single_product_details/query_single_product_details_node.png" width="300">
+</div>
+
+<hr />
+<h2 id="parameters">Parameters</h2>
+<h3 id="1-product-id">1. Product ID</h3>
+<p>A single product ID to request from the <strong>Google Play Console</strong>. This ID should match a product you’ve configured in your Play Store listing.  </p>
+<hr />
+<h3 id="2-product-type">2. Product Type</h3>
+<p>Specifies the type of products to query — either <strong>In-App</strong> or <strong>Subscription</strong>. See <a href="../../object_definitions/enumerations/#eproducttype"><code>EProductType</code></a> for available values.</p>
+<hr />
+<h3 id="3-on-success">3. On Success</h3>
+<p>Triggered when product details have been successfully retrieved. Returns a single <a href="../../object_definitions/product_details/#fproductdetails"><code>FProductDetails</code></a> object that includes all pricing and metadata information. You can drag this pin to create a custom event and use the data in your shop or UI.</p>
+<hr />
+<h3 id="4-on-failure">4. On Failure</h3>
+<p>Triggered when the request fails. Returns:  </p>
 <ul>
-<li>Installation and setup instructions  </li>
-<li>Blueprint &amp; C++ usage examples  </li>
-<li>Troubleshooting and FAQ  </li>
+<li><strong>Response Code</strong> — <a href="../../object_definitions/enumerations/#ebillingresponsecode"><code>EBillingResponseCode</code></a>  </li>
+<li><strong>Error Message</strong> — <code>FString</code> with additional debug information.  </li>
 </ul>
+<p>Use this delegate to handle issues.</p>
 <hr />
-<h2 id="available-plugins">✅ Available Plugins</h2>
-<table>
-<thead>
-<tr>
-<th>Plugin</th>
-<th>Description</th>
-<th>Documentation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Google Play Billing</strong></td>
-<td>Handles in-app purchases and subscriptions through the official Google Play Billing Library.</td>
-<td><a href="billing/implementation/overview/">Open →</a></td>
-</tr>
-<tr>
-<td><strong>Google AdMob</strong></td>
-<td>Adds support for banners, interstitials, and rewarded ads using the native AdMob SDK.</td>
-<td><a href="admob/implementation/overview/">Open →</a></td>
-</tr>
-<tr>
-<td><strong>Firebase Analytics</strong></td>
-<td>Tracks player events, sessions, and engagement through Firebase Analytics.</td>
-<td><a href="analytics/overview/">Open →</a></td>
-</tr>
-<tr>
-<td><strong>Google Play In-App Review</strong></td>
-<td>Triggers the native Google Play review dialog directly inside your game.</td>
-<td><a href="inappreview/implementation/overview/">Open →</a></td>
-</tr>
-</tbody>
-</table>
+<h2 id="example">Example</h2>
+<p>In this example, the <strong>Query Single Product Details</strong> node requests detailed information for a specific in-app product from the <strong>Google Play Console</strong>. When the query succeeds, the returned <strong>Product Details</strong> struct is passed to a <strong>Custom Event</strong>, where its fields are accessed using the <strong>Break Product Details</strong> node.</p>
+<p>The setup shown below extracts the <strong>Formatted Price</strong> from the <strong>One Time Purchase Offer Details</strong> and displays it in a UI text widget using <strong>Set Text</strong>. This allows you to dynamically show the product’s localized price and other details such as title and description directly in your in-game shop. </p>
+<div align="center">
+  <img src="../assets/query_single_product_details/query_single_product_details_example.png" width="1000">
+</div>
+
 <hr />
-<h2 id="compatibility">⚙️ Compatibility</h2>
-<p>All plugins are built and tested for:</p>
-<ul>
-<li><strong>Unreal Engine:</strong> 5.5, 5.6 and 5.7  </li>
-<li><strong>Android Target SDK:</strong> 35+  </li>
-<li><strong>Minimum supported SDK:</strong> 26</li>
-</ul>
-<p>Older Unreal versions are <strong>not supported</strong> due to updated Google Play requirements.</p>
-<hr />
-<h2 id="contacts-support">💬 Contacts &amp; Support</h2>
-<p>If you run into issues or want to suggest improvements:</p>
-<ul>
-<li>📩 <strong>Support email:</strong> ploxtools@gmail.com  </li>
-<li>💬 <strong>Discord:</strong> <a href="https://discord.com/invite/4fmvSr2f9D">Join community chat</a>  </li>
-</ul>
-<hr />
-<p><em>Last updated: October 2025</em></p>
+<h2 id="c-usage">C++ Usage</h2>
+<p>You can fetch product details directly from C++ by providing a product ID and handling success or failure through delegates.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BillingCPPLibrary.h&quot;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">UMyGameInstance::FetchSingleProductDetails</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">FString</span><span class="w"> </span><span class="n">ProductID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;coins_pack_1&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">FOnSingleProductDetailsQuerySuccessfulNative</span><span class="w"> </span><span class="n">OnSuccess</span><span class="p">;</span>
+<span class="w">    </span><span class="n">OnSuccess</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">FProductDetails</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ProductDetails</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Successfully retrieved product price: %s&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">ProductDetails</span><span class="p">.</span><span class="n">OneTimePurchaseOfferDetails</span><span class="p">.</span><span class="n">FormattedPrice</span><span class="p">);</span><span class="w">      </span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="n">FOnSingleProductDetailsQueryFailedNative</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">;</span>
+<span class="w">    </span><span class="n">OnFailure</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="n">EBillingResponseCode</span><span class="w"> </span><span class="n">Code</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FString</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Message</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Failed to query product details: %s (Code: %d)&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">Message</span><span class="p">,</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">int32</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Code</span><span class="p">));</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="n">UBillingCPPLibrary</span><span class="o">::</span><span class="n">QuerySingleProductDetails</span><span class="p">(</span><span class="n">ProductID</span><span class="p">,</span><span class="w"> </span><span class="n">EProductType</span><span class="o">::</span><span class="n">INAPP</span><span class="p">,</span><span class="w"> </span><span class="n">OnSuccess</span><span class="p">,</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
@@ -2057,10 +2214,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.tabs", "content.code.copy", "navigation.indexes"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.top", "navigation.tabs", "content.code.copy", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

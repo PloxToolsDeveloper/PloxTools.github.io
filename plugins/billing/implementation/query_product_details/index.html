@@ -18,7 +18,7 @@
         <link rel="prev" href="../initialize_billingclient/">
       
       
-        <link rel="next" href="../launch_billing_flow/">
+        <link rel="next" href="../query_single_product_details/">
       
       
       <link rel="icon" href="../../../../assets/icon.png">
@@ -437,6 +437,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -609,7 +613,7 @@
           <li class="md-nav__item">
   <a href="#1-product-ids" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Product Ids
+      1. Product IDs
     </span>
   </a>
   
@@ -669,6 +673,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../query_single_product_details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Query Single Product Details
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -871,6 +898,29 @@
   
   <span class="md-ellipsis">
     Utilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Purchases Without Real Payments
     
   </span>
   
@@ -1979,7 +2029,7 @@
           <li class="md-nav__item">
   <a href="#1-product-ids" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Product Ids
+      1. Product IDs
     </span>
   </a>
   
@@ -2054,14 +2104,17 @@
 <h1 id="query-product-details">Query Product Details</h1>
 <p>This is an asynchronous function that retrieves <a href="../../object_definitions/product_details/#fproductdetails">Product Details</a> from the <strong>Google Play Console</strong>. It returns detailed data for each product ID you provide, including pricing, currency, title, and subscription offers.</p>
 <p>You can use the returned information to display in-game shop items or manage available subscriptions. The function also provides <strong>Offer Tokens</strong>, which can be used later when Launching a Billing Flow.</p>
-<p>Parameters include a list of <strong>Product IDs</strong> and a <a href="../../object_definitions/enumerations/#eproducttype">Product Type</a> that determines whether the query targets in-app products or subscriptions. Once the operation completes, one of two delegates will trigger — success or failure — depending on the result of the query.</p>
+<p>Parameters include a list of <strong>Product IDs</strong> and a <a href="../../object_definitions/enumerations/#eproducttype">Product Type</a> that determines whether the query targets in-app products or subscriptions. Once the operation completes, one of two delegates will trigger — <strong>success</strong> or <strong>failure</strong> — depending on the result of the query.</p>
+<blockquote>
+<p>If you need to request details for a single product only, use the <a href="../query_single_product_details/">Query Single Product Details</a> function instead.</p>
+</blockquote>
 <div align="center">
   <img src="../assets/query_product_details/query_product_details_node.png" width="300">
 </div>
 
 <hr />
 <h2 id="parameters">Parameters</h2>
-<h3 id="1-product-ids">1. Product Ids</h3>
+<h3 id="1-product-ids">1. Product IDs</h3>
 <p>An array of product IDs to request from the <strong>Google Play Console</strong>. Each ID should match a product you’ve configured in your Play Store listing.</p>
 <hr />
 <h3 id="2-product-type">2. Product Type</h3>
@@ -2081,7 +2134,7 @@
 <h2 id="example">Example</h2>
 <p>In the example below, the <strong>Query Product Details</strong> node requests information for a list of in-app products retrieved from the <strong>Google Play Console</strong>. The results are then passed to a custom event, which updates the product list in the in-game shop UI.</p>
 <p>If the query fails, the <strong>Handle Error</strong> function is called, allowing you to process the error code and message for debugging or user feedback.</p>
-<p>This setup can be extended for subscriptions — simply change the <strong>Product Type</strong> to <em>Subscription</em> and store the results for use when launching a purchase.</p>
+<p>This setup can be extended for subscriptions — simply change the <strong>Product Type</strong> to <strong>Subscription</strong> and store the results for use when launching a purchase.</p>
 <div align="center">
   <img src="../assets/query_product_details/query_product_details_example.png" width="1000">
 </div>

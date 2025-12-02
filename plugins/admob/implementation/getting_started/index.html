@@ -433,6 +433,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -549,6 +553,29 @@
   
   <span class="md-ellipsis">
     Query Product Details
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/query_single_product_details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Query Single Product Details
     
   </span>
   
@@ -756,6 +783,29 @@
   
   <span class="md-ellipsis">
     Utilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/testing_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Purchases Without Real Payments
     
   </span>
   
@@ -1156,9 +1206,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disable-any-other-admob-plugins" class="md-nav__link">
+  <a href="#disable-any-other-custom-admob-plugins" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable Any Other AdMob plugins
+      Disable Any Other Custom AdMob plugins
     </span>
   </a>
   
@@ -1168,6 +1218,24 @@
   <a href="#disable-built-in-admob-in-unreal-engine" class="md-nav__link">
     <span class="md-ellipsis">
       Disable Built-in AdMob in Unreal Engine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-online-subsystem-google-play-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable Online Subsystem Google Play (Optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-android-file-server-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable Android File Server (Optional)
     </span>
   </a>
   
@@ -2015,9 +2083,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disable-any-other-admob-plugins" class="md-nav__link">
+  <a href="#disable-any-other-custom-admob-plugins" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable Any Other AdMob plugins
+      Disable Any Other Custom AdMob plugins
     </span>
   </a>
   
@@ -2027,6 +2095,24 @@
   <a href="#disable-built-in-admob-in-unreal-engine" class="md-nav__link">
     <span class="md-ellipsis">
       Disable Built-in AdMob in Unreal Engine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-online-subsystem-google-play-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable Online Subsystem Google Play (Optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-android-file-server-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable Android File Server (Optional)
     </span>
   </a>
   
@@ -2107,7 +2193,7 @@
 </div>
 
 <hr />
-<h2 id="disable-any-other-admob-plugins">Disable Any Other AdMob plugins</h2>
+<h2 id="disable-any-other-custom-admob-plugins">Disable Any Other Custom AdMob plugins</h2>
 <p>Make sure that no other Google AdMob-related plugins are active, as they may override or conflict with this plugin. Go to <strong>Edit → Plugins</strong> and disable any third-party Google AdMob plugins. </p>
 <hr />
 <h2 id="disable-built-in-admob-in-unreal-engine">Disable Built-in AdMob in Unreal Engine</h2>
@@ -2120,6 +2206,28 @@
 </ol>
 <div align="center">
   <img src="../assets/getting_started/admob_gettingstarted_turnoffnativeadmob.png" width="1000">
+</div>
+
+<hr />
+<h2 id="disable-online-subsystem-google-play-optional">Disable Online Subsystem Google Play (Optional)</h2>
+<p>Go to <strong>Edit</strong> → <strong>Plugins</strong>, search for "<strong>Online Subsystem GooglePlay</strong>", and turn it off.</p>
+<p>This subsystem uses outdated Google AdMob APIs and automatically injects Java files and manifest entries that conflict with latest 24.5.0 library used in this plugin.</p>
+<blockquote>
+<p>💡 This plugin does not rely on Unreal’s Online Subsystem Google Play.
+Disabling it is recommended for stability, but not strictly required in all projects.</p>
+</blockquote>
+<p>If left enabled, some projects may fail to package or report duplicated/obsolete AdMob API classes.</p>
+<div align="center">
+  <img src="../assets/getting_started/admob_gettingstarted_onlinesubsystemgp.png" width="1000">
+</div>
+
+<hr />
+<h2 id="disable-android-file-server-optional">Disable Android File Server (Optional)</h2>
+<p>In <strong>Edit</strong> → <strong>Plugins</strong>, locate "<strong>AndroidFileServer</strong>" and disable it <strong>only if Online Subsystem Google Play is disabled too</strong>.</p>
+<p>AFS depends on OnlineSubsystemGooglePlay. When OnlineSubsystemGooglePlay is turned off, AFS may still inject manifest sections and ProGuard rules, which can cause build failures during packaging.</p>
+<p>This prevents errors such as missing ProGuard files, manifest merge conflicts, or duplicated Java entries.</p>
+<div align="center">
+  <img src="../assets/getting_started/admob_gettingstarted_afs.png" width="1000">
 </div>
 
 <hr />
