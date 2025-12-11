@@ -1378,6 +1378,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#get-consent-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Consent Status
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Consent Status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-return-value_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Return Value
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reset-consent-state" class="md-nav__link">
     <span class="md-ellipsis">
       Reset Consent State
@@ -1388,7 +1427,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parameters_3" class="md-nav__link">
+  <a href="#parameters_4" class="md-nav__link">
     <span class="md-ellipsis">
       Parameters
     </span>
@@ -1412,7 +1451,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parameters_4" class="md-nav__link">
+  <a href="#parameters_5" class="md-nav__link">
     <span class="md-ellipsis">
       Parameters
     </span>
@@ -1490,6 +1529,15 @@
   <a href="#isconsentgiven" class="md-nav__link">
     <span class="md-ellipsis">
       IsConsentGiven
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getconsentstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetConsentStatus
     </span>
   </a>
   
@@ -2395,6 +2443,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#get-consent-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Consent Status
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Consent Status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-return-value_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Return Value
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reset-consent-state" class="md-nav__link">
     <span class="md-ellipsis">
       Reset Consent State
@@ -2405,7 +2492,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parameters_3" class="md-nav__link">
+  <a href="#parameters_4" class="md-nav__link">
     <span class="md-ellipsis">
       Parameters
     </span>
@@ -2429,7 +2516,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parameters_4" class="md-nav__link">
+  <a href="#parameters_5" class="md-nav__link">
     <span class="md-ellipsis">
       Parameters
     </span>
@@ -2513,6 +2600,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#getconsentstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetConsentStatus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#resetconsentstate" class="md-nav__link">
     <span class="md-ellipsis">
       ResetConsentState
@@ -2581,7 +2677,7 @@
 <p>An optional parameter that marks the user as being under the age of consent. If enabled, <strong>the consent dialog will not appear</strong>, and <strong>personalized ads will be disabled automatically</strong>. Use this setting only in specific cases — for example, if your app includes its own <strong>age verification</strong> system.   </p>
 <hr />
 <h4 id="2-on-completed">2. On Completed</h4>
-<p>Called when the consent process has finished successfully. You can start showing personalized ads from this point.</p>
+<p>Called when the consent process has finished successfully. You can start showing personalized ads from this point. The callback returns an <a href="../../object_definitions/enumerations/#econsentstatus"><code>EConsentStatus</code></a> value.</p>
 <hr />
 <h4 id="3-on-failure">3. On Failure</h4>
 <p>Called if the consent form fails to load or display. This callback returns an <a href="../../object_definitions/enumerations/#eformerrorcode"><code>EFormErrorCode</code></a> value describing the reason for failure. Use it to log the error and take appropriate action — for example, retry showing the form or return to the main menu.    </p>
@@ -2614,6 +2710,19 @@ If <strong>false</strong>, only non-personalized or limited ads should be shown 
 - <strong>true</strong> — the user has accepted personalized ads<br />
 - <strong>false</strong> — the user has declined or not yet provided consent  </p>
 <hr />
+<h2 id="get-consent-status">Get Consent Status</h2>
+<p>This function returns the current <strong>User Messaging Platform (UMP)</strong> consent status as an enum.<br />
+Unlike <strong>Is Consent Given</strong>, which only reports a yes/no result, this function provides the <strong>exact consent state</strong> returned by Google’s UMP system.</p>
+<p>Use this function when you need more detailed logic, such as determining whether the consent form should be shown, checking if consent is required, or handling custom UI flows.</p>
+<div align="center">
+  <img src="../assets/consent&privacy/consent&privacy_getconsentstatus.png" width="220">
+</div>
+
+<h3 id="parameters_3">Parameters</h3>
+<h4 id="1-return-value_1">1. Return Value</h4>
+<p>The function returns an <a href="../../object_definitions/enumerations/#econsentstatus"><code>EConsentStatus</code></a> value.<br />
+Each state corresponds directly to UMP’s internal status codes.</p>
+<hr />
 <h2 id="reset-consent-state">Reset Consent State</h2>
 <p>This function resets the stored consent information for the user. It clears the saved consent status so that the <strong>User Messaging Platform (UMP)</strong> dialog can be shown again on the next request.  </p>
 <p>This is useful for testing or when you want to provide players with an option to review or change their consent settings manually.</p>
@@ -2621,7 +2730,7 @@ If <strong>false</strong>, only non-personalized or limited ads should be shown 
   <img src="../assets/consent&privacy/consent&privacy_reset.png" width="200">
 </div>
 
-<h3 id="parameters_3">Parameters</h3>
+<h3 id="parameters_4">Parameters</h3>
 <p>This function does not have any input or output parameters. It simply resets all stored consent preferences. </p>
 <hr />
 <h2 id="configure-ad-mob-privacy">Configure Ad Mob Privacy</h2>
@@ -2631,7 +2740,7 @@ If <strong>false</strong>, only non-personalized or limited ads should be shown 
   <img src="../assets/consent&privacy/consent&privacy_configureprivacy.png" width="250">
 </div>
 
-<h3 id="parameters_4">Parameters</h3>
+<h3 id="parameters_5">Parameters</h3>
 <h4 id="1-is-child-directed">1. Is Child Directed</h4>
 <p>Marks the app as directed toward children under the <strong>COPPA</strong> (Children’s Online Privacy Protection Act) regulation. When enabled, AdMob restricts ad targeting, disables personalized ads, and ensures only age-appropriate content is shown. Use this only if your app is clearly intended for a child audience. </p>
 <hr />
@@ -2702,6 +2811,35 @@ If <strong>false</strong>, only non-personalized or limited ads should be shown 
 
 <span class="w">    </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Is consent given? %s&quot;</span><span class="p">),</span>
 <span class="w">        </span><span class="n">bHasConsent</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Yes&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;No&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="getconsentstatus">GetConsentStatus</h3>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">UMyGameInstance::CheckConsentStatus</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">EConsentStatus</span><span class="w"> </span><span class="n">Status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UAdMobCPPLibrary</span><span class="o">::</span><span class="n">GetConsentStatus</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">Status</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">EConsentStatus</span><span class="o">::</span><span class="no">Obtained</span><span class="p">:</span>
+<span class="w">            </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consent Status: Obtained&quot;</span><span class="p">));</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">EConsentStatus</span><span class="o">::</span><span class="no">Required</span><span class="p">:</span>
+<span class="w">            </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consent Status: Required — form should be shown&quot;</span><span class="p">));</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">EConsentStatus</span><span class="o">::</span><span class="no">NotRequired</span><span class="p">:</span>
+<span class="w">            </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consent Status: Not Required&quot;</span><span class="p">));</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">EConsentStatus</span><span class="o">::</span><span class="no">Unknown</span><span class="p">:</span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span>
+<span class="w">            </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consent Status: Unknown&quot;</span><span class="p">));</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />

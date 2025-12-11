@@ -1370,18 +1370,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-on-success" class="md-nav__link">
+  <a href="#2-offset-x" class="md-nav__link">
     <span class="md-ellipsis">
-      2. On Success
+      2. Offset X
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-on-failure" class="md-nav__link">
+  <a href="#3-offset-y" class="md-nav__link">
     <span class="md-ellipsis">
-      3. On Failure
+      3. Offset Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-on-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. On Success
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-on-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. On Failure
     </span>
   </a>
   
@@ -1427,6 +1445,30 @@
         
           <li class="md-nav__item">
   <a href="#return-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-banner-visible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Banner Visible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Is Banner Visible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#return-value_1" class="md-nav__link">
     <span class="md-ellipsis">
       Return Value
     </span>
@@ -1498,6 +1540,15 @@
   <a href="#isbannerready" class="md-nav__link">
     <span class="md-ellipsis">
       IsBannerReady
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isbannervisible" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsBannerVisible
     </span>
   </a>
   
@@ -2331,18 +2382,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-on-success" class="md-nav__link">
+  <a href="#2-offset-x" class="md-nav__link">
     <span class="md-ellipsis">
-      2. On Success
+      2. Offset X
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-on-failure" class="md-nav__link">
+  <a href="#3-offset-y" class="md-nav__link">
     <span class="md-ellipsis">
-      3. On Failure
+      3. Offset Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-on-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. On Success
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-on-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. On Failure
     </span>
   </a>
   
@@ -2388,6 +2457,30 @@
         
           <li class="md-nav__item">
   <a href="#return-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Value
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-banner-visible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Banner Visible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Is Banner Visible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#return-value_1" class="md-nav__link">
     <span class="md-ellipsis">
       Return Value
     </span>
@@ -2459,6 +2552,15 @@
   <a href="#isbannerready" class="md-nav__link">
     <span class="md-ellipsis">
       IsBannerReady
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isbannervisible" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsBannerVisible
     </span>
   </a>
   
@@ -2566,7 +2668,7 @@
 <hr />
 <h2 id="show-banner">Show Banner</h2>
 <p>This function displays a <strong>previously loaded banner ad</strong> on the screen. You must call <a href="#load-banner"><strong>Load Banner</strong></a> before using this function — banners cannot be shown until they are loaded successfully.   </p>
-<p>You can choose the banner’s position using the <strong>Banner Gravity</strong> parameter, which determines where on the screen the ad will appear (top, middle, or bottom).</p>
+<p>You can choose the banner’s position using the <strong>Banner Gravity</strong> parameter, which determines where on the screen the ad will appear (top, middle, or bottom). Additional offsets allow you to move the banner relative to that anchor.</p>
 <div align="center">
   <img src="../assets/banner/banner_show.png" width="320">
 </div>
@@ -2575,10 +2677,30 @@
 <h4 id="1-banner-gravity">1. Banner Gravity</h4>
 <p>Specifies the screen position for the banner ad. Available values are defined in <a href="../../object_definitions/enumerations/#ebannergravity"><code>EBannerGravity</code></a>. Typical options include <strong>Top Center</strong>, <strong>Middle Center</strong>, and <strong>Bottom Center</strong> (most commonly used).  </p>
 <hr />
-<h4 id="2-on-success">2. On Success</h4>
+<h4 id="2-offset-x">2. Offset X</h4>
+<p>Horizontal shift in pixels.</p>
+<ul>
+<li>Positive value moves the banner to the right</li>
+<li>Negative — to the left</li>
+</ul>
+<p>Applies consistently for all banner positions.</p>
+<hr />
+<h4 id="3-offset-y">3. Offset Y</h4>
+<p>Vertical shift in pixels.</p>
+<ul>
+<li>
+<p>Positive value moves the banner up</p>
+</li>
+<li>
+<p>Negative — down</p>
+</li>
+</ul>
+<p>Applies consistently for all banner positions.</p>
+<hr />
+<h4 id="4-on-success">4. On Success</h4>
 <p>Called when the banner is successfully displayed on screen.</p>
 <hr />
-<h4 id="3-on-failure">3. On Failure</h4>
+<h4 id="5-on-failure">5. On Failure</h4>
 <p>Called if the banner fails to appear (for example, if it hasn’t been loaded yet or was destroyed). This usually indicates that a new banner needs to be loaded before attempting to show it again. This callback returns an <a href="../../object_definitions/enumerations/#eaderrorcode"><code>EAdErrorCode</code></a> value describing the reason for failure. </p>
 <hr />
 <h2 id="hide-banner">Hide Banner</h2>
@@ -2599,12 +2721,23 @@
 <h2 id="is-banner-ready">Is Banner Ready</h2>
 <p>This function checks whether a <strong>banner ad</strong> has been successfully loaded and is ready to be shown. It is typically used to verify the ad’s state before calling <a href="#show-banner"><strong>Show Banner</strong></a>, preventing unnecessary errors or failures.  </p>
 <div align="center">
-  <img src="../assets/banner/banner_isready.png" width="200">
+  <img src="../assets/banner/banner_isready.png" width="220">
 </div>
 
 <h3 id="return-value">Return Value</h3>
 <p>Returns <code>true</code> if a banner ad is loaded and ready to display.<br />
 Returns <code>false</code> if the banner has not been loaded or failed to load.</p>
+<hr />
+<h2 id="is-banner-visible">Is Banner Visible</h2>
+<p>This function checks whether a <strong>banner ad is currently visible on the screen</strong>. It does not verify whether the banner is loaded — only whether it is actively being displayed after a successful call to <a href="#show-banner"><strong>Show Banner</strong></a>. </p>
+<p>This is useful when your game needs to react to UI changes, avoid overlapping widgets, or hide gameplay elements when an ad is present.</p>
+<div align="center">
+  <img src="../assets/banner/banner_isvisible.png" width="220">
+</div>
+
+<h3 id="return-value_1">Return Value</h3>
+<p>Returns <code>true</code> if the banner is currently visible on the screen.
+Returns <code>false</code> if the banner is hidden, removed, or has never been shown.</p>
 <hr />
 <h2 id="example">Example</h2>
 <p>In this example, the <strong>Load Banner</strong> function is used to request a banner ad with the specified <strong>Ad Unit ID</strong> and size (<strong>Full Banner</strong>).</p>
@@ -2662,7 +2795,11 @@ Returns <code>false</code> if the banner has not been loaded or failed to load.<
 <span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Failed to show banner: %s (Code: %d)&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">Message</span><span class="p">,</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">int32</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Error</span><span class="p">));</span>
 <span class="w">    </span><span class="p">});</span>
 
-<span class="w">    </span><span class="n">UAdMobCPPLibrary</span><span class="o">::</span><span class="n">ShowBanner</span><span class="p">(</span><span class="n">EBannerGravity</span><span class="o">::</span><span class="n">BottomCenter</span><span class="p">,</span><span class="w"> </span><span class="n">OnSuccess</span><span class="p">,</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Show banner at Bottom Center with no offsets</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">int32</span><span class="w"> </span><span class="n">OffsetX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">int32</span><span class="w"> </span><span class="n">OffsetY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">UAdMobCPPLibrary</span><span class="o">::</span><span class="n">ShowBanner</span><span class="p">(</span><span class="n">EBannerGravity</span><span class="o">::</span><span class="n">BottomCenter</span><span class="p">,</span><span class="w"> </span><span class="n">OffsetX</span><span class="p">,</span><span class="w"> </span><span class="n">OffsetY</span><span class="p">,</span><span class="w"> </span><span class="n">OnSuccess</span><span class="p">,</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
@@ -2704,6 +2841,24 @@ Returns <code>false</code> if the banner has not been loaded or failed to load.<
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">bIsReady</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UAdMobCPPLibrary</span><span class="o">::</span><span class="n">IsBannerReady</span><span class="p">();</span>
 
 <span class="w">    </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Is banner ready? %s&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">bIsReady</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Yes&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;No&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="isbannervisible">IsBannerVisible</h3>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">UMyClass::CheckBannerVisibility</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">bVisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UAdMobCPPLibrary</span><span class="o">::</span><span class="n">IsBannerVisible</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bVisible</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Banner is currently visible on screen.&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Banner is not visible.&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
