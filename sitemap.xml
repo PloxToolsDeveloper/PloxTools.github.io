@@ -2,170 +2,310 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ploxtools.github.io/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/help/help/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/faq/faq/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/implementation/app_open/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/implementation/banner/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/implementation/consent%26privacy/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/implementation/getting_started/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/implementation/ininitialization/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/implementation/interstitial/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/implementation/mediation/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/implementation/overview/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/implementation/rewarded/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/implementation/rewarded_interstitial/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/implementation/testing_ads/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/admob/object_definitions/enumerations/</loc>
-         <lastmod>2025-12-11</lastmod>
-    </url>
-    <url>
-         <loc>https://ploxtools.github.io/plugins/analytics/getting_started/</loc>
-         <lastmod>2025-12-11</lastmod>
-    </url>
-    <url>
-         <loc>https://ploxtools.github.io/plugins/analytics/overview/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/faq/faq/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/getting_started/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/initialize_billingclient/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/is_product_purchased/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/is_subscription_active/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/launch_billing_flow/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/manual_purchase_handling/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/overview/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/process_pending_purchases/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/query_owned_purchases/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/query_product_details/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/query_single_product_details/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/set_nonconsumable_products/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/show_inapp_messages/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/testing_purchases/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/implementation/utilities/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/object_definitions/enumerations/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/object_definitions/product_details/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/billing/object_definitions/purchase/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/cpp_usage/cpp_usage/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/faq/faq/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/getting_started/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/initialization/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/overview/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/analytics/api/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/analytics/examples/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/analytics/overview/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/authentication/api/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/authentication/examples/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/authentication/overview/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/cloud_messaging/api/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/cloud_messaging/examples/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/cloud_messaging/overview/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/cloud_storage/api/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/cloud_storage/examples/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/cloud_storage/overview/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/crashlytics/api/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/crashlytics/examples/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/crashlytics/overview/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/firestore/api/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/firestore/document_api/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/firestore/examples/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/firestore/overview/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/firestore/value_api/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/performance_monitoring/api/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/performance_monitoring/examples/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/performance_monitoring/overview/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/realtime_database/api/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/realtime_database/examples/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/realtime_database/overview/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/remote_config/api/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/remote_config/examples/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/implementation/remote_config/overview/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/object_definitions/enumerations/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/object_definitions/firestore_document/</loc>
+         <lastmod>2025-12-24</lastmod>
+    </url>
+    <url>
+         <loc>https://ploxtools.github.io/plugins/firebase/object_definitions/firestore_value/</loc>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/inappreview/faq/faq/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/inappreview/implementation/getting_started/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/inappreview/implementation/launch_inapp_review/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/inappreview/implementation/overview/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
     <url>
          <loc>https://ploxtools.github.io/plugins/inappreview/object_definitions/enumerations/</loc>
-         <lastmod>2025-12-11</lastmod>
+         <lastmod>2025-12-24</lastmod>
     </url>
 </urlset>
