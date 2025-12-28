@@ -1297,16 +1297,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-sign-in-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other Sign-In Methods
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Other Sign-In Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#google-sign-in" class="md-nav__link">
     <span class="md-ellipsis">
       Google Sign-In
@@ -1314,18 +1304,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#email-and-password" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#email-and-password-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Email and Password
+      Email and Password Authentication
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1333,6 +1318,60 @@
   <a href="#checking-authentication-state-and-user-data" class="md-nav__link">
     <span class="md-ellipsis">
       Checking Authentication State and User Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-user-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating User Profile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reauthentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reauthentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linking-authentication-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking Authentication Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reloading-user-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reloading User Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-the-user-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting the User Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-state-listener" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication State Listener
     </span>
   </a>
   
@@ -3504,16 +3543,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-sign-in-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other Sign-In Methods
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Other Sign-In Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#google-sign-in" class="md-nav__link">
     <span class="md-ellipsis">
       Google Sign-In
@@ -3521,18 +3550,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#email-and-password" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#email-and-password-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Email and Password
+      Email and Password Authentication
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3540,6 +3564,60 @@
   <a href="#checking-authentication-state-and-user-data" class="md-nav__link">
     <span class="md-ellipsis">
       Checking Authentication State and User Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-user-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating User Profile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reauthentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reauthentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linking-authentication-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking Authentication Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reloading-user-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reloading User Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-the-user-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting the User Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-state-listener" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication State Listener
     </span>
   </a>
   
@@ -3615,28 +3693,71 @@
 </ul>
 <p>If sign-in fails, the failure callback can be used to handle network or configuration errors.</p>
 <hr />
-<h2 id="other-sign-in-methods">Other Sign-In Methods</h2>
-<p>Firebase Authentication also supports additional sign-in methods.</p>
-<h3 id="google-sign-in">Google Sign-In</h3>
-<p>Google Sign-In allows users to authenticate using their Google account.<br />
-This method requires additional configuration in the Firebase Console and is typically used for permanent accounts.</p>
+<h2 id="google-sign-in">Google Sign-In</h2>
+<p>Google Sign-In allows users to authenticate using their Google account.</p>
+<p>This is one of the most common and reliable authentication methods for mobile games, as most Android users already have a Google account configured on their device.</p>
+<p>Typical use cases:</p>
+<ul>
+<li>converting a guest (anonymous) user into a permanent account  </li>
+<li>providing a one-tap sign-in experience  </li>
+<li>restoring user progress across devices  </li>
+<li>reducing friction compared to manual account creation  </li>
+</ul>
+<p>When Google Sign-In succeeds:</p>
+<ul>
+<li>the current Firebase user is authenticated using Google credentials  </li>
+<li>the user receives a stable and permanent UID  </li>
+<li>the account can be safely used across sessions and devices  </li>
+</ul>
+<p>Google Sign-In can be used in two main scenarios:</p>
+<ul>
+<li><strong>Direct sign-in</strong> for new or returning users  </li>
+<li><strong>Account linking</strong>, where an anonymous user is upgraded to a Google-backed account without losing data  </li>
+</ul>
 <div align="center">
   <img src="../../assets/authentication/firebase_authentication_google.png" width="600">
 </div>
 
-<h3 id="email-and-password">Email and Password</h3>
-<p>Email-based authentication supports:</p>
+<p>Important notes:</p>
 <ul>
-<li>creating new users  </li>
-<li>signing in with email and password  </li>
+<li>Google Sign-In requires SHA-1 and SHA-256 fingerprints to be configured in the Firebase Console</li>
+<li>Google Sign-In can also be used for reauthentication when required  </li>
+</ul>
+<hr />
+<h2 id="email-and-password-authentication">Email and Password Authentication</h2>
+<p>Email and password authentication provides a traditional account system similar to classic web or PC applications.</p>
+<p>This method is suitable for projects that require:</p>
+<ul>
+<li>explicit user accounts  </li>
+<li>manual login credentials  </li>
+<li>password recovery flows  </li>
+<li>email-based verification  </li>
+</ul>
+<p>Email authentication supports the following operations:</p>
+<ul>
+<li>creating new user accounts  </li>
+<li>signing in with existing credentials  </li>
 <li>sending password reset emails  </li>
-<li>email verification  </li>
+<li>sending email verification messages  </li>
+<li>updating email and password after authentication  </li>
 </ul>
 <div align="center">
   <img src="../../assets/authentication/firebase_authentication_mail.png" width="600">
 </div>
 
-<p>These methods are suitable for projects that require traditional account systems.</p>
+<p>Typical usage patterns:</p>
+<ul>
+<li>players creating an account via a registration screen  </li>
+<li>allowing users to log in on multiple devices using the same credentials  </li>
+<li>combining email authentication with other providers via account linking  </li>
+</ul>
+<p>Important notes:</p>
+<ul>
+<li>email verification is optional but recommended for permanent accounts  </li>
+<li>some sensitive operations (email/password update, account deletion) may require recent reauthentication  </li>
+<li>email/password accounts can later be linked with Google or other providers  </li>
+</ul>
+<p>Email-based authentication works well for projects that need full control over account lifecycle and user credentials.</p>
 <hr />
 <h2 id="checking-authentication-state-and-user-data">Checking Authentication State and User Data</h2>
 <p>After a successful sign-in, it is common to immediately read basic information about the authenticated user and store it in game state or UI variables.</p>
@@ -3658,11 +3779,115 @@ This method requires additional configuration in the Firebase Console and is typ
 
 <p>Important notes:</p>
 <ul>
-<li>user data getters return values for the currently authenticated user  </li>
+<li>getters return values for the currently authenticated user  </li>
 <li>some fields (such as display name or email) may be empty depending on the sign-in method  </li>
 <li>getters are safe to call after a successful authentication flow  </li>
 </ul>
 <p>This pattern is commonly used right after sign-in or during game startup to initialize user-related state without making additional network requests.</p>
+<hr />
+<h2 id="updating-user-profile">Updating User Profile</h2>
+<p>Firebase Authentication allows updating profile data for the currently authenticated user.</p>
+<p>Supported updates include:</p>
+<ul>
+<li>display name  </li>
+<li>photo URL  </li>
+<li>email address  </li>
+<li>password  </li>
+</ul>
+<p>These operations may require recent authentication, depending on account security rules.</p>
+<p>Typical use cases:</p>
+<ul>
+<li>profile or account settings screens  </li>
+<li>allowing users to customize their public profile  </li>
+<li>account recovery or credential updates  </li>
+</ul>
+<div align="center">
+  <img src="../../assets/authentication/firebase_authentication_setters.png" width="700">
+</div>
+
+<p>After updating profile data, it is recommended to <strong>reload the user</strong> to ensure local state is up to date.</p>
+<hr />
+<h2 id="reauthentication">Reauthentication</h2>
+<p>Some sensitive operations require the user to be recently authenticated.</p>
+<p>This includes:</p>
+<ul>
+<li>updating email  </li>
+<li>updating password  </li>
+<li>deleting the account  </li>
+</ul>
+<p>If such an operation fails due to authentication age, the user must reauthenticate.</p>
+<p>Supported reauthentication methods:</p>
+<ul>
+<li>email and password  </li>
+<li>Google Sign-In  </li>
+</ul>
+<p>Reauthentication does not create a new session or user.<br />
+It only refreshes the security credentials of the current user.</p>
+<hr />
+<h2 id="linking-authentication-providers">Linking Authentication Providers</h2>
+<p>Linking allows attaching multiple authentication providers to a single Firebase user.</p>
+<p>This is commonly used to:</p>
+<ul>
+<li>upgrade an anonymous account to a permanent one  </li>
+<li>allow login via multiple methods  </li>
+<li>preserve user data across different sign-in flows  </li>
+</ul>
+<p>Supported linking methods:</p>
+<ul>
+<li>email and password  </li>
+<li>Google account  </li>
+</ul>
+<p>After linking succeeds:</p>
+<ul>
+<li>the same user ID (UID) is preserved  </li>
+<li>existing data in Firebase services remains intact  </li>
+</ul>
+<p>You can retrieve all linked providers at any time to update UI or account settings.</p>
+<hr />
+<h2 id="reloading-user-data">Reloading User Data</h2>
+<p>Firebase caches user profile data locally.</p>
+<p>To ensure the latest state is loaded from the server, you can explicitly reload the current user.</p>
+<p>Reloading updates:</p>
+<ul>
+<li>email verification status  </li>
+<li>linked providers  </li>
+<li>profile metadata  </li>
+</ul>
+<p>This is especially useful after:</p>
+<ul>
+<li>email verification  </li>
+<li>profile updates  </li>
+<li>linking new providers  </li>
+</ul>
+<hr />
+<h2 id="deleting-the-user-account">Deleting the User Account</h2>
+<p>Firebase Authentication allows permanently deleting the currently authenticated user.</p>
+<p>This operation:</p>
+<ul>
+<li>removes the account from Firebase Authentication  </li>
+<li>invalidates all associated sessions  </li>
+<li>does not automatically delete data in other Firebase services  </li>
+</ul>
+<p>For safety, this operation often requires reauthentication beforehand.</p>
+<hr />
+<h2 id="authentication-state-listener">Authentication State Listener</h2>
+<p>Firebase provides a global authentication state listener.</p>
+<p>This listener is triggered when:</p>
+<ul>
+<li>a user signs in  </li>
+<li>a user signs out  </li>
+<li>the active user changes  </li>
+</ul>
+<p>Typical use cases:</p>
+<ul>
+<li>reacting to login/logout globally  </li>
+<li>updating UI automatically  </li>
+<li>synchronizing authentication-dependent systems  </li>
+</ul>
+<div align="center">
+  <img src="../../assets/authentication/firebase_authentication_listener.png" width="700">
+</div>
+
 <hr />
 <h2 id="signing-out">Signing Out</h2>
 <p>Signing out removes the current authentication session from the device.</p>

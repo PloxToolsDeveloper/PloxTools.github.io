@@ -1338,9 +1338,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
+  <a href="#linking-providers" class="md-nav__link">
     <span class="md-ellipsis">
-      Security
+      Linking Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reauthentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reauthentication
     </span>
   </a>
   
@@ -1356,45 +1365,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sign-out" class="md-nav__link">
+  <a href="#session" class="md-nav__link">
     <span class="md-ellipsis">
-      Sign Out
+      Session
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-profile" class="md-nav__link">
+  <a href="#current-user-account" class="md-nav__link">
     <span class="md-ellipsis">
-      User Profile
+      Current User - Account
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#account-deletion" class="md-nav__link">
+  <a href="#current-user-profile-getters" class="md-nav__link">
     <span class="md-ellipsis">
-      Account Deletion
+      Current User - Profile Getters
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#id-token" class="md-nav__link">
+  <a href="#current-user-profile-setters" class="md-nav__link">
     <span class="md-ellipsis">
-      ID Token
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-profile-getters" class="md-nav__link">
-    <span class="md-ellipsis">
-      User Profile Getters
+      Current User - Profile Setters
     </span>
   </a>
   
@@ -3552,9 +3552,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
+  <a href="#linking-providers" class="md-nav__link">
     <span class="md-ellipsis">
-      Security
+      Linking Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reauthentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reauthentication
     </span>
   </a>
   
@@ -3570,45 +3579,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sign-out" class="md-nav__link">
+  <a href="#session" class="md-nav__link">
     <span class="md-ellipsis">
-      Sign Out
+      Session
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-profile" class="md-nav__link">
+  <a href="#current-user-account" class="md-nav__link">
     <span class="md-ellipsis">
-      User Profile
+      Current User - Account
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#account-deletion" class="md-nav__link">
+  <a href="#current-user-profile-getters" class="md-nav__link">
     <span class="md-ellipsis">
-      Account Deletion
+      Current User - Profile Getters
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#id-token" class="md-nav__link">
+  <a href="#current-user-profile-setters" class="md-nav__link">
     <span class="md-ellipsis">
-      ID Token
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-profile-getters" class="md-nav__link">
-    <span class="md-ellipsis">
-      User Profile Getters
+      Current User - Profile Setters
     </span>
   </a>
   
@@ -3640,7 +3640,7 @@
 
 
 <h1 id="authentication-api-reference">Authentication API Reference</h1>
-<p>This section documents all Firebase Authentication Blueprint nodes provided by the plugin. These nodes allow you to initialize authentication, sign users in and out, manage user accounts, handle security operations, and observe authentication state changes.</p>
+<p>This section documents all Firebase Authentication Blueprint nodes provided by the plugin. These nodes allow you to initialize authentication, sign users in and out, manage user accounts, perform security-sensitive operations, link authentication providers, and observe authentication state changes.</p>
 <p>All Authentication nodes require Firebase to be successfully initialized before use.</p>
 <hr />
 <h2 id="authentication-initialization">Authentication Initialization</h2>
@@ -3717,13 +3717,13 @@
 <tr>
 <td><strong>Create User With Email and Password</strong></td>
 <td><code>Email</code>, <code>Password</code> (string)</td>
-<td><strong>On Success (UserID)</strong>: Called when the user account is created successfully.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if user creation fails.</td>
+<td><strong>On Success (UserId)</strong>: Called when the user account is created successfully.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if user creation fails.</td>
 <td>Creates a new Firebase Authentication user using email and password.</td>
 </tr>
 <tr>
 <td><strong>Sign In With Email and Password</strong></td>
 <td><code>Email</code>, <code>Password</code> (string)</td>
-<td><strong>On Success (UserID)</strong>: Called when sign-in succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if sign-in fails.</td>
+<td><strong>On Success (UserId)</strong>: Called when sign-in succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if sign-in fails.</td>
 <td>Signs the user in using email and password credentials.</td>
 </tr>
 <tr>
@@ -3735,7 +3735,39 @@
 </tbody>
 </table>
 <hr />
-<h2 id="security">Security</h2>
+<h2 id="linking-providers">Linking Providers</h2>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Parameters</th>
+<th>Callbacks / Return</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Link With Email and Password</strong></td>
+<td><code>Email</code>, <code>Password</code> (string)</td>
+<td><strong>On Success</strong>: Called when linking succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if linking fails.</td>
+<td>Links the currently authenticated user with an email and password provider.</td>
+</tr>
+<tr>
+<td><strong>Link With Google</strong></td>
+<td>–</td>
+<td><strong>On Success</strong>: Called when linking succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if linking fails.</td>
+<td>Links the currently authenticated user with a Google account.</td>
+</tr>
+<tr>
+<td><strong>Get Linked Providers</strong></td>
+<td>–</td>
+<td><code>Array&lt;string&gt;</code></td>
+<td>Returns a list of authentication providers linked to the current user.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="reauthentication">Reauthentication</h2>
 <table>
 <thead>
 <tr>
@@ -3750,7 +3782,13 @@
 <td><strong>Reauthenticate With Email and Password</strong></td>
 <td><code>Email</code>, <code>Password</code> (string)</td>
 <td><strong>On Success</strong>: Called when reauthentication succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if reauthentication fails.</td>
-<td>Reauthenticates the currently signed-in user using email and password. Required for sensitive account operations.</td>
+<td>Reauthenticates the current user using email and password. Required for sensitive account operations.</td>
+</tr>
+<tr>
+<td><strong>Reauthenticate With Google</strong></td>
+<td>–</td>
+<td><strong>On Success</strong>: Called when Google reauthentication succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if reauthentication fails.</td>
+<td>Reauthenticates the current user using Google Sign-In.</td>
 </tr>
 </tbody>
 </table>
@@ -3781,7 +3819,7 @@
 </tbody>
 </table>
 <hr />
-<h2 id="sign-out">Sign Out</h2>
+<h2 id="session">Session</h2>
 <table>
 <thead>
 <tr>
@@ -3798,66 +3836,12 @@
 <td><strong>On Sign Out</strong>: Called after the user has been signed out.</td>
 <td>Signs out the currently authenticated user.</td>
 </tr>
-</tbody>
-</table>
-<hr />
-<h2 id="user-profile">User Profile</h2>
-<table>
-<thead>
 <tr>
-<th>Node</th>
-<th>Parameters</th>
-<th>Callbacks / Return</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Update Email</strong></td>
-<td><code>NewEmail</code> (string)</td>
-<td><strong>On Success</strong>: Called when the email is updated successfully.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if the update fails.</td>
-<td>Updates the email address of the currently authenticated user.</td>
-</tr>
-<tr>
-<td><strong>Update Password</strong></td>
-<td><code>NewPassword</code> (string)</td>
-<td><strong>On Success</strong>: Called when the password is updated successfully.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if the update fails.</td>
-<td>Updates the password of the currently authenticated user.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="account-deletion">Account Deletion</h2>
-<table>
-<thead>
-<tr>
-<th>Node</th>
-<th>Parameters</th>
-<th>Callbacks / Return</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Delete Current User</strong></td>
+<td><strong>Is Signed In</strong></td>
 <td>–</td>
-<td><strong>On Success</strong>: Called when the user is deleted successfully.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if deletion fails.</td>
-<td>Permanently deletes the currently authenticated user account.</td>
+<td><code>bool</code></td>
+<td>Returns whether a Firebase Authentication user currently exists.</td>
 </tr>
-</tbody>
-</table>
-<hr />
-<h2 id="id-token">ID Token</h2>
-<table>
-<thead>
-<tr>
-<th>Node</th>
-<th>Parameters</th>
-<th>Callbacks / Return</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td><strong>Get ID Token</strong></td>
 <td><code>bForceRefresh</code> (bool)</td>
@@ -3867,7 +3851,7 @@
 </tbody>
 </table>
 <hr />
-<h2 id="user-profile-getters">User Profile Getters</h2>
+<h2 id="current-user-account">Current User - Account</h2>
 <table>
 <thead>
 <tr>
@@ -3879,11 +3863,31 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Is Signed In</strong></td>
+<td><strong>Reload User</strong></td>
 <td>–</td>
-<td><code>bool</code></td>
-<td>Returns whether a Firebase Authentication user is currently signed in.</td>
+<td><strong>On Success</strong>: Called when the user data is reloaded.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if reload fails.</td>
+<td>Reloads the current Firebase user from the server, updating profile data and verification state.</td>
 </tr>
+<tr>
+<td><strong>Delete Current User</strong></td>
+<td>–</td>
+<td><strong>On Success</strong>: Called when the user is deleted successfully.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if deletion fails.</td>
+<td>Permanently deletes the currently authenticated user account.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="current-user-profile-getters">Current User - Profile Getters</h2>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Parameters</th>
+<th>Callbacks / Return</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><strong>Get Current User ID</strong></td>
 <td>–</td>
@@ -3912,7 +3916,45 @@
 <td><strong>Get Current User Provider ID</strong></td>
 <td>–</td>
 <td><code>string</code></td>
-<td>Returns the authentication provider ID of the current user.</td>
+<td>Returns the primary authentication provider ID of the current user.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="current-user-profile-setters">Current User - Profile Setters</h2>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Parameters</th>
+<th>Callbacks / Return</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Update Email</strong></td>
+<td><code>NewEmail</code> (string)</td>
+<td><strong>On Success</strong>: Called when the email is updated.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if the update fails.</td>
+<td>Updates the email address of the currently authenticated user.</td>
+</tr>
+<tr>
+<td><strong>Update Password</strong></td>
+<td><code>NewPassword</code> (string)</td>
+<td><strong>On Success</strong>: Called when the password is updated.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if the update fails.</td>
+<td>Updates the password of the currently authenticated user.</td>
+</tr>
+<tr>
+<td><strong>Update User Display Name</strong></td>
+<td><code>DisplayName</code> (string)</td>
+<td><strong>On Success</strong>: Called when the display name is updated.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if the update fails.</td>
+<td>Updates the display name of the current user.</td>
+</tr>
+<tr>
+<td><strong>Update User Photo</strong></td>
+<td><code>PhotoUrl</code> (string)</td>
+<td><strong>On Success</strong>: Called when the photo URL is updated.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if the update fails.</td>
+<td>Updates the photo URL of the current user profile.</td>
 </tr>
 </tbody>
 </table>
@@ -3932,7 +3974,7 @@
 <td><strong>Listen Auth State</strong></td>
 <td>–</td>
 <td><strong>On Changed (UserId)</strong>: Called whenever the authentication state changes.</td>
-<td>Registers a listener that is triggered when the Firebase Authentication state changes, such as sign-in or sign-out events.</td>
+<td>Registers a listener that is triggered when the Firebase Authentication state changes, such as sign-in, sign-out, or user switching.</td>
 </tr>
 </tbody>
 </table>
