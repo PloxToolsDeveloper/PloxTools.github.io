@@ -12,13 +12,13 @@
         <meta name="author" content="PloxTools">
       
       
-        <link rel="canonical" href="https://ploxtools.github.io/plugins/firebase/object_definitions/firestore_value/">
+        <link rel="canonical" href="https://ploxtools.github.io/plugins/firebase/data_api/firebase_value_api/">
       
       
-        <link rel="prev" href="../firestore_document/">
+        <link rel="prev" href="../../implementation/remote_config/api/">
       
       
-        <link rel="next" href="../../cpp_usage/cpp_usage/">
+        <link rel="next" href="../firestore_document_api/">
       
       
       <link rel="icon" href="../../../../assets/icon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Firestore Value - PloxTools Plugins</title>
+        <title>Firebase Value API - PloxTools Plugins</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#firestore-value" class="md-skip">
+        <a href="#firebase-value-api-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Firestore Value
+              Firebase Value API
             
           </span>
         </div>
@@ -841,6 +841,8 @@
   
     
     
+      
+        
       
         
       
@@ -1665,10 +1667,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -1762,52 +1760,6 @@
   
   <span class="md-ellipsis">
     API Reference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../implementation/firestore/document_api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Document API
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../implementation/firestore/value_api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Value API
     
   </span>
   
@@ -2227,8 +2179,6 @@
       
         
       
-        
-      
     
     
     
@@ -2248,7 +2198,7 @@
   
   
   <span class="md-ellipsis">
-    Object Definitions
+    Data API
     
   </span>
   
@@ -2259,55 +2209,9 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3_2">
             <span class="md-nav__icon md-icon"></span>
-            Object Definitions
+            Data API
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../enumerations/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Enumerations
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../firestore_document/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Firestore Document
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -2330,7 +2234,7 @@
   
   
   <span class="md-ellipsis">
-    Firestore Value
+    Firebase Value API
     
   </span>
   
@@ -2343,7 +2247,7 @@
   
   
   <span class="md-ellipsis">
-    Firestore Value
+    Firebase Value API
     
   </span>
   
@@ -2366,74 +2270,80 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#relationship-with-firestore-document" class="md-nav__link">
+  <a href="#make-value" class="md-nav__link">
     <span class="md-ellipsis">
-      Relationship with Firestore Document
+      Make Value
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#efirestorevaluetype" class="md-nav__link">
+  <a href="#get-value-content" class="md-nav__link">
     <span class="md-ellipsis">
-      EFirestoreValueType
+      Get Value Content
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ffirestorevalue" class="md-nav__link">
+  <a href="#type-checks" class="md-nav__link">
     <span class="md-ellipsis">
-      FFirestoreValue
+      Type Checks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fields" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Fields
+      Notes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#factory-functions-c-only" class="md-nav__link">
+  <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Factory Functions (C++ Only)
+      C++ Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C++ Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-native-c-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Native C++ API
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#getters-c-only" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#using-blueprint-helper-functions-in-c" class="md-nav__link">
     <span class="md-ellipsis">
-      Getters (C++ Only)
+      Using Blueprint Helper Functions in C++
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#type-checks-c-only" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Type Checks (C++ Only)
+      Summary
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#blueprint-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      Blueprint Access
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2441,6 +2351,155 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firestore_document_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firestore Document API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Object Definitions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Object Definitions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../object_definitions/enumerations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enumerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../object_definitions/firebase_value/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firebase Value
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../object_definitions/firestore_document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firestore Document
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3478,74 +3537,80 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#relationship-with-firestore-document" class="md-nav__link">
+  <a href="#make-value" class="md-nav__link">
     <span class="md-ellipsis">
-      Relationship with Firestore Document
+      Make Value
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#efirestorevaluetype" class="md-nav__link">
+  <a href="#get-value-content" class="md-nav__link">
     <span class="md-ellipsis">
-      EFirestoreValueType
+      Get Value Content
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ffirestorevalue" class="md-nav__link">
+  <a href="#type-checks" class="md-nav__link">
     <span class="md-ellipsis">
-      FFirestoreValue
+      Type Checks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fields" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Fields
+      Notes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#factory-functions-c-only" class="md-nav__link">
+  <a href="#c-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Factory Functions (C++ Only)
+      C++ Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C++ Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-native-c-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Native C++ API
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#getters-c-only" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#using-blueprint-helper-functions-in-c" class="md-nav__link">
     <span class="md-ellipsis">
-      Getters (C++ Only)
+      Using Blueprint Helper Functions in C++
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#type-checks-c-only" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Type Checks (C++ Only)
+      Summary
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#blueprint-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      Blueprint Access
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3565,242 +3630,228 @@
 
 
 
-<h1 id="firestore-value">Firestore Value</h1>
-<p>The <strong>Firestore Value</strong> structure represents a single typed value stored inside a Firestore Document. It is used as the fundamental building block for all Firestore data and can represent primitive values, arrays, and nested objects.</p>
-<p>Firestore values are shared between <strong>C++</strong> and <strong>Blueprint</strong> workflows. However, <strong>native factory and getter functions of this structure are intended for C++ usage only</strong>.</p>
-<p>In Blueprint, Firestore values must be created and accessed using the <a href="../../implementation/firestore/value_api/"><strong>Firestore Value Library</strong></a>.</p>
+<h1 id="firebase-value-api-reference">Firebase Value API Reference</h1>
+<p>This section documents the Blueprint helper functions used to create, inspect, and check the type of <a href="../../object_definitions/firebase_value/"><code>FFirebaseValue</code></a> instances in Blueprints. These functions provide the <strong>only supported way</strong> to work with Firebase Values in Blueprint graphs.</p>
+<p>The underlying <code>FFirebaseValue</code> structure is shared between C++ and Blueprints, but its native factory and getter functions are intended for <strong>C++ usage only</strong>. Blueprint users must always use the functions provided by this Blueprint library.</p>
+<p>All functions in this section operate purely on local value data and do not perform any network or Firebase service operations.</p>
 <hr />
-<h2 id="relationship-with-firestore-document">Relationship with Firestore Document</h2>
-<p><code>FFirestoreValue</code> is used as the value type for all fields stored in a <a href="../firestore_document/"><code>FFirestoreDocument</code></a>.</p>
-<p>A Firestore Document is a map of field names to Firestore Values:</p>
-<ul>
-<li><code>FFirestoreDocument</code> — container of fields  </li>
-<li><code>FFirestoreValue</code> — typed value stored in each field</li>
-</ul>
-<p>These two structures are tightly coupled and always used together.</p>
-<hr />
-<h2 id="efirestorevaluetype">EFirestoreValueType</h2>
-<p>Defines the type of a Firestore value.</p>
+<h2 id="make-value">Make Value</h2>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>None</strong></td>
-<td>No value is set.</td>
-</tr>
-<tr>
-<td><strong>Int</strong></td>
-<td>Integer value.</td>
-</tr>
-<tr>
-<td><strong>Bool</strong></td>
-<td>Boolean value.</td>
-</tr>
-<tr>
-<td><strong>Double</strong></td>
-<td>Double-precision floating-point value.</td>
-</tr>
-<tr>
-<td><strong>String</strong></td>
-<td>UTF-8 string value.</td>
-</tr>
-<tr>
-<td><strong>Object</strong></td>
-<td>Nested object represented as a map of values.</td>
-</tr>
-<tr>
-<td><strong>Array</strong></td>
-<td>Array of Firestore values.</td>
-</tr>
-<tr>
-<td><strong>Null</strong></td>
-<td>Explicit null value.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="ffirestorevalue">FFirestoreValue</h2>
-<p>This struct represents a single Firestore value with an associated type.</p>
-<hr />
-<h2 id="fields">Fields</h2>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Type</strong></td>
-<td><code>EFirestoreValueType</code></td>
-<td>The type of the stored value.</td>
-</tr>
-<tr>
-<td><strong>IntValue</strong></td>
-<td><code>int32</code></td>
-<td>Stored integer value (when type is <code>Int</code>).</td>
-</tr>
-<tr>
-<td><strong>BoolValue</strong></td>
-<td><code>bool</code></td>
-<td>Stored boolean value (when type is <code>Bool</code>).</td>
-</tr>
-<tr>
-<td><strong>DoubleValue</strong></td>
-<td><code>double</code></td>
-<td>Stored double value (when type is <code>Double</code>).</td>
-</tr>
-<tr>
-<td><strong>StringValue</strong></td>
-<td><code>FString</code></td>
-<td>Stored string value (when type is <code>String</code>).</td>
-</tr>
-<tr>
-<td><strong>ObjectValue</strong></td>
-<td><code>TSharedPtr&lt;TMap&lt;FString, FFirestoreValue&gt;&gt;</code></td>
-<td>Stored object value (when type is <code>Object</code>).</td>
-</tr>
-<tr>
-<td><strong>ArrayValue</strong></td>
-<td><code>TSharedPtr&lt;TArray&lt;FFirestoreValue&gt;&gt;</code></td>
-<td>Stored array value (when type is <code>Array</code>).</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="factory-functions-c-only">Factory Functions (C++ Only)</h2>
-<p>These functions create Firestore values of a specific type.<br />
-They are intended for <strong>C++ usage only</strong>.</p>
-<table>
-<thead>
-<tr>
-<th>Function</th>
+<th>Node</th>
 <th>Parameters</th>
+<th>Return</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>FromInt</strong></td>
-<td><code>Value</code></td>
-<td>Creates an integer value.</td>
+<td><strong>Make Int</strong></td>
+<td><code>Value</code> (int32)</td>
+<td><code>FFirebaseValue</code></td>
+<td>Creates a Firebase value holding a 32-bit integer.</td>
 </tr>
 <tr>
-<td><strong>FromBool</strong></td>
-<td><code>Value</code></td>
-<td>Creates a boolean value.</td>
+<td><strong>Make Bool</strong></td>
+<td><code>Value</code> (bool)</td>
+<td><code>FFirebaseValue</code></td>
+<td>Creates a Firebase value holding a boolean value.</td>
 </tr>
 <tr>
-<td><strong>FromDouble</strong></td>
-<td><code>Value</code></td>
-<td>Creates a double value.</td>
+<td><strong>Make Double</strong></td>
+<td><code>Value</code> (double)</td>
+<td><code>FFirebaseValue</code></td>
+<td>Creates a Firebase value holding a double-precision number.</td>
 </tr>
 <tr>
-<td><strong>FromString</strong></td>
-<td><code>Value</code></td>
-<td>Creates a string value.</td>
+<td><strong>Make String</strong></td>
+<td><code>Value</code> (string)</td>
+<td><code>FFirebaseValue</code></td>
+<td>Creates a Firebase value holding a string.</td>
 </tr>
 <tr>
-<td><strong>FromObject</strong></td>
-<td><code>Object</code></td>
-<td>Creates an object value from a map of fields.</td>
+<td><strong>Make Object</strong></td>
+<td><code>Fields</code> (TMap<string, FFirebaseValue>)</td>
+<td><code>FFirebaseValue</code></td>
+<td>Creates a Firebase object value from a map of named Firebase values.</td>
 </tr>
 <tr>
-<td><strong>FromArray</strong></td>
-<td><code>Array</code></td>
-<td>Creates an array value.</td>
+<td><strong>Make Array</strong></td>
+<td><code>Array</code> (TArray<FFirebaseValue>)</td>
+<td><code>FFirebaseValue</code></td>
+<td>Creates a Firebase array value from an array of Firebase values.</td>
 </tr>
 <tr>
-<td><strong>FromNull</strong></td>
+<td><strong>Make Null</strong></td>
 <td>–</td>
-<td>Creates a null value.</td>
+<td><code>FFirebaseValue</code></td>
+<td>Creates a Firebase null value.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="getters-c-only">Getters (C++ Only)</h2>
+<h2 id="get-value-content">Get Value Content</h2>
 <table>
 <thead>
 <tr>
-<th>Function</th>
-<th>Returns</th>
+<th>Node</th>
+<th>Parameters</th>
+<th>Return</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>GetInt</strong></td>
+<td><strong>Get Int</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
 <td><code>int32</code></td>
-<td>Returns the integer value or <code>0</code> if the type does not match.</td>
+<td>Returns the integer stored in this value or <code>0</code> if the type does not match.</td>
 </tr>
 <tr>
-<td><strong>GetBool</strong></td>
+<td><strong>Get Bool</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
 <td><code>bool</code></td>
-<td>Returns the boolean value or <code>false</code> if the type does not match.</td>
+<td>Returns the boolean stored in this value or <code>false</code> if the type does not match.</td>
 </tr>
 <tr>
-<td><strong>GetDouble</strong></td>
+<td><strong>Get Double</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
 <td><code>double</code></td>
-<td>Returns the double value or <code>0.0</code> if the type does not match.</td>
+<td>Returns the number stored in this value or <code>0.0</code> if the type does not match.</td>
 </tr>
 <tr>
-<td><strong>GetString</strong></td>
-<td><code>FString</code></td>
-<td>Returns the string value or an empty string if the type does not match.</td>
+<td><strong>Get String</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
+<td><code>string</code></td>
+<td>Returns the string stored in this value or an empty string if the type does not match.</td>
 </tr>
 <tr>
-<td><strong>GetObject</strong></td>
-<td><code>TMap&lt;FString, FFirestoreValue&gt;</code></td>
-<td>Returns the object value or an empty map if the type does not match.</td>
+<td><strong>Get Object</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
+<td><code>TMap&lt;string, FFirebaseValue&gt;</code></td>
+<td>Returns the object fields stored in this value or an empty map if the type does not match.</td>
 </tr>
 <tr>
-<td><strong>GetArray</strong></td>
-<td><code>TArray&lt;FFirestoreValue&gt;</code></td>
-<td>Returns the array value or an empty array if the type does not match.</td>
+<td><strong>Get Array</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
+<td><code>TArray&lt;FFirebaseValue&gt;</code></td>
+<td>Returns the array stored in this value or an empty array if the type does not match.</td>
+</tr>
+<tr>
+<td><strong>Get Type</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
+<td><code>EFirebaseValueType</code></td>
+<td>Returns the type of this Firebase value.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="type-checks-c-only">Type Checks (C++ Only)</h2>
+<h2 id="type-checks">Type Checks</h2>
 <table>
 <thead>
 <tr>
-<th>Function</th>
-<th>Returns</th>
+<th>Node</th>
+<th>Parameters</th>
+<th>Return</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>IsNull</strong></td>
+<td><strong>Is Int</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
 <td><code>bool</code></td>
-<td>Returns true if the value is null.</td>
+<td>Returns whether this value is an integer.</td>
 </tr>
 <tr>
-<td><strong>IsObject</strong></td>
+<td><strong>Is Bool</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
 <td><code>bool</code></td>
-<td>Returns true if the value is an object.</td>
+<td>Returns whether this value is a boolean.</td>
 </tr>
 <tr>
-<td><strong>IsArray</strong></td>
+<td><strong>Is Double</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
 <td><code>bool</code></td>
-<td>Returns true if the value is an array.</td>
+<td>Returns whether this value is a double-precision number.</td>
+</tr>
+<tr>
+<td><strong>Is String</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
+<td><code>bool</code></td>
+<td>Returns whether this value is a string.</td>
+</tr>
+<tr>
+<td><strong>Is Number</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
+<td><code>bool</code></td>
+<td>Returns whether this value is an integer or double.</td>
+</tr>
+<tr>
+<td><strong>Is Object</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
+<td><code>bool</code></td>
+<td>Returns whether this value is an object.</td>
+</tr>
+<tr>
+<td><strong>Is Array</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
+<td><code>bool</code></td>
+<td>Returns whether this value is an array.</td>
+</tr>
+<tr>
+<td><strong>Is Null</strong></td>
+<td><code>Value</code> (FFirebaseValue)</td>
+<td><code>bool</code></td>
+<td>Returns whether this value represents null.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="blueprint-access">Blueprint Access</h2>
-<p>In Blueprint, Firestore values are created and accessed exclusively through the <a href="../../implementation/firestore/value_api/"><strong>Firestore Value Library</strong></a>. The Blueprint library operates on the same underlying data structure but exposes a safe and supported Blueprint interface.</p>
-<p>C++ users may use either:
-- native <code>FFirestoreValue</code> factory and getter functions, or
-- Blueprint library wrappers for consistency across C++ and Blueprint code.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>These functions operate only on local Firebase Value data and do not communicate with Firebase services.  </li>
+<li>Firebase Values are primarily used as building blocks for Firestore Documents and Realtime Database payloads.  </li>
+<li>For working with Firestore documents, see the <a href="../firestore_document_api/"><strong>Firestore Document API Reference</strong></a>.</li>
+</ul>
+<hr />
+<h2 id="c-usage">C++ Usage</h2>
+<p>In C++, <code>FFirebaseValue</code> can also be used in <strong>two different ways</strong>, depending on your workflow.</p>
+<h3 id="using-native-c-api">Using Native C++ API</h3>
+<p>When working purely in C++, you can directly construct and inspect <code>FFirebaseValue</code> using its native C++ interface. This approach is often <strong>more convenient and expressive</strong> when building complex objects or arrays in C++ code.</p>
+<p>To use the native API, include the value header:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;FirebaseValue.h&quot;</span>
+</code></pre></div>
+<p>The following example demonstrates creating and reading Firebase values using the native C++ API:</p>
+<div class="highlight"><pre><span></span><code><span class="n">FFirebaseValue</span><span class="w"> </span><span class="n">LevelValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FFirebaseValue</span><span class="o">::</span><span class="n">MakeInt</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">FFirebaseValue</span><span class="w"> </span><span class="n">NameValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FFirebaseValue</span><span class="o">::</span><span class="n">MakeString</span><span class="p">(</span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;player123&quot;</span><span class="p">));</span>
+
+<span class="n">int32</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LevelValue</span><span class="p">.</span><span class="n">GetInt</span><span class="p">();</span>
+<span class="n">FString</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NameValue</span><span class="p">.</span><span class="n">GetString</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="using-blueprint-helper-functions-in-c">Using Blueprint Helper Functions in C++</h3>
+<p>The same helper functions exposed to Blueprints can also be used from C++ by including the Blueprint helper library:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;FirebaseValueLibrary.h&quot;</span>
+</code></pre></div>
+<p>The following example demonstrates the same value creation and access pattern using the Blueprint helper functions from C++:</p>
+<div class="highlight"><pre><span></span><code><span class="n">FFirebaseValue</span><span class="w"> </span><span class="n">LevelValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UFirebaseValueLibrary</span><span class="o">::</span><span class="n">MakeInt</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">FFirebaseValue</span><span class="w"> </span><span class="n">NameValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UFirebaseValueLibrary</span><span class="o">::</span><span class="n">MakeString</span><span class="p">(</span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;player123&quot;</span><span class="p">));</span>
+
+<span class="n">int32</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UFirebaseValueLibrary</span><span class="o">::</span><span class="n">GetInt</span><span class="p">(</span><span class="n">LevelValue</span><span class="p">);</span>
+<span class="n">FString</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UFirebaseValueLibrary</span><span class="o">::</span><span class="n">GetString</span><span class="p">(</span><span class="n">NameValue</span><span class="p">);</span>
+</code></pre></div>
+<p>This approach is useful when:</p>
+<ul>
+<li>sharing logic between Blueprint and C++</li>
+<li>keeping behavior consistent across both systems</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<ul>
+<li><strong>Blueprint users</strong> must always use the Blueprint helper functions</li>
+<li><strong>C++ users</strong> may choose either approach native <code>FFirebaseValue</code> API or Blueprint helper functions via <code>FirebaseValueLibrary</code></li>
+</ul>
+<p>Both approaches are fully supported and interoperable.</p>
 
 
 

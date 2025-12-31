@@ -18,7 +18,7 @@
         <link rel="prev" href="../examples/">
       
       
-        <link rel="next" href="../document_api/">
+        <link rel="next" href="../../performance_monitoring/overview/">
       
       
       <link rel="icon" href="../../../../../assets/icon.png">
@@ -850,6 +850,8 @@
       
         
       
+        
+      
     
     
     
@@ -1669,10 +1671,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -1849,52 +1847,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../document_api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Document API
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../value_api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Value API
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2307,8 +2259,6 @@
       
         
       
-        
-      
     
     
     
@@ -2328,7 +2278,7 @@
   
   
   <span class="md-ellipsis">
-    Object Definitions
+    Data API
     
   </span>
   
@@ -2338,6 +2288,109 @@
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data_api/firebase_value_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firebase Value API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data_api/firestore_document_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firestore Document API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Object Definitions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
             <span class="md-nav__icon md-icon"></span>
             Object Definitions
           </label>
@@ -2373,12 +2426,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object_definitions/firestore_document/" class="md-nav__link">
+      <a href="../../../object_definitions/firebase_value/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Firestore Document
+    Firebase Value
     
   </span>
   
@@ -2396,12 +2449,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object_definitions/firestore_value/" class="md-nav__link">
+      <a href="../../../object_definitions/firestore_document/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Firestore Value
+    Firestore Document
     
   </span>
   
@@ -3497,7 +3550,7 @@
 
 <h1 id="firestore-api-reference">Firestore API Reference</h1>
 <p>This section documents all Firebase Firestore Blueprint nodes provided by the plugin. These nodes allow you to create, update, read, delete, query, and listen to Firestore documents and collections, as well as perform batched write operations.</p>
-<p>Firestore operations use structured data represented by <a href="../../../object_definitions/firestore_document/"><code>FFirestoreDocument</code></a> and <a href="../../../object_definitions/firestore_value/"><code>FFirestoreValue</code></a>. Understanding these structures is required for effective Firestore usage.</p>
+<p>Firestore operations use structured data represented by <a href="../../../object_definitions/firestore_document/"><code>FFirestoreDocument</code></a> and <a href="../../../object_definitions/firebase_value/"><code>FFirebaseValue</code></a>. Understanding these structures is required for effective Firestore usage.</p>
 <p>All Firestore nodes require Firebase to be successfully initialized before use.</p>
 <hr />
 <h2 id="document-operations">Document Operations</h2>
@@ -3563,7 +3616,7 @@
 </tr>
 <tr>
 <td><strong>Query Where</strong></td>
-<td><code>Handle</code> (int32), <code>Field</code> (string), <code>Operator</code> (EFirestoreQueryOperator), <code>Value</code> (<a href="../../../object_definitions/firestore_value/"><code>FFirestoreValue</code></a>)</td>
+<td><code>Handle</code> (int32), <code>Field</code> (string), <code>Operator</code> (EFirestoreQueryOperator), <code>FirebaseValue</code> (<a href="../../../object_definitions/firebase_value/"><code>FFirebaseValue</code></a>)</td>
 <td>–</td>
 <td>Adds a WHERE clause to the specified Firestore query.</td>
 </tr>

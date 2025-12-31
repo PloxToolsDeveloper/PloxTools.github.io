@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://ploxtools.github.io/plugins/firebase/object_definitions/firestore_document/">
       
       
-        <link rel="prev" href="../enumerations/">
+        <link rel="prev" href="../firebase_value/">
       
       
-        <link rel="next" href="../firestore_value/">
+        <link rel="next" href="../../cpp_usage/cpp_usage/">
       
       
       <link rel="icon" href="../../../../assets/icon.png">
@@ -850,6 +850,8 @@
       
         
       
+        
+      
     
     
     
@@ -1665,10 +1667,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -1762,52 +1760,6 @@
   
   <span class="md-ellipsis">
     API Reference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../implementation/firestore/document_api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Document API
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../implementation/firestore/value_api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Value API
     
   </span>
   
@@ -2216,6 +2168,107 @@
                 
   
   
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data API
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_api/firebase_value_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firebase Value API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_api/firestore_document_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firestore Document API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2240,10 +2293,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
             
   
   
@@ -2256,8 +2309,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_3_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3_3">
             <span class="md-nav__icon md-icon"></span>
             Object Definitions
           </label>
@@ -2276,6 +2329,29 @@
   
   <span class="md-ellipsis">
     Enumerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firebase_value/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firebase Value
     
   </span>
   
@@ -2400,29 +2476,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../firestore_value/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Firestore Value
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -3530,13 +3583,13 @@
 
 
 <h1 id="firestore-document">Firestore Document</h1>
-<p>The <strong>Firestore Document</strong> structure represents a raw Firestore document as a collection of named fields. Each field is stored as a typed <a href="../firestore_value/"><code>FFirestoreValue</code></a>, allowing documents to contain primitive values, arrays, and nested objects.</p>
-<p>This structure is used internally by the <a href="../../implementation/firestore/api/">Firestore API</a> and can be accessed both from <strong>C++</strong> and <strong>Blueprints</strong>.</p>
+<p>The <strong>Firestore Document</strong> structure represents a raw Firestore document as a collection of named fields. Each field is stored as a typed <a href="../firebase_value/"><code>FFirebaseValue</code></a>, allowing documents to contain primitive values, arrays, and nested objects.</p>
+<p>This structure is used internally by the Firestore API and can be accessed both from <strong>C++</strong> and <strong>Blueprints</strong>.</p>
 <p>The document fields themselves are shared between C++ and Blueprint workflows. However, <strong>the native setters and getters of this structure are intended for C++ usage only</strong>.</p>
-<p>In Blueprint, all interactions with a Firestore Document must be performed through the <a href="../../implementation/firestore/document_api/"><strong>Firestore Document Library</strong></a>, which provides the public and supported Blueprint interface.</p>
+<p>In Blueprint, all interactions with a Firestore Document must be performed through the <a href="../../data_api/firestore_document_api/"><strong>Firestore Document Library</strong></a>, which provides the public and supported Blueprint interface.</p>
 <hr />
 <h2 id="ffirestoredocument">FFirestoreDocument</h2>
-<p>This struct acts as a low-level container for Firestore document data. It stores document fields as a map of field names to Firestore values and provides native helper functions for accessing and modifying them in C++.</p>
+<p>This struct acts as a low-level container for Firestore document data. It stores document fields as a map of field names to Firebase Values and provides native helper functions for accessing and modifying them in C++.</p>
 <p>Blueprint users should not call these methods directly and must use the Blueprint wrapper functions instead.</p>
 <hr />
 <h2 id="fields">Fields</h2>
@@ -3551,8 +3604,8 @@
 <tbody>
 <tr>
 <td><strong>Fields</strong></td>
-<td><code>TMap&lt;FString, FFirestoreValue&gt;</code></td>
-<td>Map containing all document fields. Each field value is represented by a <a href="../firestore_value/"><code>FFirestoreValue</code></a>.</td>
+<td><code>TMap&lt;FString, FFirebaseValue&gt;</code></td>
+<td>Map containing all document fields. Each field value is represented by a <a href="../firebase_value/"><code>FFirebaseValue</code></a>.</td>
 </tr>
 </tbody>
 </table>
@@ -3639,12 +3692,12 @@
 </tr>
 <tr>
 <td><strong>GetObject</strong></td>
-<td><code>TMap&lt;FString, FFirestoreValue&gt;</code></td>
+<td><code>TMap&lt;FString, FFirebaseValue&gt;</code></td>
 <td>Returns a nested object field.</td>
 </tr>
 <tr>
 <td><strong>GetArray</strong></td>
-<td><code>TArray&lt;FFirestoreValue&gt;</code></td>
+<td><code>TArray&lt;FFirebaseValue&gt;</code></td>
 <td>Returns an array field.</td>
 </tr>
 </tbody>
@@ -3667,17 +3720,19 @@
 </tr>
 <tr>
 <td><strong>GetFieldType</strong></td>
-<td><code>EFirestoreValueType</code></td>
+<td><code>EFirebaseValueType</code></td>
 <td>Returns the type of a field stored in the document.</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="blueprint-access">Blueprint Access</h2>
-<p>In Blueprint, this structure is manipulated exclusively through the <a href="../../implementation/firestore/document_api/"><strong>Firestore Document Library</strong></a>. The Blueprint library internally operates on the same document data but exposes a safe and supported Blueprint API.</p>
-<p>C++ users may choose to use either:
-- the native methods of <code>FFirestoreDocument</code>, or
-- the Blueprint library wrappers for consistency with Blueprint workflows.</p>
+<p>In Blueprint, this structure is manipulated exclusively through the <a href="../../data_api/firestore_document_api/"><strong>Firestore Document Library</strong></a>. The Blueprint library internally operates on the same document data but exposes a safe and supported Blueprint API.</p>
+<p>C++ users may choose to use either:</p>
+<ul>
+<li>the native methods of <code>FFirestoreDocument</code>, or</li>
+<li>the Blueprint library wrappers for consistency with Blueprint workflows.</li>
+</ul>
 
 
 

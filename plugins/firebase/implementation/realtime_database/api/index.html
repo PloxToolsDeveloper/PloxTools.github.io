@@ -850,6 +850,8 @@
       
         
       
+        
+      
     
     
     
@@ -1667,10 +1669,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -1764,52 +1762,6 @@
   
   <span class="md-ellipsis">
     API Reference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../firestore/document_api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Document API
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../firestore/value_api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Value API
     
   </span>
   
@@ -2307,8 +2259,6 @@
       
         
       
-        
-      
     
     
     
@@ -2328,7 +2278,7 @@
   
   
   <span class="md-ellipsis">
-    Object Definitions
+    Data API
     
   </span>
   
@@ -2338,6 +2288,109 @@
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data_api/firebase_value_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firebase Value API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data_api/firestore_document_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firestore Document API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Object Definitions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
             <span class="md-nav__icon md-icon"></span>
             Object Definitions
           </label>
@@ -2373,12 +2426,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object_definitions/firestore_document/" class="md-nav__link">
+      <a href="../../../object_definitions/firebase_value/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Firestore Document
+    Firebase Value
     
   </span>
   
@@ -2396,12 +2449,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object_definitions/firestore_value/" class="md-nav__link">
+      <a href="../../../object_definitions/firestore_document/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Firestore Value
+    Firestore Document
     
   </span>
   
@@ -3496,7 +3549,7 @@
 
 
 <h1 id="realtime-database-api-reference">Realtime Database API Reference</h1>
-<p>This section documents all Firebase Realtime Database Blueprint nodes provided by the plugin. These nodes allow you to read and write JSON data, listen for realtime updates, manage presence, and control connection state.</p>
+<p>This section documents all Firebase Realtime Database Blueprint nodes provided by the plugin. These nodes allow you to read, write, update, and listen to Realtime Database data using typed <a href="../../../object_definitions/firebase_value/"><code>FFirebaseValue</code></a> instead of raw JSON strings.</p>
 <p>All Realtime Database nodes require Firebase to be successfully initialized before use.</p>
 <hr />
 <h2 id="value-operations">Value Operations</h2>
@@ -3512,20 +3565,20 @@
 <tbody>
 <tr>
 <td><strong>Set Value</strong></td>
-<td><code>Path</code> (string), <code>Json</code> (string)</td>
+<td><code>Path</code> (string), <code>FirebaseValue</code> (FFirebaseValue)</td>
 <td>–</td>
-<td>Sets a JSON value at the specified Realtime Database path, replacing any existing data.</td>
+<td>Sets a value at the specified Realtime Database path, replacing any existing data.</td>
 </tr>
 <tr>
 <td><strong>Update Value</strong></td>
-<td><code>Path</code> (string), <code>Json</code> (string)</td>
+<td><code>Path</code> (string), <code>FirebaseValue</code> (FFirebaseValue)</td>
 <td>–</td>
-<td>Updates specific child fields at the specified path using a JSON object, without overwriting the entire node.</td>
+<td>Updates specific child fields at the specified path using a Firebase object value, without overwriting the entire node.</td>
 </tr>
 <tr>
 <td><strong>Get Value</strong></td>
 <td><code>Path</code> (string)</td>
-<td><strong>On Success (Path, Json)</strong>: Called when the value is read successfully.<br><strong>On Failure (Path, Error Message, Error Code)</strong>: Called if the read operation fails.</td>
+<td><strong>On Success (Path, Value)</strong>: Called when the value is read successfully.<br><strong>On Failure (Path, Error Message, Error Code)</strong>: Called if the read operation fails.</td>
 <td>Asynchronously reads the value stored at the specified path.</td>
 </tr>
 <tr>
@@ -3536,7 +3589,7 @@
 </tr>
 <tr>
 <td><strong>Push Value</strong></td>
-<td><code>Path</code> (string), <code>Json</code> (string)</td>
+<td><code>Path</code> (string), <code>FirebaseValue</code> (FFirebaseValue)</td>
 <td><strong>On Success (Path, Key)</strong>: Called when a new child is created successfully.<br><strong>On Failure (Path, Error Message, Error Code)</strong>: Called if the push operation fails.</td>
 <td>Pushes a new child node with an auto-generated key to the specified path.</td>
 </tr>
@@ -3557,19 +3610,19 @@
 <tr>
 <td><strong>Listen Value</strong></td>
 <td><code>Path</code> (string)</td>
-<td><strong>Return (Handle)</strong>: Listener handle.<br><strong>On Value (Path, Json)</strong>: Called when the value changes.<br><strong>On Error (Path, Error Message, Error Code)</strong>: Called on listener error.</td>
+<td><strong>Return (Handle)</strong>: Listener handle.<br><strong>On Value (Path, Value)</strong>: Called when the value changes.<br><strong>On Error (Path, Error Message, Error Code)</strong>: Called on listener error.</td>
 <td>Listens for value changes at the specified path.</td>
 </tr>
 <tr>
 <td><strong>Listen Child Added</strong></td>
 <td><code>Path</code> (string)</td>
-<td><strong>Return (Handle)</strong>: Listener handle.<br><strong>On Added (Path, Key, Json)</strong>: Called when a child is added.<br><strong>On Error (Path, Error Message, Error Code)</strong>: Called on listener error.</td>
+<td><strong>Return (Handle)</strong>: Listener handle.<br><strong>On Added (Path, Key, Value)</strong>: Called when a child is added.<br><strong>On Error (Path, Error Message, Error Code)</strong>: Called on listener error.</td>
 <td>Listens for child added events at the specified path.</td>
 </tr>
 <tr>
 <td><strong>Listen Child Changed</strong></td>
 <td><code>Path</code> (string)</td>
-<td><strong>Return (Handle)</strong>: Listener handle.<br><strong>On Changed (Path, Key, Json)</strong>: Called when a child is changed.<br><strong>On Error (Path, Error Message, Error Code)</strong>: Called on listener error.</td>
+<td><strong>Return (Handle)</strong>: Listener handle.<br><strong>On Changed (Path, Key, Value)</strong>: Called when a child is changed.<br><strong>On Error (Path, Error Message, Error Code)</strong>: Called on listener error.</td>
 <td>Listens for child changed events at the specified path.</td>
 </tr>
 <tr>
@@ -3600,9 +3653,9 @@
 <tbody>
 <tr>
 <td><strong>Set On Disconnect Set</strong></td>
-<td><code>Path</code> (string), <code>Json</code> (string)</td>
+<td><code>Path</code> (string), <code>FirebaseValue</code> (FFirebaseValue)</td>
 <td>–</td>
-<td>Sets a value that will be written to the specified path when the client disconnects.</td>
+<td>Sets a value that will be written to the specified path automatically when the client disconnects.</td>
 </tr>
 <tr>
 <td><strong>Set On Disconnect Remove</strong></td>

@@ -848,6 +848,8 @@
       
         
       
+        
+      
     
     
     
@@ -1663,10 +1665,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -1760,52 +1758,6 @@
   
   <span class="md-ellipsis">
     API Reference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../firebase/implementation/firestore/document_api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Document API
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../firebase/implementation/firestore/value_api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Value API
     
   </span>
   
@@ -2223,8 +2175,6 @@
       
         
       
-        
-      
     
     
     
@@ -2244,7 +2194,7 @@
   
   
   <span class="md-ellipsis">
-    Object Definitions
+    Data API
     
   </span>
   
@@ -2254,6 +2204,109 @@
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../firebase/data_api/firebase_value_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firebase Value API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../firebase/data_api/firestore_document_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firestore Document API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Object Definitions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
             <span class="md-nav__icon md-icon"></span>
             Object Definitions
           </label>
@@ -2289,12 +2342,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/object_definitions/firestore_document/" class="md-nav__link">
+      <a href="../../../firebase/object_definitions/firebase_value/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Firestore Document
+    Firebase Value
     
   </span>
   
@@ -2312,12 +2365,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/object_definitions/firestore_value/" class="md-nav__link">
+      <a href="../../../firebase/object_definitions/firestore_document/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Firestore Value
+    Firestore Document
     
   </span>
   
@@ -3524,7 +3577,7 @@
 <p>This asynchronous function works similarly to the standard <a href="../launch_billing_flow/"><code>LaunchBillingFlow</code></a>, but it does <strong>not automatically acknowledge or consume</strong> the purchase after completion. It is intended for developers who want full control over purchase validation and confirmation on their own backend.  </p>
 <p>When using this function, you’ll receive a purchase details struct that includes the purchase token. This token can then be verified on your server before calling <strong>Acknowledge Purchase</strong> or <strong>Consume Purchase</strong>. This approach provides maximum flexibility and is recommended for apps that rely on secure server-side validation of transactions.</p>
 <div align="center">
-  <img src="../assets/manual_purchase_handling/manual_purchase_handling_launchbillingflow.png" width="250">
+  <img src="../assets/manual_purchase_handling/manual_purchase_handling_launchbillingflow.png" width="290">
 </div>
 
 <hr />
@@ -3533,7 +3586,7 @@
 <p>The function takes the <strong>purchase token</strong> as a parameter, confirms the purchase with Google Play, and then returns the same token back — allowing you to use it later for <strong>Consume Purchase</strong>, if the product is consumable.  </p>
 <p>This manual acknowledgment flow ensures that only verified purchases are finalized, giving your backend full control over entitlement logic and item delivery.</p>
 <div align="center">
-  <img src="../assets/manual_purchase_handling/manual_purchase_handling_acknowledgepurchase.png" width="200">
+  <img src="../assets/manual_purchase_handling/manual_purchase_handling_acknowledgepurchase.png" width="250">
 </div>
 
 <hr />
@@ -3541,7 +3594,7 @@
 <p>This function is used to <strong>consume</strong> a previously acknowledged purchase. Consuming a purchase means marking it as used, so the same item can be bought again in the future. This applies only to <strong>one-time consumable products</strong> (for example, in-game currency or resources).  </p>
 <p>The function takes the <strong>purchase token</strong> obtained during the purchase or acknowledgment process, performs the consume request, and confirms the operation with Google Play. After a successful consume, the token becomes invalid and a new one will be issued on the next purchase.</p>
 <div align="center">
-  <img src="../assets/manual_purchase_handling/manual_purchase_handling_consumepurchase.png" width="200">
+  <img src="../assets/manual_purchase_handling/manual_purchase_handling_consumepurchase.png" width="250">
 </div>
 
 <hr />
