@@ -12,7 +12,7 @@
         <meta name="author" content="PloxTools">
       
       
-        <link rel="canonical" href="https://ploxtools.github.io/plugins/admob/implementation/ininitialization/">
+        <link rel="canonical" href="https://ploxtools.github.io/plugins/admob/implementation/initialization/">
       
       
         <link rel="prev" href="../getting_started/">
@@ -6666,8 +6666,9 @@
 
 
 <h1 id="initialization">Initialization</h1>
-<p>Before any ads can be loaded or shown, <strong>AdMob must be initialized</strong>. This step prepares the Google Mobile Ads SDK, configures the application with your App ID, and ensures that all ad formats (banner, interstitial, rewarded, and others) are ready to operate.</p>
-<p>Initialization is required <strong>once</strong>, typically at the start of your game or when the first level loads. Without initialization, no ad requests will work, and all loading functions will fail.</p>
+<p>Before loading or showing ads, it is <strong>strongly recommended</strong> to initialize AdMob. This prepares the Google Mobile Ads SDK, applies your App ID configuration, and initializes internal services and mediation adapters.</p>
+<p>Initialization is required only <strong>once</strong>, typically at game startup or before requesting the first ad.</p>
+<p>Although some ad requests may still work without explicitly calling initialization (due to lazy SDK startup), relying on this behavior is not recommended. Explicit initialization ensures more predictable behavior and future compatibility with Google Mobile Ads SDK updates.</p>
 <hr />
 <h2 id="initialize-ad-mob">Initialize Ad Mob</h2>
 <p>This function must be called <strong>before loading or showing any ads</strong>. Once triggered, the plugin starts the AdMob SDK and waits until the initialization is complete. This can sometimes take a little time (2 to 5 seconds).</p>
