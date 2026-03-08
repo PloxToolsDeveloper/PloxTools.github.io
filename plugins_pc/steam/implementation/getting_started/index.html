@@ -6588,17 +6588,18 @@
 <p>Open <strong>Edit → Plugins</strong> and disable any additional Steam integration plugins before using the PloxTools Steam Integration plugin.</p>
 <hr />
 <h2 id="disable-built-in-steam-plugins">Disable Built-in Steam Plugins</h2>
-<p>The <strong>PloxTools Steam Integration</strong> plugin does not rely on Unreal Engine’s built-in Steam plugins and does not use Online Subsystem Steam.</p>
-<p>If your project does not explicitly require them, it is recommended to disable the following built-in plugins:</p>
+<p>The <strong>PloxTools Steam Integration</strong> plugin uses the <strong>Steamworks SDK directly</strong> and does not rely on Unreal Engine’s built-in Steam plugins.</p>
+<p>Because of this, the built-in Steam plugins must be <strong>disabled</strong>, otherwise Unreal Engine will attempt to initialize the Steam API multiple times which will result in a crash.</p>
+<p>Please make sure the following plugins are disabled in your project:</p>
 <ul>
-<li><strong>Online Subsystem Steam</strong>  </li>
-<li><strong>Steam Shared Module</strong>  </li>
-<li><strong>Steam Controller</strong>  </li>
-<li><strong>Steam Sockets</strong>  </li>
-<li><strong>Steam Audio</strong>  </li>
+<li><strong>Online Subsystem Steam</strong></li>
+<li><strong>Steam Shared Module</strong></li>
+<li><strong>Steam Controller</strong></li>
+<li><strong>Steam Sockets</strong></li>
+<li><strong>Steam Audio</strong></li>
 </ul>
-<p>Disabling these plugins helps avoid confusion and ensures that all Steam functionality is handled exclusively by the PloxTools Steam plugin.</p>
-<p>If your project explicitly depends on any of these built-in plugins for other systems, they may remain enabled.</p>
+<p>These plugins all depend on Unreal Engine’s Steam subsystem and cannot run at the same time as the <strong>PloxTools Steam Integration</strong> plugin.</p>
+<p>If any of these plugins are enabled, launching the game may result in a crash during startup.</p>
 <hr />
 <h2 id="steamworks-account-and-app-setup">Steamworks Account and App Setup</h2>
 <p>Before using any Steam functionality in Unreal Engine, your project must be <strong>set up in Steamworks</strong>.</p>
