@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#movement-anticipation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -6632,6 +6637,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Movement Anticipation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -6644,6 +6664,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -6703,12 +6769,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../camera_animation/" class="md-nav__link">
+      <a href="../camera_animations/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Camera Animation
+    Camera Animations
     
   </span>
   
@@ -7095,6 +7161,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -7110,9 +7213,61 @@
 
 
 
-  <h1>Movement Anticipation</h1>
+<h1 id="movement-anticipation">Movement Anticipation</h1>
+<div align="center">
+  <img src="../assets/movement_anticipation/movement_anticipation.gif"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
 
+<p>The <strong>Movement Anticipation</strong> system slightly shifts the camera in the direction of movement.</p>
+<p>This helps:</p>
+<ul>
+<li>improve readability of movement direction  </li>
+<li>enhance the feeling of speed  </li>
+<li>provide better forward visibility during motion  </li>
+</ul>
+<p>The result is a more responsive and natural camera that “leans” into movement.</p>
+<hr />
+<h2 id="behavior">Behavior</h2>
+<p>Movement Anticipation is fully automatic and based on character movement.</p>
+<ul>
+<li>the camera shifts toward the movement direction  </li>
+<li>the effect increases with movement input  </li>
+<li>the camera smoothly returns to its base position when movement stops  </li>
+</ul>
+<p>The system works on top of the existing framing and does not modify base camera settings.</p>
+<hr />
+<h2 id="settings">Settings</h2>
+<div align="center">
+  <img src="../assets/movement_anticipation/movement_anticipation_settings.png"
+       style="max-width: 80%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
 
+<p>The movement anticipation system is defined by the following parameters:</p>
+<ul>
+<li><strong>Enable Movement Anticipation</strong> - enables or disables camera anticipation based on movement direction  </li>
+<li><strong>Anticipation Strength</strong> - maximum offset applied in the movement direction  </li>
+<li>
+<p><strong>Anticipation Interp Speed</strong> - controls how quickly the camera shifts and returns  </p>
+</li>
+<li>
+<p><strong>Lateral Only</strong> - applies anticipation only left/right relative to the camera, without forward/backward offset  </p>
+</li>
+<li>
+<p><strong>Look Input Delay</strong> - time after the last look input before anticipation becomes active again  </p>
+</li>
+<li>
+<p><strong>Anticipation Full Speed</strong> - character speed at which the effect reaches full strength  </p>
+</li>
+<li><strong>Activation Interp Speed</strong> - controls how quickly the anticipation effect activates and fades out  </li>
+</ul>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Movement Anticipation is applied on top of the current framing  </li>
+<li>It does not modify base camera settings  </li>
+<li>The effect is fully dynamic and driven by movement input  </li>
+</ul>
 
 
 

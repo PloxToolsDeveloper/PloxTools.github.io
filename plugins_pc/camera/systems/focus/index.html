@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#focus" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -6586,6 +6591,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Focus
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -6598,6 +6618,241 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Focus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Focus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Override Settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hard-lock-vs-soft-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Lock vs Soft Lock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hard-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Lock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soft-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soft Lock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soft-lock-hard-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soft Lock Hard Limits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events-and-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events and Lifecycle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Events and Lifecycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onfocusstarted" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnFocusStarted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onfocuschanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnFocusChanged
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onfocusfinished" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnFocusFinished
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Callback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Focus Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-end-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Focus End Conditions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -6703,12 +6958,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../camera_animation/" class="md-nav__link">
+      <a href="../camera_animations/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Camera Animation
+    Camera Animations
     
   </span>
   
@@ -7095,6 +7350,232 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Focus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Focus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Override Settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hard-lock-vs-soft-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Lock vs Soft Lock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hard-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Lock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soft-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soft Lock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soft-lock-hard-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soft Lock Hard Limits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events-and-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events and Lifecycle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Events and Lifecycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onfocusstarted" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnFocusStarted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onfocuschanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnFocusChanged
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onfocusfinished" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnFocusFinished
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Callback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Focus Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-end-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Focus End Conditions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -7110,9 +7591,277 @@
 
 
 
-  <h1>Focus</h1>
+<h1 id="focus">Focus</h1>
+<div align="center">
+  <img src="../assets/focus/focus_hardlock.gif"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
 
+<p>The <strong>Focus</strong> system allows the camera to track a specific target or location.</p>
+<p>It is used when the camera needs to stay oriented toward something important, such as enemies, interactable objects, or cinematic points of interest.</p>
+<p>When focus is active, it temporarily overrides normal camera rotation and controls how the camera tracks the target.</p>
+<hr />
+<h2 id="using-focus">Using Focus</h2>
+<p>Focus is controlled through runtime functions on <strong>ThirdPersonCameraComponent</strong>.</p>
+<p>You can start focus using different target types:</p>
+<ul>
+<li><strong>Set Focus Actor</strong>  </li>
+<li><strong>Set Focus Actor Socket</strong>  </li>
+<li><strong>Set Focus Actor Component</strong>  </li>
+<li><strong>Set Focus Location</strong>  </li>
+</ul>
+<p>Each function defines what the camera should track.</p>
+<div align="center">
+  <img src="../assets/focus/focus_set.png"
+       style="max-width: 80%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
 
+<h3 id="target-types">Target Types</h3>
+<p>The focus system supports multiple target types:</p>
+<ul>
+<li><strong>Actor</strong> - tracks the Actor location  </li>
+<li><strong>Component</strong> - tracks a specific component  </li>
+<li><strong>Socket</strong> - tracks a socket on a skeletal mesh </li>
+<li><strong>Location</strong> - tracks a fixed world position  </li>
+</ul>
+<p>If a socket is not found, the system falls back to the Actor location.</p>
+<p>To stop focusing, call:</p>
+<ul>
+<li><strong>Clear Focus</strong></li>
+</ul>
+<div align="center">
+  <img src="../assets/focus/focus_clear.png"
+       style="max-width: 80%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<h3 id="override-settings">Override Settings</h3>
+<p>Focus functions support per-call settings overrides.</p>
+<p>This allows you to change focus behavior for a specific use case without modifying the component’s default settings.</p>
+<p>To use overrides:</p>
+<ol>
+<li>Enable <strong>Use Override Settings</strong></li>
+<li>Provide <strong>Override Settings</strong></li>
+</ol>
+<div align="center">
+  <img src="../assets/focus/focus_override.png"
+       style="max-width: 80%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>When enabled, the camera will use the provided settings only for this focus instance.</p>
+<p>This is useful for:</p>
+<ul>
+<li>switching between Hard Lock and Soft Lock dynamically  </li>
+<li>adjusting rotation speed for specific targets  </li>
+<li>changing limits for special gameplay situations  </li>
+</ul>
+<p>If overrides are not enabled, the component’s default Focus Settings are used.</p>
+<hr />
+<h2 id="behavior">Behavior</h2>
+<h3 id="hard-lock-vs-soft-lock">Hard Lock vs Soft Lock</h3>
+<p>Focus can operate in two main modes:</p>
+<ul>
+<li><strong>Hard Lock</strong> - the camera strictly follows the target and keeps it centered  </li>
+<li><strong>Soft Lock</strong> - the camera follows the target more loosely and blends with player input  </li>
+</ul>
+<div style="display: flex; gap: 24px; justify-content: center;">
+
+<div style="text-align: center;">
+<img src="../assets/focus/focus_hardlock.gif" style="border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);" />
+<p><em>Hard Lock</em></p>
+</div>
+
+<div style="text-align: center;">
+<img src="../assets/focus/focus_softlock.gif" style="border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);" />
+<p><em>Soft Lock</em></p>
+</div>
+
+</div>
+
+<p>Hard Lock is typically used for precise tracking (lock-on systems) while Soft Lock is used for more natural or cinematic behavior.</p>
+<hr />
+<h2 id="settings">Settings</h2>
+<div align="center">
+  <img src="../assets/focus/focus_settings.png"
+       style="max-width: 80%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>The focus system is defined by a set of parameters that control how the camera tracks, maintains, and exits focus.</p>
+<p>These settings define the behavior of the camera while focus is active.</p>
+<ul>
+<li><strong>Focus Mode</strong> - defines how the camera tracks the target. Hard Lock fully aligns the camera toward the target, while Soft Lock allows limited player control within defined bounds  </li>
+<li><strong>Auto Clear by Distance</strong> - enables automatic focus removal when the target is too far from the pivot  </li>
+<li><strong>Auto Clear Distance</strong> - maximum allowed distance to the target before focus is cleared  </li>
+<li><strong>Auto Clear by Visibility</strong> - enables automatic focus removal when the target is no longer visible from the pivot  </li>
+<li><strong>Auto Clear Visibility Delay</strong> - time the target must remain invisible before focus is cleared to prevent flickering  </li>
+</ul>
+<h3 id="hard-lock">Hard Lock</h3>
+<ul>
+<li><strong>Hard Lock Rotation Speed</strong> - controls how quickly the camera rotates toward the target in Hard Lock mode  </li>
+</ul>
+<h3 id="soft-lock">Soft Lock</h3>
+<ul>
+<li><strong>Soft Yaw Limit</strong> - maximum yaw angle the player can rotate away from the target before automatic return begins  </li>
+<li><strong>Soft Pitch Limit</strong> - maximum pitch angle the player can rotate away from the target before automatic return begins  </li>
+<li><strong>Soft Return Speed</strong> - controls how quickly the camera returns toward the target when limits are exceeded  </li>
+</ul>
+<h3 id="soft-lock-hard-limits">Soft Lock Hard Limits</h3>
+<ul>
+<li><strong>Enable Hard Yaw Limit</strong> - prevents rotation beyond the defined yaw limit  </li>
+<li><strong>Enable Hard Pitch Limit</strong> - prevents rotation beyond the defined pitch limit  </li>
+<li><strong>Hard Yaw Limit</strong> - maximum allowed yaw deviation from the target  </li>
+<li><strong>Hard Pitch Limit</strong> - maximum allowed pitch deviation from the target  </li>
+</ul>
+<p>These settings can be configured on the component or overridden per focus call using <strong>OverrideSettings</strong>.</p>
+<hr />
+<h2 id="events-and-lifecycle">Events and Lifecycle</h2>
+<p>Focus is a state-driven system with clear transitions and callback support.</p>
+<p>The system provides:</p>
+<ul>
+<li><strong>global events</strong> on the component  </li>
+<li><strong>local callback</strong> per individual focus call  </li>
+</ul>
+<p>This allows you to react either to all focus changes globally or only to a specific focus request.</p>
+<hr />
+<h3 id="global-events">Global Events</h3>
+<p>These events are exposed on <strong>ThirdPersonCameraComponent</strong> and provide information about focus state changes.</p>
+<div align="center">
+  <img src="../assets/focus/focus_global_callbacks.png"
+       style="max-width: 80%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<h4 id="onfocusstarted">OnFocusStarted</h4>
+<p>Called when a new focus begins.</p>
+<p>Returns:</p>
+<ul>
+<li><strong>New Focus</strong> - contains information about the current focus target and its state  </li>
+</ul>
+<div align="center">
+  <img src="../assets/focus/focus_started.png"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>Use this event to:</p>
+<ul>
+<li>update UI (lock-on indicators, widgets)  </li>
+<li>trigger gameplay logic when entering focus  </li>
+<li>initialize systems that depend on a focused target  </li>
+</ul>
+<hr />
+<h4 id="onfocuschanged">OnFocusChanged</h4>
+<p>Called when the focus target changes directly from one target to another.</p>
+<p>Returns:</p>
+<ul>
+<li><strong>Previous Focus</strong> - the previous target  </li>
+<li><strong>New Focus</strong> - the new target  </li>
+</ul>
+<div align="center">
+  <img src="../assets/focus/focus_changed.png"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>This event is triggered only on meaningful changes, such as:</p>
+<ul>
+<li>switching to a different Actor  </li>
+<li>switching to a different socket  </li>
+</ul>
+<p>It is not triggered when reapplying the same target.</p>
+<p>Use this event to:</p>
+<ul>
+<li>update UI when switching targets  </li>
+<li>refresh target-dependent logic  </li>
+<li>react to dynamic target changes  </li>
+</ul>
+<hr />
+<h4 id="onfocusfinished">OnFocusFinished</h4>
+<p>Called when focus ends.</p>
+<p>Returns:</p>
+<ul>
+<li><strong>Previous Focus</strong> - the last active target  </li>
+<li><strong>Reason</strong> - why the focus ended (<strong>EFocusLostReason</strong>)  </li>
+</ul>
+<div align="center">
+  <img src="../assets/focus/focus_finished.png"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>Possible reasons include:</p>
+<ul>
+<li>manual clear  </li>
+<li>distance threshold exceeded  </li>
+<li>target not visible  </li>
+<li>target became invalid  </li>
+<li>focus interrupted by a new focus  </li>
+</ul>
+<p>Use this event to:</p>
+<ul>
+<li>clean up UI  </li>
+<li>stop target-related logic  </li>
+<li>react differently depending on the reason  </li>
+</ul>
+<hr />
+<h3 id="local-callback">Local Callback</h3>
+<p>Each focus function also supports a local callback:</p>
+<ul>
+<li><strong>OnFocusFinishedLocal</strong></li>
+</ul>
+<p>This callback is passed directly into the focus function and is executed once when that specific focus instance ends.</p>
+<div align="center">
+  <img src="../assets/focus/focus_local_callback.png"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>Returns:</p>
+<ul>
+<li><strong>Reason</strong> - why the focus ended  </li>
+</ul>
+<p>Use this when:</p>
+<ul>
+<li>you only care about a single focus request  </li>
+<li>you want localized logic without subscribing to global events  </li>
+</ul>
+<hr />
+<h3 id="focus-data">Focus Data</h3>
+<p>All events provide structured information about the focus target, including:</p>
+<ul>
+<li>what is being tracked (Actor, Component, Socket, or Location)  </li>
+<li>distance from the camera pivot  </li>
+<li>whether the target is valid  </li>
+</ul>
+<p>For a detailed breakdown of the data structures, refer to <a href="../../reference/structures/#focus"><strong>Focus Structures</strong></a></p>
+<hr />
+<h3 id="focus-end-conditions">Focus End Conditions</h3>
+<p>Focus can end in several ways:</p>
+<ul>
+<li>manual call to <strong>Clear Focus</strong>  </li>
+<li>automatic clear (distance or visibility)  </li>
+<li>replacing the current focus with a new one  </li>
+</ul>
+<p>All cases trigger:</p>
+<ul>
+<li><strong>OnFocusFinished</strong> (global)  </li>
+<li><strong>OnFocusFinishedLocal</strong> (if provided)</li>
+</ul>
+<hr />
+<h2 id="runtime-control">Runtime Control</h2>
+<p>The focus system is controlled through runtime functions.</p>
+<p>For a complete list of functions and parameters, refer to the <a href="../../reference/api/#focus-state">API Reference</a>.</p>
+<h3 id="main-functions">Main Functions</h3>
+<ul>
+<li><strong>Set Focus Actor</strong> - sets focus to the specified Actor  </li>
+<li><strong>Set Focus Actor Socket</strong> - sets focus to a specific socket on the Actor’s skeletal mesh  </li>
+<li><strong>Set Focus Actor Component</strong> - sets focus to a specific Scene Component  </li>
+<li><strong>Set Focus Location</strong> - sets focus to a fixed world location  </li>
+<li><strong>Clear Focus</strong> - clears the current focus and returns the camera to normal behavior  </li>
+</ul>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Focus overrides normal camera rotation while active  </li>
+<li>Behavior is defined by focus settings (Hard / Soft)  </li>
+<li>Target type defines what the camera tracks  </li>
+<li>Override settings apply only to the specific focus call  </li>
+<li>Local callbacks are tied to individual focus instances  </li>
+</ul>
 
 
 

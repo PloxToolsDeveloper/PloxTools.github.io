@@ -18,7 +18,7 @@
         <link rel="prev" href="../pitch_effects/">
       
       
-        <link rel="next" href="../camera_animation/">
+        <link rel="next" href="../camera_animations/">
       
       
       <link rel="icon" href="../../../../assets/icon.png">
@@ -76,6 +76,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#speed-modifiers" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -6678,6 +6683,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Speed Effects
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -6691,6 +6711,85 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Distance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fov" class="md-nav__link">
+    <span class="md-ellipsis">
+      FOV
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6703,12 +6802,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../camera_animation/" class="md-nav__link">
+      <a href="../camera_animations/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Camera Animation
+    Camera Animations
     
   </span>
   
@@ -7095,6 +7194,76 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Distance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fov" class="md-nav__link">
+    <span class="md-ellipsis">
+      FOV
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -7110,9 +7279,66 @@
 
 
 
-  <h1>Speed Effects</h1>
+<h1 id="speed-modifiers">Speed Modifiers</h1>
+<div align="center">
+  <img src="../assets/speed_effects/speed_effects.gif"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
 
+<p>The <strong>Speed Modifiers</strong> system adjusts camera distance and field of view based on character movement speed.</p>
+<p>This helps:</p>
+<ul>
+<li>enhance the feeling of speed  </li>
+<li>improve forward visibility while moving fast  </li>
+<li>make transitions between slow and fast movement feel more dynamic  </li>
+</ul>
+<hr />
+<h2 id="behavior">Behavior</h2>
+<p>Speed Modifiers are applied automatically based on the character’s current speed.</p>
+<ul>
+<li>the effect increases between minimum and maximum speed thresholds  </li>
+<li>both camera distance and FOV can be affected simultaneously  </li>
+<li>the camera smoothly interpolates between states  </li>
+<li>the effect fades out when the character slows down  </li>
+</ul>
+<p>Speed Modifiers are applied on top of the current framing and do not modify base settings.</p>
+<hr />
+<h2 id="settings">Settings</h2>
+<div align="center">
+  <img src="../assets/speed_effects/speed_effects_settings.png"
+       style="max-width: 80%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
 
+<p>The speed modifiers system is defined by the following parameters:</p>
+<h3 id="general">General</h3>
+<ul>
+<li><strong>Speed Modifier Min Speed</strong> - character speed at which the effect begins  </li>
+<li><strong>Speed Modifier Max Speed</strong> - character speed at which the effect reaches full strength  </li>
+</ul>
+<h3 id="camera-distance">Camera Distance</h3>
+<ul>
+<li><strong>Modify Camera Distance</strong> - enables speed-based camera distance changes  </li>
+<li><strong>Min Camera Distance</strong> - distance offset applied at minimum speed  </li>
+<li><strong>Max Camera Distance</strong> - distance offset applied at maximum speed  </li>
+<li><strong>Camera Distance Interp Speed</strong> - controls how quickly the distance changes  </li>
+<li><strong>Camera Distance Curve</strong> - optional curve controlling how speed maps to distance offset  </li>
+</ul>
+<h3 id="fov">FOV</h3>
+<ul>
+<li><strong>Modify FOV</strong> - enables speed-based FOV changes  </li>
+<li><strong>Min FOV</strong> - FOV offset applied at minimum speed  </li>
+<li><strong>Max FOV</strong> - FOV offset applied at maximum speed  </li>
+<li><strong>FOV Interp Speed</strong> - controls how quickly the FOV changes  </li>
+<li><strong>FOV Curve</strong> - optional curve controlling how speed maps to FOV offset  </li>
+</ul>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Speed Modifiers are runtime-only and do not modify base camera settings  </li>
+<li>Distance and FOV modifiers are evaluated together as a single system  </li>
+<li>Effects are driven by character movement speed  </li>
+<li>Curves allow fine control over how the effect scales between min and max speed</li>
+</ul>
 
 
 

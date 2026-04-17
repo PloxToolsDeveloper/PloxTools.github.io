@@ -6941,27 +6941,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#play-camera-spline" class="md-nav__link">
+  <a href="#main-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Play Camera Spline
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stop-camera-spline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stop Camera Spline
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#is-spline-active" class="md-nav__link">
-    <span class="md-ellipsis">
-      Is Spline Active
+      Main Functions
     </span>
   </a>
   
@@ -7066,12 +7048,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../camera_animation/" class="md-nav__link">
+      <a href="../camera_animations/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Camera Animation
+    Camera Animations
     
   </span>
   
@@ -7751,27 +7733,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#play-camera-spline" class="md-nav__link">
+  <a href="#main-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Play Camera Spline
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stop-camera-spline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stop Camera Spline
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#is-spline-active" class="md-nav__link">
-    <span class="md-ellipsis">
-      Is Spline Active
+      Main Functions
     </span>
   </a>
   
@@ -7993,29 +7957,26 @@
 <hr />
 <h3 id="tether-types">Tether Types</h3>
 <h4 id="default">Default</h4>
+<p>The camera follows the player projection on the spline without additional constraints.</p>
 <div align="center">
   <img src="../assets/spline/spline_tethered_default.gif"
        style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<p>The camera follows the player projection on the spline without additional constraints.</p>
-<hr />
 <h4 id="keep-minimum-distance-behind">Keep Minimum Distance Behind</h4>
+<p>The camera stays at least a minimum distance <strong>behind</strong> the player along the spline.</p>
 <div align="center">
   <img src="../assets/spline/spline_tethered_behind.gif"
        style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<p>The camera stays at least a minimum distance <strong>behind</strong> the player along the spline.</p>
-<hr />
 <h4 id="keep-minimum-distance-ahead">Keep Minimum Distance Ahead</h4>
+<p>The camera stays at least a minimum distance <strong>ahead</strong> of the player along the spline.</p>
 <div align="center">
   <img src="../assets/spline/spline_tethered_ahead.gif"
        style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<p>The camera stays at least a minimum distance <strong>ahead</strong> of the player along the spline.</p>
-<hr />
 <h4 id="settings_2">Settings</h4>
 <ul>
 <li><strong>Tether Type</strong> - selects the behavior  </li>
@@ -8024,24 +7985,21 @@
 <hr />
 <h3 id="focus">Focus</h3>
 <h4 id="focus-player-character">Focus Player Character</h4>
+<p>The camera rotates to follow the player while moving along the spline.</p>
 <div align="center">
   <img src="../assets/spline/spline_focus_player.gif"
        style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<p>The camera rotates to follow the player while moving along the spline.</p>
-<hr />
 <h4 id="focus-target">Focus Target</h4>
+<p>The camera rotates toward a specific Actor in the world.</p>
 <div align="center">
   <img src="../assets/spline/spline_focus_target.gif"
        style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<p>The camera rotates toward a specific Actor in the world.</p>
-<hr />
 <h4 id="focus-priority">Focus Priority</h4>
 <p>If <strong>Focus Target</strong> is set, it always overrides <strong>Focus Player Character</strong>.</p>
-<hr />
 <h4 id="settings_3">Settings</h4>
 <ul>
 <li><strong>Focus Player Character</strong> - enables player tracking  </li>
@@ -8082,12 +8040,12 @@
 <h2 id="runtime-control">Runtime Control</h2>
 <p>The spline system is controlled through runtime functions.</p>
 <p>For a complete list of functions and parameters, refer to the <a href="../../reference/api/#spline">API Reference</a>.</p>
-<h3 id="play-camera-spline">Play Camera Spline</h3>
-<p>Starts a spline camera and optionally applies override settings.</p>
-<h3 id="stop-camera-spline">Stop Camera Spline</h3>
-<p>Stops the currently active spline.</p>
-<h3 id="is-spline-active">Is Spline Active</h3>
-<p>Returns whether a spline camera is active or stopping.</p>
+<h3 id="main-functions">Main Functions</h3>
+<ul>
+<li><strong>Play Camera Spline</strong> - starts a spline camera and optionally applies override settings  </li>
+<li><strong>Stop Camera Spline</strong> - stops the currently active spline  </li>
+<li><strong>Is Spline Active</strong> - returns whether a spline camera is active or stopping  </li>
+</ul>
 <hr />
 <h2 id="notes">Notes</h2>
 <ul>

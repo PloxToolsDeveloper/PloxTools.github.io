@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#pitch-effects" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -6655,6 +6660,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pitch Effects
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -6667,6 +6687,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camera-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Distance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fov" class="md-nav__link">
+    <span class="md-ellipsis">
+      FOV
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -6703,12 +6793,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../camera_animation/" class="md-nav__link">
+      <a href="../camera_animations/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Camera Animation
+    Camera Animations
     
   </span>
   
@@ -7095,6 +7185,67 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camera-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Distance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fov" class="md-nav__link">
+    <span class="md-ellipsis">
+      FOV
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -7110,9 +7261,58 @@
 
 
 
-  <h1>Pitch Effects</h1>
+<h1 id="pitch-effects">Pitch Effects</h1>
+<div align="center">
+  <img src="../assets/pitch_effects/pitch_effects.gif"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
 
+<p>The <strong>Pitch Effects</strong> system dynamically adjusts camera distance and field of view based on camera pitch.</p>
+<p>This allows the camera to feel more responsive and context-aware when looking up or down.</p>
+<p>It helps:</p>
+<ul>
+<li>improve framing depending on vertical view direction  </li>
+<li>enhance sense of depth and scale  </li>
+<li>make vertical movement more readable  </li>
+</ul>
+<hr />
+<h2 id="behavior">Behavior</h2>
+<p>Pitch Effects are applied automatically based on the current camera pitch.</p>
+<ul>
+<li>looking up and down produces different camera responses  </li>
+<li>both distance and FOV can be affected simultaneously  </li>
+<li>the effect is evaluated continuously at runtime  </li>
+<li>the camera smoothly blends between states  </li>
+</ul>
+<p>Pitch Effects are applied on top of the current framing and do not modify base settings.</p>
+<hr />
+<h2 id="settings">Settings</h2>
+<div align="center">
+  <img src="../assets/pitch_effects/pitch_effects_settings.png"
+       style="max-width: 80%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
 
+<p>The pitch effects system is defined by the following parameters:</p>
+<h3 id="camera-distance">Camera Distance</h3>
+<ul>
+<li><strong>Enable Pitch Camera Distance Modifier</strong> - enables pitch-based modification of the base camera distance  </li>
+<li><strong>Pitch Distance Down Percent</strong> - percentage change applied to the base camera distance when looking down  </li>
+<li><strong>Pitch Distance Up Percent</strong> - percentage change applied to the base camera distance when looking up  </li>
+</ul>
+<h3 id="fov">FOV</h3>
+<ul>
+<li><strong>Enable Pitch FOV Modifier</strong> - enables pitch-based modification of camera field of view  </li>
+<li><strong>Pitch FOV Down Percent</strong> - percentage change applied to the camera FOV when looking down  </li>
+<li><strong>Pitch FOV Up Percent</strong> - percentage change applied to the camera FOV when looking up  </li>
+</ul>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Pitch Effects are runtime-only and do not modify base camera settings  </li>
+<li>Distance and FOV effects are evaluated together as a single system  </li>
+<li>The effect depends entirely on camera pitch  </li>
+<li>Works best when combined with Framing and Movement Anticipation  </li>
+</ul>
 
 
 

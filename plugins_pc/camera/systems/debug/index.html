@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#debug" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -6695,12 +6700,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../camera_animation/" class="md-nav__link">
+      <a href="../camera_animations/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Camera Animation
+    Camera Animations
     
   </span>
   
@@ -6816,6 +6821,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Debug
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -6828,6 +6848,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#camera-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Debug
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collision-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collision Debug
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Focus Debug
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -7095,6 +7179,61 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#camera-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Debug
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collision-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collision Debug
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Focus Debug
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -7110,9 +7249,56 @@
 
 
 
-  <h1>Debug</h1>
+<h1 id="debug">Debug</h1>
+<div align="center">
+  <img src="../assets/debug/debug.png"
+       style="max-width: 90%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
 
-
+<p>The <strong>Debug</strong> system provides visual tools to inspect how the camera behaves in real time.</p>
+<p>It helps you understand internal camera logic and is useful when:</p>
+<ul>
+<li>tuning camera settings  </li>
+<li>debugging unexpected behavior  </li>
+<li>verifying collision and focus systems  </li>
+<li>adjusting framing and offsets  </li>
+</ul>
+<hr />
+<h2 id="camera-debug">Camera Debug</h2>
+<p>Camera debug options visualize the core camera positions and relationships.</p>
+<ul>
+<li><strong>Debug Pivot</strong> - draws the camera pivot point used as the origin for camera positioning  </li>
+<li><strong>Debug Ideal Camera</strong> - shows the target camera position before collision is applied  </li>
+<li><strong>Debug Final Camera</strong> - shows the final camera position after collision and smoothing  </li>
+</ul>
+<p>These visualizations help you understand how the camera is calculated each frame.</p>
+<hr />
+<h2 id="collision-debug">Collision Debug</h2>
+<p>Collision debug options visualize how the camera interacts with the environment.</p>
+<ul>
+<li><strong>Debug Collision Sweep</strong> - draws the main sweep from the pivot toward the ideal camera position  </li>
+<li><strong>Debug Collision Hit</strong> - shows hit points where collisions are detected  </li>
+<li><strong>Debug Collision Feelers</strong> - visualizes predictive avoidance probes around the camera direction  </li>
+</ul>
+<p>This is useful for diagnosing clipping issues and understanding how the camera reacts to obstacles.</p>
+<hr />
+<h2 id="focus-debug">Focus Debug</h2>
+<p>Focus debug visualizes the active focus target.</p>
+<ul>
+<li><strong>Debug Focus</strong> - draws the focus target location and a line from the pivot to the target  </li>
+</ul>
+<p>This helps verify that the correct target is being tracked and how the camera aligns with it.</p>
+<hr />
+<h2 id="usage">Usage</h2>
+<p>Debug options can be enabled directly on the <strong>ThirdPersonCameraComponent</strong>.</p>
+<p>Each option can be toggled independently and updates in real time during gameplay.</p>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Debug visualization does not affect gameplay behavior  </li>
+<li>All debug options are intended for development and testing  </li>
+<li>It is recommended to disable debug visualization in production builds  </li>
+</ul>
 
 
 

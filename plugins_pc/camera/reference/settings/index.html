@@ -6698,12 +6698,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/camera_animation/" class="md-nav__link">
+      <a href="../../systems/camera_animations/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Camera Animation
+    Camera Animations
     
   </span>
   
@@ -7255,6 +7255,15 @@
   <a href="#general_1" class="md-nav__link">
     <span class="md-ellipsis">
       General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hard-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Lock
     </span>
   </a>
   
@@ -7859,6 +7868,15 @@
   <a href="#general_1" class="md-nav__link">
     <span class="md-ellipsis">
       General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hard-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Lock
     </span>
   </a>
   
@@ -8708,11 +8726,6 @@
 <td>Defines how the camera behaves when focusing on a target.</td>
 </tr>
 <tr>
-<td><strong>FocusRotationSpeed</strong></td>
-<td><code>float</code></td>
-<td>Speed of rotation interpolation when focusing on a target.</td>
-</tr>
-<tr>
 <td><strong>bEnableAutoClearByDistance</strong></td>
 <td><code>bool</code></td>
 <td>If enabled, focus is cleared when the distance to the target exceeds the defined threshold.</td>
@@ -8731,6 +8744,24 @@
 <td><strong>AutoClearVisibilityDelay</strong></td>
 <td><code>float</code></td>
 <td>Time in seconds the target must remain invisible before focus is cleared.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="hard-lock">Hard Lock</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HardLockRotationSpeed</strong></td>
+<td><code>float</code></td>
+<td>Controls how quickly the camera rotates toward the focus target in Hard Lock mode</td>
 </tr>
 </tbody>
 </table>

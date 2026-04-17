@@ -12,7 +12,7 @@
         <meta name="author" content="PloxTools">
       
       
-        <link rel="canonical" href="https://ploxtools.github.io/plugins_pc/camera/systems/camera_animation/">
+        <link rel="canonical" href="https://ploxtools.github.io/plugins_pc/camera/systems/camera_animations/">
       
       
         <link rel="prev" href="../speed_effects/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Camera Animation - PloxTools Plugins</title>
+        <title>Camera Animations - PloxTools Plugins</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#camera-animations" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Camera Animation
+              Camera Animations
             
           </span>
         </div>
@@ -6701,18 +6706,169 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Camera Animations
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Camera Animation
+    Camera Animations
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-camera-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Camera Animation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Camera Animation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-level-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Level Sequences
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-camera-animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Camera Animations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Camera Animations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Callbacks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Animations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -7095,6 +7251,133 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-camera-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Camera Animation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Camera Animation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-level-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Level Sequences
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-camera-animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Camera Animations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Camera Animations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Callbacks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Animations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -7110,9 +7393,166 @@
 
 
 
-  <h1>Camera Animation</h1>
+<h1 id="camera-animations">Camera Animations</h1>
+<div align="center">
+  <img src="../assets/camera_animations/camera_animations.gif"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
 
+<p>The <strong>Camera Animations</strong> system allows you to play procedural camera motion on top of the gameplay camera.</p>
+<p>It is used to add controlled movement such as:</p>
+<ul>
+<li>impacts and impulses  </li>
+<li>cinematic camera motion  </li>
+<li>subtle handheld effects  </li>
+</ul>
+<p>Camera Animations do not replace the gameplay camera. Instead, they are applied as an additional layer, allowing multiple animations to blend together.</p>
+<hr />
+<h2 id="creating-a-camera-animation">Creating a Camera Animation</h2>
+<p>Camera Animations are created as assets in the Content Browser.</p>
+<p>To create a new Camera Animation:</p>
+<ol>
+<li>Right-click in the <strong>Content Browser</strong>  </li>
+<li>Navigate to <strong>Cinematics → Camera Animation Sequence</strong>  </li>
+<li>Select <strong>Camera Animation Sequence</strong>  </li>
+</ol>
+<div align="center">
+  <img src="../assets/camera_animations/camera_animations_create.png"
+       style="max-width: 90%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
 
+<p>Once created, double-click the asset to open the animation editor.</p>
+<p>This opens a Sequencer-based editor where you can animate the camera using standard transform tracks.</p>
+<div align="center">
+  <img src="../assets/camera_animations/camera_animations_editor.png"
+       style="max-width: 90%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<h3 id="important-notes">Important Notes</h3>
+<ul>
+<li>Camera Animations define <strong>relative motion</strong>, not absolute world position  </li>
+<li>They are applied on top of the current gameplay camera  </li>
+</ul>
+<p>This means that:</p>
+<ul>
+<li>(0, 0, 0) produces no movement  </li>
+<li>any values offset the camera relative to its current position  </li>
+</ul>
+<p>In most cases, you should animate <strong>small offsets</strong> rather than large positional changes.</p>
+<p>For example:</p>
+<ul>
+<li>slight X/Y/Z movement for camera sway  </li>
+<li>small rotation changes for impacts or motion  </li>
+</ul>
+<p>Large offsets can be used, but they effectively reposition the camera and may conflict with your framing setup.</p>
+<hr />
+<h3 id="using-level-sequences">Using Level Sequences</h3>
+<p>You can also create camera motion inside a <strong>Level Sequence</strong> and reuse it:</p>
+<ol>
+<li>Animate a camera in a Level Sequence  </li>
+<li>Copy the <strong>Transform track</strong>  </li>
+<li>Paste it into a <strong>Camera Animation Sequence</strong>  </li>
+</ol>
+<p>This is useful when working with complex or pre-existing animations.</p>
+<p>Camera Animation Sequences do not support full scene context, so character animation syncing must be done in Level Sequences.</p>
+<hr />
+<h2 id="using-camera-animations">Using Camera Animations</h2>
+<p>Camera Animations are played at runtime using <strong>ThirdPersonCameraComponent</strong>.</p>
+<p>To play an animation:</p>
+<ul>
+<li><strong>Play Camera Animation</strong></li>
+</ul>
+<div align="center">
+  <img src="../assets/camera_animations/camera_animations_play.png"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>This function:</p>
+<ul>
+<li>plays the animation through the Player Camera Manager  </li>
+<li>returns a handle that can be used to control it  </li>
+<li>supports optional callbacks  </li>
+</ul>
+<hr />
+<h3 id="parameters">Parameters</h3>
+<p>Camera Animations support an <strong>optional parameter struct</strong> that controls how the animation is played.</p>
+<p>This struct is part of Unreal Engine’s built-in camera animation system and is passed into:</p>
+<ul>
+<li><strong>Play Camera Animation</strong></li>
+</ul>
+<div align="center">
+  <img src="../assets/camera_animations/camera_animations_parameters.png"
+       style="max-width: 90%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>If no parameters are provided, default values are used.</p>
+<p>Commonly used parameters include:</p>
+<ul>
+<li><strong>Play Rate</strong> - controls animation speed  </li>
+<li><strong>Scale</strong> - controls animation intensity  </li>
+<li><strong>Ease In / Ease Out</strong> - controls how smoothly the animation starts and ends  </li>
+<li><strong>Loop</strong> - repeats the animation  </li>
+<li><strong>Start Offset</strong> - starts playback from a specific point  </li>
+</ul>
+<p>In most cases, only a few parameters need to be adjusted depending on the effect.</p>
+<p>For a complete reference, see the <a href="../../reference/api/#camera-animation">API Reference</a>.</p>
+<hr />
+<h3 id="callbacks">Callbacks</h3>
+<p>Camera Animations support optional callbacks:</p>
+<ul>
+<li><strong>On Finished</strong> - called when the animation completes  </li>
+<li><strong>On Interrupted</strong> - called when the animation is stopped early  </li>
+</ul>
+<p>These callbacks allow you to react to animation lifecycle events without polling.</p>
+<hr />
+<h2 id="behavior">Behavior</h2>
+<p>Camera Animations are <strong>additive</strong>.</p>
+<p>This means:</p>
+<ul>
+<li>they are applied on top of the current camera state  </li>
+<li>they do not override framing, rotation, or focus  </li>
+<li>they can run simultaneously  </li>
+</ul>
+<p>Multiple animations can be active at the same time.</p>
+<p>Each animation contributes to the final camera transform, allowing complex layered motion.</p>
+<p>The final result is blended automatically by the engine.</p>
+<hr />
+<h2 id="stopping-animations">Stopping Animations</h2>
+<p>You can stop animations at any time:</p>
+<ul>
+<li><strong>Stop Camera Animation</strong> - stops a specific animation using its handle  </li>
+<li><strong>Stop All Camera Animations</strong> - stops all active animations  </li>
+</ul>
+<div align="center">
+  <img src="../assets/camera_animations/camera_animations_stop.png"
+       style="max-width: 90%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>Stopping can be:</p>
+<ul>
+<li>immediate  </li>
+<li>or smoothly blended out  </li>
+</ul>
+<hr />
+<h2 id="runtime-control">Runtime Control</h2>
+<p>The Camera Animations system is controlled through runtime functions.</p>
+<p>For a complete list of functions and parameters, refer to the <a href="../../reference/api/#camera-animation">API Reference</a>.</p>
+<h3 id="main-functions">Main Functions</h3>
+<ul>
+<li><strong>Play Camera Animation</strong> - plays a camera animation and returns a handle used to control it  </li>
+<li><strong>Stop Camera Animation</strong> - stops a specific camera animation using its handle  </li>
+<li><strong>Stop All Camera Animations</strong> - stops all active camera animations  </li>
+<li><strong>Is Camera Animation Playing</strong> - returns whether a specific camera animation is currently active  </li>
+</ul>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Camera Animations are <strong>additive</strong> and do not override the gameplay camera  </li>
+<li>Multiple animations can play simultaneously  </li>
+<li>Animations are controlled using a returned handle  </li>
+<li>Callbacks are optional and tied to individual animation instances  </li>
+<li>Use Camera Animations for controlled motion, and Camera Shake for procedural noise  </li>
+</ul>
 
 
 
