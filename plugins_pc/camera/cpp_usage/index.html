@@ -12,28 +12,28 @@
         <meta name="author" content="PloxTools">
       
       
-        <link rel="canonical" href="https://ploxtools.github.io/plugins/billing/implementation/query_product_details/">
+        <link rel="canonical" href="https://ploxtools.github.io/plugins_pc/camera/cpp_usage/">
       
       
-        <link rel="prev" href="../initialize_billingclient/">
+        <link rel="prev" href="../reference/structures/">
       
       
-        <link rel="next" href="../query_single_product_details/">
+        <link rel="next" href="../faq/">
       
       
-      <link rel="icon" href="../../../../assets/icon.png">
+      <link rel="icon" href="../../../assets/icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>Query Product Details - PloxTools Plugins</title>
+        <title>C++ Usage - PloxTools Plugins</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#query-product-details" class="md-skip">
+        <a href="#c-usage" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +92,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="PloxTools Plugins" class="md-header__button md-logo" aria-label="PloxTools Plugins" data-md-component="logo">
+    <a href="../../.." title="PloxTools Plugins" class="md-header__button md-logo" aria-label="PloxTools Plugins" data-md-component="logo">
       
-  <img src="../../../../assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Query Product Details
+              C++ Usage
             
           </span>
         </div>
@@ -170,7 +170,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -187,13 +187,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../plugins/" class="md-tabs__link">
           
   
   
@@ -211,11 +209,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../plugins_pc/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -235,7 +235,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../help/help/" class="md-tabs__link">
+      <a href="../../../help/help/" class="md-tabs__link">
         
   
   
@@ -270,9 +270,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="PloxTools Plugins" class="md-nav__button md-logo" aria-label="PloxTools Plugins" data-md-component="logo">
+    <a href="../../.." title="PloxTools Plugins" class="md-nav__button md-logo" aria-label="PloxTools Plugins" data-md-component="logo">
       
-  <img src="../../../../assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     PloxTools Plugins
@@ -287,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -306,8 +306,6 @@
       
   
   
-    
-  
   
   
     
@@ -331,21 +329,18 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../../plugins/" class="md-nav__link ">
               
   
   
@@ -358,13 +353,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Android Plugins
@@ -494,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/implementation/overview/" class="md-nav__link">
+      <a href="../../../plugins/admob/implementation/overview/" class="md-nav__link">
         
   
   
@@ -517,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/implementation/getting_started/" class="md-nav__link">
+      <a href="../../../plugins/admob/implementation/getting_started/" class="md-nav__link">
         
   
   
@@ -540,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/implementation/initialization/" class="md-nav__link">
+      <a href="../../../plugins/admob/implementation/initialization/" class="md-nav__link">
         
   
   
@@ -563,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/implementation/consent%26privacy/" class="md-nav__link">
+      <a href="../../../plugins/admob/implementation/consent%26privacy/" class="md-nav__link">
         
   
   
@@ -586,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/implementation/banner/" class="md-nav__link">
+      <a href="../../../plugins/admob/implementation/banner/" class="md-nav__link">
         
   
   
@@ -609,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/implementation/interstitial/" class="md-nav__link">
+      <a href="../../../plugins/admob/implementation/interstitial/" class="md-nav__link">
         
   
   
@@ -632,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/implementation/rewarded/" class="md-nav__link">
+      <a href="../../../plugins/admob/implementation/rewarded/" class="md-nav__link">
         
   
   
@@ -655,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/implementation/rewarded_interstitial/" class="md-nav__link">
+      <a href="../../../plugins/admob/implementation/rewarded_interstitial/" class="md-nav__link">
         
   
   
@@ -678,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/implementation/app_open/" class="md-nav__link">
+      <a href="../../../plugins/admob/implementation/app_open/" class="md-nav__link">
         
   
   
@@ -701,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/implementation/mediation/" class="md-nav__link">
+      <a href="../../../plugins/admob/implementation/mediation/" class="md-nav__link">
         
   
   
@@ -777,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/object_definitions/enumerations/" class="md-nav__link">
+      <a href="../../../plugins/admob/object_definitions/enumerations/" class="md-nav__link">
         
   
   
@@ -808,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/implementation/testing_ads/" class="md-nav__link">
+      <a href="../../../plugins/admob/implementation/testing_ads/" class="md-nav__link">
         
   
   
@@ -831,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../admob/faq/faq/" class="md-nav__link">
+      <a href="../../../plugins/admob/faq/faq/" class="md-nav__link">
         
   
   
@@ -982,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/overview/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/overview/" class="md-nav__link">
         
   
   
@@ -1005,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/getting_started/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/getting_started/" class="md-nav__link">
         
   
   
@@ -1028,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/initialization/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/initialization/" class="md-nav__link">
         
   
   
@@ -1100,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/analytics/overview/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/analytics/overview/" class="md-nav__link">
         
   
   
@@ -1123,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/analytics/examples/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/analytics/examples/" class="md-nav__link">
         
   
   
@@ -1146,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/analytics/api/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/analytics/api/" class="md-nav__link">
         
   
   
@@ -1226,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/authentication/overview/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/authentication/overview/" class="md-nav__link">
         
   
   
@@ -1249,7 +1244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/authentication/examples/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/authentication/examples/" class="md-nav__link">
         
   
   
@@ -1272,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/authentication/api/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/authentication/api/" class="md-nav__link">
         
   
   
@@ -1352,7 +1347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/cloud_messaging/overview/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/cloud_messaging/overview/" class="md-nav__link">
         
   
   
@@ -1375,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/cloud_messaging/examples/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/cloud_messaging/examples/" class="md-nav__link">
         
   
   
@@ -1398,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/cloud_messaging/api/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/cloud_messaging/api/" class="md-nav__link">
         
   
   
@@ -1478,7 +1473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/cloud_storage/overview/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/cloud_storage/overview/" class="md-nav__link">
         
   
   
@@ -1501,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/cloud_storage/examples/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/cloud_storage/examples/" class="md-nav__link">
         
   
   
@@ -1524,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/cloud_storage/api/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/cloud_storage/api/" class="md-nav__link">
         
   
   
@@ -1604,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/crashlytics/overview/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/crashlytics/overview/" class="md-nav__link">
         
   
   
@@ -1627,7 +1622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/crashlytics/examples/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/crashlytics/examples/" class="md-nav__link">
         
   
   
@@ -1650,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/crashlytics/api/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/crashlytics/api/" class="md-nav__link">
         
   
   
@@ -1730,7 +1725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/firestore/overview/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/firestore/overview/" class="md-nav__link">
         
   
   
@@ -1753,7 +1748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/firestore/examples/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/firestore/examples/" class="md-nav__link">
         
   
   
@@ -1776,7 +1771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/firestore/api/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/firestore/api/" class="md-nav__link">
         
   
   
@@ -1856,7 +1851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/performance_monitoring/overview/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/performance_monitoring/overview/" class="md-nav__link">
         
   
   
@@ -1879,7 +1874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/performance_monitoring/examples/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/performance_monitoring/examples/" class="md-nav__link">
         
   
   
@@ -1902,7 +1897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/performance_monitoring/api/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/performance_monitoring/api/" class="md-nav__link">
         
   
   
@@ -1982,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/realtime_database/overview/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/realtime_database/overview/" class="md-nav__link">
         
   
   
@@ -2005,7 +2000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/realtime_database/examples/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/realtime_database/examples/" class="md-nav__link">
         
   
   
@@ -2028,7 +2023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/realtime_database/api/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/realtime_database/api/" class="md-nav__link">
         
   
   
@@ -2108,7 +2103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/remote_config/overview/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/remote_config/overview/" class="md-nav__link">
         
   
   
@@ -2131,7 +2126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/remote_config/examples/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/remote_config/examples/" class="md-nav__link">
         
   
   
@@ -2154,7 +2149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/implementation/remote_config/api/" class="md-nav__link">
+      <a href="../../../plugins/firebase/implementation/remote_config/api/" class="md-nav__link">
         
   
   
@@ -2240,7 +2235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/data_api/firebase_value_api/" class="md-nav__link">
+      <a href="../../../plugins/firebase/data_api/firebase_value_api/" class="md-nav__link">
         
   
   
@@ -2263,7 +2258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/data_api/firestore_document_api/" class="md-nav__link">
+      <a href="../../../plugins/firebase/data_api/firestore_document_api/" class="md-nav__link">
         
   
   
@@ -2343,7 +2338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/object_definitions/enumerations/" class="md-nav__link">
+      <a href="../../../plugins/firebase/object_definitions/enumerations/" class="md-nav__link">
         
   
   
@@ -2366,7 +2361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/object_definitions/firebase_value/" class="md-nav__link">
+      <a href="../../../plugins/firebase/object_definitions/firebase_value/" class="md-nav__link">
         
   
   
@@ -2389,7 +2384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/object_definitions/firestore_document/" class="md-nav__link">
+      <a href="../../../plugins/firebase/object_definitions/firestore_document/" class="md-nav__link">
         
   
   
@@ -2420,7 +2415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/cpp_usage/cpp_usage/" class="md-nav__link">
+      <a href="../../../plugins/firebase/cpp_usage/cpp_usage/" class="md-nav__link">
         
   
   
@@ -2443,7 +2438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../firebase/faq/faq/" class="md-nav__link">
+      <a href="../../../plugins/firebase/faq/faq/" class="md-nav__link">
         
   
   
@@ -2471,10 +2466,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -2493,11 +2486,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
@@ -2513,7 +2506,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Google Play Billing
@@ -2524,10 +2517,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -2566,11 +2557,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1" >
         
           
           <label class="md-nav__link" for="__nav_2_4_1" id="__nav_2_4_1_label" tabindex="0">
@@ -2586,7 +2577,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4_1">
             <span class="md-nav__icon md-icon"></span>
             Implementation
@@ -2600,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/overview/" class="md-nav__link">
         
   
   
@@ -2623,7 +2614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/getting_started/" class="md-nav__link">
         
   
   
@@ -2646,7 +2637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../initialize_billingclient/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/initialize_billingclient/" class="md-nav__link">
         
   
   
@@ -2666,32 +2657,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Query Product Details
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../plugins/billing/implementation/query_product_details/" class="md-nav__link">
         
   
   
@@ -2702,95 +2671,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-product-ids" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Product IDs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-product-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Product Type
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-on-success" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. On Success
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-on-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. On Failure
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#c-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      C++ Usage
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2803,7 +2683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../query_single_product_details/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/query_single_product_details/" class="md-nav__link">
         
   
   
@@ -2826,7 +2706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../launch_billing_flow/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/launch_billing_flow/" class="md-nav__link">
         
   
   
@@ -2849,7 +2729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../set_nonconsumable_products/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/set_nonconsumable_products/" class="md-nav__link">
         
   
   
@@ -2872,7 +2752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../is_product_purchased/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/is_product_purchased/" class="md-nav__link">
         
   
   
@@ -2895,7 +2775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../is_subscription_active/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/is_subscription_active/" class="md-nav__link">
         
   
   
@@ -2918,7 +2798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../query_owned_purchases/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/query_owned_purchases/" class="md-nav__link">
         
   
   
@@ -2941,7 +2821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../process_pending_purchases/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/process_pending_purchases/" class="md-nav__link">
         
   
   
@@ -2964,7 +2844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../show_inapp_messages/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/show_inapp_messages/" class="md-nav__link">
         
   
   
@@ -2987,7 +2867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../manual_purchase_handling/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/manual_purchase_handling/" class="md-nav__link">
         
   
   
@@ -3010,7 +2890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../utilities/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/utilities/" class="md-nav__link">
         
   
   
@@ -3090,7 +2970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object_definitions/product_details/" class="md-nav__link">
+      <a href="../../../plugins/billing/object_definitions/product_details/" class="md-nav__link">
         
   
   
@@ -3113,7 +2993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object_definitions/purchase/" class="md-nav__link">
+      <a href="../../../plugins/billing/object_definitions/purchase/" class="md-nav__link">
         
   
   
@@ -3136,7 +3016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object_definitions/enumerations/" class="md-nav__link">
+      <a href="../../../plugins/billing/object_definitions/enumerations/" class="md-nav__link">
         
   
   
@@ -3167,7 +3047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../testing_purchases/" class="md-nav__link">
+      <a href="../../../plugins/billing/implementation/testing_purchases/" class="md-nav__link">
         
   
   
@@ -3190,7 +3070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/faq/" class="md-nav__link">
+      <a href="../../../plugins/billing/faq/faq/" class="md-nav__link">
         
   
   
@@ -3331,7 +3211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/overview/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/overview/" class="md-nav__link">
         
   
   
@@ -3354,7 +3234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/getting_started/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/getting_started/" class="md-nav__link">
         
   
   
@@ -3377,7 +3257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/sign_in/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/sign_in/" class="md-nav__link">
         
   
   
@@ -3449,7 +3329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/achievements/overview/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/achievements/overview/" class="md-nav__link">
         
   
   
@@ -3472,7 +3352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/achievements/examples/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/achievements/examples/" class="md-nav__link">
         
   
   
@@ -3495,7 +3375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/achievements/api/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/achievements/api/" class="md-nav__link">
         
   
   
@@ -3575,7 +3455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/events/overview/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/events/overview/" class="md-nav__link">
         
   
   
@@ -3598,7 +3478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/events/examples/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/events/examples/" class="md-nav__link">
         
   
   
@@ -3621,7 +3501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/events/api/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/events/api/" class="md-nav__link">
         
   
   
@@ -3701,7 +3581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/leaderboards/overview/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/leaderboards/overview/" class="md-nav__link">
         
   
   
@@ -3724,7 +3604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/leaderboards/examples/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/leaderboards/examples/" class="md-nav__link">
         
   
   
@@ -3747,7 +3627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/leaderboards/api/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/leaderboards/api/" class="md-nav__link">
         
   
   
@@ -3827,7 +3707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/player_profile/overview/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/player_profile/overview/" class="md-nav__link">
         
   
   
@@ -3850,7 +3730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/player_profile/examples/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/player_profile/examples/" class="md-nav__link">
         
   
   
@@ -3873,7 +3753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/player_profile/api/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/player_profile/api/" class="md-nav__link">
         
   
   
@@ -3953,7 +3833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/saved_games/overview/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/saved_games/overview/" class="md-nav__link">
         
   
   
@@ -3976,7 +3856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/saved_games/examples/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/saved_games/examples/" class="md-nav__link">
         
   
   
@@ -3999,7 +3879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/implementation/saved_games/api/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/implementation/saved_games/api/" class="md-nav__link">
         
   
   
@@ -4085,7 +3965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/object_definitions/enumerations/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/object_definitions/enumerations/" class="md-nav__link">
         
   
   
@@ -4108,7 +3988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/object_definitions/structures/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/object_definitions/structures/" class="md-nav__link">
         
   
   
@@ -4139,7 +4019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/cpp_usage/cpp_usage/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/cpp_usage/cpp_usage/" class="md-nav__link">
         
   
   
@@ -4162,7 +4042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../playgamesservices/faq/faq/" class="md-nav__link">
+      <a href="../../../plugins/playgamesservices/faq/faq/" class="md-nav__link">
         
   
   
@@ -4291,7 +4171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../inappreview/implementation/overview/" class="md-nav__link">
+      <a href="../../../plugins/inappreview/implementation/overview/" class="md-nav__link">
         
   
   
@@ -4314,7 +4194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../inappreview/implementation/getting_started/" class="md-nav__link">
+      <a href="../../../plugins/inappreview/implementation/getting_started/" class="md-nav__link">
         
   
   
@@ -4337,7 +4217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../inappreview/implementation/launch_inapp_review/" class="md-nav__link">
+      <a href="../../../plugins/inappreview/implementation/launch_inapp_review/" class="md-nav__link">
         
   
   
@@ -4413,7 +4293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../inappreview/object_definitions/enumerations/" class="md-nav__link">
+      <a href="../../../plugins/inappreview/object_definitions/enumerations/" class="md-nav__link">
         
   
   
@@ -4444,7 +4324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../inappreview/faq/faq/" class="md-nav__link">
+      <a href="../../../plugins/inappreview/faq/faq/" class="md-nav__link">
         
   
   
@@ -4479,6 +4359,8 @@
       
   
   
+    
+  
   
   
     
@@ -4496,18 +4378,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../plugins_pc/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -4520,13 +4405,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             PC Plugins
@@ -4601,7 +4486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/overview/" class="md-nav__link">
         
   
   
@@ -4624,7 +4509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/getting_started/" class="md-nav__link">
+      <a href="../../steam/implementation/getting_started/" class="md-nav__link">
         
   
   
@@ -4647,7 +4532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/testing_steam/testing_steam/" class="md-nav__link">
+      <a href="../../steam/testing_steam/testing_steam/" class="md-nav__link">
         
   
   
@@ -4670,7 +4555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/bp_usage/bp_usage/" class="md-nav__link">
+      <a href="../../steam/bp_usage/bp_usage/" class="md-nav__link">
         
   
   
@@ -4693,7 +4578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/cpp_usage/cpp_usage/" class="md-nav__link">
+      <a href="../../steam/cpp_usage/cpp_usage/" class="md-nav__link">
         
   
   
@@ -4832,7 +4717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/achievements/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/achievements/overview/" class="md-nav__link">
         
   
   
@@ -4855,7 +4740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/achievements/steamworks_setup/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/achievements/steamworks_setup/" class="md-nav__link">
         
   
   
@@ -4878,7 +4763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/achievements/examples/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/achievements/examples/" class="md-nav__link">
         
   
   
@@ -4901,7 +4786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/achievements/api/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/achievements/api/" class="md-nav__link">
         
   
   
@@ -4983,7 +4868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/cloud_saves/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/cloud_saves/overview/" class="md-nav__link">
         
   
   
@@ -5006,7 +4891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/cloud_saves/steamworks_setup/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/cloud_saves/steamworks_setup/" class="md-nav__link">
         
   
   
@@ -5029,7 +4914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/cloud_saves/examples/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/cloud_saves/examples/" class="md-nav__link">
         
   
   
@@ -5052,7 +4937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/cloud_saves/api/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/cloud_saves/api/" class="md-nav__link">
         
   
   
@@ -5132,7 +5017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/friends/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/friends/overview/" class="md-nav__link">
         
   
   
@@ -5155,7 +5040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/friends/examples/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/friends/examples/" class="md-nav__link">
         
   
   
@@ -5178,7 +5063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/friends/api/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/friends/api/" class="md-nav__link">
         
   
   
@@ -5260,7 +5145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/leaderboards/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/leaderboards/overview/" class="md-nav__link">
         
   
   
@@ -5283,7 +5168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/leaderboards/steamworks_setup/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/leaderboards/steamworks_setup/" class="md-nav__link">
         
   
   
@@ -5306,7 +5191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/leaderboards/examples/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/leaderboards/examples/" class="md-nav__link">
         
   
   
@@ -5329,7 +5214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/leaderboards/api/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/leaderboards/api/" class="md-nav__link">
         
   
   
@@ -5409,7 +5294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/lobbies/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/lobbies/overview/" class="md-nav__link">
         
   
   
@@ -5432,7 +5317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/lobbies/examples/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/lobbies/examples/" class="md-nav__link">
         
   
   
@@ -5455,7 +5340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/lobbies/api/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/lobbies/api/" class="md-nav__link">
         
   
   
@@ -5535,7 +5420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/overlay/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/overlay/overview/" class="md-nav__link">
         
   
   
@@ -5558,7 +5443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/overlay/examples/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/overlay/examples/" class="md-nav__link">
         
   
   
@@ -5581,7 +5466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/overlay/api/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/overlay/api/" class="md-nav__link">
         
   
   
@@ -5663,7 +5548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/rich_presence/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/rich_presence/overview/" class="md-nav__link">
         
   
   
@@ -5686,7 +5571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/rich_presence/steamworks_setup/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/rich_presence/steamworks_setup/" class="md-nav__link">
         
   
   
@@ -5709,7 +5594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/rich_presence/examples/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/rich_presence/examples/" class="md-nav__link">
         
   
   
@@ -5732,7 +5617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/rich_presence/api/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/rich_presence/api/" class="md-nav__link">
         
   
   
@@ -5812,7 +5697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/screenshots/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/screenshots/overview/" class="md-nav__link">
         
   
   
@@ -5835,7 +5720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/screenshots/examples/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/screenshots/examples/" class="md-nav__link">
         
   
   
@@ -5858,7 +5743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/screenshots/api/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/screenshots/api/" class="md-nav__link">
         
   
   
@@ -5940,7 +5825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/stats/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/stats/overview/" class="md-nav__link">
         
   
   
@@ -5963,7 +5848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/stats/steamworks_setup/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/stats/steamworks_setup/" class="md-nav__link">
         
   
   
@@ -5986,7 +5871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/stats/examples/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/stats/examples/" class="md-nav__link">
         
   
   
@@ -6009,7 +5894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/stats/api/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/stats/api/" class="md-nav__link">
         
   
   
@@ -6089,7 +5974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/user/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/user/overview/" class="md-nav__link">
         
   
   
@@ -6112,7 +5997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/user/examples/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/user/examples/" class="md-nav__link">
         
   
   
@@ -6135,7 +6020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/user/api/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/user/api/" class="md-nav__link">
         
   
   
@@ -6215,7 +6100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/utility/overview/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/utility/overview/" class="md-nav__link">
         
   
   
@@ -6238,7 +6123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/utility/examples/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/utility/examples/" class="md-nav__link">
         
   
   
@@ -6261,7 +6146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/implementation/subsystems/utility/api/" class="md-nav__link">
+      <a href="../../steam/implementation/subsystems/utility/api/" class="md-nav__link">
         
   
   
@@ -6347,7 +6232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/object_definitions/enumerations/" class="md-nav__link">
+      <a href="../../steam/object_definitions/enumerations/" class="md-nav__link">
         
   
   
@@ -6370,7 +6255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/object_definitions/structures/" class="md-nav__link">
+      <a href="../../steam/object_definitions/structures/" class="md-nav__link">
         
   
   
@@ -6401,7 +6286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/faq/faq/" class="md-nav__link">
+      <a href="../../steam/faq/faq/" class="md-nav__link">
         
   
   
@@ -6429,8 +6314,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -6455,11 +6342,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -6475,7 +6362,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Third Person Camera
@@ -6489,7 +6376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -6512,7 +6399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/getting_started/" class="md-nav__link">
+      <a href="../getting_started/" class="md-nav__link">
         
   
   
@@ -6535,7 +6422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/core_concepts/" class="md-nav__link">
+      <a href="../core_concepts/" class="md-nav__link">
         
   
   
@@ -6629,7 +6516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/framing/" class="md-nav__link">
+      <a href="../systems/framing/" class="md-nav__link">
         
   
   
@@ -6652,7 +6539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/rotation/" class="md-nav__link">
+      <a href="../systems/rotation/" class="md-nav__link">
         
   
   
@@ -6675,7 +6562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/collision/" class="md-nav__link">
+      <a href="../systems/collision/" class="md-nav__link">
         
   
   
@@ -6698,7 +6585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/focus/" class="md-nav__link">
+      <a href="../systems/focus/" class="md-nav__link">
         
   
   
@@ -6721,7 +6608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/spline/" class="md-nav__link">
+      <a href="../systems/spline/" class="md-nav__link">
         
   
   
@@ -6744,7 +6631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/movement_anticipation/" class="md-nav__link">
+      <a href="../systems/movement_anticipation/" class="md-nav__link">
         
   
   
@@ -6767,7 +6654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/pitch_effects/" class="md-nav__link">
+      <a href="../systems/pitch_effects/" class="md-nav__link">
         
   
   
@@ -6790,7 +6677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/speed_effects/" class="md-nav__link">
+      <a href="../systems/speed_effects/" class="md-nav__link">
         
   
   
@@ -6813,7 +6700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/camera_animations/" class="md-nav__link">
+      <a href="../systems/camera_animations/" class="md-nav__link">
         
   
   
@@ -6836,7 +6723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/camera_shake/" class="md-nav__link">
+      <a href="../systems/camera_shake/" class="md-nav__link">
         
   
   
@@ -6859,7 +6746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/camera_control/" class="md-nav__link">
+      <a href="../systems/camera_control/" class="md-nav__link">
         
   
   
@@ -6882,7 +6769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/dithering/" class="md-nav__link">
+      <a href="../systems/dithering/" class="md-nav__link">
         
   
   
@@ -6905,7 +6792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/settings_asset/" class="md-nav__link">
+      <a href="../systems/settings_asset/" class="md-nav__link">
         
   
   
@@ -6928,7 +6815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/systems/debug/" class="md-nav__link">
+      <a href="../systems/debug/" class="md-nav__link">
         
   
   
@@ -7012,7 +6899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/reference/api/" class="md-nav__link">
+      <a href="../reference/api/" class="md-nav__link">
         
   
   
@@ -7035,7 +6922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/reference/settings/" class="md-nav__link">
+      <a href="../reference/settings/" class="md-nav__link">
         
   
   
@@ -7058,7 +6945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/reference/events/" class="md-nav__link">
+      <a href="../reference/events/" class="md-nav__link">
         
   
   
@@ -7081,7 +6968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/reference/enumerations/" class="md-nav__link">
+      <a href="../reference/enumerations/" class="md-nav__link">
         
   
   
@@ -7104,7 +6991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/reference/structures/" class="md-nav__link">
+      <a href="../reference/structures/" class="md-nav__link">
         
   
   
@@ -7132,10 +7019,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/cpp_usage/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    C++ Usage
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -7146,6 +7055,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enable-c-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable C++ Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Headers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available Headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Headers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-component-in-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Component in C++
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Component in C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-component-to-your-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Component to Your Character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -7158,7 +7162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/faq/" class="md-nav__link">
+      <a href="../faq/" class="md-nav__link">
         
   
   
@@ -7196,7 +7200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../help/help/" class="md-nav__link">
+      <a href="../../../help/help/" class="md-nav__link">
         
   
   
@@ -7238,46 +7242,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
+  <a href="#enable-c-access" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters
+      Enable C++ Access
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Parameters">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Headers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available Headers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-product-ids" class="md-nav__link">
+  <a href="#main-headers" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Product IDs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-product-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Product Type
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-on-success" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. On Success
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-on-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. On Failure
+      Main Headers
     </span>
   </a>
   
@@ -7289,18 +7275,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#using-the-component-in-c" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Using the Component in C++
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Component in C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-component-to-your-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Component to Your Character
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#c-usage" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      C++ Usage
+      Notes
     </span>
   </a>
   
@@ -7322,65 +7332,71 @@
 
 
 
-<h1 id="query-product-details">Query Product Details</h1>
-<p>This is an asynchronous function that retrieves <a href="../../object_definitions/product_details/#fproductdetails">Product Details</a> from the <strong>Google Play Console</strong>. It returns detailed data for each product ID you provide, including pricing, currency, title, and subscription offers.</p>
-<p>You can use the returned information to display in-game shop items or manage available subscriptions. The function also provides <strong>Offer Tokens</strong>, which can be used later when Launching a Billing Flow.</p>
-<p>Parameters include a list of <strong>Product IDs</strong> and a <a href="../../object_definitions/enumerations/#eproducttype">Product Type</a> that determines whether the query targets in-app products or subscriptions. Once the operation completes, one of two delegates will trigger — <strong>success</strong> or <strong>failure</strong> — depending on the result of the query.</p>
-<blockquote>
-<p>If you need to request details for a single product only, use the <a href="../query_single_product_details/">Query Single Product Details</a> function instead.</p>
-</blockquote>
-<div align="center">
-  <img src="../assets/query_product_details/query_product_details_node.png" width="300">
-</div>
-
+<h1 id="c-usage">C++ Usage</h1>
+<p>This section shows how to use the <strong>Third Person Camera Component</strong> in C++.</p>
+<p>All functionality available in Blueprint is also accessible in C++, allowing full runtime control over the camera system.</p>
 <hr />
-<h3 id="parameters">Parameters</h3>
-<h4 id="1-product-ids">1. Product IDs</h4>
-<p>An array of product IDs to request from the <strong>Google Play Console</strong>. Each ID should match a product you’ve configured in your Play Store listing.</p>
-<h4 id="2-product-type">2. Product Type</h4>
-<p>Specifies the type of products to query — either <strong>In-App</strong> or <strong>Subscription</strong>. See <a href="../../object_definitions/enumerations/#eproducttype"><code>EProductType</code></a> for available values.</p>
-<h4 id="3-on-success">3. On Success</h4>
-<p>Triggered when product details have been successfully retrieved. Returns an array of <a href="../../object_definitions/product_details/#fproductdetails"><code>FProductDetails</code></a> that includes all pricing and metadata information. You can drag this pin to create a custom event and use the data in your shop or UI.</p>
-<h4 id="4-on-failure">4. On Failure</h4>
-<p>Triggered when the request fails. Returns:  </p>
-<ul>
-<li><strong>Response Code</strong> — <a href="../../object_definitions/enumerations/#ebillingresponsecode"><code>EBillingResponseCode</code></a>  </li>
-<li><strong>Error Message</strong> — <code>FString</code> with additional debug information.  </li>
-</ul>
-<p>Use this delegate to handle issues.</p>
-<hr />
-<h2 id="example">Example</h2>
-<p>In the example below, the <strong>Query Product Details</strong> node requests information for a list of in-app products retrieved from the <strong>Google Play Console</strong>. The results are then passed to a custom event, which updates the product list in the in-game shop UI.</p>
-<p>If the query fails, the <strong>Handle Error</strong> function is called, allowing you to process the error code and message for debugging or user feedback.</p>
-<p>This setup can be extended for subscriptions — simply change the <strong>Product Type</strong> to <strong>Subscription</strong> and store the results for use when launching a purchase.</p>
-<div align="center">
-  <img src="../assets/query_product_details/query_product_details_example.png" width="1000">
-</div>
-
-<hr />
-<h2 id="c-usage">C++ Usage</h2>
-<p>You can fetch product details directly from C++ by providing an array of product IDs and handling success or failure through delegates.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BillingCPPLibrary.h&quot;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">UMyGameInstance::FetchProductDetails</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">TArray</span><span class="o">&lt;</span><span class="n">FString</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ProductIDs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;coins_pack_1&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;premium_upgrade&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
-
-<span class="w">    </span><span class="n">FOnProductDetailsQuerySuccessfulNative</span><span class="w"> </span><span class="n">OnSuccess</span><span class="p">;</span>
-<span class="w">    </span><span class="n">OnSuccess</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">TArray</span><span class="o">&lt;</span><span class="n">FProductDetails</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">ProductDetails</span><span class="p">)</span>
+<h2 id="enable-c-access">Enable C++ Access</h2>
+<p>To access the Third Person Camera plugin from C++ code, the plugin module must be added to your project’s <strong>Build.cs</strong> file.</p>
+<p>Open your project’s <code>*.Build.cs</code> file and add <strong>"PloxToolsThirdPersonCamera"</strong> to the public dependency modules list:</p>
+<div class="highlight"><pre><span></span><code><span class="n">PublicDependencyModuleNames</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">string</span><span class="p">[]</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Successfully retrieved %d product details.&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">ProductDetails</span><span class="p">.</span><span class="n">Num</span><span class="p">());</span>
-<span class="w">    </span><span class="p">});</span>
-
-<span class="w">    </span><span class="n">FOnProductDetailsQueryFailedNative</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">;</span>
-<span class="w">    </span><span class="n">OnFailure</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="n">EBillingResponseCode</span><span class="w"> </span><span class="n">Code</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FString</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Message</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Failed to query product details: %s (Code: %d)&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">Message</span><span class="p">,</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">int32</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Code</span><span class="p">));</span>
-<span class="w">    </span><span class="p">});</span>
-
-<span class="w">    </span><span class="n">UBillingCPPLibrary</span><span class="o">::</span><span class="n">QueryProductDetails</span><span class="p">(</span><span class="n">ProductIDs</span><span class="p">,</span><span class="w"> </span><span class="n">EProductType</span><span class="o">::</span><span class="n">INAPP</span><span class="p">,</span><span class="w"> </span><span class="n">OnSuccess</span><span class="p">,</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="w">        </span><span class="s">&quot;Core&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;CoreUObject&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;Engine&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;PloxToolsThirdPersonCamera&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">);</span>
 </code></pre></div>
+<div align="center">
+  <img src="../assets/cpp_usage/cpp_usage_module.png"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>Once the module is added, you can include the plugin’s code in your C++ classes.</p>
+<hr />
+<h2 id="available-headers">Available Headers</h2>
+<p>The plugin exposes several public headers that can be included depending on your use case.</p>
+<h3 id="main-headers">Main Headers</h3>
+<ul>
+<li><code>ThirdPersonCameraComponent.h</code> - Main component class. Provides full control over the camera system, including runtime functions, state queries, and access to all camera features  </li>
+<li><code>ThirdPersonCameraSettingsAsset.h</code> - Defines the Settings Asset used to store and apply complete camera configurations  </li>
+<li><code>ThirdPersonCameraSplineActor.h</code> - Actor used for spline-based camera movement. Required when working with spline camera modes  </li>
+<li><code>ThirdPersonCameraTypes.h</code> - Contains shared types used across the plugin such as structs and enums  </li>
+</ul>
+<p>These headers provide everything needed to work with the camera system in C++.</p>
+<hr />
+<h2 id="using-the-component-in-c">Using the Component in C++</h2>
+<p>The <strong>Third Person Camera Component</strong> is used in C++ the same way as any standard Unreal Engine component.</p>
+<p>You can add it to your character either in C++ or in a Blueprint.</p>
+<hr />
+<h3 id="adding-component-to-your-character">Adding Component to Your Character</h3>
+<p>Include the component header:</p>
+<p><code>#include "ThirdPersonCameraComponent.h"</code></p>
+<p>Declare the component in your header:</p>
+<div class="highlight"><pre><span></span><code><span class="n">UPROPERTY</span><span class="p">(</span><span class="n">VisibleAnywhere</span><span class="p">,</span><span class="w"> </span><span class="n">BlueprintReadOnly</span><span class="p">,</span><span class="w"> </span><span class="n">Category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Camera</span><span class="p">,</span><span class="w"> </span><span class="n">meta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">AllowPrivateAccess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;true&quot;</span><span class="p">))</span>
+<span class="n">UThirdPersonCameraComponent</span><span class="o">*</span><span class="w"> </span><span class="n">ThirdPersonCamera</span><span class="p">;</span>
+</code></pre></div>
+<p>Then create it in your character constructor:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ThirdPersonCamera</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateDefaultSubobject</span><span class="o">&lt;</span><span class="n">UThirdPersonCameraComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;ThirdPersonCamera&quot;</span><span class="p">));</span>
+</code></pre></div>
+<p>The component will automatically detect and control the attached <code>CameraComponent</code> at runtime.</p>
+<hr />
+<h3 id="usage">Usage</h3>
+<p>Once added, all camera functionality is available through the component.</p>
+<p>You can call any camera function directly from C++ in the same way as in Blueprint.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ThirdPersonCamera</span><span class="o">-&gt;</span><span class="n">SetCameraDistance</span><span class="p">(</span><span class="mf">400.f</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3f</span><span class="p">);</span>
+</code></pre></div>
+<p>For a full list of available functions, refer to the <a href="../reference/api/">API Reference</a>.</p>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li>All functions can be called at runtime  </li>
+<li>The component manages its own internal state  </li>
+<li>Some functions may be ignored when Focus or Spline is active (for example camera rotation overrides)  </li>
+</ul>
 
 
 
@@ -7435,10 +7451,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.top", "navigation.tabs", "content.code.copy", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.tabs", "content.code.copy", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
