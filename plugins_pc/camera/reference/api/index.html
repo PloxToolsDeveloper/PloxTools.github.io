@@ -6475,6 +6475,8 @@
       
         
       
+        
+      
     
     
     
@@ -6769,6 +6771,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../systems/camera_view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camera View
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../systems/dithering/" class="md-nav__link">
         
   
@@ -6969,6 +6994,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#camera-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#player-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Player Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#character" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera View
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#framing-state" class="md-nav__link">
     <span class="md-ellipsis">
       Framing State
@@ -7026,33 +7087,6 @@
   <a href="#spline" class="md-nav__link">
     <span class="md-ellipsis">
       Spline
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#camera-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Camera Control
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#player-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Player Control
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#character" class="md-nav__link">
-    <span class="md-ellipsis">
-      Character
     </span>
   </a>
   
@@ -7313,6 +7347,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#camera-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#player-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Player Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#character" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera View
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#framing-state" class="md-nav__link">
     <span class="md-ellipsis">
       Framing State
@@ -7370,33 +7440,6 @@
   <a href="#spline" class="md-nav__link">
     <span class="md-ellipsis">
       Spline
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#camera-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Camera Control
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#player-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Player Control
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#character" class="md-nav__link">
-    <span class="md-ellipsis">
-      Character
     </span>
   </a>
   
@@ -7479,16 +7522,28 @@
 </thead>
 <tbody>
 <tr>
+<td><strong>Set Target Camera</strong></td>
+<td><code>NewTargetCamera</code> (<code>UCameraComponent*</code>)</td>
+<td>-</td>
+<td>Sets which Camera Component is controlled by this Third Person Camera Component. Useful when the owning actor has multiple cameras.</td>
+</tr>
+<tr>
+<td><strong>Get Target Camera</strong></td>
+<td>-</td>
+<td><code>UCameraComponent*</code></td>
+<td>Returns the Camera Component currently controlled by this Third Person Camera Component.</td>
+</tr>
+<tr>
 <td><strong>Get Camera Location</strong></td>
 <td>-</td>
 <td><code>FVector</code></td>
-<td>Returns the current world location of the controlled camera component.</td>
+<td>Returns the current world location of the Target Camera component.</td>
 </tr>
 <tr>
 <td><strong>Get Camera Rotation</strong></td>
 <td>-</td>
 <td><code>FRotator</code></td>
-<td>Returns the current world rotation of the controlled camera component.</td>
+<td>Returns the current world rotation of the Target Camera component.</td>
 </tr>
 <tr>
 <td><strong>Get Camera Pivot Location</strong></td>
@@ -7501,6 +7556,164 @@
 <td>-</td>
 <td><code>bool</code></td>
 <td>Returns <code>true</code> if camera collision is currently compressing the camera closer to the pivot than its effective target distance.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="camera-control">Camera Control</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Parameters</th>
+<th>Return / Callback</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Set Camera Rotation</strong></td>
+<td><code>TargetRotation</code> (<code>FRotator</code>), <code>BlendTime</code> (<code>float</code>), <code>Mode</code> (<a href="../enumerations/#ecamerarotationoverridemode"><code>ECameraRotationOverrideMode</code></a>), <code>OnFinished</code> (<code>FOnCameraRotationFinished</code>)</td>
+<td><strong>Callback:</strong> <code>OnFinished</code></td>
+<td>Smoothly rotates the camera to the target rotation over time. Does nothing if Focus or Spline is active.</td>
+</tr>
+<tr>
+<td><strong>Reset Camera Rotation</strong></td>
+<td><code>BlendTime</code> (<code>float</code>), <code>Mode</code> (<a href="../enumerations/#ecameraresetmode"><code>ECameraResetMode</code></a>), <code>OnFinished</code> (<code>FOnCameraResetFinished</code>)</td>
+<td><strong>Callback:</strong> <code>OnFinished</code></td>
+<td>Smoothly resets the camera rotation to the selected target mode. Does nothing if Focus or Spline is active.</td>
+</tr>
+<tr>
+<td><strong>Is Camera Rotation Active</strong></td>
+<td>-</td>
+<td><code>bool</code></td>
+<td>Returns <code>true</code> while a camera rotation override is currently active.</td>
+</tr>
+<tr>
+<td><strong>Stop Camera Rotation</strong></td>
+<td>-</td>
+<td>-</td>
+<td>Stops the active camera rotation override without firing the completion callback.</td>
+</tr>
+<tr>
+<td><strong>Is Camera Resetting</strong></td>
+<td>-</td>
+<td><code>bool</code></td>
+<td>Returns <code>true</code> while a camera reset blend is currently active.</td>
+</tr>
+<tr>
+<td><strong>Stop Camera Reset</strong></td>
+<td>-</td>
+<td>-</td>
+<td>Stops the active camera reset without firing the completion callback.</td>
+</tr>
+<tr>
+<td><strong>Set Camera System Enabled</strong></td>
+<td><code>bEnabled</code> (<code>bool</code>)</td>
+<td>-</td>
+<td>Enables or disables the entire Third Person Camera system. When disabled, the component stops updating the camera.</td>
+</tr>
+<tr>
+<td><strong>Is Camera System Enabled</strong></td>
+<td>-</td>
+<td><code>bool</code></td>
+<td>Returns <code>true</code> if the Third Person Camera system is currently enabled.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="player-control">Player Control</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Parameters</th>
+<th>Return / Callback</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Set Look Input Enabled</strong></td>
+<td><code>bEnabled</code> (<code>bool</code>)</td>
+<td>-</td>
+<td>Enables or disables player look input on the owning <code>PlayerController</code>.</td>
+</tr>
+<tr>
+<td><strong>Set Move Input Enabled</strong></td>
+<td><code>bEnabled</code> (<code>bool</code>)</td>
+<td>-</td>
+<td>Enables or disables player movement input on the owning <code>PlayerController</code>.</td>
+</tr>
+<tr>
+<td><strong>Set Player Control Enabled</strong></td>
+<td><code>bEnabled</code> (<code>bool</code>)</td>
+<td>-</td>
+<td>Enables or disables both player look input and movement input on the owning <code>PlayerController</code>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="character">Character</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Parameters</th>
+<th>Return / Callback</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Set Character Rotation Follows Camera</strong></td>
+<td><code>bEnabled</code> (<code>bool</code>)</td>
+<td>-</td>
+<td>Controls whether the character should rotate with the camera yaw instead of orienting to movement direction.</td>
+</tr>
+<tr>
+<td><strong>Is Character Rotation Following Camera</strong></td>
+<td>-</td>
+<td><code>bool</code></td>
+<td>Returns <code>true</code> if character rotation currently follows camera yaw.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="camera-view">Camera View</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Parameters</th>
+<th>Return / Callback</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Set View Camera</strong></td>
+<td><code>NewViewCamera</code> (<code>UCameraComponent*</code>)</td>
+<td>-</td>
+<td>Instantly switches the player's view to the specified Camera Component. This does not change the Target Camera controlled by this component.</td>
+</tr>
+<tr>
+<td><strong>Blend To View Camera</strong></td>
+<td><code>NewViewCamera</code> (<code>UCameraComponent*</code>), <code>BlendTime</code> (<code>float</code>), <code>BlendFunction</code> (<code>EViewTargetBlendFunction</code>), <code>BlendExponent</code> (<code>float</code>)</td>
+<td>-</td>
+<td>Blends the player's view to the specified Camera Component. If the camera belongs to the same actor, an internal transition camera is used for a smooth local blend. This does not change the Target Camera controlled by this component.</td>
+</tr>
+<tr>
+<td><strong>Get Current View Camera</strong></td>
+<td>-</td>
+<td><code>UCameraComponent*</code></td>
+<td>Returns the Camera Component currently used for the player's view. During a local same-actor camera blend, this returns the internal transition camera.</td>
+</tr>
+<tr>
+<td><strong>Get View Target Camera</strong></td>
+<td>-</td>
+<td><code>UCameraComponent*</code></td>
+<td>Returns the Camera Component the player's view is currently blending toward. If no local camera blend is active, this returns the current view camera.</td>
 </tr>
 </tbody>
 </table>
@@ -7851,114 +8064,6 @@
 <td>-</td>
 <td><code>bool</code></td>
 <td>Returns <code>true</code> if a camera spline is currently active or in the process of stopping.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="camera-control">Camera Control</h2>
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Parameters</th>
-<th>Return / Callback</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Set Camera Rotation</strong></td>
-<td><code>TargetRotation</code> (<code>FRotator</code>), <code>BlendTime</code> (<code>float</code>), <code>Mode</code> (<a href="../enumerations/#ecamerarotationoverridemode"><code>ECameraRotationOverrideMode</code></a>), <code>OnFinished</code> (<code>FOnCameraRotationFinished</code>)</td>
-<td><strong>Callback:</strong> <code>OnFinished</code></td>
-<td>Smoothly rotates the camera to the target rotation over time. Does nothing if a spline or focus is active.</td>
-</tr>
-<tr>
-<td><strong>Reset Camera Rotation</strong></td>
-<td><code>BlendTime</code> (<code>float</code>), <code>Mode</code> (<a href="../enumerations/#ecameraresetmode"><code>ECameraResetMode</code></a>), <code>OnFinished</code> (<code>FOnCameraResetFinished</code>)</td>
-<td><strong>Callback:</strong> <code>OnFinished</code></td>
-<td>Smoothly resets the camera rotation to the selected target mode. If focus is active, focus is cleared first.</td>
-</tr>
-<tr>
-<td><strong>Is Camera Resetting</strong></td>
-<td>-</td>
-<td><code>bool</code></td>
-<td>Returns <code>true</code> while a camera reset blend is currently active.</td>
-</tr>
-<tr>
-<td><strong>Stop Camera Reset</strong></td>
-<td>-</td>
-<td>-</td>
-<td>Stops the active camera reset without firing the completion callback.</td>
-</tr>
-<tr>
-<td><strong>Set Camera System Enabled</strong></td>
-<td><code>bEnabled</code> (<code>bool</code>)</td>
-<td>-</td>
-<td>Enables or disables the entire Third Person Camera system. When disabled, the component stops updating the camera.</td>
-</tr>
-<tr>
-<td><strong>Is Camera System Enabled</strong></td>
-<td>-</td>
-<td><code>bool</code></td>
-<td>Returns <code>true</code> if the Third Person Camera system is currently enabled.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="player-control">Player Control</h2>
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Parameters</th>
-<th>Return / Callback</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Set Look Input Enabled</strong></td>
-<td><code>bEnabled</code> (<code>bool</code>)</td>
-<td>-</td>
-<td>Enables or disables player look input on the owning <code>PlayerController</code>.</td>
-</tr>
-<tr>
-<td><strong>Set Move Input Enabled</strong></td>
-<td><code>bEnabled</code> (<code>bool</code>)</td>
-<td>-</td>
-<td>Enables or disables player movement input on the owning <code>PlayerController</code>.</td>
-</tr>
-<tr>
-<td><strong>Set Player Control Enabled</strong></td>
-<td><code>bEnabled</code> (<code>bool</code>)</td>
-<td>-</td>
-<td>Enables or disables both player look input and movement input on the owning <code>PlayerController</code>.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="character">Character</h2>
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Parameters</th>
-<th>Return / Callback</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Set Character Rotation Follows Camera</strong></td>
-<td><code>bEnabled</code> (<code>bool</code>)</td>
-<td>-</td>
-<td>Controls whether the character should rotate with the camera yaw instead of orienting to movement direction.</td>
-</tr>
-<tr>
-<td><strong>Is Character Rotation Following Camera</strong></td>
-<td>-</td>
-<td><code>bool</code></td>
-<td>Returns <code>true</code> if character rotation currently follows camera yaw.</td>
 </tr>
 </tbody>
 </table>

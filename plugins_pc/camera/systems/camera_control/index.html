@@ -18,7 +18,7 @@
         <link rel="prev" href="../camera_shake/">
       
       
-        <link rel="next" href="../dithering/">
+        <link rel="next" href="../camera_view/">
       
       
       <link rel="icon" href="../../../../assets/icon.png">
@@ -6477,6 +6477,8 @@
       
         
       
+        
+      
     
     
     
@@ -6798,6 +6800,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#target-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target Camera
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Target Camera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#camera-rotation" class="md-nav__link">
     <span class="md-ellipsis">
       Camera Rotation
@@ -6806,6 +6832,15 @@
   
     <nav class="md-nav" aria-label="Camera Rotation">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rotation-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotation Modes
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
@@ -6909,6 +6944,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../camera_view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camera View
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -7277,6 +7335,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#target-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target Camera
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Target Camera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#camera-rotation" class="md-nav__link">
     <span class="md-ellipsis">
       Camera Rotation
@@ -7285,6 +7367,15 @@
   
     <nav class="md-nav" aria-label="Camera Rotation">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rotation-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotation Modes
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
@@ -7406,15 +7497,45 @@
        style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<p>The <strong>Camera Control</strong> section provides runtime functions for directly controlling camera behavior.</p>
-<p>Unlike systems such as Focus or Spline, these functions do not define camera behavior on their own.<br />
-Instead, they allow you to temporarily override or adjust the camera during gameplay.</p>
+<p>The <strong>Camera Control</strong> section provides runtime functions for controlling the internal behavior of the Third Person Camera system.</p>
+<p>Unlike systems such as Focus or Spline, these functions do not define camera behavior on their own. Instead, they allow you to temporarily override or adjust the camera during gameplay.</p>
 <p>This is commonly used for:</p>
 <ul>
 <li>gameplay events  </li>
 <li>cutscenes and transitions  </li>
 <li>scripted camera adjustments  </li>
 <li>player control management  </li>
+</ul>
+<hr />
+<h2 id="target-camera">Target Camera</h2>
+<p>You can control which camera is used internally by the Third Person Camera system:</p>
+<ul>
+<li><strong>Set Target Camera</strong>  </li>
+<li><strong>Get Target Camera</strong></li>
+</ul>
+<p>This defines which Camera Component is controlled by the camera system itself.</p>
+<p>This camera is used by the system for all camera calculations such as framing, rotation, collision, and effects.</p>
+<div align="center">
+  <img src="../assets/camera_control/camera_control_target.png"
+       style="max-width: 90%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>This is useful when:</p>
+<ul>
+<li>the character has multiple camera components  </li>
+<li>switching between different camera setups  </li>
+<li>dynamically changing the controlled camera during gameplay  </li>
+</ul>
+<h3 id="important">Important</h3>
+<ul>
+<li>The <strong>Target Camera</strong> is not the same as the <strong>View Camera</strong>  </li>
+<li>Changing the Target Camera affects how the system updates the camera  </li>
+<li>It does not automatically change what the player sees  </li>
+</ul>
+<p>To control what the player sees, use the <a href="../camera_view/">Camera View</a> system:</p>
+<ul>
+<li><strong>Set View Camera</strong>  </li>
+<li><strong>Blend To View Camera</strong></li>
 </ul>
 <hr />
 <h2 id="camera-rotation">Camera Rotation</h2>
@@ -7440,11 +7561,19 @@ Instead, they allow you to temporarily override or adjust the camera during game
 <li>cinematic transitions  </li>
 <li>re-centering the camera  </li>
 </ul>
-<h3 id="limitations">Limitations</h3>
-<p>Camera rotation override is ignored when:</p>
+<h3 id="rotation-modes">Rotation Modes</h3>
+<p>The rotation behavior is controlled by <strong>Rotation Override Mode</strong>:</p>
 <ul>
-<li>a <strong>Focus</strong> is active  </li>
-<li>a <strong>Spline</strong> is active  </li>
+<li><code>IgnoreInput</code> — camera rotation is fully controlled by the system. Player input is ignored during the rotation  </li>
+<li><code>BlendWithInput</code> — camera rotates toward the target while still allowing player input to influence the result  </li>
+<li><code>CancelOnInput</code> — camera rotates toward the target, but any player input immediately cancels the rotation  </li>
+</ul>
+<p>These modes define how player input interacts with system-driven camera rotation.</p>
+<h3 id="limitations">Limitations</h3>
+<p>Does nothing when:</p>
+<ul>
+<li><strong>Focus</strong> is active  </li>
+<li><strong>Spline</strong> is active  </li>
 </ul>
 <hr />
 <h2 id="reset-camera-rotation">Reset Camera Rotation</h2>
@@ -7468,13 +7597,12 @@ Instead, they allow you to temporarily override or adjust the camera during game
 <ul>
 <li>smoothly rotates the camera using <strong>Blend Time</strong>  </li>
 <li>uses a selected <strong>Reset Mode</strong>  </li>
-<li>clears active focus before resetting  </li>
 </ul>
 <h3 id="limitations_1">Limitations</h3>
-<p>Reset Camera Rotation does not work while:</p>
+<p>Does nothing when:</p>
 <ul>
 <li><strong>Focus</strong> is active  </li>
-<li><strong>Spline</strong> is active</li>
+<li><strong>Spline</strong> is active  </li>
 </ul>
 <hr />
 <h2 id="camera-system-control">Camera System Control</h2>
@@ -7551,8 +7679,9 @@ Instead, they allow you to temporarily override or adjust the camera during game
 <p>For a complete list of functions and parameters, refer to the <a href="../../reference/api/#camera-control">API Reference</a>.</p>
 <h3 id="main-functions">Main Functions</h3>
 <ul>
+<li><strong>Set Target Camera</strong> - sets which Camera Component is controlled by the camera system  </li>
 <li><strong>Set Camera Rotation</strong> - smoothly rotates the camera to a target rotation over time  </li>
-<li><strong>Reset Camera Rotation</strong> - smoothly resets the camera rotation, typically aligning it behind the character  </li>
+<li><strong>Reset Camera Rotation</strong> - smoothly resets the camera rotation  </li>
 <li><strong>Set Camera System Enabled</strong> - enables or disables the entire camera system  </li>
 <li><strong>Set Look Input Enabled</strong> - enables or disables player camera look input  </li>
 <li><strong>Set Move Input Enabled</strong> - enables or disables player movement input  </li>
@@ -7563,8 +7692,8 @@ Instead, they allow you to temporarily override or adjust the camera during game
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Camera Control functions are <strong>runtime utilities</strong>, not standalone systems  </li>
-<li>Rotation overrides are ignored when Focus or Spline is active  </li>
-<li>These functions are intended for temporary control and scripted behavior  </li>
+<li>These functions do not override Focus or Spline systems  </li>
+<li>They are ignored while higher-priority systems are active  </li>
 <li>Use Focus or Spline for sustained camera behavior, and Camera Control for direct overrides  </li>
 </ul>
 

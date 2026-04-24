@@ -6477,6 +6477,8 @@
       
         
       
+        
+      
     
     
     
@@ -6577,23 +6579,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#runtime-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Runtime Control
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Runtime Control">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#runtime-blending" class="md-nav__link">
     <span class="md-ellipsis">
       Runtime Blending
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Runtime Blending">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#setframing" class="md-nav__link">
@@ -6677,6 +6670,30 @@
   <a href="#fov-offset" class="md-nav__link">
     <span class="md-ellipsis">
       FOV Offset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Functions
     </span>
   </a>
   
@@ -6925,6 +6942,29 @@
   
   <span class="md-ellipsis">
     Camera Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../camera_view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camera View
     
   </span>
   
@@ -7307,23 +7347,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#runtime-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Runtime Control
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Runtime Control">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#runtime-blending" class="md-nav__link">
     <span class="md-ellipsis">
       Runtime Blending
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Runtime Blending">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#setframing" class="md-nav__link">
@@ -7418,6 +7449,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#runtime-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       Notes
@@ -7480,22 +7535,19 @@
 <li><strong>Additional Pivot Offset</strong> - applies an offset directly to the pivot after pivot height is calculated. This shifts the center of rotation itself rather than the final camera position</li>
 </ul>
 <hr />
-<h2 id="runtime-control">Runtime Control</h2>
-<p>The framing system exposes runtime functions that allow you to modify camera behavior during gameplay.</p>
-<p>These functions:</p>
+<h2 id="runtime-blending">Runtime Blending</h2>
+<p>Runtime framing changes are applied as temporary overrides on top of the base camera settings.</p>
+<p>These overrides:</p>
 <ul>
-<li>do not modify base settings</li>
-<li>apply temporary runtime overrides</li>
-<li>support smooth blending over time</li>
+<li>do not modify base settings  </li>
+<li>are applied at runtime only  </li>
+<li>can be combined and layered  </li>
 </ul>
-<p>For a complete list of functions and parameters, refer to the <a href="../../reference/api/#framing-control">API Reference</a>.</p>
-<hr />
-<h3 id="runtime-blending">Runtime Blending</h3>
-<p>All runtime framing changes are smoothly interpolated from the current state to a target state.</p>
+<p>All changes are smoothly interpolated from the current state to a target state.</p>
 <p>Blending is controlled by:</p>
 <ul>
-<li><strong>Blend Time</strong> - duration of the transition</li>
-<li><strong>Blend Curve</strong> - optional curve shaping the interpolation</li>
+<li><strong>Blend Time</strong> - duration of the transition  </li>
+<li><strong>Blend Curve</strong> - optional curve shaping the interpolation  </li>
 </ul>
 <hr />
 <h3 id="setframing">SetFraming</h3>
@@ -7594,6 +7646,45 @@
        style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
+<hr />
+<h2 id="runtime-control">Runtime Control</h2>
+<p>The Framing system is controlled through runtime functions.</p>
+<p>For a complete list of functions and parameters, refer to the <a href="../../reference/api/#framing-control">API Reference</a>.</p>
+<h3 id="main-functions">Main Functions</h3>
+<ul>
+<li><strong>Set Framing</strong> - sets all runtime framing parameters at once  </li>
+<li>
+<p><strong>Reset Framing</strong> - resets all runtime framing values back to base settings  </p>
+</li>
+<li>
+<p><strong>Set Camera Distance</strong> - blends the runtime camera distance to a new value  </p>
+</li>
+<li>
+<p><strong>Reset Camera Distance</strong> - resets the runtime camera distance to the base value  </p>
+</li>
+<li>
+<p><strong>Set Pivot Height</strong> - blends the runtime pivot height to a new value  </p>
+</li>
+<li>
+<p><strong>Reset Pivot Height</strong> - resets the runtime pivot height to the base value  </p>
+</li>
+<li>
+<p><strong>Set Camera Offset</strong> - blends the runtime camera offset to a new value  </p>
+</li>
+<li>
+<p><strong>Reset Camera Offset</strong> - resets the runtime camera offset to zero  </p>
+</li>
+<li>
+<p><strong>Set Pivot Offset</strong> - blends the runtime pivot offset to a new value  </p>
+</li>
+<li>
+<p><strong>Reset Pivot Offset</strong> - resets the runtime pivot offset to zero  </p>
+</li>
+<li>
+<p><strong>Set FOV Offset</strong> - blends the runtime FOV offset to a new value  </p>
+</li>
+<li><strong>Reset FOV Offset</strong> - resets the runtime FOV offset to zero  </li>
+</ul>
 <hr />
 <h2 id="notes">Notes</h2>
 <ul>
