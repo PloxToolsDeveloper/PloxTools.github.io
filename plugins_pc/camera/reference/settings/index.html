@@ -8303,7 +8303,7 @@
 </table>
 <hr />
 <h3 id="pitch-follow-ceiling-anticipation">Pitch Follow - Ceiling Anticipation</h3>
-<p>Controls pitch adjustment when a ceiling is detected above the character.</p>
+<p>Controls pitch adjustment when a ceiling is detected above the character, including early anticipation before reaching the obstacle.</p>
 <table>
 <thead>
 <tr>
@@ -8319,14 +8319,19 @@
 <td>Enables automatic pitch adjustment when a ceiling is detected above the character.</td>
 </tr>
 <tr>
-<td><strong>CeilingCheckDistance</strong></td>
+<td><strong>CeilingUpCheckDistance</strong></td>
 <td><code>float</code></td>
-<td>Maximum distance used to detect a ceiling above the pivot.</td>
+<td>Maximum vertical distance used to detect a ceiling above the pivot.</td>
+</tr>
+<tr>
+<td><strong>CeilingForwardCheckDistance</strong></td>
+<td><code>float</code></td>
+<td>Forward distance used to sample ceiling ahead of the character. Allows the system to anticipate low ceilings before the character reaches them.</td>
 </tr>
 <tr>
 <td><strong>MaxCeilingPitchOffset</strong></td>
 <td><code>float</code></td>
-<td>Maximum downward pitch offset applied when a ceiling is directly above.</td>
+<td>Maximum downward pitch offset applied when a ceiling is detected.</td>
 </tr>
 </tbody>
 </table>
