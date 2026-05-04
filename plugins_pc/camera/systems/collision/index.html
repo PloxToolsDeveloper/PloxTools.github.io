@@ -6335,6 +6335,8 @@
       
         
       
+        
+      
     
     
     
@@ -6422,6 +6424,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../playable_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Playable Demo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../core_concepts/" class="md-nav__link">
         
   
@@ -6490,10 +6515,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
             
   
   
@@ -6506,8 +6531,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_3_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_5">
             <span class="md-nav__icon md-icon"></span>
             Camera Systems
           </label>
@@ -6619,6 +6644,15 @@
   <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collision-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collision Tuning
     </span>
   </a>
   
@@ -6819,7 +6853,7 @@
   
   
   <span class="md-ellipsis">
-    Pitch Effects
+    Pitch Based Effects
     
   </span>
   
@@ -6842,7 +6876,7 @@
   
   
   <span class="md-ellipsis">
-    Speed Effects
+    Speed Based Effects
     
   </span>
   
@@ -7052,10 +7086,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_6" >
         
           
-          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_6" id="__nav_3_3_6_label" tabindex="0">
             
   
   
@@ -7068,8 +7102,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_6">
             <span class="md-nav__icon md-icon"></span>
             Technical Reference
           </label>
@@ -7317,6 +7351,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#collision-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collision Tuning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#camera-collision" class="md-nav__link">
     <span class="md-ellipsis">
       Camera Collision
@@ -7465,6 +7508,21 @@
 <li>the transition is smoothed over time  </li>
 </ul>
 <p>Additional predictive probes can detect obstacles before they intersect the main camera path.</p>
+<hr />
+<h2 id="collision-tuning">Collision Tuning</h2>
+<p>By default, collision settings are tuned for smooth and visually stable camera movement.</p>
+<p>This prioritizes softness and responsiveness, but during fast camera movement it may allow slight clipping through geometry.</p>
+<p>If more strict and reliable collision behavior is required, you can increase the following parameters:</p>
+<ul>
+<li><strong>Collision Compression Speed</strong>  </li>
+<li><strong>Collision Distance Smoothing Speed</strong></li>
+</ul>
+<p>Example values for stronger collision:</p>
+<ul>
+<li><strong>Collision Compression Speed</strong> ≈ 35  </li>
+<li><strong>Collision Distance Smoothing Speed</strong> ≈ 65–70</li>
+</ul>
+<p>Higher values reduce clipping but make camera movement less smooth.</p>
 <hr />
 <h2 id="camera-collision">Camera Collision</h2>
 <div align="center">

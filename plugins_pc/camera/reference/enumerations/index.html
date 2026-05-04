@@ -6335,6 +6335,8 @@
       
         
       
+        
+      
     
     
     
@@ -6422,6 +6424,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../playable_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Playable Demo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../core_concepts/" class="md-nav__link">
         
   
@@ -6488,10 +6513,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
             
   
   
@@ -6504,8 +6529,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5">
             <span class="md-nav__icon md-icon"></span>
             Camera Systems
           </label>
@@ -6661,7 +6686,7 @@
   
   
   <span class="md-ellipsis">
-    Pitch Effects
+    Pitch Based Effects
     
   </span>
   
@@ -6684,7 +6709,7 @@
   
   
   <span class="md-ellipsis">
-    Speed Effects
+    Speed Based Effects
     
   </span>
   
@@ -6896,10 +6921,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_6" id="__nav_3_3_6_label" tabindex="0">
             
   
   
@@ -6912,8 +6937,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_3_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_6">
             <span class="md-nav__icon md-icon"></span>
             Technical Reference
           </label>
@@ -7067,6 +7092,15 @@
   <a href="#ecamerarotationoverridemode" class="md-nav__link">
     <span class="md-ellipsis">
       ECameraRotationOverrideMode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecamerarotationtargetspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      ECameraRotationTargetSpace
     </span>
   </a>
   
@@ -7329,6 +7363,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ecamerarotationtargetspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      ECameraRotationTargetSpace
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7443,11 +7486,11 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>BehindCharacter</strong></td>
+<td><strong>Behind Character</strong></td>
 <td>Resets the camera to align behind the character's facing direction.</td>
 </tr>
 <tr>
-<td><strong>InitialRotation</strong></td>
+<td><strong>Initial Rotation</strong></td>
 <td>Resets the camera back to its initial rotation.</td>
 </tr>
 </tbody>
@@ -7465,20 +7508,45 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>IgnoreInput</strong></td>
+<td><strong>Ignore Input</strong></td>
 <td>Camera rotation is fully controlled by the system. Player input is ignored during the rotation.</td>
 </tr>
 <tr>
-<td><strong>BlendWithInput</strong></td>
+<td><strong>Blend With Input</strong></td>
 <td>Camera rotates toward the target while still allowing player input to influence the result.</td>
 </tr>
 <tr>
-<td><strong>CancelOnInput</strong></td>
+<td><strong>Cancel On Input</strong></td>
 <td>Camera rotates toward the target, but any player input immediately cancels the rotation.</td>
 </tr>
 </tbody>
 </table>
 <hr />
+<h3 id="ecamerarotationtargetspace">ECameraRotationTargetSpace</h3>
+<p>Defines how the target rotation passed to <code>SetCameraRotation</code> is interpreted.</p>
+<p>This enumeration controls whether the rotation is applied as an absolute value or relative to another reference.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>World</strong></td>
+<td>Target rotation is interpreted as an absolute world rotation.</td>
+</tr>
+<tr>
+<td><strong>Actor Relative</strong></td>
+<td>Target rotation is applied relative to the owning actor's rotation. Useful for positioning the camera around the character (for example, side view).</td>
+</tr>
+<tr>
+<td><strong>Camera Relative</strong></td>
+<td>Target rotation is applied as an offset from the current camera rotation. Useful for incremental rotations such as quick turns or small adjustments.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="focus">Focus</h2>
 <h3 id="efocustargettype">EFocusTargetType</h3>
@@ -7561,11 +7629,11 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>HardLock</strong></td>
+<td><strong>Hard Lock</strong></td>
 <td>Camera rotation is fully locked to the focus target with no player influence.</td>
 </tr>
 <tr>
-<td><strong>SoftLock</strong></td>
+<td><strong>Soft Lock</strong></td>
 <td>Camera is guided toward the focus target while still allowing player input.</td>
 </tr>
 </tbody>
@@ -7610,12 +7678,16 @@
 <td>Camera follows the character projection on the spline without additional constraints.</td>
 </tr>
 <tr>
-<td><strong>KeepMinimumDistanceBehind</strong></td>
-<td>Ensures the camera stays at least a minimum distance behind the character along the spline.</td>
+<td><strong>Keep Minimum Distance Behind</strong></td>
+<td>Keeps the camera at least a minimum distance behind the character along the spline.</td>
 </tr>
 <tr>
-<td><strong>KeepMinimumDistanceAhead</strong></td>
-<td>Ensures the camera stays at least a minimum distance ahead of the character along the spline.</td>
+<td><strong>Keep Minimum Distance Ahead</strong></td>
+<td>Keeps the camera at least a minimum distance ahead of the character along the spline.</td>
+</tr>
+<tr>
+<td><strong>Keep Minimum Distance Auto</strong></td>
+<td>Automatically keeps the camera at least a minimum distance on the side where it starts relative to the character along the spline.</td>
 </tr>
 </tbody>
 </table>
