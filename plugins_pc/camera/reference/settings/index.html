@@ -8328,7 +8328,7 @@
 </table>
 <hr />
 <h3 id="pitch-follow-ceiling-anticipation">Pitch Follow - Ceiling Anticipation</h3>
-<p>Controls pitch adjustment when a ceiling is detected above the character, including early anticipation before reaching the obstacle.</p>
+<p>Controls pitch adjustment when a ceiling is detected above the owner, including early anticipation before reaching the obstacle.</p>
 <table>
 <thead>
 <tr>
@@ -8341,7 +8341,7 @@
 <tr>
 <td><strong>Enable Ceiling Anticipation</strong></td>
 <td><code>bool</code></td>
-<td>Enables automatic pitch adjustment when a ceiling is detected above the character.</td>
+<td>Enables automatic pitch adjustment when a ceiling is detected above the owner.</td>
 </tr>
 <tr>
 <td><strong>Ceiling Up Check Distance</strong></td>
@@ -8351,7 +8351,7 @@
 <tr>
 <td><strong>Ceiling Forward Check Distance</strong></td>
 <td><code>float</code></td>
-<td>Forward distance used to sample ceiling ahead of the character. Allows the system to anticipate low ceilings before the character reaches them.</td>
+<td>Forward distance used to sample ceiling ahead of the owner. Allows the system to anticipate low ceilings before the owner reaches them.</td>
 </tr>
 <tr>
 <td><strong>Max Ceiling Pitch Offset</strong></td>
@@ -8507,7 +8507,7 @@
 <tr>
 <td><strong>Enable Movement Anticipation</strong></td>
 <td><code>bool</code></td>
-<td>Enables camera anticipation based on character movement direction.</td>
+<td>Enables camera anticipation based on owner movement direction.</td>
 </tr>
 <tr>
 <td><strong>Anticipation Strength</strong></td>
@@ -8532,7 +8532,7 @@
 <tr>
 <td><strong>Anticipation Full Speed</strong></td>
 <td><code>float</code></td>
-<td>Character speed at which movement anticipation reaches full strength.</td>
+<td>Owner speed at which movement anticipation reaches full strength.</td>
 </tr>
 <tr>
 <td><strong>Anticipation Activation Interp Speed</strong></td>
@@ -8616,12 +8616,12 @@
 <tr>
 <td><strong>Speed Modifier Min Speed</strong></td>
 <td><code>float</code></td>
-<td>Character speed at which the modifier starts affecting the camera.</td>
+<td>Owner speed at which the modifier starts affecting the camera.</td>
 </tr>
 <tr>
 <td><strong>Speed Modifier Max Speed</strong></td>
 <td><code>float</code></td>
-<td>Character speed at which the modifier reaches maximum effect.</td>
+<td>Owner speed at which the modifier reaches maximum effect.</td>
 </tr>
 </tbody>
 </table>
@@ -8719,12 +8719,12 @@
 <tr>
 <td><strong>Enable Idle Camera Shake</strong></td>
 <td><code>bool</code></td>
-<td>Enables idle camera shake when the character is not moving.</td>
+<td>Enables idle camera shake when the owner is not moving.</td>
 </tr>
 <tr>
 <td><strong>Idle Camera Shake Class</strong></td>
 <td><code>TSubclassOf&lt;UCameraShakeBase&gt;</code></td>
-<td>Camera shake class played while the character is idle.</td>
+<td>Camera shake class played while the owner is idle.</td>
 </tr>
 <tr>
 <td><strong>Idle Shake Scale</strong></td>
@@ -8748,7 +8748,7 @@
 <tr>
 <td><strong>Enable Movement Camera Shake</strong></td>
 <td><code>bool</code></td>
-<td>Enables camera shake driven by character movement speed.</td>
+<td>Enables camera shake driven by owner movement speed.</td>
 </tr>
 <tr>
 <td><strong>Movement Camera Shake Class</strong></td>

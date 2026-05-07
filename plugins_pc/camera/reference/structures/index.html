@@ -8156,7 +8156,7 @@
 <tr>
 <td><strong>Enable Ceiling Anticipation</strong></td>
 <td><code>bool</code></td>
-<td>Enables downward pitch adjustment when a ceiling is detected above the character.</td>
+<td>Enables downward pitch adjustment when a ceiling is detected above the owner.</td>
 </tr>
 <tr>
 <td><strong>Ceiling Up Check Distance</strong></td>
@@ -8166,7 +8166,7 @@
 <tr>
 <td><strong>Ceiling Forward Check Distance</strong></td>
 <td><code>float</code></td>
-<td>Forward distance used to sample ceiling ahead of the character, allowing earlier anticipation before reaching obstacles.</td>
+<td>Forward distance used to sample ceiling ahead of the owner, allowing earlier anticipation before reaching obstacles.</td>
 </tr>
 <tr>
 <td><strong>Max Ceiling Pitch Offset</strong></td>
@@ -8405,7 +8405,7 @@
 <hr />
 <h2 id="speed-effects">Speed Effects</h2>
 <h3 id="fthirdpersoncameraspeedbasedeffectssettings">FThirdPersonCameraSpeedBasedEffectsSettings</h3>
-<p>Defines camera modifiers driven by character speed.</p>
+<p>Defines camera modifiers driven by owner speed.</p>
 <table>
 <thead>
 <tr>
@@ -8418,12 +8418,12 @@
 <tr>
 <td><strong>Speed Modifier Min Speed</strong></td>
 <td><code>float</code></td>
-<td>Character speed at which speed-based modifiers start affecting the camera.</td>
+<td>Owner speed at which speed-based modifiers start affecting the camera.</td>
 </tr>
 <tr>
 <td><strong>Speed Modifier Max Speed</strong></td>
 <td><code>float</code></td>
-<td>Character speed at which speed-based modifiers reach maximum effect.</td>
+<td>Owner speed at which speed-based modifiers reach maximum effect.</td>
 </tr>
 <tr>
 <td><strong>Enable Speed Modify Camera Distance</strong></td>
@@ -8493,7 +8493,7 @@
 <tr>
 <td><strong>Enable Idle Camera Shake</strong></td>
 <td><code>bool</code></td>
-<td>Enables subtle idle camera shake while the character is not moving.</td>
+<td>Enables subtle idle camera shake while the owner is not moving.</td>
 </tr>
 <tr>
 <td><strong>Idle Camera Shake Class</strong></td>
@@ -8518,22 +8518,22 @@
 <tr>
 <td><strong>Movement Shake Min Speed</strong></td>
 <td><code>float</code></td>
-<td>Character speed at which movement shake begins.</td>
+<td>Owner speed at which movement shake begins.</td>
 </tr>
 <tr>
 <td><strong>Movement Shake Max Speed</strong></td>
 <td><code>float</code></td>
-<td>Character speed at which movement shake reaches maximum intensity.</td>
+<td>Owner speed at which movement shake reaches maximum intensity.</td>
 </tr>
 <tr>
 <td><strong>Movement Shake Min Scale</strong></td>
 <td><code>float</code></td>
-<td>Shake scale applied when character speed equals the minimum shake speed.</td>
+<td>Shake scale applied when owner speed equals the minimum shake speed.</td>
 </tr>
 <tr>
 <td><strong>Movement Shake Max Scale</strong></td>
 <td><code>float</code></td>
-<td>Shake scale applied when character speed reaches the maximum shake speed.</td>
+<td>Shake scale applied when owner speed reaches the maximum shake speed.</td>
 </tr>
 <tr>
 <td><strong>Movement Shake Interp Speed</strong></td>

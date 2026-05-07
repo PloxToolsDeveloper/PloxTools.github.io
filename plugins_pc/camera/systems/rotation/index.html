@@ -7674,7 +7674,8 @@
 </div>
 
 <p>Vertical Pitch Support adjusts the camera pitch based on vertical movement such as going up slopes, down slopes, or falling.</p>
-<p>This keeps the character properly framed during vertical motion.</p>
+<p>This helps keep the owner properly framed during vertical motion.</p>
+<p>This feature currently requires a Character-based owner and relies on <code>CharacterMovementComponent</code> data for slope and falling detection.</p>
 <h3 id="settings_2">Settings</h3>
 <div align="center">
   <img src="../assets/rotation/rotation_vertical_support_settings.png"
@@ -7685,7 +7686,7 @@
 <li><strong>Enable Vertical Pitch Support</strong> - enables vertical adjustment  </li>
 <li><strong>Max Vertical Pitch Up Offset</strong> - maximum upward offset  </li>
 <li><strong>Max Vertical Pitch Down Offset</strong> - maximum downward offset  </li>
-<li><strong>Max Falling Pitch Offset</strong> - pitch offset applied while falling  </li>
+<li><strong>Max Falling Pitch Offset</strong> - pitch offset applied while falling   </li>
 </ul>
 <hr />
 <h2 id="ceiling-anticipation">Ceiling Anticipation</h2>
