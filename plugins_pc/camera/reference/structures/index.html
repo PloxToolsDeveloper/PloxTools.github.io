@@ -8646,6 +8646,11 @@
 <td>If enabled, the owner character can also fade when the camera is very close or inside the mesh.</td>
 </tr>
 <tr>
+<td><strong>Dither Attached Actors</strong></td>
+<td><code>bool</code></td>
+<td>If enabled, actors attached to the owner will also fade when owner dithering is active. Useful for weapons, armor, cosmetic actors, and other attached equipment.</td>
+</tr>
+<tr>
 <td><strong>Dither Tags</strong></td>
 <td><code>TArray&lt;FName&gt;</code></td>
 <td>Actor tags that should be considered for dithering when blocking the view.</td>
@@ -8741,9 +8746,9 @@
 <td>Determines whether the spline uses time-based playback or tethered movement.</td>
 </tr>
 <tr>
-<td><strong>Focus Player Character</strong></td>
+<td><strong>Focus Owner</strong></td>
 <td><code>bool</code></td>
-<td>If enabled, the spline camera rotates to follow the player character. Ignored when <code>Focus Target</code> is set.</td>
+<td>If enabled, the spline camera rotates to follow the owner. Ignored when <code>Focus Target</code> is set.</td>
 </tr>
 <tr>
 <td><strong>Focus Target</strong></td>

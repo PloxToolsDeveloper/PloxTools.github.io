@@ -7046,6 +7046,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dithering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dithering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#camera-view" class="md-nav__link">
     <span class="md-ellipsis">
       Camera View
@@ -7399,6 +7408,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dithering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dithering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#camera-view" class="md-nav__link">
     <span class="md-ellipsis">
       Camera View
@@ -7705,6 +7723,26 @@
 </tbody>
 </table>
 <hr />
+<h2 id="dithering">Dithering</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Parameters</th>
+<th>Return / Callback</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reset Dithering</strong></td>
+<td>-</td>
+<td>-</td>
+<td>Immediately restores all currently dithered components back to full opacity and clears the internal dithering state. Useful after custom camera transitions, vehicle enter/exit flows, attach/detach logic, or direct view target changes.</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="camera-view">Camera View</h2>
 <table>
 <thead>
@@ -7950,13 +7988,13 @@
 <td><strong>Set Focus Actor</strong></td>
 <td><code>InActor</code> (<code>AActor*</code>), <code>bUseOverrideSettings</code> (<code>bool</code>), <code>OverrideSettings</code> (<a href="../structures/#fthirdpersoncamerafocussettings"><code>FThirdPersonCameraFocusSettings</code></a>), <code>OnFinished</code> (<code>FOnFocusFinishedLocal</code>)</td>
 <td><strong>Callback:</strong> <code>OnFinished</code> (<code>Reason</code>: <a href="../enumerations/#efocuslostreason"><code>EFocusLostReason</code></a>)</td>
-<td>Sets focus to the specified Actor. Optionally allows overriding focus settings for this focus only. The optional callback is executed once when this specific focus session ends.</td>
+<td>Sets focus to the specified Actor. The optional callback is executed once when this specific focus session ends. Optionally allows overriding focus settings for this focus only.</td>
 </tr>
 <tr>
 <td><strong>Set Focus Actor Socket</strong></td>
 <td><code>InActor</code> (<code>AActor*</code>), <code>InSocketName</code> (<code>FName</code>), <code>bUseOverrideSettings</code> (<code>bool</code>), <code>OverrideSettings</code> (<a href="../structures/#fthirdpersoncamerafocussettings"><code>FThirdPersonCameraFocusSettings</code></a>), <code>OnFinished</code> (<code>FOnFocusFinishedLocal</code>)</td>
 <td><strong>Callback:</strong> <code>OnFinished</code> (<code>Reason</code>: <a href="../enumerations/#efocuslostreason"><code>EFocusLostReason</code></a>)</td>
-<td>Sets focus to a specific socket on the specified Actor's Skeletal Mesh. If the socket does not exist, the Actor location is used instead.</td>
+<td>Sets focus to a specific socket on the specified Actor's Skeletal Mesh. If the socket does not exist, the Actor location is used instead. Optionally allows overriding focus settings for this focus only.</td>
 </tr>
 <tr>
 <td><strong>Set Focus Actor Component</strong></td>

@@ -7000,6 +7000,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#manual-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Reset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       Notes
@@ -7486,6 +7495,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#manual-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Reset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       Notes
@@ -7643,6 +7661,7 @@
 <ul>
 <li><strong>Enable Dithering</strong> - enables the dithering system  </li>
 <li><strong>Dither Owner</strong> - allows the character to fade when the camera is very close  </li>
+<li><strong>Dither Attached Actors</strong> - allows actors attached to the owner, such as weapons or equipment, to fade together with the character</li>
 <li><strong>Dither Tags</strong> - only actors with these tags will be affected  </li>
 <li><strong>Dither Min Opacity</strong> - minimum opacity applied during dithering  </li>
 <li><strong>Dither Speed</strong> - controls how quickly objects fade in and out  </li>
@@ -7656,15 +7675,34 @@
 <li>no manual calls are required  </li>
 <li>only objects between the camera and the character are affected  </li>
 <li>multiple objects can be faded at the same time  </li>
+<li>multi-component actors fade as a single visual object  </li>
+<li>owner dithering supports characters made from multiple mesh components  </li>
+<li>attached actors, such as weapons or equipment, can fade together with the owner  </li>
 </ul>
 <p>The system restores objects to their original appearance when they are no longer blocking the view.</p>
+<hr />
+<h2 id="manual-reset">Manual Reset</h2>
+<p>In most cases, dithering is restored automatically.</p>
+<div align="center">
+  <img src="../assets/dithering/dithering_reset.png"
+       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<p>For custom gameplay flows, you can manually reset the current dithering state using:</p>
+<ul>
+<li><strong>Reset Dithering</strong></li>
+</ul>
+<p>This immediately restores all currently dithered components back to full opacity and clears the internal dithering state.</p>
+<p>This can be useful when using custom camera transitions, vehicle enter/exit logic, attach/detach flows, or direct view target changes outside the camera component.</p>
 <hr />
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Dithering requires materials to include <strong>MF_CameraDithering</strong>  </li>
 <li>Objects without the material setup will not be affected  </li>
+<li>Actors with multiple mesh components fade as a single object when they use a matching Dither Tag  </li>
+<li>If your object uses a separate invisible collision proxy, the Actor still needs a matching Dither Tag  </li>
 <li>The system is fully automatic and runs at runtime  </li>
-<li>Useful for improving visibility in dense environments such as foliage or tight spaces</li>
+<li>Useful for improving visibility in dense environments such as foliage or tight spaces  </li>
 </ul>
 
 
