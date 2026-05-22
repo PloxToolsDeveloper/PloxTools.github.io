@@ -4584,28 +4584,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#local-testing-using-steam_appidtxt" class="md-nav__link">
+  <a href="#local-testing-in-standalone-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Local Testing Using steam_appid.txt
+      Local Testing in Standalone Mode
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Local Testing Using steam_appid.txt">
+    <nav class="md-nav" aria-label="Local Testing in Standalone Mode">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#testing-with-the-spacewar-app-id" class="md-nav__link">
+  <a href="#step-1-find-your-steam-app-id" class="md-nav__link">
     <span class="md-ellipsis">
-      Testing with the Spacewar App ID
+      Step 1: Find your Steam App ID
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limitations-of-local-testing" class="md-nav__link">
+  <a href="#step-2-set-the-app-id-in-unreal-engine" class="md-nav__link">
     <span class="md-ellipsis">
-      Limitations of Local Testing
+      Step 2: Set the App ID in Unreal Engine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-launch-standalone-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Launch Standalone Mode
     </span>
   </a>
   
@@ -4613,6 +4622,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-with-the-spacewar-app-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing with the Spacewar App ID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-testing-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Testing Limitations
+    </span>
+  </a>
   
 </li>
       
@@ -7277,28 +7304,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#local-testing-using-steam_appidtxt" class="md-nav__link">
+  <a href="#local-testing-in-standalone-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Local Testing Using steam_appid.txt
+      Local Testing in Standalone Mode
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Local Testing Using steam_appid.txt">
+    <nav class="md-nav" aria-label="Local Testing in Standalone Mode">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#testing-with-the-spacewar-app-id" class="md-nav__link">
+  <a href="#step-1-find-your-steam-app-id" class="md-nav__link">
     <span class="md-ellipsis">
-      Testing with the Spacewar App ID
+      Step 1: Find your Steam App ID
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limitations-of-local-testing" class="md-nav__link">
+  <a href="#step-2-set-the-app-id-in-unreal-engine" class="md-nav__link">
     <span class="md-ellipsis">
-      Limitations of Local Testing
+      Step 2: Set the App ID in Unreal Engine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-launch-standalone-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Launch Standalone Mode
     </span>
   </a>
   
@@ -7306,6 +7342,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-with-the-spacewar-app-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing with the Spacewar App ID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-testing-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Testing Limitations
+    </span>
+  </a>
   
 </li>
       
@@ -7358,41 +7412,76 @@
 <ul>
 <li>The <strong>Steam client must be running</strong></li>
 <li>You must be <strong>logged into a Steam account</strong></li>
-<li>The Steam account must <strong>have access to the application</strong> (typically the developer account)</li>
+<li>The Steam account must <strong>have access to the application</strong> when testing your own Steam App ID</li>
+<li>The correct <strong>Steam App ID</strong> must be configured</li>
 </ul>
-<p>If these conditions are not met, Steam API calls will fail or return no data.</p>
+<p>If these conditions are not met, Steam API calls may fail or return no data.</p>
 <hr />
-<h2 id="local-testing-using-steam_appidtxt">Local Testing Using steam_appid.txt</h2>
-<p>For quick local testing, Steam functionality can be tested by running the game executable directly and providing a <code>steam_appid.txt</code> file.</p>
-<p>This file must:</p>
-<ul>
-<li>Be named <code>steam_appid.txt</code></li>
-<li>Contain your <strong>App ID</strong> or <code>480</code>  as plain text</li>
-<li>Be placed in the same directory as the game executable</li>
-</ul>
+<h2 id="local-testing-in-standalone-mode">Local Testing in Standalone Mode</h2>
+<p>For quick local testing, the plugin supports testing Steam functionality directly from <strong>Standalone Mode</strong> in Unreal Engine.</p>
+<p>This workflow allows you to test most Steam functionality without uploading a build to Steam after every change.</p>
+<h3 id="step-1-find-your-steam-app-id">Step 1: Find your Steam App ID</h3>
+<p>Open your application page in Steamworks and copy the App ID shown next to the application name.</p>
 <div align="center">
-  <img src="../assets/testing_app_id.png" width="800">
+  <img src="../assets/testing_app_id_steamworks.png" width="800">
 </div>
 
-<p>This approach is commonly used for development builds and allows basic validation of Steam integration without uploading a build to Steam.</p>
-<h3 id="testing-with-the-spacewar-app-id">Testing with the Spacewar App ID</h3>
+<p>You can also use the official Steam test App ID <code>480</code> for early validation if your own Steamworks application is not ready yet.</p>
+<h3 id="step-2-set-the-app-id-in-unreal-engine">Step 2: Set the App ID in Unreal Engine</h3>
+<p>Open <strong>Project Settings</strong> and go to:</p>
+<p><strong>Plugins &gt; PloxTools: Steam Integration</strong></p>
+<p>Paste your Steam App ID into the <strong>Steam App ID</strong> field.</p>
+<div align="center">
+  <img src="../assets/testing_app_id_unreal.png" width="800">
+</div>
+
+<h3 id="step-3-launch-standalone-mode">Step 3: Launch Standalone Mode</h3>
+<p>Before launching the game, make sure that:</p>
+<ul>
+<li>The <strong>Steam client is running</strong></li>
+<li>You are <strong>logged into Steam</strong></li>
+<li>Your Steam account has access to the application when using your own App ID</li>
+</ul>
+<p>Then launch the game using <strong>Standalone Game</strong>.</p>
+<p>The plugin automatically prepares the required local Steam App ID file for non-shipping builds and initializes Steam early enough for local testing.</p>
+<p>This workflow can be used to test most Steam functionality during development, including Steam initialization, user data, stats, achievements, leaderboards, rich presence, and basic Overlay behavior.</p>
+<p>Some features may still depend on your Steamworks application configuration and should be validated again through an uploaded Steam build before release.</p>
+<hr />
+<h2 id="testing-with-the-spacewar-app-id">Testing with the Spacewar App ID</h2>
 <p>If your application has not yet been created in Steamworks, limited testing can be performed using the official Steam test App ID <code>480</code>.</p>
+<div align="center">
+  <img src="../assets/testing_app_id_480.png" width="800">
+</div>
+
 <p>Using the Spacewar App ID allows you to:</p>
 <ul>
-<li>Verify basic Steam initialization</li>
-<li>Validate simple API calls such as user information and presence</li>
+<li>Verify that Steam initializes correctly</li>
+<li>Test basic Steam API calls</li>
+<li>Check whether local Steam runtime integration is working</li>
 </ul>
-<p>However, this testing mode is highly restricted and does not reflect real application behavior.</p>
-<h3 id="limitations-of-local-testing">Limitations of Local Testing</h3>
-<p>Local testing using <code>steam_appid.txt</code>, including testing with the Spacewar App ID, has important limitations:</p>
+<p>However, Spacewar does not represent your real application.</p>
+<p>Important limitations:</p>
 <ul>
-<li>Most application-specific features such as achievements, stats, leaderboards, and cloud saves are unavailable or non-functional</li>
-<li>Overlay behavior may be inconsistent</li>
-<li>Ownership, entitlement, and DLC checks are not representative of a real release</li>
-<li>Data written during testing does not persist in a production-like environment</li>
+<li>Application-specific achievements, stats, leaderboards, and cloud saves will not match your own game</li>
+<li>Data belongs to the Spacewar test application, not your application</li>
+<li>Ownership and entitlement checks are not representative of your real product</li>
+<li>Production behavior must still be verified with your own Steam App ID</li>
 </ul>
-<p>This method is suitable for early development and basic feature verification only.</p>
-<p>For accurate validation of all Steam features, the application must be properly created in Steamworks and tested using uploaded builds and Steam Playtest or release configurations.</p>
+<p>Use App ID <code>480</code> only for early validation or troubleshooting.</p>
+<hr />
+<h2 id="local-testing-limitations">Local Testing Limitations</h2>
+<p>Standalone Mode testing is useful for fast iteration, but it is still a local development workflow.</p>
+<p>Some Steam features may behave differently compared to a real Steam launch, especially features that depend on Steam ownership, branch configuration, depots, cloud configuration, or release state.</p>
+<p>For best results, use Standalone Mode for development testing, then validate the final behavior through Steam builds.</p>
+<p>Standalone Mode is suitable for:</p>
+<ul>
+<li>Fast API validation</li>
+<li>Checking Blueprint and C++ logic</li>
+<li>Testing callbacks</li>
+<li>Testing basic overlay behavior</li>
+<li>Testing your configured Steam App ID before uploading a build</li>
+</ul>
+<p>It should not be treated as a full replacement for production testing through Steam.</p>
 <hr />
 <h2 id="testing-through-steam-builds">Testing Through Steam Builds</h2>
 <p>For accurate and production-like testing, the game should be uploaded and launched through Steam.</p>
@@ -7402,23 +7491,27 @@
 <li>Assigning the build to a testing branch</li>
 <li>Launching the game directly from the Steam client</li>
 </ul>
-<p>Testing through Steam provides the most reliable results and ensures that all Steam features behave exactly as they will for end users.</p>
+<p>Testing through Steam provides the most reliable results and ensures that Steam features behave as they will for end users.</p>
 <p>This method is strongly recommended when validating:</p>
 <ul>
-<li>Achievements and Leaderboards</li>
+<li>Achievements</li>
+<li>Leaderboards</li>
 <li>Cloud Saves</li>
 <li>Rich Presence</li>
 <li>Overlay behavior</li>
 <li>Ownership and entitlement checks</li>
+<li>DLC checks</li>
+<li>Final release behavior</li>
 </ul>
 <p>When uploading and managing builds, it is recommended to follow the <a href="https://partner.steamgames.com/doc/sdk/uploading"><strong>official Steamworks documentation</strong></a> for SteamPipe, as it describes the correct workflow, folder structure, and common pitfalls in detail.</p>
 <hr />
 <h2 id="recommended-testing-workflow">Recommended Testing Workflow</h2>
 <p>A typical testing workflow looks like this:</p>
 <ol>
-<li>Use <strong>local testing with <code>steam_appid.txt</code></strong> during early development</li>
-<li>Upload builds to Steam for <strong>full feature validation</strong></li>
-<li>Perform final testing by launching the game <strong>directly from Steam</strong></li>
+<li>Use <strong>Standalone Mode</strong> with the Steam App ID configured in the plugin settings during development</li>
+<li>Use App ID <code>480</code> only for early validation or troubleshooting</li>
+<li>Upload builds to Steam for full feature validation</li>
+<li>Perform final testing by launching the game directly from Steam</li>
 </ol>
 <p>Following this approach allows fast iteration during development while still ensuring correct behavior in production.</p>
 <hr />
@@ -7426,11 +7519,13 @@
 <p>If Steam functionality does not work as expected, verify the following:</p>
 <ul>
 <li>The Steam client is running and logged in</li>
-<li>The correct App ID is used</li>
+<li>The correct Steam App ID is configured in the plugin settings</li>
 <li>The Steam account has access to the application</li>
+<li>The project is launched in Standalone Mode or as a packaged build</li>
 <li>No other Steam integration plugins are active in the project</li>
+<li>The application is properly configured in Steamworks when testing application-specific features</li>
 </ul>
-<p>Most Steam-related issues during development are caused by missing Steam client state or incorrect application access.</p>
+<p>Most Steam-related issues during development are caused by missing Steam client state, incorrect App ID configuration, or missing application access.</p>
 <p>For detailed instructions on uploading builds and managing branches, refer to the official Steamworks documentation.</p>
 
 
