@@ -4445,6 +4445,8 @@
       
         
       
+        
+      
     
     
     
@@ -6285,6 +6287,207 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_8" id="__nav_3_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Steam Publishing Tool
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Steam Publishing Tool
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../steam/steam_publishing/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../steam/steam_publishing/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../steam/steam_publishing/publishing_a_build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publishing a Build
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../steam/steam_publishing/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../steam/steam_publishing/logs_and_generated_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logs and Generated Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../steam/steam_publishing/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../steam/faq/faq/" class="md-nav__link">
         
@@ -6504,6 +6707,8 @@
       
         
       
+        
+      
     
     
     
@@ -6643,6 +6848,29 @@
   
   <span class="md-ellipsis">
     Spline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../location_lag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Location Lag
     
   </span>
   
@@ -6985,6 +7213,15 @@
   <a href="#settings" class="md-nav__link">
     <span class="md-ellipsis">
       Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attached-actor-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attached Actor Filtering
     </span>
   </a>
   
@@ -7486,6 +7723,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#attached-actor-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attached Actor Filtering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#behavior" class="md-nav__link">
     <span class="md-ellipsis">
       Behavior
@@ -7660,14 +7906,45 @@
 
 <ul>
 <li><strong>Enable Dithering</strong> - enables the dithering system  </li>
-<li><strong>Dither Owner</strong> - allows the character to fade when the camera is very close  </li>
-<li><strong>Dither Attached Actors</strong> - allows actors attached to the owner, such as weapons or equipment, to fade together with the character</li>
-<li><strong>Dither Tags</strong> - only actors with these tags will be affected  </li>
+<li><strong>Dither Owner</strong> - allows the character to fade when the camera is very close or inside the character mesh  </li>
+<li>
+<p><strong>Dither Attached Actors</strong> - allows actors attached to the owner, such as weapons or equipment, to fade together with the character  </p>
+</li>
+<li>
+<p><strong>Owner Dither Attached Actor Ignore Classes</strong> - excludes specific attached actor classes from owner dithering. This is useful for riders, passengers, AI characters, mounted characters, or other gameplay actors attached to the owner that should remain visible  </p>
+</li>
+<li>
+<p><strong>Owner Dither Bounds Ignore Component Classes</strong> - ignores specific component classes when checking whether the camera is inside the owner or attached actor bounds. This is useful for helper components, widgets, particles, draw frustums, or custom gameplay components that should not trigger owner fading  </p>
+</li>
+<li>
+<p><strong>Dither Tags</strong> - only actors with these tags will be affected  </p>
+</li>
 <li><strong>Dither Min Opacity</strong> - minimum opacity applied during dithering  </li>
 <li><strong>Dither Speed</strong> - controls how quickly objects fade in and out  </li>
 <li><strong>Dither Sweep Radius</strong> - radius used to detect blocking objects  </li>
 <li><strong>Dither Overlap Radius</strong> - radius used for close-range detection around the camera  </li>
 </ul>
+<hr />
+<h2 id="attached-actor-filtering">Attached Actor Filtering</h2>
+<p>When <strong>Dither Attached Actors</strong> is enabled, actors attached to the owner can fade together with the owner.</p>
+<p>This is useful for objects that visually belong to the character or vehicle, such as:</p>
+<ul>
+<li>weapons  </li>
+<li>armor pieces  </li>
+<li>cosmetic attachments  </li>
+<li>equipment  </li>
+<li>vehicle parts  </li>
+</ul>
+<p>In some cases, an attached actor is a separate gameplay object and should not fade with the owner.</p>
+<p>For example:</p>
+<ul>
+<li>a rider attached to a vehicle  </li>
+<li>a passenger inside a vehicle  </li>
+<li>an AI character attached to a mount  </li>
+<li>a gameplay actor temporarily attached to the player  </li>
+</ul>
+<p>Use <strong>Owner Dither Attached Actor Ignore Classes</strong> to exclude these actors from owner dithering.</p>
+<p>Excluded attached actors will not be used for owner dithering bounds checks and their components will not fade together with the owner.</p>
 <hr />
 <h2 id="behavior">Behavior</h2>
 <p>Dithering is applied automatically during camera updates.</p>
@@ -7678,6 +7955,8 @@
 <li>multi-component actors fade as a single visual object  </li>
 <li>owner dithering supports characters made from multiple mesh components  </li>
 <li>attached actors, such as weapons or equipment, can fade together with the owner  </li>
+<li>attached actor classes can be excluded from owner dithering when they should remain visible  </li>
+<li>component classes can be ignored when checking owner or attached actor bounds  </li>
 </ul>
 <p>The system restores objects to their original appearance when they are no longer blocking the view.</p>
 <hr />
@@ -7701,6 +7980,9 @@
 <li>Objects without the material setup will not be affected  </li>
 <li>Actors with multiple mesh components fade as a single object when they use a matching Dither Tag  </li>
 <li>If your object uses a separate invisible collision proxy, the Actor still needs a matching Dither Tag  </li>
+<li>Owner dithering can also include attached actors when <strong>Dither Attached Actors</strong> is enabled  </li>
+<li>Use <strong>Owner Dither Attached Actor Ignore Classes</strong> for attached gameplay actors that should not fade with the owner  </li>
+<li>Use <strong>Owner Dither Bounds Ignore Component Classes</strong> for helper or non-visual components that should not trigger owner fading  </li>
 <li>The system is fully automatic and runs at runtime  </li>
 <li>Useful for improving visibility in dense environments such as foliage or tight spaces  </li>
 </ul>
