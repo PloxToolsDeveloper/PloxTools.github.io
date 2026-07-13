@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://ploxtools.github.io/plugins/inappreview/object_definitions/enumerations/">
       
       
-        <link rel="prev" href="../../implementation/launch_inapp_review/">
+        <link rel="prev" href="../../implementation/cpp_usage/">
       
       
         <link rel="next" href="../../faq/faq/">
@@ -199,7 +199,7 @@
   
     
   
-  Android Plugins
+  Mobile Plugins
 
         </a>
       </li>
@@ -350,7 +350,7 @@
   
   
   <span class="md-ellipsis">
-    Android Plugins
+    Mobile Plugins
     
   </span>
   
@@ -367,7 +367,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Android Plugins
+            Mobile Plugins
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4088,6 +4088,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -4107,7 +4113,7 @@
   
   
   <span class="md-ellipsis">
-    Google Play In-App Review
+    Mobile In-App Review
     
   </span>
   
@@ -4118,56 +4124,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
-            Google Play In-App Review
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Implementation
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6_1">
-            <span class="md-nav__icon md-icon"></span>
-            Implementation
+            Mobile In-App Review
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4240,9 +4197,24 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/cpp_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++ Usage
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4272,10 +4244,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5" id="__nav_2_6_5_label" tabindex="0">
             
   
   
@@ -4288,8 +4260,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_6_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6_5">
             <span class="md-nav__icon md-icon"></span>
             Object Definitions
           </label>
@@ -7481,10 +7453,11 @@
 
 
 <h1 id="enumerations">Enumerations</h1>
-<p>This section contains enumeration used throughout the plugin. The enum reflects the constants defined in the official <strong>Google Play In-App Review Library</strong>, adapted for use in Unreal Engine.</p>
+<p>This section contains the enumerations used by the plugin.</p>
+<p>Some response codes are specific to the <strong>Google Play In-App Review API</strong>, while generic values may also be used for errors returned by the iOS implementation.</p>
 <hr />
 <h2 id="einappreviewresponsecode">EInAppReviewResponseCode</h2>
-<p>Represents response codes returned by the Google Play In-App Review Library in case of errors after calling In-App Review function.</p>
+<p>Represents the response code returned when an in-app review request fails.</p>
 <table>
 <thead>
 <tr>
@@ -7495,23 +7468,23 @@
 <tbody>
 <tr>
 <td><strong>INTERNAL_ERROR</strong></td>
-<td>Unknown internal error.</td>
+<td>An internal platform or plugin error occurred.</td>
 </tr>
 <tr>
 <td><strong>INVALID_REQUEST</strong></td>
-<td>Invalid request made to the Google API.</td>
+<td>The review request was invalid or could not be processed.</td>
 </tr>
 <tr>
 <td><strong>NO_ERROR</strong></td>
-<td>Default value, should not normally occur.</td>
+<td>Default value. This should not normally be returned through the failure callback.</td>
 </tr>
 <tr>
 <td><strong>PLAY_STORE_NOT_FOUND</strong></td>
-<td>No Play Store app found or unofficial version installed.</td>
+<td>The Google Play Store is unavailable, missing, or unsupported on the device. Android only.</td>
 </tr>
 <tr>
 <td><strong>UNKNOWN</strong></td>
-<td>Fallback for unmapped values.</td>
+<td>The returned error could not be mapped to a known response code.</td>
 </tr>
 </tbody>
 </table>

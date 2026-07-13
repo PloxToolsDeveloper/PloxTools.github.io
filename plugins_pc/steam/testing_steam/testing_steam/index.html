@@ -197,7 +197,7 @@
   
     
   
-  Android Plugins
+  Mobile Plugins
 
         </a>
       </li>
@@ -345,7 +345,7 @@
   
   
   <span class="md-ellipsis">
-    Android Plugins
+    Mobile Plugins
     
   </span>
   
@@ -362,7 +362,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Android Plugins
+            Mobile Plugins
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4081,6 +4081,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -4100,7 +4106,7 @@
   
   
   <span class="md-ellipsis">
-    Google Play In-App Review
+    Mobile In-App Review
     
   </span>
   
@@ -4111,56 +4117,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
-            Google Play In-App Review
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Implementation
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6_1">
-            <span class="md-nav__icon md-icon"></span>
-            Implementation
+            Mobile In-App Review
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4233,9 +4190,24 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plugins/inappreview/implementation/cpp_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++ Usage
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4263,10 +4235,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5" id="__nav_2_6_5_label" tabindex="0">
             
   
   
@@ -4279,8 +4251,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5">
             <span class="md-nav__icon md-icon"></span>
             Object Definitions
           </label>
@@ -7713,11 +7685,16 @@
 <hr />
 <h2 id="testing-through-steam-builds">Testing Through Steam Builds</h2>
 <p>For accurate and production-like testing, the game should be uploaded and launched through Steam.</p>
-<p>This involves:</p>
+<p>The plugin includes a built-in <a href="../../steam_publishing/overview/"><strong>Steam Publishing Tool</strong></a> that allows you to configure, validate, and upload prepared game builds through SteamCMD directly from the Unreal Editor.</p>
+<p>The recommended workflow is:</p>
 <ul>
-<li>Uploading a build using SteamPipe</li>
-<li>Assigning the build to a testing branch</li>
-<li>Launching the game directly from the Steam client</li>
+<li>Package your game build</li>
+<li>Open the Steam Publishing Tool</li>
+<li>Configure the Steam App ID, Depot ID, build folder, executable, and target branch</li>
+<li>Authorize your Steam account</li>
+<li>Review the pre-flight summary</li>
+<li>Publish the build to Steam</li>
+<li>Launch the uploaded build directly from the Steam client</li>
 </ul>
 <p>Testing through Steam provides the most reliable results and ensures that Steam features behave as they will for end users.</p>
 <p>This method is strongly recommended when validating:</p>
@@ -7731,7 +7708,8 @@
 <li>DLC checks</li>
 <li>Final release behavior</li>
 </ul>
-<p>When uploading and managing builds, it is recommended to follow the <a href="https://partner.steamgames.com/doc/sdk/uploading"><strong>official Steamworks documentation</strong></a> for SteamPipe, as it describes the correct workflow, folder structure, and common pitfalls in detail.</p>
+<p>The Publishing Tool simplifies the SteamPipe upload workflow, but your application, depots, branches, permissions, and related Steamworks settings must still be configured correctly in the Steamworks Partner Portal.</p>
+<p>For additional information about SteamPipe configuration and build management, refer to the <a href="https://partner.steamgames.com/doc/sdk/uploading"><strong>official Steamworks documentation</strong></a>.</p>
 <hr />
 <h2 id="recommended-testing-workflow">Recommended Testing Workflow</h2>
 <p>A typical testing workflow looks like this:</p>

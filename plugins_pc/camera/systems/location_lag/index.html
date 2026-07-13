@@ -197,7 +197,7 @@
   
     
   
-  Android Plugins
+  Mobile Plugins
 
         </a>
       </li>
@@ -345,7 +345,7 @@
   
   
   <span class="md-ellipsis">
-    Android Plugins
+    Mobile Plugins
     
   </span>
   
@@ -362,7 +362,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Android Plugins
+            Mobile Plugins
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4081,6 +4081,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -4100,7 +4106,7 @@
   
   
   <span class="md-ellipsis">
-    Google Play In-App Review
+    Mobile In-App Review
     
   </span>
   
@@ -4111,56 +4117,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
-            Google Play In-App Review
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Implementation
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6_1">
-            <span class="md-nav__icon md-icon"></span>
-            Implementation
+            Mobile In-App Review
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4233,9 +4190,24 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plugins/inappreview/implementation/cpp_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++ Usage
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4263,10 +4235,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_5" id="__nav_2_6_5_label" tabindex="0">
             
   
   
@@ -4279,8 +4251,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_5">
             <span class="md-nav__icon md-icon"></span>
             Object Definitions
           </label>
@@ -7589,20 +7561,6 @@
 
 
 <h1 id="location-lag">Location Lag</h1>
-<div style="display: flex; gap: 24px; justify-content: center;">
-
-<div style="text-align: center;">
-<img src="../assets/collision/collision_default.gif" style="border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);" />
-<p><em>Without Location Lag</em></p>
-</div>
-
-<div style="text-align: center;">
-<img src="../assets/collision/collision_smooth.gif" style="border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);" />
-<p><em>With Location Lag</em></p>
-</div>
-
-</div>
-
 <p>The <strong>Location Lag</strong> system smooths the gameplay camera pivot before the camera position and collision are calculated.</p>
 <p>This is useful for reducing small vertical camera bumps caused by:</p>
 <ul>
@@ -7626,11 +7584,6 @@
 <p>This helps smooth terrain and step movement while keeping the camera responsive during normal horizontal movement.</p>
 <hr />
 <h2 id="vertical-lag">Vertical Lag</h2>
-<div align="center">
-  <img src="../assets/location_lag/location_lag_z.gif"
-       style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
-</div>
-
 <p>Vertical Location Lag smooths camera movement when the character moves up or down.</p>
 <p>This helps prevent the camera from reacting too sharply to small height changes.</p>
 <p>It is especially useful for:</p>
