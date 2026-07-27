@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://ploxtools.github.io/plugins/admob/implementation/consent%26privacy/">
       
       
-        <link rel="prev" href="../initialization/">
+        <link rel="prev" href="../basic_usage/">
       
       
-        <link rel="next" href="../banner/">
+        <link rel="next" href="../testing_ads/">
       
       
       <link rel="icon" href="../../../../assets/icon.png">
@@ -392,6 +392,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -423,71 +435,6 @@
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Google AdMob
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Implementation
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_2_1">
-            <span class="md-nav__icon md-icon"></span>
-            Implementation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -544,12 +491,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../initialization/" class="md-nav__link">
+      <a href="../basic_usage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Initialization
+    Basic Usage
     
   </span>
   
@@ -617,133 +564,91 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-a-consent-form-in-admob" class="md-nav__link">
+  <a href="#how-the-consent-process-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a Consent Form in AdMob
+      How the Consent Process Works
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#request-consent-form" class="md-nav__link">
+  <a href="#configure-privacy-messages-in-admob" class="md-nav__link">
     <span class="md-ellipsis">
-      Request Consent Form
+      Configure Privacy Messages in AdMob
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Request Consent Form">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-under-age-of-consent" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Under Age Of Consent
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-on-completed" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. On Completed
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-on-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. On Failure
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#force-consent-form" class="md-nav__link">
+  <a href="#recommended-consent-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Force Consent Form
+      Recommended Consent Flow
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Force Consent Form">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-on-completed" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. On Completed
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-on-failure_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. On Failure
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#is-consent-given" class="md-nav__link">
+  <a href="#privacy-options" class="md-nav__link">
     <span class="md-ellipsis">
-      Is Consent Given
+      Privacy Options
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Is Consent Given">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#age-restricted-treatment-for-ad-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age-Restricted Treatment for Ad Requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-the-current-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking the Current State
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-the-consent-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing the Consent Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ios-app-tracking-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      iOS App Tracking Transparency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="iOS App Tracking Transparency">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#return-value" class="md-nav__link">
+  <a href="#configure-the-plugin" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Value
+      Configure the Plugin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-admob" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure AdMob
     </span>
   </a>
   
@@ -755,191 +660,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-consent-status" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Consent Status
+      Next Steps
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Get Consent Status">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-return-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Return Value
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reset-consent-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reset Consent State
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reset Consent State">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-ad-mob-privacy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure Ad Mob Privacy
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configure Ad Mob Privacy">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-is-child-directed" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Is Child Directed
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-is-under-age-of-consent" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Is Under Age Of Consent
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#c-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      C++ Usage
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="C++ Usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requestconsentform" class="md-nav__link">
-    <span class="md-ellipsis">
-      RequestConsentForm
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#forceconsentform" class="md-nav__link">
-    <span class="md-ellipsis">
-      ForceConsentForm
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#isconsentgiven" class="md-nav__link">
-    <span class="md-ellipsis">
-      IsConsentGiven
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getconsentstatus" class="md-nav__link">
-    <span class="md-ellipsis">
-      GetConsentStatus
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resetconsentstate" class="md-nav__link">
-    <span class="md-ellipsis">
-      ResetConsentState
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configureadmobprivacy" class="md-nav__link">
-    <span class="md-ellipsis">
-      ConfigureAdMobPrivacy
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -951,6 +676,82 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing_ads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_6" id="__nav_2_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ad Formats
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ad Formats
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -1067,6 +868,14 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
               
                 
   
@@ -1090,9 +899,24 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++ Usage
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1109,6 +933,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1120,15 +948,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
         
           
-          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    Object Definitions
+    Technical Reference
     
   </span>
   
@@ -1136,10 +964,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_9">
             <span class="md-nav__icon md-icon"></span>
-            Object Definitions
+            Technical Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1150,7 +978,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object_definitions/enumerations/" class="md-nav__link">
+      <a href="../../technical_reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AdMob API (Functions)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_reference/enumerations/" class="md-nav__link">
         
   
   
@@ -1166,14 +1017,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
               
                 
   
@@ -1181,17 +1024,25 @@
   
   
     <li class="md-nav__item">
-      <a href="../testing_ads/" class="md-nav__link">
+      <a href="../../technical_reference/settings/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Testing Ads
+    Settings
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2666,6 +2517,29 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../firebase/cpp_usage/cpp_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++ Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -2686,15 +2560,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    Object Definitions
+    Technical Reference
     
   </span>
   
@@ -2702,10 +2576,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_4">
             <span class="md-nav__icon md-icon"></span>
-            Object Definitions
+            Technical Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2781,29 +2655,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../firebase/cpp_usage/cpp_usage/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    C++ Usage
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -3298,6 +3149,29 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../billing/implementation/testing_purchases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Purchases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -3318,15 +3192,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    Object Definitions
+    Technical Reference
     
   </span>
   
@@ -3334,10 +3208,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
             <span class="md-nav__icon md-icon"></span>
-            Object Definitions
+            Technical Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3413,29 +3287,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../billing/implementation/testing_purchases/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Testing Purchases
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -4295,6 +4146,29 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../playgamesservices/cpp_usage/cpp_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++ Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -4313,15 +4187,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5_3" id="__nav_2_5_3_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    Object Definitions
+    Technical Reference
     
   </span>
   
@@ -4329,10 +4203,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_3">
             <span class="md-nav__icon md-icon"></span>
-            Object Definitions
+            Technical Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4385,29 +4259,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../playgamesservices/cpp_usage/cpp_usage/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    C++ Usage
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -4621,7 +4472,7 @@
   
   
   <span class="md-ellipsis">
-    Object Definitions
+    Technical Reference
     
   </span>
   
@@ -4632,7 +4483,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6_5">
             <span class="md-nav__icon md-icon"></span>
-            Object Definitions
+            Technical Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -6538,6 +6389,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -6557,7 +6416,7 @@
   
   
   <span class="md-ellipsis">
-    Object Definitions
+    Steam Publishing Tool
     
   </span>
   
@@ -6567,115 +6426,6 @@
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2_7">
-            <span class="md-nav__icon md-icon"></span>
-            Object Definitions
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/object_definitions/enumerations/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Enumerations
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../plugins_pc/steam/object_definitions/structures/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Structures
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_2_8" id="__nav_3_2_8_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Steam Publishing Tool
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_8">
             <span class="md-nav__icon md-icon"></span>
             Steam Publishing Tool
           </label>
@@ -6809,6 +6559,107 @@
   
   <span class="md-ellipsis">
     Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_8" id="__nav_3_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Technical Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plugins_pc/steam/object_definitions/enumerations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enumerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plugins_pc/steam/object_definitions/structures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Structures
     
   </span>
   
@@ -7466,6 +7317,29 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../../plugins_pc/camera/cpp_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++ Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -7490,10 +7364,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_7" >
         
           
-          <label class="md-nav__link" for="__nav_3_3_6" id="__nav_3_3_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_7" id="__nav_3_3_7_label" tabindex="0">
             
   
   
@@ -7506,8 +7380,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_7">
             <span class="md-nav__icon md-icon"></span>
             Technical Reference
           </label>
@@ -7643,29 +7517,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../plugins_pc/camera/cpp_usage/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    C++ Usage
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../plugins_pc/camera/faq/" class="md-nav__link">
         
   
@@ -7746,133 +7597,91 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-a-consent-form-in-admob" class="md-nav__link">
+  <a href="#how-the-consent-process-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a Consent Form in AdMob
+      How the Consent Process Works
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#request-consent-form" class="md-nav__link">
+  <a href="#configure-privacy-messages-in-admob" class="md-nav__link">
     <span class="md-ellipsis">
-      Request Consent Form
+      Configure Privacy Messages in AdMob
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Request Consent Form">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-under-age-of-consent" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Under Age Of Consent
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-on-completed" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. On Completed
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-on-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. On Failure
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#force-consent-form" class="md-nav__link">
+  <a href="#recommended-consent-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Force Consent Form
+      Recommended Consent Flow
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Force Consent Form">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-on-completed" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. On Completed
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-on-failure_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. On Failure
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#is-consent-given" class="md-nav__link">
+  <a href="#privacy-options" class="md-nav__link">
     <span class="md-ellipsis">
-      Is Consent Given
+      Privacy Options
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Is Consent Given">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#age-restricted-treatment-for-ad-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age-Restricted Treatment for Ad Requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-the-current-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking the Current State
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-the-consent-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing the Consent Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ios-app-tracking-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      iOS App Tracking Transparency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="iOS App Tracking Transparency">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#return-value" class="md-nav__link">
+  <a href="#configure-the-plugin" class="md-nav__link">
     <span class="md-ellipsis">
-      Return Value
+      Configure the Plugin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-admob" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure AdMob
     </span>
   </a>
   
@@ -7884,191 +7693,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-consent-status" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Consent Status
+      Next Steps
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Get Consent Status">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-return-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Return Value
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reset-consent-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reset Consent State
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reset Consent State">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-ad-mob-privacy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure Ad Mob Privacy
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configure Ad Mob Privacy">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-is-child-directed" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Is Child Directed
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-is-under-age-of-consent" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Is Under Age Of Consent
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#c-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      C++ Usage
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="C++ Usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requestconsentform" class="md-nav__link">
-    <span class="md-ellipsis">
-      RequestConsentForm
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#forceconsentform" class="md-nav__link">
-    <span class="md-ellipsis">
-      ForceConsentForm
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#isconsentgiven" class="md-nav__link">
-    <span class="md-ellipsis">
-      IsConsentGiven
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getconsentstatus" class="md-nav__link">
-    <span class="md-ellipsis">
-      GetConsentStatus
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resetconsentstate" class="md-nav__link">
-    <span class="md-ellipsis">
-      ResetConsentState
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configureadmobprivacy" class="md-nav__link">
-    <span class="md-ellipsis">
-      ConfigureAdMobPrivacy
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8089,217 +7718,211 @@
 
 
 <h1 id="consent-privacy">Consent &amp; Privacy</h1>
-<p>Before showing ads, apps that use <strong>personalized advertising</strong> must ask the user for consent. This is required by Google through the <strong>User Messaging Platform (UMP)</strong> — an official SDK that shows the consent form and stores the user’s choice.</p>
-<p>Personalized ads typically generate <strong>higher revenue</strong>, because they use targeting data. If the user <strong>declines consent</strong>, ads will still be shown, but only in a <strong>non-personalized</strong> or <strong>limited</strong> form, which significantly reduces overall ad revenue.  </p>
-<p>The plugin includes full integration with Google’s UMP SDK. It automatically displays the consent form configured in your AdMob account and forwards the resulting consent status to all mediation partners. If consent is denied, the plugin continues working normally, but AdMob and mediation networks will restrict ad personalization.</p>
+<p>Before initializing AdMob or loading ads, your application may need to collect or update the user's privacy choices.</p>
+<p>Privacy requirements can depend on the user's region, age, your application's audience, the advertising features you use, and the privacy messages configured in AdMob.</p>
+<p>The consent flow is used to give users the required privacy information and choices before advertising data is processed. These choices can affect personalized advertising, measurement, and other advertising features.</p>
+<p>The plugin integrates Google User Messaging Platform (UMP) on Android and iOS. UMP checks the current user's consent requirements, displays the privacy message configured in AdMob when necessary, and stores the user's choices for future sessions.</p>
+<p>AdMob can technically be initialized and ads can be requested without running the UMP consent flow. However, doing so may fail to account for privacy requirements or user choices that apply to the current user.</p>
+<p>When your application uses UMP, run the consent flow before initializing AdMob or loading ads. After the process finishes, use <strong>Can Request Ads</strong> to determine whether the current UMP privacy state allows the application to proceed with advertising requests.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Consent and privacy configuration is the responsibility of the application developer.</p>
+<p>You must configure and publish the appropriate privacy messages in AdMob, determine whether age-related treatment applies to a user, run the consent flow at the correct time, and verify that your implementation meets the requirements of your application, audience, and supported regions.</p>
+</div>
+<p>Incorrect privacy configuration may prevent ads from loading, limit access to personalized advertising, or cause advertising requests to use inappropriate privacy settings.</p>
 <hr />
-<h2 id="creating-a-consent-form-in-admob">Creating a Consent Form in AdMob</h2>
-<p>To use the <strong>User Messaging Platform (UMP)</strong>, you must first create a consent form in your AdMob account. This form will be automatically fetched and displayed by the plugin when you request user consent. </p>
+<h2 id="how-the-consent-process-works">How the Consent Process Works</h2>
+<p>In simple terms, the application asks UMP whether the current user must complete a privacy message.</p>
+<p>UMP considers the current privacy message configuration, the user's region, any previously stored choices, and the parameters provided by the application.</p>
+<p>The process works as follows:</p>
 <ol>
-<li>Go to your <a href="https://admob.google.com">Google AdMob dashboard</a>.  </li>
-<li>Open the section <strong>Privacy &amp; Messaging</strong>.  </li>
-<li>Under <strong>Consent management solutions</strong>, click <strong>Create</strong> for both <strong>European regulations (GDPR)</strong> and <strong>US state regulations</strong>.</li>
-<li>Once created, AdMob will handle displaying these messages to users automatically through the UMP SDK.</li>
+<li>The application calls <strong>Request Consent</strong>.</li>
+<li>UMP updates the current consent information.</li>
+<li>If a privacy message is required, UMP loads and displays it.</li>
+<li>If no message is required, the request finishes without displaying a form.</li>
+<li>The application checks <strong>Can Request Ads</strong>.</li>
+<li>If ads can be requested, the application initializes AdMob and starts loading ads.</li>
+</ol>
+<p>The application should not decide by itself whether a consent form must be shown. UMP handles this decision based on the current user state and the messages published in AdMob.</p>
+<p>A consent form may not appear when:</p>
+<ul>
+<li>consent is not required for the current user;</li>
+<li>the user has already completed the current message;</li>
+<li>no applicable message is published for the application;</li>
+<li>the user is marked as being under the age of consent;</li>
+<li>the current AdMob message configuration does not require a form.</li>
+</ul>
+<p>The absence of a form does not automatically indicate an error.</p>
+<hr />
+<h2 id="configure-privacy-messages-in-admob">Configure Privacy Messages in AdMob</h2>
+<p>Before requesting consent in your application, configure the required privacy messages in AdMob.</p>
+<ol>
+<li>Open the <a href="https://admob.google.com">AdMob website</a>.</li>
+<li>Go to <strong>Privacy &amp; messaging</strong>.</li>
+<li>Create the messages required for your application, such as:<ul>
+<li><strong>European regulations</strong></li>
+<li><strong>US state regulations</strong></li>
+</ul>
+</li>
+<li>Select the Android and iOS applications that should use each message.</li>
+<li>Configure the message options, consent choices, languages, and targeting.</li>
+<li>Publish the message.</li>
+</ol>
+<p>UMP can only display messages that have been configured, assigned to the correct application, and published.</p>
+<p>Android and iOS are registered as separate applications in AdMob. Verify that the appropriate privacy message is assigned to each application you support.</p>
+<div align="center">
+  <img src="../assets/consent&privacy/consent&privacy_creategdprwindow.png"
+       style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+</div>
+
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Adding the UMP implementation to the application is not enough by itself. The corresponding privacy messages must also be configured and published in AdMob.</p>
+</div>
+<hr />
+<h2 id="recommended-consent-flow">Recommended Consent Flow</h2>
+<p>Call <strong>Request Consent</strong> during every application launch and before initializing AdMob.</p>
+<p>The recommended startup flow is:</p>
+<ol>
+<li>Call <strong>Request Consent</strong>.</li>
+<li>Wait for <strong>On Completed</strong> or <strong>On Failure</strong>.</li>
+<li>Check <strong>Can Request Ads</strong>.</li>
+<li>If it returns <code>true</code>, initialize AdMob.</li>
+<li>Begin loading ads after AdMob initialization completes.</li>
 </ol>
 <div align="center">
-  <img src="../assets/consent&privacy/consent&privacy_creategdprwindow.png" width="700">
+  <img src="../assets/consent&privacy/consent&privacy_example.png"
+       style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>On Completed</strong> means that UMP finished updating the consent information and handling any required form. It does not mean that the user accepted personalized advertising.</p>
+<p>Use <strong>Can Request Ads</strong> to determine whether the current UMP privacy state allows the application to proceed with AdMob initialization and ad requests.</p>
+</div>
+<p>Google Mobile Ads automatically uses the available privacy state when processing subsequent ad requests. You normally do not need to manually select personalized or non-personalized ads based on the returned consent status.</p>
+<p>For applications with age-related requirements, the plugin also provides:</p>
+<ul>
+<li><strong>Under Age Of Consent</strong> on the <strong>Request Consent</strong> node, which changes how UMP handles the consent request.</li>
+<li><strong>Set Age Restricted Treatment</strong>, which changes how Google Mobile Ads processes subsequent ad requests.</li>
+</ul>
+<p>The plugin does not determine the user's age automatically. Your application is responsible for obtaining or determining the user's age and deciding whether either setting applies.</p>
+<p>Configure these options only when your application has a valid reason to treat the current user as under the age of consent, a child, or a teen. Do not enable them for all users as a precaution, because incorrect age-related settings may change the consent flow and advertising behavior.</p>
 <hr />
-<h2 id="request-consent-form">Request Consent Form</h2>
-<p>This function displays the <strong>User Messaging Platform (UMP)</strong> consent dialog that asks the user for permission to show <strong>personalized ads</strong> and process personal data in accordance with <strong>GDPR</strong> and <strong>COPPA</strong>.  </p>
-<p>It is recommended to call this function <strong>before the game starts</strong> — for example, in the <strong>loading screen</strong> or <strong>main menu</strong> — so that consent is collected before any ads are loaded. If the user has already provided consent, the dialog <strong>will not be shown again</strong>, and the process will complete instantly. </p>
+<h2 id="privacy-options">Privacy Options</h2>
+<p>Applications commonly provide a privacy settings option that allows users to review or change their choices after the initial consent flow.</p>
+<p>Add a <strong>Privacy Options</strong> button to an appropriate location, such as the application's settings, account, legal, or privacy menu.</p>
+<p>Before displaying this button, use <strong>Get Privacy Options Requirement Status</strong>.</p>
+<p>The function can return:</p>
+<ul>
+<li><strong>Unknown</strong> — the requirement has not been determined yet.</li>
+<li><strong>Required</strong> — the application should provide a Privacy Options button.</li>
+<li><strong>Not Required</strong> — a privacy options entry point is not required for the current user.</li>
+</ul>
 <div align="center">
-  <img src="../assets/consent&privacy/consent&privacy_request.png" width="250">
+  <img src="../assets/consent&privacy/consent&privacy_formstatus.png"
+       style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<h3 id="parameters">Parameters</h3>
-<h4 id="1-under-age-of-consent">1. Under Age Of Consent</h4>
-<p>An optional parameter that marks the user as being under the age of consent. If enabled, <strong>the consent dialog will not appear</strong>, and <strong>personalized ads will be disabled automatically</strong>. Use this setting only in specific cases — for example, if your app includes its own <strong>age verification</strong> system.   </p>
-<h4 id="2-on-completed">2. On Completed</h4>
-<p>Called when the consent process has finished successfully. You can start showing personalized ads from this point. The callback returns an <a href="../../object_definitions/enumerations/#econsentstatus"><code>EConsentStatus</code></a> value.</p>
-<h4 id="3-on-failure">3. On Failure</h4>
-<p>Called if the consent form fails to load or display. This callback returns an <a href="../../object_definitions/enumerations/#eformerrorcode"><code>EFormErrorCode</code></a> value describing the reason for failure. Use it to log the error and take appropriate action — for example, retry showing the form or return to the main menu.    </p>
-<hr />
-<h2 id="force-consent-form">Force Consent Form</h2>
-<p>This function displays the <strong>User Messaging Platform (UMP)</strong> consent dialog <strong>even if the user has already given consent</strong>. It’s typically used in a <strong>Settings</strong> or <strong>Privacy</strong> menu where players can manually review or change their consent preferences. </p>
-<p>Unlike the standard <code>Request Consent Form</code>, this function always forces the consent window to appear, regardless of previous choices.</p>
+<p>Check this status after <strong>Request Consent</strong> has completed.</p>
+<p>When the status is <strong>Required</strong>, display the button and call <strong>Show Privacy Options Form</strong> when the user selects it.</p>
 <div align="center">
-  <img src="../assets/consent&privacy/consent&privacy_force.png" width="200">
+  <img src="../assets/consent&privacy/consent&privacy_showprivacyoptions.png"
+       style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<h3 id="parameters_1">Parameters</h3>
-<h4 id="1-on-completed">1. On Completed</h4>
-<p>Called when the consent form has been displayed and completed successfully. You can continue with loading ads or update UI elements if needed.</p>
-<h4 id="3-on-failure_1">3. On Failure</h4>
-<p>Called if the consent form fails to load or display. This callback returns an <a href="../../object_definitions/enumerations/#eformerrorcode"><code>EFormErrorCode</code></a> value describing the reason for failure. Use it to log the error and take appropriate action — for example, retry showing the form or return to the main menu.  </p>
+<p>After the form closes, Google Mobile Ads applies the updated privacy choices to future ad requests.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Show Privacy Options Form</strong> is not a replacement for the initial consent flow.</p>
+<p>Use <strong>Request Consent</strong> during application startup. Use <strong>Show Privacy Options Form</strong> only when the user chooses to review or change their privacy settings.</p>
+</div>
 <hr />
-<h2 id="is-consent-given">Is Consent Given</h2>
-<p>This function checks whether the user has already provided consent for personalized ads. It’s useful when you want to confirm consent status before attempting to load or show ads.  </p>
-<p>If the result is <strong>true</strong>, the user has granted consent and personalized ads can be displayed.<br />
-If <strong>false</strong>, only non-personalized or limited ads should be shown until consent is obtained.</p>
+<h2 id="age-restricted-treatment-for-ad-requests">Age-Restricted Treatment for Ad Requests</h2>
+<p><strong>Set Age Restricted Treatment</strong> configures the age-related treatment applied to Google Mobile Ads requests.</p>
+<p>Call this function before initializing AdMob.</p>
+<p>Available values are:</p>
+<ul>
+<li><strong>Unspecified</strong> — no specific age-related treatment is applied.</li>
+<li><strong>Child</strong> — ad requests receive child treatment.</li>
+<li><strong>Teen</strong> — ad requests receive teen treatment.</li>
+</ul>
+<p>Use <strong>Child</strong> or <strong>Teen</strong> only when your application has determined that the corresponding treatment applies. Otherwise, leave the value set to <strong>Unspecified</strong>.</p>
 <div align="center">
-  <img src="../assets/consent&privacy/consent&privacy_isgiven.png" width="200">
+  <img src="../assets/consent&privacy/consent&privacy_agerestricted.png"
+       style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<h3 id="return-value">Return Value</h3>
-<p>A boolean value indicating whether user consent has been given.<br />
-- <strong>true</strong> — the user has accepted personalized ads<br />
-- <strong>false</strong> — the user has declined or not yet provided consent  </p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Under Age Of Consent</strong> and <strong>Set Age Restricted Treatment</strong> are separate settings.</p>
+<p><strong>Under Age Of Consent</strong> affects how UMP handles the consent request.</p>
+<p><strong>Set Age Restricted Treatment</strong> affects how Google Mobile Ads processes subsequent ad requests.</p>
+</div>
+<p>Depending on your application and audience, you may need to configure one or both settings.</p>
 <hr />
-<h2 id="get-consent-status">Get Consent Status</h2>
-<p>This function returns the current <strong>User Messaging Platform (UMP)</strong> consent status as an enum.<br />
-Unlike <strong>Is Consent Given</strong>, which only reports a yes/no result, this function provides the <strong>exact consent state</strong> returned by Google’s UMP system.</p>
-<p>Use this function when you need more detailed logic, such as determining whether the consent form should be shown, checking if consent is required, or handling custom UI flows.</p>
+<h2 id="checking-the-current-state">Checking the Current State</h2>
+<p>The plugin provides several functions for checking the current UMP state:</p>
+<ul>
+<li><strong>Can Request Ads</strong> — returns whether the current UMP privacy state allows the application to proceed with AdMob initialization and ad requests.</li>
+<li><strong>Get Consent Status</strong> — returns the current UMP consent status.</li>
+<li><strong>Get Privacy Options Requirement Status</strong> — returns whether the application should provide a Privacy Options button.</li>
+</ul>
+<p>For applications that use the UMP consent flow, <strong>Can Request Ads</strong> is the main result used to decide when to proceed with advertising requests.</p>
+<p>Do not replace it with a direct check such as <code>Consent Status == Obtained</code>. Ads may also be available when consent is <strong>Not Required</strong>.</p>
+<p>Use <strong>Get Consent Status</strong> mainly for diagnostics, development logs, or custom application UI.</p>
+<hr />
+<h2 id="testing-the-consent-flow">Testing the Consent Flow</h2>
+<p>Use <strong>Reset Consent State</strong> during development when you need to test the first-time consent flow again.</p>
 <div align="center">
-  <img src="../assets/consent&privacy/consent&privacy_getconsentstatus.png" width="220">
+  <img src="../assets/consent&privacy/consent&privacy_reset.png"
+       style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<h3 id="parameters_2">Parameters</h3>
-<h4 id="1-return-value">1. Return Value</h4>
-<p>The function returns an <a href="../../object_definitions/enumerations/#econsentstatus"><code>EConsentStatus</code></a> value.<br />
-Each state corresponds directly to UMP’s internal status codes.</p>
+<p>After resetting the state, call <strong>Request Consent</strong> again.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Reset Consent State</strong> is intended only for development and testing.</p>
+<p>Do not use it as a user-facing privacy settings option in a published application.</p>
+</div>
 <hr />
-<h2 id="reset-consent-state">Reset Consent State</h2>
-<p>This function resets the stored consent information for the user. It clears the saved consent status so that the <strong>User Messaging Platform (UMP)</strong> dialog can be shown again on the next request.  </p>
-<p>This is useful for testing or when you want to provide players with an option to review or change their consent settings manually.</p>
+<h2 id="ios-app-tracking-transparency">iOS App Tracking Transparency</h2>
+<p>App Tracking Transparency (ATT) is an optional iOS permission required to access the device advertising identifier for tracking purposes.</p>
+<p>UMP and ATT handle different parts of the privacy flow:</p>
+<ul>
+<li>UMP handles consent requirements such as European and US state regulations.</li>
+<li>ATT handles Apple's system-level permission for advertising tracking on iOS.</li>
+</ul>
+<p>The normal UMP consent flow works without ATT. However, without ATT permission, access to the advertising identifier is restricted, which may reduce advertising personalization and measurement capabilities on iOS.</p>
+<p>Enable ATT only if your application intends to request Apple's tracking permission.</p>
+<h3 id="configure-the-plugin">Configure the Plugin</h3>
+<p>Open <strong>Project Settings &gt; Plugins &gt; PloxTools: Google AdMob</strong> and enable <strong>Enable App Tracking Transparency</strong>.</p>
+<p>You can customize <strong>Tracking Usage Description</strong> or keep the default value. This text is included in the iOS application and explains why tracking permission is requested.</p>
 <div align="center">
-  <img src="../assets/consent&privacy/consent&privacy_reset.png" width="200">
+  <img src="../assets/consent&privacy/consent&privacy_attsettings.png"
+       style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<h3 id="parameters_3">Parameters</h3>
-<p>This function does not have any input or output parameters. It simply resets all stored consent preferences. </p>
-<hr />
-<h2 id="configure-ad-mob-privacy">Configure Ad Mob Privacy</h2>
-<p>This is an <strong>optional</strong> configuration function that controls AdMob’s privacy and data processing behavior. Use it with caution — incorrect values may <strong>disable personalized ads</strong> and significantly reduce ad revenue.  </p>
-<p>This node is designed for apps that specifically target children or handle sensitive age-related content. If your app is not intended for children, you generally <strong>should not use</strong> this function.</p>
+<h3 id="configure-admob">Configure AdMob</h3>
+<p>Open <strong>Privacy &amp; messaging</strong> in AdMob. Under <strong>Transparency and control</strong>, create and publish the <strong>IDFA explainer</strong> for the iOS application.</p>
 <div align="center">
-  <img src="../assets/consent&privacy/consent&privacy_configureprivacy.png" width="250">
+  <img src="../assets/consent&privacy/consent&privacy_attcreation.png"
+       style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<h3 id="parameters_4">Parameters</h3>
-<h4 id="1-is-child-directed">1. Is Child Directed</h4>
-<p>Marks the app as directed toward children under the <strong>COPPA</strong> (Children’s Online Privacy Protection Act) regulation. When enabled, AdMob restricts ad targeting, disables personalized ads, and ensures only age-appropriate content is shown. Use this only if your app is clearly intended for a child audience. </p>
-<hr />
-<h4 id="2-is-under-age-of-consent">2. Is Under Age Of Consent</h4>
-<p>Disables personalized ads for users who are considered under the age of consent according to <strong>GDPR</strong> or <strong>regional regulations</strong>. This does <strong>not block</strong> ad requests but forces all ads to be non-personalized. Unlike the same option in <strong>Request Consent Form</strong>, this parameter does <strong>not skip the consent dialog</strong> — it simply controls how ads are served afterward. </p>
-<hr />
-<h2 id="example">Example</h2>
-<p>In this example, AdMob is initialized first, followed by a <strong>consent form request</strong> using the <strong>Request Consent Form</strong> node. Once initialization is completed, the consent dialog is shown to the user, allowing them to choose whether they agree to receive <strong>personalized ads</strong> in accordance with <strong>GDPR</strong> and <strong>COPPA</strong>.  </p>
-<p>After the user responds, the <strong>On Consent Completed</strong> event triggers a <strong>Switch on EConsentStatus</strong> node that checks the user’s decision.  </p>
-<p>If the status is <strong>Obtained</strong>, personalized ads are enabled through a custom <strong>Show Personalized Ads</strong> function.  </p>
-<p>This node is used <strong>only as an example</strong> — the developer cannot directly control whether personalized ads are displayed. The ad personalization behavior depends entirely on the user’s consent status and is automatically handled by the <strong>Google Mobile Ads SDK</strong> once consent is granted.  </p>
-<div align="center">
-  <img src="../assets/consent&privacy/consent&privacy_example.png" width="670">
+<p>After both settings are configured, use the normal <strong>Request Consent</strong> flow before initializing AdMob. No separate Blueprint function is required to request ATT.</p>
+<p>When applicable, UMP displays the configured IDFA explainer before opening the iOS system tracking permission dialog.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Enabling ATT in the plugin settings does not configure the AdMob message automatically. The <strong>IDFA explainer</strong> must also be created and published for the correct iOS application in AdMob.</p>
 </div>
-
+<p>If ATT is disabled, the standard UMP consent flow remains available, but the iOS tracking permission dialog is not requested.</p>
+<p>Even when ATT is enabled, the dialog may not appear if the user has already made a tracking choice, the current system state does not allow the request, or no applicable IDFA explainer is published.</p>
 <hr />
-<h2 id="c-usage">C++ Usage</h2>
-<p>All consent and privacy functions are also available in C++. You can manage user consent, reset state, or adjust privacy flags directly through static methods of <code>UAdMobCPPLibrary</code>.  </p>
-<h3 id="requestconsentform">RequestConsentForm</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">UMyClass::RequestConsent</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">FOnConsentFormCompletedNative</span><span class="w"> </span><span class="n">OnCompleted</span><span class="p">;</span>
-<span class="w">    </span><span class="n">OnCompleted</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="n">EConsentStatus</span><span class="w"> </span><span class="n">Status</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consent form completed.&quot;</span><span class="p">));</span>
-<span class="w">    </span><span class="p">});</span>
-
-<span class="w">    </span><span class="n">FOnConsentFormFailedNative</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">;</span>
-<span class="w">    </span><span class="n">OnFailure</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="n">EFormErrorCode</span><span class="w"> </span><span class="n">Code</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FString</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Message</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consent form failed.&quot;</span><span class="p">));</span>
-<span class="w">    </span><span class="p">});</span>
-
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">bUnderAgeOfConsent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">    </span><span class="n">UAdMobCPPLibrary</span><span class="o">::</span><span class="n">RequestConsentForm</span><span class="p">(</span><span class="n">bUnderAgeOfConsent</span><span class="p">,</span><span class="w"> </span><span class="n">OnCompleted</span><span class="p">,</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr />
-<h3 id="forceconsentform">ForceConsentForm</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">UMyClass::ForceConsent</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">FOnConsentFormCompletedNative</span><span class="w"> </span><span class="n">OnCompleted</span><span class="p">;</span>
-<span class="w">    </span><span class="n">OnCompleted</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="n">EConsentStatus</span><span class="w"> </span><span class="n">Status</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consent updated.&quot;</span><span class="p">));</span>
-<span class="w">    </span><span class="p">});</span>
-
-<span class="w">    </span><span class="n">FOnConsentFormFailedNative</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">;</span>
-<span class="w">    </span><span class="n">OnFailure</span><span class="p">.</span><span class="n">BindLambda</span><span class="p">([](</span><span class="n">EFormErrorCode</span><span class="w"> </span><span class="n">Code</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FString</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Message</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Failed to show forced consent form.);</span>
-<span class="w">    </span><span class="p">});</span>
-
-<span class="w">    </span><span class="n">UAdMobCPPLibrary</span><span class="o">::</span><span class="n">ForceConsentForm</span><span class="p">(</span><span class="n">OnCompleted</span><span class="p">,</span><span class="w"> </span><span class="n">OnFailure</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr />
-<h3 id="isconsentgiven">IsConsentGiven</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">UMyGameInstance::CheckConsent</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">bHasConsent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UAdMobCPPLibrary</span><span class="o">::</span><span class="n">IsConsentGiven</span><span class="p">();</span>
-
-<span class="w">    </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Is consent given? %s&quot;</span><span class="p">),</span>
-<span class="w">        </span><span class="n">bHasConsent</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Yes&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;No&quot;</span><span class="p">));</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr />
-<h3 id="getconsentstatus">GetConsentStatus</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">UMyGameInstance::CheckConsentStatus</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">EConsentStatus</span><span class="w"> </span><span class="n">Status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UAdMobCPPLibrary</span><span class="o">::</span><span class="n">GetConsentStatus</span><span class="p">();</span>
-
-<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">Status</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">EConsentStatus</span><span class="o">::</span><span class="no">Obtained</span><span class="p">:</span>
-<span class="w">            </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consent Status: Obtained&quot;</span><span class="p">));</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">EConsentStatus</span><span class="o">::</span><span class="no">Required</span><span class="p">:</span>
-<span class="w">            </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consent Status: Required — form should be shown&quot;</span><span class="p">));</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">EConsentStatus</span><span class="o">::</span><span class="no">NotRequired</span><span class="p">:</span>
-<span class="w">            </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consent Status: Not Required&quot;</span><span class="p">));</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">EConsentStatus</span><span class="o">::</span><span class="no">Unknown</span><span class="p">:</span>
-<span class="w">        </span><span class="k">default</span><span class="o">:</span>
-<span class="w">            </span><span class="n">UE_LOG</span><span class="p">(</span><span class="n">LogTemp</span><span class="p">,</span><span class="w"> </span><span class="n">Log</span><span class="p">,</span><span class="w"> </span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;Consent Status: Unknown&quot;</span><span class="p">));</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr />
-<h3 id="resetconsentstate">ResetConsentState</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">UMyGameInstance::ResetConsent</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">UAdMobCPPLibrary</span><span class="o">::</span><span class="n">ResetConsentState</span><span class="p">();</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr />
-<h3 id="configureadmobprivacy">ConfigureAdMobPrivacy</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AdMobCPPLibrary.h&quot;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">UMyGameInstance::ConfigurePrivacy</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">bIsChildDirected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">bIsUnderAgeOfConsent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-
-<span class="w">    </span><span class="n">UAdMobCPPLibrary</span><span class="o">::</span><span class="n">ConfigureAdMobPrivacy</span><span class="p">(</span><span class="n">bIsChildDirected</span><span class="p">,</span><span class="w"> </span><span class="n">bIsUnderAgeOfConsent</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<h2 id="next-steps">Next Steps</h2>
+<p>When using UMP, continue with the standard advertising workflow described in <a href="../basic_usage/">Basic Usage</a> after the consent flow has completed and <strong>Can Request Ads</strong> returns <code>true</code>.</p>
+<p>Use <a href="../testing_ads/">Testing</a> for official Android and iOS test Ad Unit IDs and additional testing guidance.</p>
+<p>For format-specific loading, display behavior, callbacks, and settings, continue with the corresponding ad format documentation.</p>
 
 
 
