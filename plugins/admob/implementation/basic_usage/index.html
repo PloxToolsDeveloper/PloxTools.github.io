@@ -7615,7 +7615,7 @@
 <h2 id="initialize-admob">Initialize AdMob</h2>
 <p>Call <strong>Initialize AdMob</strong> once when the application starts.</p>
 <p>Explicit initialization prepares the Google Mobile Ads SDK and any enabled mediation adapters before the first ad request. It also provides a callback that confirms when the initialization process has completed.</p>
-<p>On Android, the SDK may initialize automatically when the first ad is loaded. However, calling <strong>Initialize AdMob</strong> provides a consistent workflow across Android and iOS and avoids performing initialization work during the first ad request.</p>
+<p>The Google Mobile Ads SDK may initialize automatically when the first ad is loaded. However, calling <strong>Initialize AdMob</strong> explicitly provides a consistent workflow across Android and iOS and avoids performing initialization work during the first ad request.</p>
 <p>You do not need to call <strong>Initialize AdMob</strong> before every ad load. Call it only once per application session.</p>
 <p>A suitable place is startup logic that runs once, such as the <strong>Begin Play</strong> event of your main menu or another persistent object created when the application starts.</p>
 <div align="center">
