@@ -8949,7 +8949,7 @@
 <tr>
 <td><strong>Mode</strong></td>
 <td><a href="../enumerations/#ethirdpersoncamerasplinemode"><code>EThirdPersonCameraSplineMode</code></a></td>
-<td>Determines whether the spline uses time-based playback or tethered movement.</td>
+<td>Determines whether the spline uses Timed, Tethered, or Manual movement.</td>
 </tr>
 <tr>
 <td><strong>Focus Owner</strong></td>
@@ -8997,29 +8997,39 @@
 <td>Minimum distance the camera should maintain from the player for distance-constrained tether types.</td>
 </tr>
 <tr>
-<td><strong>Enable Tethered Rotation Soft Lock</strong></td>
+<td><strong>Enable Rotation Soft Lock</strong></td>
 <td><code>bool</code></td>
-<td>Enables limited player-controlled rotation offsets while in Tethered mode.</td>
+<td>Enables limited player-controlled camera rotation relative to the spline's base rotation in Timed, Tethered, and Manual modes.</td>
 </tr>
 <tr>
-<td><strong>Tethered Rotation Yaw Limit</strong></td>
-<td><code>float</code></td>
-<td>Maximum yaw offset allowed on top of spline camera rotation while tethered soft lock is enabled.</td>
+<td><strong>Allow Rotation During Ease In</strong></td>
+<td><code>bool</code></td>
+<td>If enabled, player-controlled rotation is available while blending onto the spline. If disabled, manual rotation becomes available after Ease In is complete.</td>
 </tr>
 <tr>
-<td><strong>Tethered Rotation Pitch Limit</strong></td>
+<td><strong>Rotation Yaw Limit</strong></td>
 <td><code>float</code></td>
-<td>Maximum pitch offset allowed on top of spline camera rotation while tethered soft lock is enabled.</td>
+<td>Maximum manual yaw offset allowed relative to the spline's base camera rotation.</td>
 </tr>
 <tr>
-<td><strong>Tethered Rotation Return Speed</strong></td>
+<td><strong>Rotation Pitch Limit</strong></td>
 <td><code>float</code></td>
-<td>Speed at which manual tethered rotation returns back to zero after input stops.</td>
+<td>Maximum manual pitch offset allowed relative to the spline's base camera rotation.</td>
 </tr>
 <tr>
-<td><strong>Tethered Rotation Follow Speed</strong></td>
+<td><strong>Rotation Return Speed</strong></td>
 <td><code>float</code></td>
-<td>Speed at which visible camera rotation follows the internally tracked manual tethered rotation offset.</td>
+<td>Speed at which the manual rotation offset returns toward the spline's base rotation after look input stops. Set to <code>0</code> to keep the current offset.</td>
+</tr>
+<tr>
+<td><strong>Rotation Follow Speed</strong></td>
+<td><code>float</code></td>
+<td>Speed at which visible camera rotation follows the tracked manual rotation offset. Higher values are more responsive, while lower values produce softer movement.</td>
+</tr>
+<tr>
+<td><strong>Rotation Inertia Damping</strong></td>
+<td><code>float</code></td>
+<td>Controls how quickly rotational momentum fades when Ease Out begins. Higher values stop rotation faster. Set to <code>0</code> to disable Ease Out rotation inertia.</td>
 </tr>
 </tbody>
 </table>

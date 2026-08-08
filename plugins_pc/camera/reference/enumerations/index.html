@@ -7739,7 +7739,7 @@
 <h2 id="spline">Spline</h2>
 <h3 id="ethirdpersoncamerasplinemode">EThirdPersonCameraSplineMode</h3>
 <p>Defines how the camera moves along a spline.</p>
-<p>This enumeration controls whether spline playback is driven by time or by the character's projected position along the spline.</p>
+<p>This enumeration controls whether spline movement is driven by time, by the character's projected position, or by a manually controlled spline position.</p>
 <table>
 <thead>
 <tr>
@@ -7755,6 +7755,10 @@
 <tr>
 <td><strong>Tethered</strong></td>
 <td>Camera position is driven by the character location projected onto the spline.</td>
+</tr>
+<tr>
+<td><strong>Manual</strong></td>
+<td>Camera position is controlled manually using the <code>Current Spline Position</code> property on the spline actor.</td>
 </tr>
 </tbody>
 </table>

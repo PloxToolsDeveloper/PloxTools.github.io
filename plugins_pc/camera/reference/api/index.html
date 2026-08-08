@@ -7244,6 +7244,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Spline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spline-actor-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spline Actor Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -7582,6 +7597,21 @@
       Spline
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Spline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spline-actor-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spline Actor Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -8224,6 +8254,44 @@
 <td>-</td>
 <td><code>bool</code></td>
 <td>Returns <code>true</code> if a camera spline is currently active or in the process of stopping.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spline-actor-control">Spline Actor Control</h3>
+<p>These functions are called on the <code>ThirdPersonCameraSplineActor</code> and are used to control spline position directly in Manual mode.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Parameters</th>
+<th>Return / Callback</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Set Current Spline Position</strong></td>
+<td><code>NewPosition</code> (<code>float</code>)</td>
+<td>-</td>
+<td>Sets the normalized camera position along the spline immediately. Values are clamped between <code>0</code> and <code>1</code>. Any active spline position transition is stopped.</td>
+</tr>
+<tr>
+<td><strong>Move To Spline Position</strong></td>
+<td><code>TargetPosition</code> (<code>float</code>), <code>TransitionDuration</code> (<code>float</code>), <code>TransitionCurve</code> (<code>UCurveFloat*</code>, optional)</td>
+<td>-</td>
+<td>Smoothly moves the camera from the current spline position to the target position over the specified duration. If no curve is provided, a smooth start and end are applied automatically. The optional curve is evaluated using normalized time from <code>0</code> to <code>1</code>.</td>
+</tr>
+<tr>
+<td><strong>Stop Spline Position Transition</strong></td>
+<td>-</td>
+<td>-</td>
+<td>Stops an active spline position transition and keeps the camera at its current spline position.</td>
+</tr>
+<tr>
+<td><strong>Is Spline Position Transition Active</strong></td>
+<td>-</td>
+<td><code>bool</code></td>
+<td>Returns <code>true</code> while <strong>Move To Spline Position</strong> is actively changing the current spline position.</td>
 </tr>
 </tbody>
 </table>
