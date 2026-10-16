@@ -1398,9 +1398,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#google-sign-in" class="md-nav__link">
+  <a href="#google-sign-in-android" class="md-nav__link">
     <span class="md-ellipsis">
-      Google Sign-In
+      Google Sign-In (Android)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-in-with-apple-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sign in with Apple (iOS)
     </span>
   </a>
   
@@ -8040,9 +8049,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#google-sign-in" class="md-nav__link">
+  <a href="#google-sign-in-android" class="md-nav__link">
     <span class="md-ellipsis">
-      Google Sign-In
+      Google Sign-In (Android)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-in-with-apple-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sign in with Apple (iOS)
     </span>
   </a>
   
@@ -8190,9 +8208,8 @@
 </ul>
 <p>If sign-in fails, the failure callback can be used to handle network or configuration errors.</p>
 <hr />
-<h2 id="google-sign-in">Google Sign-In</h2>
-<p>Google Sign-In allows users to authenticate using their Google account.</p>
-<p>This is one of the most common and reliable authentication methods for mobile games, as most Android users already have a Google account configured on their device.</p>
+<h2 id="google-sign-in-android">Google Sign-In (Android)</h2>
+<p>Google Sign-In allows Android users to authenticate using their Google account.</p>
 <p>Typical use cases:</p>
 <ul>
 <li>converting a guest (anonymous) user into a permanent account  </li>
@@ -8206,10 +8223,11 @@
 <li>the user receives a stable and permanent UID  </li>
 <li>the account can be safely used across sessions and devices  </li>
 </ul>
-<p>Google Sign-In can be used in two main scenarios:</p>
+<p>Google Sign-In can be used in three main scenarios:</p>
 <ul>
 <li><strong>Direct sign-in</strong> for new or returning users  </li>
-<li><strong>Account linking</strong>, where an anonymous user is upgraded to a Google-backed account without losing data  </li>
+<li><strong>Account linking</strong>, where an existing user is linked to a Google account  </li>
+<li><strong>Reauthentication</strong> before sensitive account operations  </li>
 </ul>
 <div align="center">
   <img src="../../assets/authentication/firebase_authentication_google.png" width="600">
@@ -8217,9 +8235,28 @@
 
 <p>Important notes:</p>
 <ul>
-<li>Google Sign-In requires SHA-1 and SHA-256 fingerprints to be configured in the Firebase Console</li>
-<li>Google Sign-In can also be used for reauthentication when required  </li>
+<li>Google Sign-In is supported on Android.</li>
+<li>Enable the Google provider in <strong>Firebase Console → Authentication → Sign-in method</strong>.</li>
+<li>Register the required SHA-1 and SHA-256 certificate fingerprints for your Android application in the Firebase Console.</li>
 </ul>
+<hr />
+<h2 id="sign-in-with-apple-ios">Sign in with Apple (iOS)</h2>
+<p>On iOS, the plugin supports Firebase Authentication through <strong>Sign in with Apple</strong>.</p>
+<p>The <strong>Sign In With Apple</strong> node handles the native Apple authorization flow and uses the returned Apple credentials to authenticate the user with Firebase.</p>
+<p>It can be used for:</p>
+<ul>
+<li>direct sign-in for new or returning users  </li>
+<li>linking an Apple account to the currently authenticated Firebase user  </li>
+<li>reauthentication before sensitive account operations  </li>
+</ul>
+<p>Before using Sign in with Apple:</p>
+<ol>
+<li>Enable <strong>Sign in with Apple</strong> for your application's App ID in the Apple Developer portal.</li>
+<li>Make sure the iOS application is signed with the <strong>Sign in with Apple</strong> capability.</li>
+<li>Enable the <strong>Apple</strong> provider in <strong>Firebase Console → Authentication → Sign-in method</strong> and complete the required Apple provider configuration.</li>
+</ol>
+<p>After setup, use <strong>Sign In With Apple</strong> in the same way as the other authentication nodes. The success callback returns the Firebase User ID. If the user cancels the Apple authorization dialog, the failure callback is triggered with the <code>Cancelled</code> authentication error.</p>
+<p>No additional Apple Sign-In SDK needs to be added to the Unreal Engine project.</p>
 <hr />
 <h2 id="email-and-password-authentication">Email and Password Authentication</h2>
 <p>Email and password authentication provides a traditional account system similar to classic web or PC applications.</p>
@@ -8252,7 +8289,7 @@
 <ul>
 <li>email verification is optional but recommended for permanent accounts  </li>
 <li>some sensitive operations (email/password update, account deletion) may require recent reauthentication  </li>
-<li>email/password accounts can later be linked with Google or other providers  </li>
+<li>email/password accounts can later be linked with a supported platform provider  </li>
 </ul>
 <p>Email-based authentication works well for projects that need full control over account lifecycle and user credentials.</p>
 <hr />
@@ -8315,8 +8352,9 @@
 <p>If such an operation fails due to authentication age, the user must reauthenticate.</p>
 <p>Supported reauthentication methods:</p>
 <ul>
-<li>email and password  </li>
-<li>Google Sign-In  </li>
+<li>email and password — Android and iOS  </li>
+<li>Google Sign-In — Android  </li>
+<li>Sign in with Apple — iOS  </li>
 </ul>
 <p>Reauthentication does not create a new session or user.<br />
 It only refreshes the security credentials of the current user.</p>
@@ -8331,8 +8369,9 @@ It only refreshes the security credentials of the current user.</p>
 </ul>
 <p>Supported linking methods:</p>
 <ul>
-<li>email and password  </li>
-<li>Google account  </li>
+<li>email and password — Android and iOS  </li>
+<li>Google account — Android  </li>
+<li>Apple account — iOS  </li>
 </ul>
 <p>After linking succeeds:</p>
 <ul>
@@ -8409,8 +8448,8 @@ It only refreshes the security credentials of the current user.</p>
 <p>This pattern is commonly used for explicit logout flows or account switching scenarios, ensuring that no stale user data remains active after the session ends.</p>
 <hr />
 <h2 id="summary">Summary</h2>
-<p>Firebase Authentication provides a flexible and reliable way to manage user identity in Unreal Engine projects.</p>
-<p>By using anonymous sign-in as a default entry point and adding optional authentication methods when needed, you can support both casual and persistent user experiences while keeping authentication logic simple and scalable.</p>
+<p>Firebase Authentication provides a flexible and reliable way to manage user identity in Unreal Engine projects on Android and iOS.</p>
+<p>By using anonymous sign-in as a default entry point and adding email/password or the platform-specific sign-in provider when needed, you can support both casual and persistent user experiences while keeping authentication logic simple and scalable.</p>
 
 
 

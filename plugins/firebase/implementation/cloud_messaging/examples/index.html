@@ -1506,6 +1506,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#requesting-notification-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requesting Notification Permission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ios-push-notification-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      iOS Push Notification Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#subscribing-to-a-topic" class="md-nav__link">
     <span class="md-ellipsis">
       Subscribing to a Topic
@@ -1530,9 +1548,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-notification-permission-android-13" class="md-nav__link">
+  <a href="#receiving-messages-in-the-game" class="md-nav__link">
     <span class="md-ellipsis">
-      Requesting Notification Permission (Android 13+)
+      Receiving Messages in the Game
     </span>
   </a>
   
@@ -7956,6 +7974,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#requesting-notification-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requesting Notification Permission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ios-push-notification-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      iOS Push Notification Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#subscribing-to-a-topic" class="md-nav__link">
     <span class="md-ellipsis">
       Subscribing to a Topic
@@ -7980,9 +8016,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-notification-permission-android-13" class="md-nav__link">
+  <a href="#receiving-messages-in-the-game" class="md-nav__link">
     <span class="md-ellipsis">
-      Requesting Notification Permission (Android 13+)
+      Receiving Messages in the Game
     </span>
   </a>
   
@@ -8024,20 +8060,43 @@
 
 <h1 id="cloud-messaging-examples">Cloud Messaging Examples</h1>
 <p>Firebase Cloud Messaging is most commonly used to <strong>subscribe users to topics</strong> and deliver push notifications sent from the Firebase Console. For basic notification workflows, manual token handling or advanced message processing is usually not required.</p>
-<p>After subscribing to a topic, notifications will be delivered <strong>even if the application is closed or the device is locked</strong>.</p>
-<ul>
-<li>When the game is <strong>not running or in the background</strong>, notifications are shown by the operating system as standard system notifications.</li>
-<li>When the game is <strong>running in the foreground</strong>, system notifications are not displayed automatically. In this case, messages can be received in-game using <strong>Listen Cloud Messaging</strong> and handled manually (for example, by showing a custom popup or updating UI).</li>
-</ul>
+<p>Notification delivery depends on the current application state and platform behavior. When the game is running, incoming messages can also be received through <strong>Listen Cloud Messaging</strong> and handled in-game.</p>
 <p>All examples below are shown using Blueprint nodes. Firebase is assumed to be already initialized.</p>
 <hr />
+<h2 id="requesting-notification-permission">Requesting Notification Permission</h2>
+<p>Use <strong>Request Cloud Messaging Notification Permission</strong> before relying on push notifications.</p>
+<p>Platform behavior:</p>
+<ul>
+<li><strong>iOS:</strong> Displays the system notification permission prompt. If permission is granted, the plugin automatically registers the application for remote notifications.</li>
+<li><strong>Android 13+ (API level 33+):</strong> Requests the <code>android.permission.POST_NOTIFICATIONS</code> runtime permission.</li>
+<li><strong>Android 12 and lower:</strong> No runtime notification permission is required.</li>
+</ul>
+<p>The plugin already declares the required Android permission, so you do not need to use Unreal Engine's separate Android permission nodes for Cloud Messaging.</p>
+<p>It is generally best to request notification permission at a point where the user can understand why notifications are being enabled, rather than repeatedly requesting it during gameplay.</p>
+<hr />
+<h2 id="ios-push-notification-setup">iOS Push Notification Setup</h2>
+<p>Firebase Cloud Messaging on iOS uses <strong>Apple Push Notification service (APNs)</strong>. The normal Firebase iOS setup with <code>GoogleService-Info.plist</code> is required, but push notifications also need Apple-side configuration.</p>
+<p>Before using Cloud Messaging on iOS:</p>
+<ol>
+<li>Make sure the iOS Bundle ID registered in Firebase matches the Bundle ID used by your Unreal Engine project.</li>
+<li>In your Apple Developer account, enable <strong>Push Notifications</strong> for the application's App ID.</li>
+<li>Make sure the packaged application is signed with the Push Notifications capability and contains the <code>aps-environment</code> entitlement.</li>
+<li>Create an APNs Authentication Key (<code>.p8</code>) in the Apple Developer portal, or use another APNs credential supported by Firebase.</li>
+<li>In the Firebase Console, open <strong>Project Settings → Cloud Messaging</strong> and configure the APNs credentials for your iOS application. When using an APNs Authentication Key, provide the key together with its <strong>Key ID</strong> and your Apple <strong>Team ID</strong>.</li>
+<li>After Firebase has been initialized in the game, call <strong>Request Cloud Messaging Notification Permission</strong>.</li>
+</ol>
+<p>The plugin handles APNs registration and passes the APNs device token to Firebase Messaging automatically. You do not need to add native iOS notification code manually.</p>
+<blockquote>
+<p>Apple Push Notifications require the appropriate Apple Developer capabilities and provisioning. This setup cannot be completed using only Firebase configuration.</p>
+</blockquote>
+<hr />
 <h2 id="subscribing-to-a-topic">Subscribing to a Topic</h2>
-<p>The most common Cloud Messaging use case is subscribing a user to one or more <strong>topics</strong>. Once subscribed, the user will receive all notifications sent to that topic from the Firebase Console or backend services.</p>
+<p>The most common Cloud Messaging use case is subscribing a user to one or more <strong>topics</strong>. Once subscribed, the user can receive notifications sent to that topic from the Firebase Console or backend services.</p>
 <p>Topic subscriptions are usually performed:</p>
 <ul>
-<li>on first application launch  </li>
-<li>after user login or profile creation  </li>
-<li>after the user agrees to receive notifications  </li>
+<li>on first application launch</li>
+<li>after user login or profile creation</li>
+<li>after the user agrees to receive notifications</li>
 </ul>
 <h3 id="example-subscribing-to-a-global-topic">Example: Subscribing to a Global Topic</h3>
 <p>In this example, the user is subscribed to multiple Cloud Messaging topics based on their account state.</p>
@@ -8049,39 +8108,40 @@
 
 <p>This pattern enables flexible and scalable notification targeting:</p>
 <ul>
-<li><code>global</code> topics for messages sent to all users  </li>
-<li>additional topics for specific user segments (for example, premium users)  </li>
+<li><code>global</code> topics for messages sent to all users</li>
+<li>additional topics for specific user segments (for example, premium users)</li>
 </ul>
-<p>If a subscription succeeds, the user will start receiving notifications sent to that topic.<br />
+<p>If a subscription succeeds, the user will start receiving notifications sent to that topic.
 If a subscription fails, the failure callback can be used to log the error or retry the operation.</p>
 <p>Using topic-based subscriptions like this avoids the need for manual token management and keeps notification logic simple and maintainable.</p>
 <hr />
-<h2 id="requesting-notification-permission-android-13">Requesting Notification Permission (Android 13+)</h2>
-<p>On <strong>Android 13 and higher (API level 33+)</strong>, push notifications require explicit user permission. Without this permission, notifications will <strong>not be displayed</strong>, even if Cloud Messaging is correctly configured.</p>
-<p>This permission is <strong>not handled by Firebase</strong> and must be requested using Unreal Engine’s built-in Android permission system.</p>
-<p>Required Permission: <code>android.permission.POST_NOTIFICATIONS</code></p>
-<p>Use the standard Unreal Engine Blueprint node <strong>Request Android Permissions</strong> to request this permission before subscribing the user to a topic.</p>
-<div align="center">
-  <img src="../../assets/cloud_messaging/firebase_cloud_messaging_permission.png" width="400">
-</div>
-
-<p>It is recommended to request notification permission:</p>
+<h2 id="receiving-messages-in-the-game">Receiving Messages in the Game</h2>
+<p>Use <strong>Listen Cloud Messaging</strong> when your game needs to react to incoming notification or data messages while it is running.</p>
+<p>The callback provides:</p>
 <ul>
-<li>on first launch  </li>
-<li>or before subscribing the user to Cloud Messaging topics  </li>
+<li>notification title</li>
+<li>notification body</li>
+<li>message data as JSON</li>
 </ul>
+<p>This is useful for custom in-game notifications, refreshing content, updating UI, or processing data messages received from your backend.</p>
 <hr />
 <h2 id="additional-notes">Additional Notes</h2>
 <ul>
-<li>Cloud Messaging tokens are generated automatically by Firebase and are used internally for message delivery  </li>
-<li>Automatic Cloud Messaging initialization is enabled by default and does not require manual configuration in most projects  </li>
-<li>Listening for incoming Cloud Messaging messages is only required when handling custom data messages or advanced workflows  </li>
+<li>Cloud Messaging tokens are generated automatically by Firebase and are used internally for message delivery.</li>
+<li>Automatic Cloud Messaging initialization is enabled by default and does not require manual configuration in most projects.</li>
+<li>If you store FCM tokens on your backend, use <strong>Listen Cloud Messaging New Token</strong> to detect token changes and update the stored value.</li>
+<li>Message behavior can differ between foreground, background, and terminated application states, especially between Android and iOS.</li>
 </ul>
-<p>For most projects, subscribing users to topics and requesting notification permission is sufficient to enable push notifications.</p>
 <hr />
 <h2 id="summary">Summary</h2>
-<p>Firebase Cloud Messaging provides a simple and reliable way to deliver push notifications to your users.</p>
-<p>By subscribing users to topics and ensuring notification permission is granted on modern Android versions, you can deliver announcements and updates without additional backend complexity.</p>
+<p>For a basic Cloud Messaging setup:</p>
+<ol>
+<li>Configure Firebase for the target platform.</li>
+<li>On iOS, complete the required APNs and Push Notifications capability setup.</li>
+<li>Request notification permission using <strong>Request Cloud Messaging Notification Permission</strong>.</li>
+<li>Subscribe the user to the required topics or use the FCM token for direct messaging.</li>
+</ol>
+<p>For most projects, this is sufficient to start receiving Firebase Cloud Messaging notifications on Android and iOS.</p>
 
 
 

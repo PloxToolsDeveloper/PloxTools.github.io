@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#frequently-asked-questions" class="md-skip">
+        <a href="#faq" class="md-skip">
           Skip to content
         </a>
       
@@ -2570,19 +2570,286 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#my-ide-highlights-the-plugin-code-in-red-and-doesnt-recognize-it-correctly" class="md-nav__link">
+  <a href="#installation-and-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      ❓ My IDE highlights the plugin code in red and doesn’t recognize it correctly
+      Installation and Configuration
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="❓ My IDE highlights the plugin code in red and doesn’t recognize it correctly">
+    <nav class="md-nav" aria-label="Installation and Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#how-to-fix" class="md-nav__link">
+  <a href="#firebase-initialization-fails" class="md-nav__link">
     <span class="md-ellipsis">
-      How to fix
+      Firebase initialization fails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-google-servicesjson-and-googleservice-infoplist" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between google-services.json and GoogleService-Info.plist?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-the-same-firebase-project-be-used-for-android-and-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can the same Firebase project be used for Android and iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-install-the-firebase-sdk-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to install the Firebase SDK manually?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ide-does-not-recognize-the-plugin-c-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      The IDE does not recognize the plugin C++ headers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-authentication-methods-are-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which authentication methods are supported?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-email-password-authentication-be-used-on-both-android-and-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can Email &amp; Password authentication be used on both Android and iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-google-sign-in-supported-on-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Google Sign-In supported on iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-sign-in-with-apple-supported-on-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Sign in with Apple supported on Android?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-sign-in-with-apple-fail-on-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does Sign in with Apple fail on iOS?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-messaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Messaging
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud Messaging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-request-notification-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to request notification permission?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-notifications-not-appearing-on-android-13-or-higher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why are notifications not appearing on Android 13 or higher?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-notifications-not-arriving-on-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why are notifications not arriving on iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-configure-apns-for-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to configure APNs for iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-the-fcm-token-empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is the FCM token empty?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-a-device-subscribe-to-multiple-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can a device subscribe to multiple topics?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firebase-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firebase Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firebase Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-all-firebase-services-require-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do all Firebase services require Authentication?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firestore-realtime-database-or-cloud-storage-returns-permission-denied" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firestore, Realtime Database, or Cloud Storage returns Permission Denied
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-the-plugin-configure-firebase-security-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Does the plugin configure Firebase Security Rules?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-analytics-crashlytics-remote-config-and-performance-monitoring-be-used-independently" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can Analytics, Crashlytics, Remote Config, and Performance Monitoring be used independently?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-and-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build and Production
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build and Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#does-the-plugin-use-the-same-blueprint-api-on-android-and-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Does the plugin use the same Blueprint API on Android and iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-separate-firebase-applications-for-android-and-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need separate Firebase applications for Android and iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-the-firebase-console-while-the-application-is-still-in-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use the Firebase Console while the application is still in development?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-should-i-check-before-publishing-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      What should I check before publishing the application?
     </span>
   </a>
   
@@ -7925,19 +8192,286 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#my-ide-highlights-the-plugin-code-in-red-and-doesnt-recognize-it-correctly" class="md-nav__link">
+  <a href="#installation-and-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      ❓ My IDE highlights the plugin code in red and doesn’t recognize it correctly
+      Installation and Configuration
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="❓ My IDE highlights the plugin code in red and doesn’t recognize it correctly">
+    <nav class="md-nav" aria-label="Installation and Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#how-to-fix" class="md-nav__link">
+  <a href="#firebase-initialization-fails" class="md-nav__link">
     <span class="md-ellipsis">
-      How to fix
+      Firebase initialization fails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-google-servicesjson-and-googleservice-infoplist" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between google-services.json and GoogleService-Info.plist?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-the-same-firebase-project-be-used-for-android-and-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can the same Firebase project be used for Android and iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-install-the-firebase-sdk-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to install the Firebase SDK manually?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ide-does-not-recognize-the-plugin-c-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      The IDE does not recognize the plugin C++ headers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-authentication-methods-are-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which authentication methods are supported?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-email-password-authentication-be-used-on-both-android-and-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can Email &amp; Password authentication be used on both Android and iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-google-sign-in-supported-on-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Google Sign-In supported on iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-sign-in-with-apple-supported-on-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Sign in with Apple supported on Android?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-sign-in-with-apple-fail-on-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does Sign in with Apple fail on iOS?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-messaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Messaging
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud Messaging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-request-notification-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to request notification permission?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-notifications-not-appearing-on-android-13-or-higher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why are notifications not appearing on Android 13 or higher?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-notifications-not-arriving-on-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why are notifications not arriving on iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-configure-apns-for-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to configure APNs for iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-the-fcm-token-empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is the FCM token empty?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-a-device-subscribe-to-multiple-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can a device subscribe to multiple topics?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firebase-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firebase Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firebase Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-all-firebase-services-require-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do all Firebase services require Authentication?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firestore-realtime-database-or-cloud-storage-returns-permission-denied" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firestore, Realtime Database, or Cloud Storage returns Permission Denied
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-the-plugin-configure-firebase-security-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Does the plugin configure Firebase Security Rules?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-analytics-crashlytics-remote-config-and-performance-monitoring-be-used-independently" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can Analytics, Crashlytics, Remote Config, and Performance Monitoring be used independently?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-and-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build and Production
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build and Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#does-the-plugin-use-the-same-blueprint-api-on-android-and-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Does the plugin use the same Blueprint API on Android and iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-separate-firebase-applications-for-android-and-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need separate Firebase applications for Android and iOS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-the-firebase-console-while-the-application-is-still-in-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use the Firebase Console while the application is still in development?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-should-i-check-before-publishing-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      What should I check before publishing the application?
     </span>
   </a>
   
@@ -7964,24 +8498,183 @@
 
 
 
-<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
-<h2 id="my-ide-highlights-the-plugin-code-in-red-and-doesnt-recognize-it-correctly">❓ My IDE highlights the plugin code in red and doesn’t recognize it correctly</h2>
-<p>This issue usually happens when Unreal Engine’s project files or intermediate caches haven’t been updated after adding a new plugin module.  </p>
-<h3 id="how-to-fix">How to fix</h3>
+<h1 id="faq">FAQ</h1>
+<p>This page covers common questions and issues related to Firebase configuration, initialization, authentication, Cloud Messaging, databases, storage, and production setup.</p>
+<p>For step-by-step setup instructions, see <a href="../../implementation/getting_started/">Getting Started</a>.</p>
+<hr />
+<h2 id="installation-and-configuration">Installation and Configuration</h2>
+<h3 id="firebase-initialization-fails">Firebase initialization fails</h3>
+<p>First, verify that the correct Firebase configuration file is assigned in the plugin settings.</p>
+<ul>
+<li><strong>Android:</strong> <code>google-services.json</code></li>
+<li><strong>iOS:</strong> <code>GoogleService-Info.plist</code></li>
+</ul>
+<p>Make sure the configuration file belongs to the Firebase app registered for the platform you are currently building.</p>
+<p>Also verify that the Android Package Name or iOS Bundle ID matches the application registered in Firebase.</p>
+<p>See <a href="../../implementation/getting_started/">Getting Started</a> and <a href="../../implementation/initialization/">Initialization</a> for the complete setup.</p>
+<hr />
+<h3 id="what-is-the-difference-between-google-servicesjson-and-googleservice-infoplist">What is the difference between <code>google-services.json</code> and <code>GoogleService-Info.plist</code>?</h3>
+<p>They are platform-specific Firebase configuration files.</p>
+<ul>
+<li><code>google-services.json</code> is used by Android.</li>
+<li><code>GoogleService-Info.plist</code> is used by iOS.</li>
+</ul>
+<p>If your project supports both platforms, register both an Android app and an iOS app inside your Firebase project and configure both files.</p>
+<hr />
+<h3 id="can-the-same-firebase-project-be-used-for-android-and-ios">Can the same Firebase project be used for Android and iOS?</h3>
+<p>Yes.</p>
+<p>A single Firebase project can contain separate Android and iOS applications.</p>
+<p>Each platform must still be registered separately and use its own configuration file and application identifier.</p>
+<hr />
+<h3 id="do-i-need-to-install-the-firebase-sdk-manually">Do I need to install the Firebase SDK manually?</h3>
+<p>No.</p>
+<p>The plugin includes and integrates the required Firebase dependencies for the supported Android and iOS services.</p>
+<p>Do not manually add another Firebase integration unless you specifically need functionality outside the plugin, as duplicate dependencies may cause build conflicts.</p>
+<hr />
+<h3 id="the-ide-does-not-recognize-the-plugin-c-headers">The IDE does not recognize the plugin C++ headers</h3>
+<p>Add <code>PloxToolsFirebase</code> to your project's <code>*.Build.cs</code> dependencies.</p>
+<p>After changing the module dependencies:</p>
 <ol>
-<li>Close Unreal Engine and your IDE.  </li>
-<li>In your project directory, <strong>delete these folders</strong>:  </li>
-<li><code>.vs</code> <em>(if you use Visual Studio)</em></li>
-<li><code>Binaries</code>  </li>
-<li><code>Intermediate</code>  </li>
-<li>Right-click your <code>.uproject</code> file and select <strong>“Generate Visual Studio project files”</strong>.  </li>
-<li>Reopen the project in your IDE (e.g., Visual Studio or Rider).  </li>
+<li>Regenerate the project files.</li>
+<li>Reopen the IDE.</li>
+<li>Rebuild the project.</li>
 </ol>
-<p>After this, the plugin’s C++ code will be properly recognized and highlighted.  </p>
-<blockquote>
-<p>💡 This process is completely safe — Unreal Engine will regenerate all required folders automatically.<br />
-It’s actually good practice to do this occasionally to refresh your project and clear outdated cache data.</p>
-</blockquote>
+<p>If the headers are still unresolved, remove the project's <code>Binaries</code> and <code>Intermediate</code> folders and regenerate the project files again.</p>
+<hr />
+<h2 id="authentication">Authentication</h2>
+<h3 id="which-authentication-methods-are-supported">Which authentication methods are supported?</h3>
+<p>The plugin supports:</p>
+<ul>
+<li><strong>Email &amp; Password</strong> on Android and iOS</li>
+<li><strong>Google Sign-In</strong> on Android</li>
+<li><strong>Sign in with Apple</strong> on iOS</li>
+</ul>
+<p>Other Firebase Authentication providers are not currently exposed by the plugin.</p>
+<hr />
+<h3 id="can-email-password-authentication-be-used-on-both-android-and-ios">Can Email &amp; Password authentication be used on both Android and iOS?</h3>
+<p>Yes.</p>
+<p>The same Email &amp; Password authentication API can be used on both supported platforms.</p>
+<p>Make sure the <strong>Email/Password</strong> provider is enabled in <strong>Firebase Console → Authentication → Sign-in method</strong>.</p>
+<hr />
+<h3 id="is-google-sign-in-supported-on-ios">Is Google Sign-In supported on iOS?</h3>
+<p>No.</p>
+<p>Google Sign-In is currently provided by the plugin on Android.</p>
+<p>For native social authentication on iOS, use <strong>Sign in with Apple</strong>.</p>
+<hr />
+<h3 id="is-sign-in-with-apple-supported-on-android">Is Sign in with Apple supported on Android?</h3>
+<p>No.</p>
+<p>Sign in with Apple is currently implemented for iOS.</p>
+<p>Android users can use Email &amp; Password or Google Sign-In.</p>
+<hr />
+<h3 id="why-does-sign-in-with-apple-fail-on-ios">Why does Sign in with Apple fail on iOS?</h3>
+<p>Sign in with Apple requires additional Apple-side configuration outside the plugin.</p>
+<p>Verify that:</p>
+<ul>
+<li>the application uses a paid Apple Developer Program account;</li>
+<li><strong>Sign in with Apple</strong> is enabled for the App ID;</li>
+<li>the required entitlement is included in the signed application;</li>
+<li>the Apple provider is enabled and configured in Firebase Authentication;</li>
+<li>the Bundle ID matches the Firebase iOS application.</li>
+</ul>
+<p>See the Authentication documentation for the complete setup.</p>
+<hr />
+<h2 id="cloud-messaging">Cloud Messaging</h2>
+<h3 id="do-i-need-to-request-notification-permission">Do I need to request notification permission?</h3>
+<p>Yes, when required by the operating system.</p>
+<p>Use <strong>Request Cloud Messaging Notification Permission</strong>.</p>
+<ul>
+<li><strong>iOS:</strong> the function requests notification authorization from the user.</li>
+<li><strong>Android 13+ (API 33+):</strong> the function requests <code>POST_NOTIFICATIONS</code>.</li>
+<li><strong>Android 12 and lower:</strong> no runtime notification permission is required.</li>
+</ul>
+<hr />
+<h3 id="why-are-notifications-not-appearing-on-android-13-or-higher">Why are notifications not appearing on Android 13 or higher?</h3>
+<p>Android 13+ requires the <code>POST_NOTIFICATIONS</code> runtime permission.</p>
+<p>Call <strong>Request Cloud Messaging Notification Permission</strong> and make sure the user grants permission before expecting notifications to appear.</p>
+<p>The plugin already declares the required permission in the Android manifest.</p>
+<hr />
+<h3 id="why-are-notifications-not-arriving-on-ios">Why are notifications not arriving on iOS?</h3>
+<p>iOS push notifications require additional Apple Push Notification service configuration.</p>
+<p>Verify that:</p>
+<ul>
+<li>Push Notifications are enabled for the App ID;</li>
+<li>the application is signed with a provisioning profile that includes the push notification entitlement;</li>
+<li>an APNs authentication key or certificate is configured in Firebase;</li>
+<li>notification permission has been granted by the user;</li>
+<li>the application is running on a real iOS device.</li>
+</ul>
+<p>The plugin handles Firebase Messaging integration, but Apple signing and APNs credentials must be configured for the project.</p>
+<hr />
+<h3 id="do-i-need-to-configure-apns-for-ios">Do I need to configure APNs for iOS?</h3>
+<p>Yes.</p>
+<p>Firebase Cloud Messaging uses Apple Push Notification service to deliver remote notifications to iOS devices.</p>
+<p>Configure an APNs authentication key or certificate in the Firebase Console under the iOS application's Cloud Messaging settings.</p>
+<hr />
+<h3 id="why-is-the-fcm-token-empty">Why is the FCM token empty?</h3>
+<p>The token may not be immediately available when the application starts.</p>
+<p>Make sure Firebase and Cloud Messaging are initialized and wait for token generation before relying on it.</p>
+<p>On iOS, APNs registration and the required Apple configuration must also complete successfully.</p>
+<hr />
+<h3 id="can-a-device-subscribe-to-multiple-topics">Can a device subscribe to multiple topics?</h3>
+<p>Yes.</p>
+<p>A device can subscribe to multiple Firebase Cloud Messaging topics.</p>
+<p>Use the topic subscription functions separately for each topic you want the device to receive.</p>
+<hr />
+<h2 id="firebase-services">Firebase Services</h2>
+<h3 id="do-all-firebase-services-require-authentication">Do all Firebase services require Authentication?</h3>
+<p>No.</p>
+<p>Authentication is only required when your Firebase configuration, Security Rules, or application logic requires an authenticated user.</p>
+<p>Services such as Analytics, Crashlytics, Remote Config, and Performance Monitoring can be used without signing the user in.</p>
+<p>Firestore, Realtime Database, and Cloud Storage access depends on the Security Rules configured in your Firebase project.</p>
+<hr />
+<h3 id="firestore-realtime-database-or-cloud-storage-returns-permission-denied">Firestore, Realtime Database, or Cloud Storage returns Permission Denied</h3>
+<p>This usually means the Firebase Security Rules do not allow the requested operation.</p>
+<p>Security Rules are configured in the Firebase Console and are not modified automatically by the plugin.</p>
+<p>Check:</p>
+<ul>
+<li>whether the user must be authenticated;</li>
+<li>whether the requested path is allowed;</li>
+<li>whether read and write permissions are configured correctly;</li>
+<li>whether the rules have been published.</li>
+</ul>
+<hr />
+<h3 id="does-the-plugin-configure-firebase-security-rules">Does the plugin configure Firebase Security Rules?</h3>
+<p>No.</p>
+<p>Firestore, Realtime Database, and Cloud Storage Security Rules belong to your Firebase backend configuration.</p>
+<p>The plugin only sends requests using the credentials and authentication state of the current application.</p>
+<hr />
+<h3 id="can-analytics-crashlytics-remote-config-and-performance-monitoring-be-used-independently">Can Analytics, Crashlytics, Remote Config, and Performance Monitoring be used independently?</h3>
+<p>Yes.</p>
+<p>You only need to use the Firebase services required by your project.</p>
+<p>After Firebase has been initialized, individual services can be used independently unless a specific workflow depends on another Firebase service.</p>
+<hr />
+<h2 id="build-and-production">Build and Production</h2>
+<h3 id="does-the-plugin-use-the-same-blueprint-api-on-android-and-ios">Does the plugin use the same Blueprint API on Android and iOS?</h3>
+<p>Yes, wherever the underlying Firebase functionality is equivalent.</p>
+<p>Most Blueprint and C++ functions are shared between Android and iOS.</p>
+<p>Platform-specific features such as Google Sign-In and Sign in with Apple are exposed separately where required.</p>
+<hr />
+<h3 id="do-i-need-separate-firebase-applications-for-android-and-ios">Do I need separate Firebase applications for Android and iOS?</h3>
+<p>Yes.</p>
+<p>Android and iOS should be registered as separate applications inside the same Firebase project.</p>
+<p>The Android app uses its Package Name and <code>google-services.json</code>, while the iOS app uses its Bundle ID and <code>GoogleService-Info.plist</code>.</p>
+<hr />
+<h3 id="can-i-use-the-firebase-console-while-the-application-is-still-in-development">Can I use the Firebase Console while the application is still in development?</h3>
+<p>Yes.</p>
+<p>Firebase projects and services can be configured and tested during development.</p>
+<p>You can inspect Authentication users, Analytics events, Firestore data, Realtime Database data, Storage files, Crashlytics reports, Remote Config values, and other Firebase data from the Firebase Console.</p>
+<hr />
+<h3 id="what-should-i-check-before-publishing-the-application">What should I check before publishing the application?</h3>
+<p>Before release:</p>
+<ol>
+<li>Verify that the correct Android Package Name and iOS Bundle ID are registered in Firebase.</li>
+<li>Verify that the correct Firebase configuration file is assigned for each platform.</li>
+<li>Confirm that Firebase Security Rules are appropriate for production.</li>
+<li>Confirm that required Authentication providers are enabled.</li>
+<li>For iOS Cloud Messaging, verify APNs configuration and push notification capabilities.</li>
+<li>For Sign in with Apple, verify Apple Developer and Firebase provider configuration.</li>
+<li>Test the packaged application on a real device before publishing.</li>
+</ol>
 
 
 

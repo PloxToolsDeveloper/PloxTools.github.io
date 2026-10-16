@@ -8226,7 +8226,7 @@
 <li>Call <strong>Host Steam Game</strong>.</li>
 <li>Select the map to host.</li>
 <li>Set the maximum player count and lobby type.</li>
-<li>Provide a multiplayer version and any optional custom lobby data.</li>
+<li>Optionally provide custom lobby data. The plugin automatically uses the <strong>Multiplayer Version</strong> configured in Project Settings.</li>
 <li>On success, the plugin has created the Steam Lobby and started the managed listen server.</li>
 <li>Other players can now discover, join, or be invited to the game.</li>
 </ol>
@@ -8244,8 +8244,9 @@
 <p>Games can also be joined through Steam invitations and Steam's <strong>Join Game</strong> flow.</p>
 <hr />
 <h2 id="multiplayer-version">Multiplayer Version</h2>
-<p>Each managed game uses a project-defined <strong>Multiplayer Version</strong> string.</p>
-<p>The host advertises this value when creating the game, and clients provide the version they expect when searching for or joining games.</p>
+<p>Each managed game uses one project-defined <strong>Multiplayer Version</strong> string, configured at <strong>Edit → Project Settings → Plugins → PloxTools: Steam Integration → Multiplayer → Connection → Multiplayer Version</strong>. The default value is <code>1</code>.</p>
+<p>The plugin automatically reads this setting when hosting a game, starting a game from an existing lobby, finding games, joining games, and automatically connecting existing lobby members. <strong>You do not pass Multiplayer Version into Blueprint nodes.</strong></p>
+<p>The host advertises its configured version in Steam Lobby metadata. Clients search for and connect to compatible managed games using their own configured version. If the versions do not match, the plugin prevents that connection through its managed multiplayer flow.</p>
 <p>This allows your project to prevent incompatible game versions from connecting to each other.</p>
 <p>For example, you can use values such as:</p>
 <ul>
@@ -8254,7 +8255,7 @@
 <li><code>Release_1</code></li>
 <li><code>Protocol_3</code></li>
 </ul>
-<p>The exact format is up to your project. What matters is that compatible clients and hosts use the same value.</p>
+<p>The exact format is up to your project. What matters is that compatible clients and hosts use the same value. Change it when an update introduces incompatible network or gameplay changes; it is independent of Unreal Engine <strong>Project Version</strong>.</p>
 <hr />
 <h2 id="join-in-progress">Join in Progress</h2>
 <p><strong>Host Steam Game</strong> creates a joinable managed lobby so other players can discover and join the hosted game.</p>
@@ -8276,7 +8277,8 @@
 <hr />
 <h2 id="starting-from-an-existing-lobby">Starting From an Existing Lobby</h2>
 <p>If your project already created or joined a Steam Lobby through the lower-level Lobbies feature, the host can use <strong>Start Steam Game From Current Lobby</strong>.</p>
-<p>This starts the managed Steam listen server using the current lobby instead of creating a new one.</p>
+<p>This starts the managed Steam listen server using the current lobby instead of creating a new one. <strong>Players who are already members of that lobby when the host starts the match are automatically connected to the managed game</strong>; they do not need to call <strong>Join Steam Game</strong> manually. Connection still depends on normal Steam networking and Multiplayer Version compatibility checks.</p>
+<p>The <strong>Allow Join In Progress</strong> parameter controls whether additional players can join the lobby after the match starts. It does not prevent existing lobby members from automatically connecting when the game is started.</p>
 <p>This is useful when your game has a custom pre-game lobby flow but still wants the Multiplayer feature to handle the actual Steam network connection and Unreal multiplayer session.</p>
 <hr />
 <h2 id="invites">Invites</h2>

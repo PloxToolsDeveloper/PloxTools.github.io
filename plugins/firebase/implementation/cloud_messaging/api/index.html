@@ -1529,6 +1529,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#notification-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notification Permission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#token-management" class="md-nav__link">
     <span class="md-ellipsis">
       Token Management
@@ -7941,6 +7950,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#notification-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notification Permission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#token-management" class="md-nav__link">
     <span class="md-ellipsis">
       Token Management
@@ -7993,8 +8011,28 @@
 
 
 <h1 id="cloud-messaging-api-reference">Cloud Messaging API Reference</h1>
-<p>This section documents all Firebase Cloud Messaging (FCM) Blueprint nodes provided by the plugin. These nodes allow you to manage FCM tokens, subscribe to messaging topics, control automatic initialization, and receive incoming push messages.</p>
+<p>This section documents all Firebase Cloud Messaging (FCM) Blueprint nodes provided by the plugin. These nodes allow you to request notification permission, manage FCM tokens, subscribe to messaging topics, control automatic initialization, and receive incoming push messages.</p>
 <p>All Cloud Messaging nodes require Firebase to be successfully initialized before use.</p>
+<hr />
+<h2 id="notification-permission">Notification Permission</h2>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Parameters</th>
+<th>Callbacks / Return</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Request Cloud Messaging Notification Permission</strong></td>
+<td>–</td>
+<td>–</td>
+<td>Requests notification permission for Firebase Cloud Messaging. On iOS, this displays the system notification permission prompt and registers the application for remote notifications if permission is granted. On Android 13+ (API level 33+), it requests <code>POST_NOTIFICATIONS</code>. On Android 12 and lower, no runtime notification permission is required.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="token-management">Token Management</h2>
 <table>

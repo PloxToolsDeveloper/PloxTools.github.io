@@ -8014,45 +8014,47 @@
 <p>Firebase services are designed to work together as a unified ecosystem, sharing user identity, project configuration, and analytics context across all modules. This makes Firebase especially suitable for live games and applications that require real-time data, remote control, user management, and post-release monitoring.</p>
 <hr />
 <h2 id="unreal-engine-plugin">Unreal Engine Plugin</h2>
-<p>The <strong>PloxTools: Google Firebase Complete</strong> plugin brings a complete and production-ready Firebase integration to Unreal Engine 5 with a strong focus on clarity, stability, and long-term maintainability. It exposes Firebase functionality through a clean Blueprint-first API while preserving full access for C++ users.</p>
-<p>The plugin provides a structured abstraction layer on top of the official Firebase Android SDK, handling initialization, lifecycle management, threading, and error translation internally. All Firebase callbacks are safely marshalled back to the game thread and exposed in a consistent Unreal-friendly way.</p>
-<p>The integration requires no manual Java, Gradle, or AndroidManifest edits. All required dependencies, permissions, services, and metadata are injected automatically during the build process.</p>
+<p>The <strong>PloxTools: Google Firebase Complete</strong> plugin brings Firebase integration to Unreal Engine 5 for <strong>Android and iOS</strong>, with a strong focus on clarity, stability, and long-term maintainability. It exposes Firebase functionality through a clean Blueprint-first API while preserving full access for C++ users.</p>
+<p>The plugin provides a structured abstraction layer on top of the official Firebase SDKs for Android and iOS, handling initialization, lifecycle management, threading, and error translation internally. Firebase callbacks are safely marshalled back to the game thread and exposed through a consistent Unreal-friendly API.</p>
+<p>Platform-specific integration is handled internally where possible, while project-specific configuration such as Firebase configuration files, Apple capabilities, and APNs setup remains under the control of the project.</p>
 <hr />
 <h2 id="architecture-overview">Architecture Overview</h2>
 <p>The plugin is built around a clear separation of responsibilities:</p>
 <ul>
-<li>Low-level native Firebase SDK integration handled internally  </li>
-<li>C++ manager layer responsible for request routing, callbacks, and error handling  </li>
-<li>Blueprint libraries providing a safe and ergonomic public API  </li>
-<li>Shared data structures used consistently across C++ and Blueprint workflows  </li>
+<li>Low-level native Firebase SDK integration handled internally</li>
+<li>C++ manager layer responsible for request routing, callbacks, and error handling</li>
+<li>Blueprint libraries providing a safe and ergonomic public API</li>
+<li>Shared data structures used consistently across C++ and Blueprint workflows</li>
 </ul>
 <p>Asynchronous operations support multiple simultaneous requests using request identifiers where required, allowing complex workflows without callback conflicts.</p>
+<p>The same public API is used across Android and iOS wherever the underlying Firebase service provides equivalent functionality. Platform-specific features, such as Google Sign-In on Android and Sign in with Apple on iOS, are exposed separately where required.</p>
 <hr />
 <h2 id="supported-firebase-services">Supported Firebase Services</h2>
 <p>The plugin provides integrated support for the following Firebase services:</p>
 <ul>
-<li>Firebase Core (Initialization and App Lifecycle)  </li>
-<li>Analytics  </li>
-<li>Authentication </li>
+<li>Firebase Core (Initialization and App Lifecycle)</li>
+<li>Analytics</li>
+<li>Authentication</li>
 <li>Cloud Messaging (FCM)</li>
-<li>Cloud Storage  </li>
+<li>Cloud Storage</li>
 <li>Crashlytics</li>
-<li>Firestore </li>
+<li>Firestore</li>
 <li>Performance Monitoring</li>
-<li>Realtime Database   </li>
-<li>Remote Config  </li>
+<li>Realtime Database</li>
+<li>Remote Config</li>
 </ul>
 <p>Each service is exposed as a dedicated module with consistent naming, error handling, and callback patterns.</p>
 <hr />
 <h2 id="key-highlights">Key Highlights</h2>
 <ul>
-<li>Built on the official Firebase Android SDK  </li>
-<li>Full Blueprint coverage with optional C++ access  </li>
-<li>Unified async callback and error handling model  </li>
-<li>Automatic project configuration and dependency management  </li>
-<li>No manual AndroidManifest, Gradle, or Java edits required  </li>
-<li>Designed for production use in live games and applications  </li>
-<li>Scalable architecture suitable for large projects and long-term support  </li>
+<li>Built on the official Firebase SDKs for Android and iOS</li>
+<li>Full Blueprint coverage with optional C++ access</li>
+<li>Unified Android and iOS API where supported</li>
+<li>Unified async callback and error handling model</li>
+<li>Automatic dependency and build integration</li>
+<li>No manual native Android or iOS code required</li>
+<li>Designed for production use in live games and applications</li>
+<li>Scalable architecture suitable for large projects and long-term support</li>
 </ul>
 <p>This plugin is intended to serve as a complete Firebase foundation for Unreal Engine projects, from small prototypes to full-scale production titles.</p>
 

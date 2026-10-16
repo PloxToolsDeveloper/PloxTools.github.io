@@ -1492,6 +1492,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#platform-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Platform Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    <span class="md-ellipsis">
+      Android
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      iOS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#important-notes" class="md-nav__link">
     <span class="md-ellipsis">
       Important Notes
@@ -7932,6 +7965,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#platform-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Platform Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    <span class="md-ellipsis">
+      Android
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      iOS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#important-notes" class="md-nav__link">
     <span class="md-ellipsis">
       Important Notes
@@ -7958,10 +8024,11 @@
 
 <h1 id="cloud-messaging">Cloud Messaging</h1>
 <p>Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that enables you to send notifications and data messages to client applications. It is commonly used for push notifications, server-driven events, live updates, and re-engagement messaging.</p>
-<p>The Cloud Messaging module in this plugin provides access to FCM tokens, topic subscriptions, and message listeners, allowing Unreal Engine applications to receive and react to messages sent from Firebase or your backend services.</p>
+<p>The Cloud Messaging module in this plugin provides access to FCM tokens, topic subscriptions, notification permission handling, and message listeners on <strong>Android and iOS</strong>, allowing Unreal Engine applications to receive and react to messages sent from Firebase or your backend services.</p>
 <hr />
 <h2 id="capabilities">Capabilities</h2>
 <ul>
+<li>Request notification permission on iOS and Android 13+.</li>
 <li>Retrieve the current Firebase Cloud Messaging registration token.</li>
 <li>Listen for automatic token refresh events.</li>
 <li>Delete the current FCM token when needed.</li>
@@ -7970,10 +8037,19 @@
 <li>Receive incoming notification and data messages while the application is running.</li>
 </ul>
 <hr />
+<h2 id="platform-notes">Platform Notes</h2>
+<h3 id="android">Android</h3>
+<p>On Android 13 and higher (API level 33+), notifications require the <code>android.permission.POST_NOTIFICATIONS</code> runtime permission. The plugin declares the required permission and provides <strong>Request Cloud Messaging Notification Permission</strong> to request it.</p>
+<p>On Android 12 and lower, no runtime notification permission is required.</p>
+<h3 id="ios">iOS</h3>
+<p>iOS push notifications use Apple Push Notification service (APNs) together with Firebase Cloud Messaging. Before receiving remote notifications, the iOS application must be configured for Push Notifications in the Apple Developer environment and APNs credentials must be configured for the iOS app in Firebase.</p>
+<p>The plugin handles the notification authorization request, APNs registration, APNs token forwarding to Firebase Messaging, and incoming message callbacks internally.</p>
+<hr />
 <h2 id="important-notes">Important Notes</h2>
 <ul>
-<li>FCM message delivery behavior depends on application state and platform restrictions; notification messages may be handled differently when the app is in the background or terminated.</li>
+<li>FCM message delivery behavior depends on application state and platform restrictions. Notification and data messages may behave differently while the application is in the foreground, background, or terminated.</li>
 <li>Token regeneration can occur at any time, so applications should listen for token update events if the token is stored or sent to a backend.</li>
+<li>On iOS, Cloud Messaging requires valid Apple Push Notification configuration in addition to the standard Firebase setup.</li>
 </ul>
 
 

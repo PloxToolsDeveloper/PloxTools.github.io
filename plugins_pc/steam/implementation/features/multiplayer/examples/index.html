@@ -8120,7 +8120,7 @@
 
 <h1 id="multiplayer-examples">Multiplayer Examples</h1>
 <p>This section provides practical examples of using the managed <strong>Multiplayer</strong> feature to host games, find and join games, invite players, travel between maps, and react to multiplayer lifecycle events.</p>
-<p>All examples below use Blueprint nodes. Equivalent functionality is available through the C++ API.</p>
+<p>All examples below use Blueprint nodes. Equivalent functionality is available through the C++ API. <strong>Multiplayer Version</strong> is configured once at <strong>Edit → Project Settings → Plugins → PloxTools: Steam Integration → Multiplayer → Connection → Multiplayer Version</strong> (default: <code>1</code>) and is automatically used by the managed multiplayer nodes.</p>
 <hr />
 <h2 id="hosting-a-game">Hosting a Game</h2>
 <p>Use <strong>Host Steam Game</strong> when you want the plugin to create a Steam lobby and start a managed Unreal listen server.</p>
@@ -8135,7 +8135,6 @@
 <li>Select the map that should be hosted.</li>
 <li>Set <code>Max Players</code>.</li>
 <li>Choose the <a href="../../../../technical_reference/enumerations/#esteamlobbytype"><code>ESteamLobbyType</code></a>.</li>
-<li>Set a project-defined <code>Multiplayer Version</code>.</li>
 <li>Add optional custom lobby data.</li>
 <li>Handle <strong>On Success</strong> or <strong>On Failure</strong>.</li>
 </ol>
@@ -8154,20 +8153,18 @@
 <ol>
 <li>Set a maximum result count.</li>
 <li>Choose the lobby distance filter.</li>
-<li>Pass the same <code>Multiplayer Version</code> expected by your client.</li>
 <li>Optionally require a minimum number of available slots.</li>
 <li>Optionally provide <a href="../../../../technical_reference/structures/#fsteamlobbysearchfilter"><code>FSteamLobbySearchFilter</code></a> entries.</li>
 <li>Handle <strong>On Success</strong>.</li>
 </ol>
 <p>The success callback returns an array of <a href="../../../../technical_reference/structures/#fsteamgamesearchresult"><code>FSteamGameSearchResult</code></a>.</p>
-<p>Each search result contains the Lobby ID required by <strong>Join Steam Game</strong>.</p>
+<p>The plugin automatically filters for the <strong>Multiplayer Version</strong> configured in Project Settings. Each search result contains the Lobby ID required by <strong>Join Steam Game</strong>.</p>
 <hr />
 <h2 id="joining-a-game">Joining a Game</h2>
 <p>After selecting a search result:</p>
 <ol>
 <li>Call <strong>Join Steam Game</strong>.</li>
 <li>Pass the result's Lobby ID.</li>
-<li>Pass the expected <code>Multiplayer Version</code>.</li>
 <li>Handle <strong>On Success</strong> or <strong>On Failure</strong>.</li>
 </ol>
 <div align="center">
@@ -8175,7 +8172,7 @@
        style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<p>The plugin joins the managed Steam lobby and connects the client to the host through the plugin's Steam networking flow.</p>
+<p>The plugin checks its configured <strong>Multiplayer Version</strong>, joins the managed Steam lobby, and connects the client to the host through the plugin's Steam networking flow.</p>
 <p>Use <strong>Is Connected To Steam Game</strong> or <strong>Get Steam Multiplayer State</strong> when you need to inspect the current connection state.</p>
 <hr />
 <h2 id="leaving-a-game">Leaving a Game</h2>
@@ -8238,7 +8235,7 @@
 <ol>
 <li>Subscribe when your persistent multiplayer UI or game instance becomes active.</li>
 <li>Store the returned <a href="../../../../technical_reference/structures/#fsteammultiplayerlistenerhandle"><code>FSteamMultiplayerListenerHandle</code></a>.</li>
-<li>When the event fires, call <strong>Join Steam Game</strong> with the received Lobby ID and your Multiplayer Version.</li>
+<li>When the event fires, call <strong>Join Steam Game</strong> with the received Lobby ID. The plugin checks <strong>Multiplayer Version</strong> automatically.</li>
 <li>Unsubscribe when the listener is no longer required.</li>
 </ol>
 <hr />
@@ -8287,16 +8284,16 @@
 <li>Configure any required lobby or member data.</li>
 <li>When the host is ready to start the game, call <strong>Start Steam Game From Current Lobby</strong>.</li>
 <li>Select the map to host.</li>
-<li>Set the Multiplayer Version and other game settings.</li>
+<li>Choose whether <strong>Allow Join In Progress</strong> should permit new players to join after the match starts.</li>
 <li>Handle <strong>On Success</strong> or <strong>On Failure</strong>.</li>
 </ol>
-<p>The plugin then starts the managed Steam networking and Unreal listen-server flow using the current lobby.</p>
+<p>The plugin then starts the managed Steam networking and Unreal listen-server flow using the current lobby. <strong>Players already in that lobby when the host starts the match automatically connect to the game</strong>, subject to the usual compatibility and connection checks. They do not need to call <strong>Join Steam Game</strong> themselves. <strong>Multiplayer Version</strong> is read from Project Settings, not passed into this node.</p>
 <p>This is useful for projects that want to implement their own pre-game lobby, ready system, character selection, or other custom lobby logic before starting the actual game.</p>
 <hr />
 <h2 id="important-notes">Important Notes</h2>
 <ul>
 <li>All clients and the host must use the same Steam App ID</li>
-<li>Compatible players should use the same project-defined Multiplayer Version</li>
+<li>Compatible players must use matching <strong>Multiplayer Version</strong> settings in Project Settings (default: <code>1</code>)</li>
 <li><strong>Host Steam Game</strong> creates the managed Steam lobby automatically</li>
 <li>Use the lower-level <a href="../../lobbies/overview/">Lobbies</a> feature when you want to manage the lobby/networking flow manually</li>
 <li>Persistent event handles should be stored and unsubscribed when no longer needed</li>

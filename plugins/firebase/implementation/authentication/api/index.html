@@ -1430,6 +1430,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sign-in-apple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sign In - Apple
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sign-in-email-and-password" class="md-nav__link">
     <span class="md-ellipsis">
       Sign In - Email and Password
@@ -8040,6 +8049,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sign-in-apple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sign In - Apple
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sign-in-email-and-password" class="md-nav__link">
     <span class="md-ellipsis">
       Sign In - Email and Password
@@ -8175,7 +8193,7 @@
 <td><strong>Sign In Anonymously</strong></td>
 <td>–</td>
 <td><strong>On Success (UserId)</strong>: Called when the anonymous user is signed in successfully.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if anonymous sign-in fails.</td>
-<td>Signs the user in anonymously and creates a temporary Firebase Authentication user.</td>
+<td>Signs the user in anonymously and creates a temporary Firebase Authentication user. Supported on Android and iOS.</td>
 </tr>
 </tbody>
 </table>
@@ -8195,7 +8213,27 @@
 <td><strong>Sign In With Google</strong></td>
 <td>–</td>
 <td><strong>On Success (UserId)</strong>: Called when Google sign-in succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if Google sign-in fails.</td>
-<td>Signs the user in using Google Sign-In. Requires SHA keys to be configured in Firebase project settings.</td>
+<td>Signs the user in using Google Sign-In. Supported on Android. Requires Google authentication to be configured in Firebase project settings.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sign-in-apple">Sign In - Apple</h2>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Parameters</th>
+<th>Callbacks / Return</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sign In With Apple</strong></td>
+<td>–</td>
+<td><strong>On Success (UserId)</strong>: Called when Apple sign-in succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if Apple sign-in fails or is cancelled.</td>
+<td>Signs the user in using Sign in with Apple. Supported on iOS. Requires the Apple authentication provider and Sign in with Apple capability to be configured.</td>
 </tr>
 </tbody>
 </table>
@@ -8253,7 +8291,13 @@
 <td><strong>Link With Google</strong></td>
 <td>–</td>
 <td><strong>On Success</strong>: Called when linking succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if linking fails.</td>
-<td>Links the currently authenticated user with a Google account.</td>
+<td>Links the currently authenticated user with a Google account. Supported on Android.</td>
+</tr>
+<tr>
+<td><strong>Link With Apple</strong></td>
+<td>–</td>
+<td><strong>On Success</strong>: Called when linking succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if linking fails or is cancelled.</td>
+<td>Links the currently authenticated user with an Apple account. Supported on iOS.</td>
 </tr>
 <tr>
 <td><strong>Get Linked Providers</strong></td>
@@ -8285,7 +8329,13 @@
 <td><strong>Reauthenticate With Google</strong></td>
 <td>–</td>
 <td><strong>On Success</strong>: Called when Google reauthentication succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if reauthentication fails.</td>
-<td>Reauthenticates the current user using Google Sign-In.</td>
+<td>Reauthenticates the current user using Google Sign-In. Supported on Android.</td>
+</tr>
+<tr>
+<td><strong>Reauthenticate With Apple</strong></td>
+<td>–</td>
+<td><strong>On Success</strong>: Called when Apple reauthentication succeeds.<br><strong>On Failure (Error Message, Error Code)</strong>: Called if reauthentication fails or is cancelled.</td>
+<td>Reauthenticates the current user using Sign in with Apple. Supported on iOS.</td>
 </tr>
 </tbody>
 </table>

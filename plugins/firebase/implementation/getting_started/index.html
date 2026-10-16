@@ -1296,11 +1296,62 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#required-android-build-configuration-for-firebase" class="md-nav__link">
+  <a href="#add-your-ios-app-to-firebase" class="md-nav__link">
     <span class="md-ellipsis">
-      Required: Android Build Configuration for Firebase
+      Add Your iOS App to Firebase
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-and-configure-googleservice-infoplist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download and Configure GoogleService-Info.plist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Download and Configure GoogleService-Info.plist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-googleservice-infoplist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download GoogleService-Info.plist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store-the-configuration-file_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Store the Configuration File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-plugin-settings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the Plugin Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-notes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -8254,11 +8305,62 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#required-android-build-configuration-for-firebase" class="md-nav__link">
+  <a href="#add-your-ios-app-to-firebase" class="md-nav__link">
     <span class="md-ellipsis">
-      Required: Android Build Configuration for Firebase
+      Add Your iOS App to Firebase
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-and-configure-googleservice-infoplist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download and Configure GoogleService-Info.plist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Download and Configure GoogleService-Info.plist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-googleservice-infoplist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download GoogleService-Info.plist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store-the-configuration-file_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Store the Configuration File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-plugin-settings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the Plugin Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-notes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -8317,7 +8419,7 @@
 <p>To use Firebase services in your project, you must have an active <strong>Firebase</strong> account and a Firebase project associated with your application. Firebase uses the same Google account system as Google Play Console, so no separate registration is required.</p>
 <ol>
 <li>Go to the <a href="https://console.firebase.google.com"><strong>Firebase Console</strong></a>.</li>
-<li>Sign in using your Google account (typically the same account used for Google Play Console).</li>
+<li>Sign in using your Google account.</li>
 <li>Click <strong>Add project</strong>.</li>
 <li>Enter a project name and follow the setup steps.</li>
 <li>Once the setup is complete, you will be redirected to the Firebase project dashboard.</li>
@@ -8353,7 +8455,7 @@
 <li><strong>App signing key certificate</strong></li>
 </ul>
 <p>These keys are managed by Google Play and are used to re-sign your application before it is delivered to users. Failing to register these keys in Firebase can cause runtime initialization issues, authentication failures, or crashes on some devices.</p>
-<p>You can find these keys in <strong>Google Play Console</strong> → <strong>You App</strong> → <strong>Test and Release → App Integrity</strong> → <strong>App Signing</strong>.</p>
+<p>You can find these keys in <strong>Google Play Console</strong> → <strong>Your App</strong> → <strong>Test and Release → App Integrity</strong> → <strong>App Signing</strong>.</p>
 <p>There you will see two sections:</p>
 <ul>
 <li><strong>Upload key certificate</strong></li>
@@ -8376,10 +8478,10 @@
 <p>If your release keystore file</p>
 <ul>
 <li>is named <code>MyGameRelease.keystore</code></li>
-<li>located at <code>C:\Projects\MyGame\Build\Android\MyGameRelease.keystore</code> </li>
-<li>and the keystore alias is <code>MyGameKey</code> </li>
+<li>located at <code>C:\Projects\MyGame\Build\Android\MyGameRelease.keystore</code></li>
+<li>and the keystore alias is <code>MyGameKey</code></li>
 </ul>
-<p>The command will look like this: </p>
+<p>The command will look like this:</p>
 <ul>
 <li><code>keytool -list -v -keystore "C:\Projects\MyGame\Build\Android\MyGameRelease.keystore" -alias MyGameKey</code></li>
 </ul>
@@ -8401,7 +8503,7 @@
 <p>If you do not use Firebase Authentication providers that require SHA keys, this step can be safely skipped.</p>
 <hr />
 <h2 id="download-and-configure-google-servicesjson">Download and Configure google-services.json</h2>
-<p>Firebase requires a valid <code>google-services.json</code> configuration file to initialize correctly. This file links your Android application package to your Firebase project and is <strong>mandatory</strong> for all Firebase services.</p>
+<p>Firebase requires a valid <code>google-services.json</code> configuration file to initialize correctly on Android. This file links your Android application package to your Firebase project and is <strong>mandatory</strong> for all Firebase services on Android.</p>
 <h3 id="download-google-servicesjson">Download google-services.json</h3>
 <ol>
 <li>Open the Firebase Console and navigate to <strong>Project Settings</strong> (In the console, find the gear in the upper left corner, click and select "Project Settings").</li>
@@ -8433,32 +8535,56 @@
 <ul>
 <li>The package name inside <code>google-services.json</code> must exactly match your Unreal Engine Android package name.</li>
 <li>If the file is missing, invalid, or points to a different package name, Firebase initialization will fail.</li>
-<li>Firebase will not function without a correctly configured <code>google-services.json</code> file.</li>
+<li>Firebase will not function on Android without a correctly configured <code>google-services.json</code> file.</li>
 </ul>
-<p>Once this step is completed, the Firebase plugin is fully configured and ready for initialization.</p>
+<p>Once this step is completed, Firebase is ready for initialization on Android.</p>
 <hr />
-<h2 id="required-android-build-configuration-for-firebase">Required: Android Build Configuration for Firebase</h2>
-<p>Firebase on Android <strong>requires a Shipping build with Distribution Signing enabled</strong>.</p>
-<p>Firebase initialization is <strong>not supported</strong> in Development builds or unsigned/debug Android packages. If these requirements are not met, the application may <strong>crash during Firebase initialization</strong>.</p>
-<p>Before using Firebase, make sure the following settings are configured:</p>
-<p>In <strong>Project Settings → Project → Packaging</strong></p>
+<h2 id="add-your-ios-app-to-firebase">Add Your iOS App to Firebase</h2>
+<p>If you plan to use Firebase on iOS, you also need to register your iOS application inside the same Firebase project.</p>
+<ol>
+<li>In the Firebase Console, open your project and click <strong>Add app</strong>, then select <strong>iOS</strong>.</li>
+<li>In the <strong>Apple bundle ID</strong> field, enter the exact Bundle ID used by your Unreal Engine project (for example <code>com.company.appname</code>).</li>
+<li>Make sure the Bundle ID matches the Bundle Identifier configured for your Unreal Engine iOS project.</li>
+<li>The <strong>App nickname</strong> field is optional and is only used for identification inside the Firebase Console.</li>
+<li>Click <strong>Register app</strong> to continue.</li>
+</ol>
+<p>You can skip the Firebase SDK installation steps shown by the Firebase Console. The plugin already includes and integrates the required Firebase Apple SDK frameworks.</p>
+<p>At this stage, download the <code>GoogleService-Info.plist</code> file when prompted, or download it later from <strong>Project Settings → Your apps</strong>.</p>
+<hr />
+<h2 id="download-and-configure-googleservice-infoplist">Download and Configure GoogleService-Info.plist</h2>
+<p>Firebase requires a valid <code>GoogleService-Info.plist</code> configuration file to initialize correctly on iOS. This file links your iOS application to your Firebase project and is required for Firebase initialization.</p>
+<h3 id="download-googleservice-infoplist">Download GoogleService-Info.plist</h3>
+<ol>
+<li>Open the Firebase Console and navigate to <strong>Project Settings</strong>.</li>
+<li>Scroll down to the <strong>Your apps</strong> section and select your registered iOS app.</li>
+<li>Download the <strong>GoogleService-Info.plist</strong> file.</li>
+</ol>
+<p>The configuration file can always be re-downloaded from this location if needed.</p>
+<h3 id="store-the-configuration-file_1">Store the Configuration File</h3>
+<p>Place the <code>GoogleService-Info.plist</code> file in a stable location, preferably inside or near your Unreal Engine project directory.</p>
+<p>The file must remain available during packaging.</p>
+<h3 id="configure-the-plugin-settings_1">Configure the Plugin Settings</h3>
+<ol>
+<li>Open <strong>Project Settings</strong> in Unreal Engine.</li>
+<li>Navigate to <strong>Plugins → PloxTools: Google Firebase Complete</strong>.</li>
+<li>Locate the setting <strong>GoogleService-Info.plist Path</strong>.</li>
+<li>Select your downloaded <code>GoogleService-Info.plist</code> file.</li>
+</ol>
+<p>The plugin will automatically copy the file into the packaged iOS application during the build.</p>
+<h3 id="important-notes_1">Important Notes</h3>
 <ul>
-<li>Build Configuration: <code>Shipping</code></li>
-<li>For Distribution: <code>Enabled</code></li>
+<li>The Bundle ID inside <code>GoogleService-Info.plist</code> must match the Bundle ID configured for your Unreal Engine iOS project.</li>
+<li>If the file is missing, invalid, or belongs to a different Firebase iOS app, Firebase initialization will fail.</li>
+<li>You do not need to manually add Firebase SDK frameworks to Xcode.</li>
 </ul>
-<p>In <strong>Project Settings → Platforms → Android → Distribution Signing</strong></p>
-<ul>
-<li>Valid <strong>Keystore</strong> is set</li>
-<li><strong>Key Alias</strong> and <strong>Passwords</strong> are configured correctly</li>
-</ul>
-<p>Firebase relies on a properly signed Android package. Running Firebase in non-distribution or debug Android builds is unsupported and may lead to startup crashes.</p>
+<p>Once this step is completed, Firebase is ready for initialization on iOS.</p>
 <hr />
 <h2 id="using-firebase-nodes-in-blueprints">Using Firebase Nodes in Blueprints</h2>
 <p>Once the plugin is enabled, all available Firebase functions become accessible directly in Blueprints. Each Firebase service is exposed under its own subcategory.</p>
 <p>To view them:</p>
 <ol>
-<li>Right-click anywhere in the Blueprint graph.  </li>
-<li>Use the search bar or scroll through the action list.  </li>
+<li>Right-click anywhere in the Blueprint graph.</li>
+<li>Use the search bar or scroll through the action list.</li>
 <li>Open the <strong>Firebase</strong> category — it contains all functions provided by the plugin.</li>
 </ol>
 <div align="center">
@@ -8482,7 +8608,7 @@
 </code></pre></div>
 <p>After that, the plugin’s functions will be available for direct use in your code. To view all available methods, simply <strong>Ctrl + Left Click on FirebaseCPPLibrary.h</strong> — this will open the header file with the full list of exposed functions.</p>
 <hr />
-<p>Once these steps are complete, the plugin is ready to use in your project.</p>
+<p>Once the required setup for your target platform is complete, the plugin is ready to use in your project.</p>
 
 
 

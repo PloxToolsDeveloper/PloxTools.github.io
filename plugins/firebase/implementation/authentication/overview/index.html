@@ -1366,6 +1366,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#platform-specific-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-Specific Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#important-notes" class="md-nav__link">
     <span class="md-ellipsis">
       Important Notes
@@ -7932,6 +7941,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#platform-specific-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-Specific Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#important-notes" class="md-nav__link">
     <span class="md-ellipsis">
       Important Notes
@@ -7958,17 +7976,19 @@
 
 <h1 id="authentication">Authentication</h1>
 <p>Firebase Authentication provides a secure and flexible system for identifying users across devices and sessions. It supports multiple sign-in methods and handles user identity, session management, and credential validation without requiring a custom backend.</p>
-<p>The Authentication module in this plugin exposes the core Firebase Authentication workflows in a form suitable for Unreal Engine games and applications, covering both anonymous and credential-based sign-in flows.</p>
+<p>The Authentication module in this plugin exposes the core Firebase Authentication workflows in a form suitable for Unreal Engine games and applications, covering anonymous, email and password, and platform-native sign-in flows on Android and iOS.</p>
 <hr />
 <h2 id="capabilities">Capabilities</h2>
 <ul>
 <li>Initialize the Firebase Authentication system.</li>
 <li>Sign in users anonymously for guest or temporary sessions.</li>
 <li>Create and sign in users using email and password credentials.</li>
-<li>Sign in users with Google Sign-In.</li>
+<li>Sign in users with Google Sign-In on Android.</li>
+<li>Sign in users with Apple on iOS.</li>
 <li>Send password reset emails.</li>
 <li>Send email verification messages.</li>
 <li>Re-authenticate users for sensitive operations.</li>
+<li>Link email/password, Google, or Apple authentication providers where supported.</li>
 <li>Sign out the current user.</li>
 <li>Update user email and password.</li>
 <li>Delete the authenticated user account.</li>
@@ -7977,9 +7997,19 @@
 <li>Listen for authentication state changes.</li>
 </ul>
 <hr />
+<h2 id="platform-specific-providers">Platform-Specific Providers</h2>
+<p>The plugin uses the native sign-in provider for each mobile platform:</p>
+<ul>
+<li><strong>Android:</strong> Google Sign-In</li>
+<li><strong>iOS:</strong> Sign in with Apple</li>
+</ul>
+<p>Email/password and anonymous authentication are available on both Android and iOS.</p>
+<hr />
 <h2 id="important-notes">Important Notes</h2>
 <ul>
-<li>Some authentication providers, such as Google Sign-In, require SHA certificate fingerprints to be registered in the Firebase project.</li>
+<li>Authentication providers must be enabled in <strong>Firebase Console → Authentication → Sign-in method</strong> before they can be used.</li>
+<li>Google Sign-In on Android requires the appropriate SHA certificate fingerprints to be registered in the Firebase project.</li>
+<li>Sign in with Apple on iOS requires the <strong>Sign in with Apple</strong> capability to be enabled for the application and the Apple provider to be configured in Firebase Authentication.</li>
 <li>Re-authentication is required by Firebase before performing sensitive actions such as updating credentials or deleting a user account.</li>
 <li>Authentication state listeners remain active and should be managed carefully to avoid duplicate callbacks.</li>
 </ul>

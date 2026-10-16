@@ -7995,6 +7995,7 @@
 <h1 id="multiplayer-api-reference">Multiplayer API Reference</h1>
 <p>This section documents all <strong>Multiplayer</strong> Blueprint nodes provided by <strong>PloxTools: Steam Integration</strong>.</p>
 <p>All functions require Steam to be initialized unless stated otherwise.</p>
+<p>Managed Host, Start, Find, and Join operations automatically use <strong>Multiplayer Version</strong> from <strong>Edit → Project Settings → Plugins → PloxTools: Steam Integration → Multiplayer → Connection</strong> (default: <code>1</code>). The version is configured once per project rather than passed to individual Blueprint nodes.</p>
 <hr />
 <h2 id="state">State</h2>
 <table>
@@ -8059,25 +8060,25 @@
 <tbody>
 <tr>
 <td><strong>Host Steam Game</strong></td>
-<td><code>WorldContextObject</code> (<code>UObject</code>)<br><code>Map</code> (<code>TSoftObjectPtr&lt;UWorld&gt;</code>)<br><code>MaxPlayers</code> (int32)<br><code>LobbyType</code> (<a href="../../../../technical_reference/enumerations/#esteamlobbytype"><code>ESteamLobbyType</code></a>)<br><code>MultiplayerVersion</code> (string)<br><code>LobbyData</code> (map of string to string)</td>
+<td><code>WorldContextObject</code> (<code>UObject</code>)<br><code>Map</code> (<code>TSoftObjectPtr&lt;UWorld&gt;</code>)<br><code>MaxPlayers</code> (int32)<br><code>LobbyType</code> (<a href="../../../../technical_reference/enumerations/#esteamlobbytype"><code>ESteamLobbyType</code></a>)<br><code>LobbyData</code> (map of string to string)</td>
 <td><strong>On Success</strong> (<strong>Lobby ID</strong>: <a href="../../../../technical_reference/structures/#fsteamlobbyid"><code>FSteamLobbyID</code></a>)<br><strong>On Failure</strong> (<strong>Error</strong>: <a href="../../../../technical_reference/enumerations/#esteammultiplayererror"><code>ESteamMultiplayerError</code></a>, <strong>Error Message</strong>: string)</td>
 <td>Creates a joinable Steam lobby and starts a PloxTools Steam listen server on the selected map.</td>
 </tr>
 <tr>
 <td><strong>Start Steam Game From Current Lobby</strong></td>
-<td><code>WorldContextObject</code> (<code>UObject</code>)<br><code>Map</code> (<code>TSoftObjectPtr&lt;UWorld&gt;</code>)<br><code>MultiplayerVersion</code> (string)<br><code>bAllowJoinInProgress</code> (bool)</td>
+<td><code>WorldContextObject</code> (<code>UObject</code>)<br><code>Map</code> (<code>TSoftObjectPtr&lt;UWorld&gt;</code>)<br><code>bAllowJoinInProgress</code> (bool)</td>
 <td><strong>On Success</strong> (<strong>Lobby ID</strong>: <a href="../../../../technical_reference/structures/#fsteamlobbyid"><code>FSteamLobbyID</code></a>)<br><strong>On Failure</strong> (<strong>Error</strong>: <a href="../../../../technical_reference/enumerations/#esteammultiplayererror"><code>ESteamMultiplayerError</code></a>, <strong>Error Message</strong>: string)</td>
-<td>Starts a PloxTools Steam listen server from the current Steam Lobby without creating a new Lobby.</td>
+<td>Starts a PloxTools Steam listen server from the current Steam Lobby without creating a new Lobby. Eligible players already in the Lobby automatically attempt to connect to the match; <code>bAllowJoinInProgress</code> controls whether additional players can join after the match starts.</td>
 </tr>
 <tr>
 <td><strong>Find Steam Games</strong></td>
-<td><code>WorldContextObject</code> (<code>UObject</code>)<br><code>MaxResults</code> (int32)<br><code>Distance</code> (<a href="../../../../technical_reference/enumerations/#esteamlobbydistancefilter"><code>ESteamLobbyDistanceFilter</code></a>)<br><code>MultiplayerVersion</code> (string)<br><code>MinimumAvailableSlots</code> (int32)<br><code>SearchFilters</code> (array of <a href="../../../../technical_reference/structures/#fsteamlobbysearchfilter"><code>FSteamLobbySearchFilter</code></a>)</td>
+<td><code>WorldContextObject</code> (<code>UObject</code>)<br><code>MaxResults</code> (int32)<br><code>Distance</code> (<a href="../../../../technical_reference/enumerations/#esteamlobbydistancefilter"><code>ESteamLobbyDistanceFilter</code></a>)<br><code>MinimumAvailableSlots</code> (int32)<br><code>SearchFilters</code> (array of <a href="../../../../technical_reference/structures/#fsteamlobbysearchfilter"><code>FSteamLobbySearchFilter</code></a>)</td>
 <td><strong>On Success</strong> (<strong>Results</strong>: array of <a href="../../../../technical_reference/structures/#fsteamgamesearchresult"><code>FSteamGameSearchResult</code></a>)<br><strong>On Failure</strong> (<strong>Error</strong>: <a href="../../../../technical_reference/enumerations/#esteammultiplayererror"><code>ESteamMultiplayerError</code></a>, <strong>Error Message</strong>: string)</td>
 <td>Finds compatible PloxTools managed Steam games using Steam lobby search.</td>
 </tr>
 <tr>
 <td><strong>Join Steam Game</strong></td>
-<td><code>WorldContextObject</code> (<code>UObject</code>)<br><code>LobbyID</code> (<a href="../../../../technical_reference/structures/#fsteamlobbyid"><code>FSteamLobbyID</code></a>)<br><code>MultiplayerVersion</code> (string)</td>
+<td><code>WorldContextObject</code> (<code>UObject</code>)<br><code>LobbyID</code> (<a href="../../../../technical_reference/structures/#fsteamlobbyid"><code>FSteamLobbyID</code></a>)</td>
 <td><strong>On Success</strong> (<strong>Lobby ID</strong>: <a href="../../../../technical_reference/structures/#fsteamlobbyid"><code>FSteamLobbyID</code></a>)<br><strong>On Failure</strong> (<strong>Error</strong>: <a href="../../../../technical_reference/enumerations/#esteammultiplayererror"><code>ESteamMultiplayerError</code></a>, <strong>Error Message</strong>: string)</td>
 <td>Joins a managed Steam lobby and connects to its host through PloxTools Steam networking.</td>
 </tr>
@@ -8095,6 +8096,7 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Version compatibility:</strong> Host and clients must use the same configured Multiplayer Version. The plugin uses it for game discovery and join validation, including automatic connections from an existing Steam Lobby. This setting is independent of Unreal Engine <strong>Project Version</strong>.</p>
 <hr />
 <h2 id="invites">Invites</h2>
 <table>

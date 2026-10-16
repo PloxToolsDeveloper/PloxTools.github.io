@@ -7010,6 +7010,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#multiplayer-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiplayer Version
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8200,6 +8209,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#multiplayer-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiplayer Version
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8505,6 +8523,47 @@
 </ul>
 <p>The Multiplayer connect string remains managed automatically regardless of this setting.</p>
 <p>Disable this option if you want to manage these Rich Presence values yourself.</p>
+<hr />
+<h3 id="multiplayer-version">Multiplayer Version</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>FString</code></td>
+</tr>
+<tr>
+<td><strong>Default</strong></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><strong>Config Property</strong></td>
+<td><code>MultiplayerVersion</code></td>
+</tr>
+</tbody>
+</table>
+<p>Defines the <strong>network compatibility version</strong> used by the managed Multiplayer system.</p>
+<p>The plugin automatically uses this value for:</p>
+<ul>
+<li><strong>Host Steam Game</strong></li>
+<li><strong>Start Steam Game From Current Lobby</strong></li>
+<li><strong>Find Steam Games</strong></li>
+<li><strong>Join Steam Game</strong></li>
+<li>Automatic joining of existing Steam Lobby members when the host starts a match</li>
+</ul>
+<p>All compatible game builds must use the same Multiplayer Version. The plugin uses this value when creating, searching for, and joining Steam multiplayer sessions.</p>
+<p>Change this setting when an update introduces network or gameplay changes that are incompatible with older game builds.</p>
+<p>The Multiplayer Version is independent of the Unreal Engine version and the project's <strong>Project Version</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Multiplayer Version is configured globally in the plugin settings and no longer needs to be specified in individual Blueprint nodes.</p>
+<p>If you are upgrading from an older plugin version, existing Blueprint nodes may need to be refreshed. Any previously customized Multiplayer Version must be transferred to this setting.</p>
+</div>
 <hr />
 <h2 id="development">Development</h2>
 <p>The following setting is available only in the Unreal Editor.</p>
@@ -8870,6 +8929,11 @@
 <tr>
 <td><strong>Automatically Update Multiplayer Rich Presence</strong></td>
 <td style="text-align: right;"><code>true</code></td>
+<td>Runtime</td>
+</tr>
+<tr>
+<td><strong>Multiplayer Version</strong></td>
+<td style="text-align: right;"><code>1</code></td>
 <td>Runtime</td>
 </tr>
 <tr>

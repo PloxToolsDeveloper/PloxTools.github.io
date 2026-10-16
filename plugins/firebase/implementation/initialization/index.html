@@ -7938,7 +7938,11 @@
 
 <h1 id="initialization">Initialization</h1>
 <p>Firebase initialization is the <strong>first and mandatory step</strong> when using the plugin. Without successful initialization, none of the Firebase services or Blueprint nodes will function.</p>
-<p>Initialization prepares the Firebase SDK, validates the <code>google-services.json</code> configuration, creates the Firebase App instance, and makes all enabled Firebase modules ready for use.</p>
+<p>Initialization prepares the Firebase SDK, validates the platform-specific Firebase configuration file, creates the Firebase App instance, and makes all enabled Firebase modules ready for use.</p>
+<ul>
+<li><strong>Android:</strong> <code>google-services.json</code></li>
+<li><strong>iOS:</strong> <code>GoogleService-Info.plist</code></li>
+</ul>
 <p>This step must be executed <strong>once</strong> during the application lifecycle.</p>
 <p>Firebase should be initialized early in the application lifecycle, before any Firebase-related logic is executed. Do not initialize Firebase repeatedly or from frequently recreated objects such as widgets unless you are certain it runs only once.</p>
 <div align="center">
@@ -7961,7 +7965,7 @@
 <td><strong>Initialize Firebase</strong></td>
 <td>–</td>
 <td><strong>On Success</strong>: Called when Firebase has been successfully initialized.<br><strong>On Failure (Error Message)</strong>: Called if initialization fails due to a configuration error.</td>
-<td>Initializes Firebase using the configured <code>google-services.json</code>. This node must be called before using any Firebase service.</td>
+<td>Initializes Firebase using the configured platform-specific Firebase configuration file. This node must be called before using any Firebase service.</td>
 </tr>
 <tr>
 <td><strong>Initialize Firebase With Modules</strong></td>

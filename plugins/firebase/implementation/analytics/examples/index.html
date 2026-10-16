@@ -8320,7 +8320,7 @@
 </ul>
 <p>Because of this, <strong>Log Purchase should always be used for real-money transactions</strong>, rather than a custom analytics event.</p>
 <h3 id="tracking-an-in-app-purchase">Tracking an In-App Purchase</h3>
-<p>In this example, a purchase is initiated using the billing system provided by the <a href="../../../../billing/implementation/overview/"><strong>PloxTools: Google Play Billing</strong></a> plugin, and the analytics event is logged only after the purchase is successfully completed.</p>
+<p>In this Android example, a purchase is initiated using the billing system provided by the <a href="../../../../billing/implementation/overview/"><strong>PloxTools: Google Play Billing</strong></a> plugin, and the analytics event is logged only after the purchase is successfully completed. On iOS, the same Analytics flow can be used after a successful App Store purchase.</p>
 <ul>
 <li>The purchase flow is handled by the billing plugin</li>
 <li>The analytics event is logged only after a confirmed successful purchase</li>
