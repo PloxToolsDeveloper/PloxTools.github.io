@@ -5511,6 +5511,8 @@
       
         
       
+        
+      
     
     
     
@@ -5558,6 +5560,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8117,7 +8142,7 @@
 <td><strong>Invite Friend To Steam Lobby</strong></td>
 <td><code>LobbyID</code> (<a href="../../../../technical_reference/structures/#fsteamlobbyid"><code>FSteamLobbyID</code></a>)<br><code>UserID</code> (<a href="../../../../technical_reference/structures/#fsteamuserid"><code>FSteamUserID</code></a>)</td>
 <td>bool</td>
-<td>Invites a Steam friend to the specified lobby.</td>
+<td>Sends a Steam lobby invitation to the specified user. This does not start a managed multiplayer game; the recipient must join the lobby. <code>true</code> does not mean the invite was accepted.</td>
 </tr>
 <tr>
 <td><strong>Set Steam Lobby Type</strong></td>
@@ -8151,6 +8176,7 @@
 </tr>
 </tbody>
 </table>
+<p>For lobby invitations and acceptance handling, see <a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a>.</p>
 <hr />
 <h2 id="data">Data</h2>
 <table>

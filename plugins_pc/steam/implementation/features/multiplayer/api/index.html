@@ -5415,6 +5415,8 @@
       
         
       
+        
+      
     
     
     
@@ -5462,6 +5464,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8113,16 +8138,17 @@
 <td><strong>Invite Player To Steam Game</strong></td>
 <td><code>UserID</code> (<a href="../../../../technical_reference/structures/#fsteamuserid"><code>FSteamUserID</code></a>)</td>
 <td>bool</td>
-<td>Invites a Steam user to the current managed Steam game. The current Lobby is used automatically.</td>
+<td>Sends a lobby invitation to the specified Steam user for the current <strong>connected, joinable managed game</strong>. The Lobby ID is resolved automatically. <code>true</code> means Steam accepted the send request, not that the friend joined.</td>
 </tr>
 <tr>
 <td><strong>Open Steam Invite Dialog For Current Game</strong></td>
 <td>–</td>
 <td>bool</td>
-<td>Opens the Steam friend invite dialog for the current managed Steam game. The current Lobby is resolved automatically.</td>
+<td>Requests the Steam Overlay invitation dialog for the current <strong>connected, joinable managed game</strong>. Requires Steam Overlay; <code>true</code> does not confirm invitation acceptance or connection.</td>
 </tr>
 </tbody>
 </table>
+<p>For choosing between managed game, pre-game lobby, and custom connect-string invites, see <a href="../invites/">Steam Invitations and Join Requests</a>.</p>
 <hr />
 <h2 id="events">Events</h2>
 <table>
@@ -8151,13 +8177,13 @@
 <td><strong>Subscribe To Steam Game Invitation Received</strong></td>
 <td>–</td>
 <td><strong>On Received</strong> (<strong>From User</strong>: <a href="../../../../technical_reference/structures/#fsteamuserid"><code>FSteamUserID</code></a>, <strong>Lobby ID</strong>: <a href="../../../../technical_reference/structures/#fsteamlobbyid"><code>FSteamLobbyID</code></a>)<br><a href="../../../../technical_reference/structures/#fsteammultiplayerlistenerhandle"><code>FSteamMultiplayerListenerHandle</code></a></td>
-<td>Registers a persistent listener fired when Steam delivers a lobby invitation for a game. Returns the inviting user and Lobby ID.</td>
+<td>Reports a Steam lobby invitation delivered while the game is running. Returns the inviting user and Lobby ID; does not join the lobby or game.</td>
 </tr>
 <tr>
 <td><strong>Subscribe To Steam Game Invitation Accepted</strong></td>
 <td>–</td>
 <td><strong>On Accepted</strong> (<strong>From User</strong>: <a href="../../../../technical_reference/structures/#fsteamuserid"><code>FSteamUserID</code></a>, <strong>Lobby ID</strong>: <a href="../../../../technical_reference/structures/#fsteamlobbyid"><code>FSteamLobbyID</code></a>)<br><a href="../../../../technical_reference/structures/#fsteammultiplayerlistenerhandle"><code>FSteamMultiplayerListenerHandle</code></a></td>
-<td>Registers a persistent listener fired when the local user accepts a managed Steam lobby invitation or chooses Join Game through Steam. Returns the source user when available and Lobby ID.</td>
+<td>Reports an accepted Steam lobby invitation or supported Join Game request. Returns the source user when available and Lobby ID. The game must choose Join Steam Game for managed matches or Join Steam Lobby for pre-game lobbies; this callback does not connect automatically.</td>
 </tr>
 <tr>
 <td><strong>Subscribe To Steam Game Travel Started</strong></td>

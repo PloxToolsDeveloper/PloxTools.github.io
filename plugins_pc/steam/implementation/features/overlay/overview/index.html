@@ -5413,6 +5413,8 @@
       
         
       
+        
+      
     
     
     
@@ -5460,6 +5462,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8078,8 +8103,9 @@
 <hr />
 <h2 id="join-requests">Join Requests</h2>
 <p>Steam join requests are represented by <a href="../../../../technical_reference/structures/#fsteamjoinrequest"><code>FSteamJoinRequest</code></a>.</p>
-<p>A request can contain a lobby ID, a connect string, and the Steam user who initiated the request. The Overlay feature reports the request; your project decides how to join the corresponding game flow.</p>
-<p>If you are using managed Multiplayer, its dedicated invite/join handling should normally be preferred.</p>
+<p>A request can contain a lobby ID, a connect string, and the Steam user associated with the request. <strong>Subscribe To Steam Join Requested</strong> reports a Steam join action on the <strong>local receiving player</strong>; it does not report that someone joined your hosted game, and it never connects by itself.</p>
+<p>For a <strong>pre-game lobby</strong>, read <code>Request.LobbyID</code> and call <strong>Join Steam Lobby</strong>. For a custom <code>ConnectString</code>, use your project's own parser and networking flow. For an <strong>active managed Multiplayer game</strong>, prefer <strong>Subscribe To Steam Game Invitation Accepted</strong> and then <strong>Join Steam Game</strong>.</p>
+<p>The same Steam request may reach both Overlay and Multiplayer listeners. Handle it in only one place to avoid duplicate joins. See <a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a> for complete examples.</p>
 <hr />
 <h2 id="persistent-events">Persistent Events</h2>
 <p>Overlay subscriptions return <a href="../../../../technical_reference/structures/#fsteamoverlaylistenerhandle"><code>FSteamOverlayListenerHandle</code></a>.</p>
@@ -8098,6 +8124,7 @@
 <li><a href="../examples/">Examples</a> — common Overlay workflows</li>
 <li><a href="../api/">API Reference</a> — complete list of Overlay nodes</li>
 <li><a href="../../multiplayer/overview/">Multiplayer</a> — managed invites and game joining</li>
+<li><a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a> — full invitation and join-request guide</li>
 </ul>
 
 

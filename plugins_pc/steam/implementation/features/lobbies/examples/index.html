@@ -5448,6 +5448,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#inviting-friends-to-a-pre-game-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inviting Friends to a Pre-Game Lobby
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#starting-a-managed-game-from-an-existing-lobby" class="md-nav__link">
     <span class="md-ellipsis">
       Starting a Managed Game From an Existing Lobby
@@ -5529,6 +5538,8 @@
       
         
       
+        
+      
     
     
     
@@ -5576,6 +5587,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8022,6 +8056,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#inviting-friends-to-a-pre-game-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inviting Friends to a Pre-Game Lobby
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#starting-a-managed-game-from-an-existing-lobby" class="md-nav__link">
     <span class="md-ellipsis">
       Starting a Managed Game From an Existing Lobby
@@ -8135,6 +8178,18 @@
 <p>Explicitly unsubscribing ensures that callbacks are no longer invoked and prevents outdated UI updates or dangling event listeners.</p>
 <p>Using subscribe and unsubscribe nodes together provides a predictable and controlled way to react to lobby lifecycle changes during gameplay.</p>
 <hr />
+<h2 id="inviting-friends-to-a-pre-game-lobby">Inviting Friends to a Pre-Game Lobby</h2>
+<p>Use this flow to invite friends to a waiting room before any Unreal listen server is running:</p>
+<ol>
+<li>The lobby owner calls <strong>Create Steam Lobby</strong>, keeping the Lobby ID returned by <strong>On Success</strong>.</li>
+<li>Invite a particular friend with <strong>Invite Friend To Steam Lobby</strong> (<code>LobbyID</code>, <code>UserID</code>), or let Steam show the friend selector with <strong>Open Steam Invite Dialog To Lobby</strong> (<code>LobbyID</code>).</li>
+<li>On the invited player's game, handle <strong>Subscribe To Steam Join Requested</strong>. For a lobby-based request, take <code>Request.LobbyID</code> and call <strong>Join Steam Lobby</strong>. Alternatively, handle <strong>Steam Game Invitation Accepted</strong> and choose <strong>Join Steam Lobby</strong> for a pre-game lobby.</li>
+<li>After <strong>Join Steam Lobby → On Success</strong>, that friend is a lobby member. Track members using <strong>Subscribe To Steam Lobby Member Joined</strong>.</li>
+<li>When ready, the owner starts the match using <strong>Start Steam Game From Current Lobby</strong>. The members already in the lobby automatically attempt to connect; no extra <strong>Join Steam Game</strong> call is needed for them.</li>
+</ol>
+<p>Do not trigger a join from both Overlay and Multiplayer callbacks for the same Steam request. Steam lobby membership is not yet a gameplay connection.</p>
+<p>For a complete comparison of invitation methods, see <a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a>.</p>
+<hr />
 <h2 id="starting-a-managed-game-from-an-existing-lobby">Starting a Managed Game From an Existing Lobby</h2>
 <p>If your project already created or joined a Steam Lobby using the <strong>Lobbies</strong> feature, the lobby can be reused to start a managed multiplayer game.</p>
 <p>This is useful when you want to build your own pre-game lobby flow, player-ready system, character selection, or other custom lobby logic before starting the actual multiplayer session.</p>
@@ -8150,10 +8205,10 @@
 <li>Configure any required lobby or member data.</li>
 <li>When the host is ready to start the game, call <strong>Start Steam Game From Current Lobby</strong>.</li>
 <li>Select the map to host.</li>
-<li>Provide the Multiplayer Version and other managed game settings.</li>
+<li>Choose <strong>Allow Join In Progress</strong> to control whether new players may join after the match starts. <strong>Multiplayer Version</strong> comes automatically from Project Settings.</li>
 <li>Handle <strong>On Success</strong> or <strong>On Failure</strong>.</li>
 </ol>
-<p>The plugin then starts the managed Steam networking and Unreal listen-server flow using the <strong>current lobby</strong>, instead of creating a new one.</p>
+<p>The plugin then starts the managed Steam networking and Unreal listen-server flow using the <strong>current lobby</strong>, instead of creating a new one. <strong>Players already in this lobby when the match starts automatically attempt to connect</strong>, subject to compatibility and networking checks; <strong>Allow Join In Progress</strong> controls later arrivals.</p>
 <p>This allows the Lobbies feature to handle the custom pre-game lobby experience while the Multiplayer feature handles the actual player connection and game session.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

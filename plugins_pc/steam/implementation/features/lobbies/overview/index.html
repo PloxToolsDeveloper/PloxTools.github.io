@@ -5425,6 +5425,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#inviting-friends-to-a-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inviting Friends to a Lobby
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#persistent-events" class="md-nav__link">
     <span class="md-ellipsis">
       Persistent Events
@@ -5529,6 +5538,8 @@
       
         
       
+        
+      
     
     
     
@@ -5576,6 +5587,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8022,6 +8056,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#inviting-friends-to-a-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inviting Friends to a Lobby
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#persistent-events" class="md-nav__link">
     <span class="md-ellipsis">
       Persistent Events
@@ -8120,6 +8163,11 @@
 <p>Lobby visibility is controlled by <a href="../../../../technical_reference/enumerations/#esteamlobbytype"><code>ESteamLobbyType</code></a>.</p>
 <p>Only the lobby owner can perform owner-restricted operations such as changing certain lobby settings. Ownership can change while a lobby exists, and the plugin exposes an owner-changed event for that case.</p>
 <p>Lobby members are represented by <a href="../../../../technical_reference/structures/#fsteamlobbymember"><code>FSteamLobbyMember</code></a>.</p>
+<hr />
+<h2 id="inviting-friends-to-a-lobby">Inviting Friends to a Lobby</h2>
+<p>Invite a specific user with <strong>Invite Friend To Steam Lobby</strong> and the target Lobby ID, or open Steam's friend picker with <strong>Open Steam Invite Dialog To Lobby</strong> (Overlay feature). When an invited user accepts, their game can receive <strong>Subscribe To Steam Join Requested</strong> with the lobby ID and call <strong>Join Steam Lobby</strong>. This adds them to the Steam lobby; it does <strong>not</strong> connect them to an Unreal multiplayer session.</p>
+<p>When the lobby owner later calls <strong>Start Steam Game From Current Lobby</strong>, players already present in the lobby automatically attempt to connect to the managed game. The <strong>Multiplayer Version</strong> is taken from Project Settings, not a Blueprint pin.</p>
+<p>See <a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a> for the exact invitation and acceptance flow.</p>
 <hr />
 <h2 id="persistent-events">Persistent Events</h2>
 <p>The feature exposes persistent subscriptions for:</p>

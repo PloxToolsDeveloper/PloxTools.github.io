@@ -5411,6 +5411,8 @@
       
         
       
+        
+      
     
     
     
@@ -5458,6 +5460,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/features/multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -9411,7 +9436,7 @@
 <hr />
 <h2 id="overlay">Overlay</h2>
 <h3 id="fsteamjoinrequest">FSteamJoinRequest</h3>
-<p>Represents a request to join a game session initiated through Steam.</p>
+<p>Represents a lobby-based or Rich Presence join request delivered to the local game through the Overlay API. This structure describes the requested destination; it does not indicate a completed lobby or Unreal networking connection. See <a href="../../implementation/features/multiplayer/invites/">Steam Invitations and Join Requests</a> for usage and callback differences.</p>
 <table>
 <thead>
 <tr>
@@ -9424,7 +9449,7 @@
 <tr>
 <td><strong>FromUser</strong></td>
 <td><a href="./#fsteamuserid"><code>FSteamUserID</code></a></td>
-<td>Steam user who initiated the join request.</td>
+<td>Steam user associated with the join request, when available.</td>
 </tr>
 <tr>
 <td><strong>LobbyID</strong></td>

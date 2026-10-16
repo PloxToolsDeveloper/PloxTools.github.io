@@ -5540,6 +5540,8 @@
       
         
       
+        
+      
     
     
     
@@ -5587,6 +5589,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/features/multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8231,7 +8256,7 @@
 <ul>
 <li>Hosting and joining multiplayer sessions</li>
 <li>Steam lobby creation and discovery</li>
-<li>Invites</li>
+<li>Invites, including a received invitation, acceptance, and the actual lobby/game join</li>
 <li>Player connections</li>
 <li>Client and server travel</li>
 <li>Voice Chat</li>
@@ -8239,6 +8264,7 @@
 <li>Reconnection and disconnect behavior</li>
 </ul>
 <p>Testing through Steam provides the closest environment to the one your players will use.</p>
+<p>For Steam invitations, test <strong>both</strong> joining an active managed game and joining a pre-game lobby on separate accounts. Verify that accepting an invitation triggers your chosen callback, that your game invokes the appropriate <strong>Join Steam Game</strong> or <strong>Join Steam Lobby</strong> node, and that <strong>Start Steam Game From Current Lobby</strong> attempts to connect existing lobby members automatically. See <a href="../../implementation/features/multiplayer/invites/">Steam Invitations and Join Requests</a>.</p>
 <hr />
 <h2 id="recommended-testing-workflow">Recommended Testing Workflow</h2>
 <p>A typical development workflow is:</p>

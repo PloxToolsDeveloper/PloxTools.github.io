@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://ploxtools.github.io/plugins_pc/steam/implementation/features/multiplayer/examples/">
       
       
-        <link rel="prev" href="../overview/">
+        <link rel="prev" href="../invites/">
       
       
         <link rel="next" href="../api/">
@@ -5415,6 +5415,8 @@
       
         
       
+        
+      
     
     
     
@@ -5462,6 +5464,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8217,7 +8242,8 @@
        style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
 </div>
 
-<p>The current managed lobby is resolved automatically.</p>
+<p>The current managed lobby is resolved automatically. These nodes work while the managed game is <strong>Connected</strong> and <strong>Allow Join In Progress</strong> is enabled. <strong>Open Steam Invite Dialog For Current Game</strong> also requires Steam Overlay to be enabled. The returned <code>bool</code> does not mean a friend has joined.</p>
+<p>For a pre-game lobby, use <strong>Invite Friend To Steam Lobby</strong> or <strong>Open Steam Invite Dialog To Lobby</strong> instead. See <a href="../invites/">Steam Invitations and Join Requests</a>.</p>
 <hr />
 <h2 id="handling-accepted-invitations">Handling Accepted Invitations</h2>
 <p>Use <strong>Subscribe To Steam Game Invitation Accepted</strong> when the game should react after the local user accepts a Steam invitation or selects Join Game through Steam.</p>
@@ -8235,9 +8261,12 @@
 <ol>
 <li>Subscribe when your persistent multiplayer UI or game instance becomes active.</li>
 <li>Store the returned <a href="../../../../technical_reference/structures/#fsteammultiplayerlistenerhandle"><code>FSteamMultiplayerListenerHandle</code></a>.</li>
-<li>When the event fires, call <strong>Join Steam Game</strong> with the received Lobby ID. The plugin checks <strong>Multiplayer Version</strong> automatically.</li>
+<li>When the event fires, identify the intended destination. If it is an <strong>active managed game</strong>, call <strong>Join Steam Game</strong> with the received Lobby ID. The plugin checks <strong>Multiplayer Version</strong> from Project Settings automatically.</li>
+<li>Handle <strong>Join Steam Game → On Success / On Failure</strong>. Invitation acceptance is not a completed network connection.</li>
 <li>Unsubscribe when the listener is no longer required.</li>
 </ol>
+<p>The same invitation-accepted event can also refer to an ordinary pre-game Steam Lobby. In that case use <strong>Join Steam Lobby</strong>, not <strong>Join Steam Game</strong>. Do not also initiate joining from <strong>Subscribe To Steam Join Requested</strong> for the same invitation.</p>
+<p>See <a href="../invites/">Steam Invitations and Join Requests</a> for the complete receiving-side workflow, including requests received when the game launches.</p>
 <hr />
 <h2 id="listening-for-players-joining-and-leaving">Listening for Players Joining and Leaving</h2>
 <p>On the host, use:</p>
@@ -8287,7 +8316,8 @@
 <li>Choose whether <strong>Allow Join In Progress</strong> should permit new players to join after the match starts.</li>
 <li>Handle <strong>On Success</strong> or <strong>On Failure</strong>.</li>
 </ol>
-<p>The plugin then starts the managed Steam networking and Unreal listen-server flow using the current lobby. <strong>Players already in that lobby when the host starts the match automatically connect to the game</strong>, subject to the usual compatibility and connection checks. They do not need to call <strong>Join Steam Game</strong> themselves. <strong>Multiplayer Version</strong> is read from Project Settings, not passed into this node.</p>
+<p>The plugin then starts the managed Steam networking and Unreal listen-server flow using the current lobby. <strong>Players already in that lobby when the host starts the match automatically attempt to join the game</strong>, subject to the usual compatibility and connection checks. They do not need to call <strong>Join Steam Game</strong> themselves. <strong>Multiplayer Version</strong> is read from Project Settings, not passed into this node.</p>
+<p><strong>Allow Join In Progress</strong> controls <em>later</em> join attempts, not automatic joining of players already in the lobby. See <a href="../invites/">Steam Invitations and Join Requests</a> for how friends join the pre-game lobby before the host starts the match.</p>
 <p>This is useful for projects that want to implement their own pre-game lobby, ready system, character selection, or other custom lobby logic before starting the actual game.</p>
 <hr />
 <h2 id="important-notes">Important Notes</h2>

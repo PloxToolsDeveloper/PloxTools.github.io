@@ -5413,6 +5413,8 @@
       
         
       
+        
+      
     
     
     
@@ -5460,6 +5462,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8147,7 +8172,7 @@ steam_player_group_size = 2
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code>-PloxToolsSteamLobby=109775241234567890
 </code></pre></div>
-<p>This allows the plugin to resolve the correct Steam Lobby when the player accepts a Steam invitation or uses <strong>Join Game</strong> through Steam.</p>
+<p>This allows the plugin to resolve the correct Steam Lobby when the player accepts a Steam invitation or uses <strong>Join Game</strong> through Steam. The receiving game must still handle <strong>Steam Game Invitation Accepted</strong> and call <strong>Join Steam Game</strong> for a managed match; publishing a connect string does not automatically establish a gameplay connection. See <a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a> for the complete invitation flow.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The automatic <code>connect</code> value is managed independently of <strong>Automatically Update Multiplayer Rich Presence</strong>.</p>

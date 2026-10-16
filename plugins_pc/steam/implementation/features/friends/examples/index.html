@@ -5568,6 +5568,8 @@
       
         
       
+        
+      
     
     
     
@@ -5615,6 +5617,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8194,11 +8219,12 @@
 
 <p>The Invite Steam Friend To Game node sends an invite without opening the Steam overlay UI.</p>
 <p>This is typically used when the game manages its own UI and wants to provide a seamless invite flow.</p>
-<p>The result of the operation can be checked immediately to determine whether the invite was successfully sent.</p>
+<p>The returned <code>bool</code> indicates whether Steam accepted the send request. It does <strong>not</strong> confirm that the friend received the invitation, accepted it, or joined a game.</p>
+<p>If you use <strong>Host Steam Game</strong> / <strong>Join Steam Game</strong>, prefer <strong>Invite Player To Steam Game</strong>, which uses the current managed Lobby automatically. For a pre-game lobby, prefer <strong>Invite Friend To Steam Lobby</strong> or <strong>Open Steam Invite Dialog To Lobby</strong>.</p>
 <h3 id="what-is-a-connect-string">What Is a Connect String</h3>
 <p>A connect string is a game-defined string that tells the game how an invited player should join a session.</p>
-<p>Steam does not interpret or validate this value. It is simply delivered back to the game when the invite is accepted.</p>
-<p>The format and meaning of the connect string are fully controlled by the game and may represent a lobby ID, session identifier, or any other join token.</p>
+<p>The format and meaning of the connect string are controlled by your game and may represent a lobby ID, session identifier, or another join token. Steam forwards the connection information through its join-request mechanisms; <strong>your project must handle the received string and perform the actual join</strong>. In a running game, <strong>Subscribe To Steam Join Requested</strong> can report the <code>ConnectString</code> for a Rich Presence join request.</p>
+<p>This lower-level function does not implement launching and joining your custom connection protocol when the game is closed. For the complete comparison, see <a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a>.</p>
 <hr />
 <h2 id="updating-friends-status-information">Updating Friends Status Information</h2>
 <p>One of the most common questions when working with the Steam Friends feature is how to keep friend online status and activity information up to date.</p>

@@ -5493,6 +5493,8 @@
       
         
       
+        
+      
     
     
     
@@ -5540,6 +5542,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8113,10 +8138,11 @@
 <td><strong>Invite Steam Friend To Game</strong></td>
 <td><code>UserID</code> (<a href="../../../../technical_reference/structures/#fsteamuserid"><code>FSteamUserID</code></a>)<br><code>ConnectString</code> (string)</td>
 <td>bool</td>
-<td>Sends a direct Steam invite to a specific friend using a connect string. Does not open Steam overlay UI.</td>
+<td>Sends a direct Steam game invite with a custom connect string, without opening Overlay. The receiving game must interpret the string. <code>true</code> does not confirm acceptance or connection.</td>
 </tr>
 </tbody>
 </table>
+<p>For managed games and pre-game lobby alternatives, see <a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a>.</p>
 
 
 

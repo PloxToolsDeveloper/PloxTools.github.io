@@ -5413,6 +5413,8 @@
       
         
       
+        
+      
     
     
     
@@ -5460,6 +5462,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8014,7 +8039,8 @@
 </div>
 
 <p>The Open Steam Invite Dialog To Lobby node opens the standard Steam invite dialog for the specified <a href="../../../../technical_reference/structures/#fsteamlobbyid"><code>FSteamLobbyID</code></a>.</p>
-<p>Steam automatically handles friend selection and invite delivery. This approach is commonly used in multiplayer games that rely on Steam lobbies and want to provide a familiar invite flow without implementing custom UI.</p>
+<p>Steam handles friend selection and sending the invitation. This node requires a valid Lobby ID and an available Steam Overlay. It only opens the invite UI: it does not join or create a game, and its <code>void</code> return does not confirm that a friend accepted.</p>
+<p>For an <strong>active managed game</strong>, prefer <strong>Open Steam Invite Dialog For Current Game</strong>; for a <strong>pre-game lobby</strong>, use this lower-level node. See <a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a>.</p>
 <hr />
 <h2 id="reacting-to-overlay-events">Reacting to Overlay Events</h2>
 <p>This example demonstrates how to react to Steam Overlay-related events using explicit subscriptions.</p>
@@ -8032,7 +8058,9 @@
 
 <p>The Subscribe To Steam Join Requested node listens for incoming join requests triggered through Steam, such as accepting a game invite from a friend. The callback provides a join request structure that can be passed to other Steam features, such as Lobbies, to handle the join flow.</p>
 <p>The On Requested callback is triggered on the local client when the player accepts a Steam invite or chooses to join a game through the Steam Overlay. This event indicates that the local user intends to join an external lobby, not that another user is joining the current lobby.</p>
-<p>The provided <a href="../../../../technical_reference/structures/#fsteamjoinrequest"><code>FSteamJoinRequest</code></a> contains the target lobby ID and optional connection data. The lobby ID is then passed to the Lobbies feature to initiate joining the requested lobby.</p>
+<p>The provided <a href="../../../../technical_reference/structures/#fsteamjoinrequest"><code>FSteamJoinRequest</code></a> contains <code>FromUser</code>, <code>LobbyID</code> (for a lobby-based request), and <code>ConnectString</code> (for a Rich Presence / custom-string request). <strong>Not every request contains a valid Lobby ID.</strong></p>
+<p>For a <strong>pre-game lobby</strong>, pass a valid <code>Request.LobbyID</code> to <strong>Join Steam Lobby</strong> and handle its success or failure. For a custom connect string, interpret <code>Request.ConnectString</code> using your own connection logic. For a managed match, prefer <strong>Steam Game Invitation Accepted → Join Steam Game</strong> instead. Avoid joining the same Steam request from both subscriptions.</p>
+<p>See <a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a> for a comparison of all invitation and join callbacks.</p>
 <div align="center">
   <img src="../../../assets/overlay/overlay_unsubscribe.png"
        style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">

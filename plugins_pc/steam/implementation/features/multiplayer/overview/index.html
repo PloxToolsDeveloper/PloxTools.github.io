@@ -18,7 +18,7 @@
         <link rel="prev" href="../../lobbies/api/">
       
       
-        <link rel="next" href="../examples/">
+        <link rel="next" href="../invites/">
       
       
       <link rel="icon" href="../../../../../../assets/icon.png">
@@ -5415,6 +5415,8 @@
       
         
       
+        
+      
     
     
     
@@ -5644,6 +5646,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -8282,15 +8307,14 @@
 <p>This is useful when your game has a custom pre-game lobby flow but still wants the Multiplayer feature to handle the actual Steam network connection and Unreal multiplayer session.</p>
 <hr />
 <h2 id="invites">Invites</h2>
-<p>The Multiplayer feature supports both direct invites and Steam's built-in invite UI.</p>
-<p>You can:</p>
+<p>The managed Multiplayer invite nodes let players invite Steam friends to an <strong>active connected game</strong> in either of two ways:</p>
 <ul>
-<li>Invite a specific Steam user to the current game</li>
-<li>Open the Steam friend invite dialog</li>
-<li>Listen for received invitations</li>
-<li>Listen for invitations or Join Game requests accepted by the local user</li>
+<li><strong>Invite Player To Steam Game</strong> sends an invitation to a specific Steam User ID.</li>
+<li><strong>Open Steam Invite Dialog For Current Game</strong> lets the local player choose friends using Steam Overlay.</li>
 </ul>
-<p>The current managed Lobby is resolved automatically when sending invites.</p>
+<p>Both use the current managed Steam Lobby automatically and require <strong>Allow Join In Progress</strong>. When an invited player accepts a Steam invitation, <strong>Subscribe To Steam Game Invitation Accepted</strong> provides the target Lobby ID. For an active managed match, the receiving game must call <strong>Join Steam Game</strong> with that ID; acceptance alone does not create the Unreal network connection.</p>
+<p>For a <strong>pre-game lobby</strong>, use the lower-level Lobbies invite functions and <strong>Join Steam Lobby</strong> instead. Existing lobby members automatically attempt to connect when the owner starts the match with <strong>Start Steam Game From Current Lobby</strong>.</p>
+<p>See <a href="../invites/">Steam Invitations and Join Requests</a> for all six invite functions, three join/invitation events, and complete instructions for both workflows.</p>
 <hr />
 <h2 id="multiplayer-state">Multiplayer State</h2>
 <p>The feature exposes several synchronous state checks:</p>
@@ -8352,6 +8376,7 @@
 <h2 id="related-documentation">Related Documentation</h2>
 <ul>
 <li><a href="../examples/">Examples</a> — common hosting, joining, travel, invite, and event workflows</li>
+<li><a href="../invites/">Steam Invitations and Join Requests</a> — choosing invite functions and handling received or accepted invitations</li>
 <li><a href="../api/">API Reference</a> — complete list of Multiplayer nodes</li>
 <li><a href="../../lobbies/overview/">Lobbies</a> — lower-level Steam Lobby API</li>
 <li><a href="../../rich_presence/overview/">Rich Presence</a> — manual Steam Rich Presence</li>

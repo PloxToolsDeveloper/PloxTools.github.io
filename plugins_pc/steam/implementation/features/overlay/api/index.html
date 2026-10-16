@@ -5413,6 +5413,8 @@
       
         
       
+        
+      
     
     
     
@@ -5460,6 +5462,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8043,13 +8068,13 @@
 <td><strong>Open Steam Invite Dialog To Lobby</strong></td>
 <td><code>LobbyID</code> (<a href="../../../../technical_reference/structures/#fsteamlobbyid"><code>FSteamLobbyID</code></a>)</td>
 <td>–</td>
-<td>Opens the Steam invite dialog for a specific lobby.</td>
+<td>Requests Steam Overlay invite dialog for a specified lobby; does not join players or report invite acceptance.</td>
 </tr>
 <tr>
 <td><strong>Open Steam Invite Dialog Connect String</strong></td>
 <td><code>ConnectString</code> (string)</td>
 <td>–</td>
-<td>Opens the Steam invite dialog using a custom connect string.</td>
+<td>Requests Steam Overlay invite dialog with a game-defined connect string. The receiving game must handle the connect string.</td>
 </tr>
 </tbody>
 </table>
@@ -8075,7 +8100,7 @@
 <td><strong>Subscribe To Steam Join Requested</strong></td>
 <td>–</td>
 <td><strong>On Requested</strong> (<strong>Request</strong>: <a href="../../../../technical_reference/structures/#fsteamjoinrequest"><code>FSteamJoinRequest</code></a>)<br><a href="../../../../technical_reference/structures/#fsteamoverlaylistenerhandle"><code>FSteamOverlayListenerHandle</code></a></td>
-<td>Subscribe to Steam join requested event. Returns a handle for later unsubscription.</td>
+<td>Reports a lobby or Rich Presence join request on the local client. <code>LobbyID</code> may be invalid and <code>ConnectString</code> may be empty. Does not join automatically.</td>
 </tr>
 <tr>
 <td><strong>Unsubscribe From Steam Overlay Activated</strong></td>
@@ -8091,6 +8116,7 @@
 </tr>
 </tbody>
 </table>
+<p>For workflows and callback differences, see <a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a>.</p>
 
 
 

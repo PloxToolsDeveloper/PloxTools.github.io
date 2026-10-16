@@ -5411,6 +5411,8 @@
       
         
       
+        
+      
     
     
     
@@ -5458,6 +5460,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/features/multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -9772,19 +9797,21 @@
 <li>use <strong>Invite Player To Steam Game</strong> when you already know the target player's <code>FSteamUserID</code></li>
 <li>use <strong>Open Steam Invite Dialog For Current Game</strong> to let the local player choose a friend through Steam</li>
 </ul>
-<p>The current managed game lobby is resolved automatically.</p>
+<p>The current managed game lobby is resolved automatically. These functions require an active connected game with <strong>Allow Join In Progress</strong> enabled; the Steam invite dialog also requires an enabled Overlay. To invite friends <strong>before</strong> starting a match, use <strong>Invite Friend To Steam Lobby</strong> or <strong>Open Steam Invite Dialog To Lobby</strong>.</p>
+<p>See <a href="../../implementation/features/multiplayer/invites/">Steam Invitations and Join Requests</a> for all available invitation methods.</p>
 <hr />
 <h3 id="how-should-i-react-when-a-steam-invitation-is-accepted">How should I react when a Steam invitation is accepted?</h3>
 <p>Subscribe to <strong>Steam Game Invitation Accepted</strong>.</p>
 <p>The callback provides the target Lobby ID and the source user when available.</p>
 <p>A typical flow is:</p>
 <ol>
-<li>Subscribe when your multiplayer UI or persistent game object becomes active.</li>
-<li>Store the returned listener handle.</li>
-<li>When the event fires, call <strong>Join Steam Game</strong> with the returned Lobby ID.</li>
-<li>Use the same Multiplayer Version expected by the current build.</li>
-<li>Unsubscribe when the listener is no longer needed.</li>
+<li>Subscribe in a persistent game object after Steam initialization and store the returned listener handle.</li>
+<li>When the event fires, determine whether the invitation targets an active <strong>managed game</strong> or an ordinary <strong>pre-game lobby</strong>.</li>
+<li>For a managed game, call <strong>Join Steam Game</strong> with the returned Lobby ID and handle <strong>On Success / On Failure</strong>. For a pre-game lobby, call <strong>Join Steam Lobby</strong> instead.</li>
+<li>Do not also initiate a join from <strong>Subscribe To Steam Join Requested</strong> for the same Steam request. <strong>Multiplayer Version</strong> is configured in Project Settings (default: <code>1</code>), not passed to the join node.</li>
 </ol>
+<p>Acceptance by itself does not connect a gameplay client. See <a href="../../implementation/features/multiplayer/invites/">Steam Invitations and Join Requests</a> for the full flow.
+5. Unsubscribe when the listener is no longer needed.</p>
 <hr />
 <h3 id="do-persistent-multiplayer-event-subscriptions-need-to-be-removed">Do persistent Multiplayer event subscriptions need to be removed?</h3>
 <p>Yes.</p>

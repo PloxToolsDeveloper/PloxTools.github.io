@@ -5511,6 +5511,8 @@
       
         
       
+        
+      
     
     
     
@@ -5558,6 +5560,29 @@
   
   <span class="md-ellipsis">
     Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/invites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invites
     
   </span>
   
@@ -8061,8 +8086,9 @@
 <hr />
 <h2 id="game-invites">Game Invites</h2>
 <p><strong>Invite Steam Friend To Game</strong> sends a direct invite using a connect string supplied by your game.</p>
-<p>This function does not create a multiplayer session and does not open the Steam Overlay. Your project is responsible for providing a connect string that can later be interpreted by its join flow.</p>
-<p>If you are using the managed Multiplayer feature, prefer its dedicated invite workflow.</p>
+<p>This function does not create a multiplayer session and does not open the Steam Overlay. Your project provides a <strong>Connect String</strong> and implements the receiver's handling of that string. A <code>true</code> result means Steam accepted the send request, not that your friend connected.</p>
+<p>If you are using the managed Multiplayer feature, prefer <strong>Invite Player To Steam Game</strong> or <strong>Open Steam Invite Dialog For Current Game</strong>, which automatically use the current managed Lobby ID. For a pre-game lobby, use the Lobbies or Overlay invite functions instead.</p>
+<p>See <a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a> to choose the correct node and learn how the receiving game handles the invitation.</p>
 <hr />
 <h2 id="important-notes">Important Notes</h2>
 <ul>
@@ -8077,6 +8103,7 @@
 <li><a href="../examples/">Examples</a> — common Friends workflows</li>
 <li><a href="../api/">API Reference</a> — complete list of Friends nodes</li>
 <li><a href="../../multiplayer/overview/">Multiplayer</a> — managed Steam multiplayer and invites</li>
+<li><a href="../../multiplayer/invites/">Steam Invitations and Join Requests</a> — sending and handling Steam invitations</li>
 <li><a href="../../user/overview/">User</a> — Steam user identity and avatars</li>
 </ul>
 
